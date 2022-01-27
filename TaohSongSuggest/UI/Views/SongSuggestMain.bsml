@@ -1,0 +1,61 @@
+﻿<vertical preferred-width='120' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+
+  
+    <horizontal id='top-pannel'> 
+
+      <clickable-text text='Oldest ⛛' default-color='~color-oldest' highlight-color='cyan' on-click='settingsOldest'/>
+      <clickable-text text='Suggestions ⛛' default-color='~color-suggest' highlight-color='cyan' on-click='settingsSuggest'/>
+
+    </horizontal>    
+
+    <horizontal bg='panel-top' bg-color='white' size-delta-y='1' pref-height='0.5'></horizontal>
+    
+    <horizontal horizontal-fit='PreferredSize' pad='10' preferred-height='79' vertical-fit='PreferredSize' child-control-height='false' active='~suggest-show'>
+      
+      <macro.as-host host='cfgInstance'>
+        
+
+        <vertical spacing='2' child-expand-height='false'>
+   
+          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' active='false'>
+            <slider-setting interactable='true' text='From Rank' show-buttons='true' value="fromRank" bind-value="true" apply-on-change="true" min='1' max='10000' increment='1' integer-only='true'/>
+            <slider-setting interactable='true' text='To Rank' show-buttons='true' value="toRank" bind-value="true" apply-on-change="true" min='1' max='10000' increment='100' integer-only='true'/>
+          </vertical>
+        
+          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80'>
+            <toggle-setting interactable='true' text='Ignore All Played' value='ignorePlayedAll' apply-on-change='true' bind-value="true"/>
+            <slider-setting text='Days' show-buttons='true' value="ignorePlayedDays" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true'/>
+          </vertical>
+          
+          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80'>
+            <toggle-setting interactable='true' text='Use Liked Songs' value='useLikedSongs' apply-on-change='true' bind-value="true"/>
+            <toggle-setting interactable='true' text='Fill Liked Songs' value='fillLikedSongs' apply-on-change='true' bind-value="true"/>
+          </vertical>
+          
+          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80'>
+            <slider-setting text='Style Focus' show-buttons='true' value="styleFocus" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true'/>
+          </vertical>
+          
+        </vertical>
+      </macro.as-host>
+    </horizontal>
+
+    <horizontal horizontal-fit='PreferredSize' pad='10' preferred-height='79' vertical-fit='PreferredSize' child-control-height='false' active='~oldest-show'>
+      <macro.as-host host='cfgInstance'>
+        <vertical spacing='2' child-expand-height='false'>
+          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80'>
+            <slider-setting interactable='true' text='Ignore Score Above' show-buttons='true' value="old_highest_acc" bind-value="true" apply-on-change="true" min='1' max='100' increment='0.1' integer-only='false' formatter='percent-formatter'/>
+            <slider-setting text='Only scores before' show-buttons='true' value="old_oldest_days" bind-value="true" apply-on-change="true" min='0' max='120' increment='1' integer-only='true' formatter='day-formatter'/>
+          </vertical>
+        </vertical>
+      </macro.as-host>
+    </horizontal>
+
+  
+  <vertical id='bgProgress' bg-color='Green' ignore-layout='true' anchor-max-x='0.0' horizontal-fit='Unconstrained' preferred-height='1' vertical-fit='PreferredSize' background='panel-fade-gradient' anchor-pos-y='-28'/>
+  
+  <horizontal bg='panel-fade-gradient' id='buttonsPanel' bg-color='Black'>
+    <button id='OldestBTN' text='100 Oldest' align='Center' font-size='7' italics='true' on-click='GenerateOldest' active='~oldest-show'/>
+    <button id='SuggestBTN' text='Suggest Songs' align='Center' font-size='7' italics='true' on-click='GeneratePlaylist' active='~suggest-show'/>
+  </horizontal>
+</vertical>

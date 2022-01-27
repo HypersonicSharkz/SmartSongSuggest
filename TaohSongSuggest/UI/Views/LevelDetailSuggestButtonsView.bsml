@@ -1,0 +1,23 @@
+﻿<bg id='root' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+  <horizontal horizontal-fit='PreferredSize' vertical-fit='PreferredSize' pref-width='30' child-expand-width='false' anchor-pos-x='-10' anchor-pos-y='20' child-align='UpperRight'>
+    
+		<button id='addToIgnoredBTN' text='🚫' face-color='~ban-color' italics='false' hover-hint="~ban-hover" pref-width='10' pref-height='10' on-click='CheckBanState'/>
+
+    <button id='addToLikedBTN' text='👍' face-color='~like-color' italics='false' hover-hint='~like-hover' pref-width='10' pref-height='10' on-click='AddDifficultyBeatmapToLiked'/>
+	</horizontal>
+
+  <modal id='modal' show-event='open-modal' hide-event='close-modal' clickerino-offerino-closerino='true' anchor-pos-x='-23.5' anchor-pos-y='10' size-delta-x='80' size-delta-y='30' move-to-center='false'>
+
+    <vertical anchor-pos-x='-11' anchor-pos-y='-2' size-delta-x='80'  size-delta-y='1'>
+      <string-setting id='dayBanCustom' value='ban-length' bind-value='true' apply-on-change='true' text='Days' pref-width='50' size-delta-y='1'/>
+    </vertical>
+
+    <button text='1' pref-width='10' anchor-pos-x ='8' anchor-pos-y='-10' click-event='close-modal' size-delta-x='10' on-click='one-day-ban'/>
+    <button text='7' pref-width='10' anchor-pos-x ='18' anchor-pos-y='-10' click-event='close-modal' size-delta-x='10' on-click='one-week-ban'/>
+    <button text='30' pref-width='10' anchor-pos-x ='28' anchor-pos-y='-10' click-event='close-modal' size-delta-x='10' on-click='one-month-ban'/>
+    <button text='Perma' pref-width='10' anchor-pos-x ='38' anchor-pos-y='-10' click-event='close-modal' size-delta-x='10' on-click='perm-ban'/>
+
+    <button text='Ban' face-color='red' pref-width='10' anchor-pos-x ='8' anchor-pos-y='-25' click-event='close-modal' size-delta-x='10' on-click='custom-day-ban'/>
+
+  </modal>
+</bg>
