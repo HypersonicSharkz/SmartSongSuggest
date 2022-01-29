@@ -19,17 +19,13 @@ namespace Actions
         {
             toolBox.SetActivePlayer(settings.scoreSaberID);
             //Create empty playlist, and reset output window.
-            playlist = new Playlist(settings.playlistSettings) {toolBox = toolBox};
+            playlist = new Playlist(toolBox.fileHandler, toolBox.songLibrary);
 
             //Add up to 100 oldest song to playlist
-            toolBox.status = "Finding 100 Oldest";
             playlist.AddSongs(toolBox.activePlayer.GetOldest(100, settings.ignoreAccuracyEqualAbove, settings.ignorePlayedDays));
 
             //Generate and save a playlist with the selected songs in the playlist.
-            toolBox.status = "Generating Playlist";
-            toolBox.fileHandler.SavePlaylist(playlist.Generate(), settings.playlistSettings.fileName);
-            
-            toolBox.status = "Ready";
+            toolBox.fileHandler.SavePlaylist(playlist.Generate(PlaylistType.OldestPlays), "100 Oldest");
         }
     }
 }

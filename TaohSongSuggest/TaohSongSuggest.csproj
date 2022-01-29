@@ -137,6 +137,7 @@
     <Compile Include="SongSuggest\DataHandling\ActivePlayer.cs" />
     <Compile Include="SongSuggest\DataHandling\ActivePlayerScore.cs" />
     <Compile Include="SongSuggest\DataHandling\FileHandler.cs" />
+    <Compile Include="SongSuggest\DataHandling\FilesData.cs" />
     <Compile Include="SongSuggest\DataHandling\Playlist.cs" />
     <Compile Include="SongSuggest\DataHandling\Song.cs" />
     <Compile Include="SongSuggest\DataHandling\SongBan.cs" />
@@ -164,7 +165,9 @@
     <Compile Include="SongSuggest\ScoreSaberJSON\Score.cs" />
     <Compile Include="SongSuggest\ScoreSaberJSON\ScoreCollection.cs" />
     <Compile Include="SongSuggest\ScoreSaberJSON\ScoreStats.cs" />
+    <Compile Include="SongSuggest\Settings\FilePathSettings.cs" />
     <Compile Include="SongSuggest\Settings\OldestSongSettings.cs" />
+    <Compile Include="SongSuggest\Settings\PlaylistSettings.cs" />
     <Compile Include="SongSuggest\Settings\SongSuggestSettings.cs" />
     <Compile Include="UI\LevelDetailViewController.cs" />
     <Compile Include="Managers\UIManager.cs" />
@@ -182,6 +185,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Configuration\InitialData\Top10KPlayers.json" />
     <None Include="Configuration\InitialData\Files.meta" />
+    <None Include="Configuration\InitialData\SongLibrary.json" />
     <None Include="Directory.Build.props" Condition="Exists('Directory.Build.props')" />
     <None Include="Directory.Build.targets" Condition="Exists('Directory.Build.targets')" />
     <None Include="TaohSongSuggest.csproj.user" Condition="Exists('TaohSongSuggest.csproj.user')" />

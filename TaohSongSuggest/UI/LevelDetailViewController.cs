@@ -181,8 +181,6 @@ namespace TaohSongSuggest.UI
                 addToIgnoredBTN.gameObject.SetActive(false);
                 addToLikedBTN.gameObject.SetActive(false);
 
-                Console.WriteLine(sldv.selectedDifficultyBeatmap.difficulty.Name());
-
                 //Forgot to check if map was ranked before checking ban... oops
                 if (difficulty.ranked)
                 {
@@ -214,9 +212,6 @@ namespace TaohSongSuggest.UI
                 }
 
                 SharedCoroutineStarter.instance.StartCoroutine(SetActiveLate());
-
-
-                Plugin.Log.Info($"Checking buttons {_ignoreActive} {_likeActive}");
             } 
 
         }
@@ -243,7 +238,6 @@ namespace TaohSongSuggest.UI
 
         void AddDifficultyBeatmapToIgnored(int days)
         {
-            Plugin.Log.Info("Pressed ignore");
             if (days == -1)
             {
                 SongSuggestManager.toolBox.songBanning.SetPermaBan(Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel), sldv.selectedDifficultyBeatmap.difficulty.Name());
@@ -262,7 +256,6 @@ namespace TaohSongSuggest.UI
                 SongSuggestManager.toolBox.songLiking.RemoveLike(Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel), sldv.selectedDifficultyBeatmap.difficulty.Name());
             } else
             {
-                Plugin.Log.Info("Pressed ignore");
 
                 SongSuggestManager.toolBox.songLiking.SetLike(Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel), sldv.selectedDifficultyBeatmap.difficulty.Name());
             }

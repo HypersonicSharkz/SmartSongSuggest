@@ -54,18 +54,15 @@ namespace Actions
 
             //Prepare for updating from web until a duplicate score is found (then remaining scores are correct)
             int page = 0;
-            string maxPage = "?";
             Boolean continueLoad = true;
             while (continueLoad)
             {
                 page++;
-                toolBox.status = "Downloading Player History Page: " + page + "/" + maxPage;
                 Console.WriteLine("Page Start: " + page + " Search Mode: " + searchmode);
                 PlayerScoreCollection playerScoreCollection = webDownloader.GetScores(activePlayer.id, searchmode, 100, page);
-                maxPage = ""+Math.Ceiling((double)playerScoreCollection.metadata.total / 100);
                 //PlayerScoreCollection playerScoreCollection = JsonConvert.DeserializeObject<PlayerScoreCollection>(scoresJSON, serializerSettings);
-                toolBox.status = "Parsing Player History Page: " + page + "/" + maxPage;
                 Console.WriteLine("Page Parse: " + page);
+
                 //Parse Player Scores
                 foreach (PlayerScore score in playerScoreCollection.playerScores)
                 {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
+
 namespace LinkedData
 {
     public class SongEndPoint
@@ -29,8 +30,9 @@ namespace LinkedData
             //Reduces the required endpoints for maximum efficiency by a % of total endpoints
             //(e.g. 50 endpoints and 10% stylefocus means a 45+ matched song gets same score as a 50 matched song with same base weight)
             float songBonus = 0.01f * focusPercentage * originPoints;
-            weightedSongs = Math.Max(0.0f + originPoints-songBonus, matchedSongs); //.  0.0f+matchedSongs+(0.0f+originPoints-matchedSongs)*(100.0f-focusPercentage)/100;
+            weightedSongs = Math.Max(0.0f + originPoints - songBonus, matchedSongs); //.  0.0f+matchedSongs+(0.0f+originPoints-matchedSongs)*(100.0f-focusPercentage)/100;
             weightedRelevanceScore = totalRelevanceScore / weightedSongs;
         }
+
     }
 }

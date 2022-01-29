@@ -5,27 +5,22 @@ using WebDownloading;
 using BanLike;
 using System;
 using Actions;
-using Settings;
 
 namespace DataHandling
 {
     public class ToolBox
     {
-        public String status { get; set; } = "Uninitialized";
         public ActivePlayer activePlayer { get; set; }
-        public String activePlayerID { get; set; } = "-1"; //Default as an unset player.
         public FileHandler fileHandler { get; set; }
         public SongLibrary songLibrary { get; set; }
         public WebDownloader webDownloader { get; set; }
         public SongLiking songLiking { get; set; }
         public SongBanning songBanning { get; set; }
 
-        public ToolBox(FilePathSettings filePathSettings)
+        public ToolBox()
         {
-            fileHandler = new FileHandler {toolBox = this};
-            fileHandler.UpdatePaths(filePathSettings);
-
-            webDownloader = new WebDownloader {toolBox = this };
+            fileHandler = new FileHandler();
+            webDownloader = new WebDownloader();
             
             songLibrary = new SongLibrary(fileHandler, webDownloader);
             fileHandler.LoadSongLibrary(songLibrary);
@@ -44,16 +39,8 @@ namespace DataHandling
                 bannedSongs = fileHandler.LoadBannedSongs()
             };
 
-            status = "Preparing Players Song History";
-            //creates an active player
-            //Needs loading of the data if user is no longer "-1"
-            activePlayer = new ActivePlayer(activePlayerID);
+            activePlayer = new ActivePlayer("-1");
 
-            status = "Checking for new Online Files";
-            //prepares files
-            webDownloader.UpdateLinkData();
-            Console.WriteLine("Ready");
-            status = "Ready";
         }
 
         public void SetActivePlayer(String activePlayerID)
