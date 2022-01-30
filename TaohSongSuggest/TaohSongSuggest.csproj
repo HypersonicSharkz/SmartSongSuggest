@@ -183,9 +183,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Configuration\InitialData\Top10KPlayers.json" />
     <None Include="Configuration\InitialData\Files.meta" />
     <None Include="Configuration\InitialData\SongLibrary.json" />
+    <None Include="Configuration\InitialData\Top10KPlayers.json" />
     <None Include="Directory.Build.props" Condition="Exists('Directory.Build.props')" />
     <None Include="Directory.Build.targets" Condition="Exists('Directory.Build.targets')" />
     <None Include="TaohSongSuggest.csproj.user" Condition="Exists('TaohSongSuggest.csproj.user')" />

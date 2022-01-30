@@ -59,15 +59,5 @@ namespace TaohSongSuggest.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Top10KPlayers {
-            get {
-                object obj = ResourceManager.GetObject("Top10KPlayers", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }
