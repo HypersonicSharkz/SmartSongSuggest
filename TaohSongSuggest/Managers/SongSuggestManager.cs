@@ -52,6 +52,11 @@ namespace TaohSongSuggest.Managers
                 try
                 {
                     string configDir = Path.Combine(UnityGame.UserDataPath, "TaohSongSuggest") + "/";
+
+                    //Check directories
+                    Directory.CreateDirectory(Path.GetDirectoryName(Path.Combine(configDir, "Players/")));
+
+                    
                     FilePathSettings fps = new FilePathSettings()
                     {
                         activePlayerDataPath = Path.Combine(configDir, "Players/"),
@@ -65,9 +70,6 @@ namespace TaohSongSuggest.Managers
                     };
 
                     toolBox = new ToolBox(fps);
-
-                    //Check directories
-                    Directory.CreateDirectory(Path.GetDirectoryName(toolBox.fileHandler.activePlayerDataPath));
                 }
                 catch (Exception e)
                 {
@@ -101,7 +103,7 @@ namespace TaohSongSuggest.Managers
                         rankTo = cfg.toRank,
                         ignorePlayedAll = cfg.ignorePlayedAll,
                         ignorePlayedDays = cfg.ignorePlayedDays,
-                        styleFocus = cfg.styleFocus,
+                        requiredMatches = cfg.requiredMatches,
                         useLikedSongs = cfg.useLikedSongs,
                         fillLikedSongs = cfg.fillLikedSongs,
                         playlistSettings = playListSettings

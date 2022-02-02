@@ -12,5 +12,6 @@ namespace Settings
         public int styleFocus { get; set; } = 0;
         public bool useLikedSongs { get; set; } = false;
         public bool fillLikedSongs { get; set; } = true;
+        public PlaylistSettings playlistSettings { get; set; }
     }
 }

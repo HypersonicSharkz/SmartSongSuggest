@@ -163,23 +163,26 @@ namespace TaohSongSuggest.UI
 
         void CheckButtons()
         {
-            BanDays = "30";
+
+
+            BanDays = "60";
 
             _ignoreActive = false;
             _likeActive = false;
 
+            addToIgnoredBTN.gameObject.SetActive(false);
+            addToLikedBTN.gameObject.SetActive(false);
+
+
+
             Song x;
-            if (Plugin.songDetails.songs.FindByHash(Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel), out x))
+            if (sldv.beatmapLevel is CustomBeatmapLevel && Plugin.songDetails.songs.FindByHash(Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel), out x))
             {
                 SongDifficulty difficulty;
                 x.GetDifficulty(out difficulty, (MapDifficulty)sldv.selectedDifficultyBeatmap.difficulty); 
 
                 _ignoreActive = difficulty.ranked;
                 _likeActive = difficulty.ranked;
-
-
-                addToIgnoredBTN.gameObject.SetActive(false);
-                addToLikedBTN.gameObject.SetActive(false);
 
                 //Forgot to check if map was ranked before checking ban... oops
                 if (difficulty.ranked)

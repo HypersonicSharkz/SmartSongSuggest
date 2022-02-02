@@ -41,7 +41,7 @@ namespace TaohSongSuggest.UI
         [UIComponent("OldestBTN")]
         public NoTransitionsButton oldestBTN;
 
-        bool _suggestShow;
+        bool _suggestShow = true;
 
         [UIValue("suggest-show")]
         public bool ShowSuggestSettings

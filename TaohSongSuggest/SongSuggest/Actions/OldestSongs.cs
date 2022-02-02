@@ -27,7 +27,7 @@ namespace Actions
 
             //Generate and save a playlist with the selected songs in the playlist.
             toolBox.status = "Generating Playlist";
-            toolBox.fileHandler.SavePlaylist(playlist.Generate(), settings.playlistSettings.fileName);
+            playlist.Generate();
             
             toolBox.status = "Ready";
         }

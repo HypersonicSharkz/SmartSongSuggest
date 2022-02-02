@@ -1,40 +1,51 @@
-﻿using System;
+﻿using Data;
+using DataHandling;
+using FileHandling;
+using LinkedData;
+using ScoreSabersJson;
+using SongLibraryNS;
+using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
-using SongLibraryNS;
-using ScoreSabersJson;
-using System.Diagnostics;
-using LinkedData;
-using FileHandling;
 using WebDownloading;
-using DataHandling;
 
 namespace Actions
 {
+
     class Top10kRefresh
     {
-        //Should potentially be moved to the ToolBox
-        private Top10kPlayers top10kPlayers = new Top10kPlayers();
-        public void Top10kPlayerDataPuller()
+        public ToolBox toolBox { get; set; }
+        private Top10kPlayers top10kPlayers;
+        
+        public void Top10kPlayerDataPuller(Boolean fullRefresh)
         {
             FileHandler fileHandler = toolBox.fileHandler;
-            WebDownloader webDownloader = toolBox.webDownloader;
+            //WebDownloader webDownloader = toolBox.webDownloader;
 
-            //Delete/Rename the json file if you want a new set of 10k players, else data on 10k known players is kept.
-            if (fileHandler.LinkedDataExist())
+            //If partial refresh, current data is loaded, else a new dataset is made.
+            if (fileHandler.LinkedDataExist()&&!fullRefresh)
             {
-                //string top10kPlayerJSON = File.ReadAllText(top10kPlayersPath);
-                top10kPlayers = fileHandler.LoadLinkedData(); //.SetJSON(top10kPlayerJSON);
+                Console.WriteLine("Keeping Users");
+                //Current players and their score data is loaded, and the score data is cleared
+                top10kPlayers = fileHandler.LoadLinkedData();
+                foreach (Top10kPlayer player in top10kPlayers.top10kPlayers)
+                {
+                    player.top10kScore.Clear();
+                }
             }
             else
             {
+                Console.WriteLine("New Users");
+                //Make fresh dataset and get the players
+                top10kPlayers = new Top10kPlayers();
                 Retrieve10kTopPlayers();
             }
             Console.WriteLine(top10kPlayers.top10kPlayers.Count());
             //Set true if you want scores updates on the players
-            Retrieve10kTopPlayersScores(true);
+            Retrieve10kTopPlayersScores();
+            UpdateFilesMeta();
         }
-        public ToolBox toolBox { get; set; }
 
         //Retrieves the 10k top players 1 page (50) at a time.
         public void Retrieve10kTopPlayers()
@@ -65,7 +76,7 @@ namespace Actions
 
 
         //Loops the known players and updates their score, if Update is True scores are updated regardless of content, else only missing players data
-        public void Retrieve10kTopPlayersScores(Boolean updateAll)
+        public void Retrieve10kTopPlayersScores()
         {
             SongLibrary songLibrary = toolBox.songLibrary;
             FileHandler fileHandler = toolBox.fileHandler;
@@ -85,9 +96,6 @@ namespace Actions
                     fileHandler.SaveLinkedData(top10kPlayers.GetJSON());
                     if (songLibrary.Updated()) songLibrary.Save();
                 }
-
-                //Clear scores if all should be updated.
-                if (updateAll) player.top10kScore.Clear();
 
                 if (player.top10kScore.Count() < 20)
                 {
@@ -118,6 +126,20 @@ namespace Actions
                 }
             }
             fileHandler.SaveLinkedData(top10kPlayers.GetJSON());
+        }
+
+        public void UpdateFilesMeta()
+        {
+            FilesMeta filesMeta = toolBox.fileHandler.LoadFilesMeta();
+            String oldVersion = filesMeta.top10kVersion;
+            int seperatorLocation = oldVersion.IndexOf(".");
+            String before = oldVersion.Substring(0, seperatorLocation);
+            String after = oldVersion.Substring(seperatorLocation+1);
+            String updatedAfter = ""+(int.Parse(after)+1);
+            String newVersion = before+"."+updatedAfter;
+            filesMeta.top10kUpdated = DateTime.UtcNow;
+            filesMeta.top10kVersion = newVersion;
+            toolBox.fileHandler.SaveFilesMeta(filesMeta);
         }
     }
 }

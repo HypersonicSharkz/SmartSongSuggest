@@ -47,10 +47,11 @@ namespace Actions
             Stopwatch timer = new Stopwatch();
             timer.Start();
 
+            toolBox.status = "Preparing Ignore List";
             //Create a List of songID's to not target with links
             //Current filters is known songs, could be replaced with a function for what a player wants to filter, adding dislike songs etc.
             List<String> ignoreSongs = new List<String>();
-
+            
             //Add either all played songs
             if (settings.ignorePlayedAll)
             {
@@ -70,7 +71,7 @@ namespace Actions
             int playerRankTo = settings.rankTo;
 
 
-
+            toolBox.status = "Preparing Origin Songs";
             //Create PlayerOriginEndPoints for top 50 songs
             List<String> originSongsIDs = new List<String>();
 
@@ -94,6 +95,7 @@ namespace Actions
             //Create the Origin Points collection
             SongEndPointCollection originSongs = new SongEndPointCollection();
 
+            toolBox.status = "Searching for Songs from Origin Songs";
             //Add an endpoint for each selected originsong
             foreach (String songID in originSongsIDs)
             {
@@ -131,6 +133,7 @@ namespace Actions
             Console.WriteLine("Origin Endpoint Done: " + timer.ElapsedMilliseconds);
 
             //Create the suggested songs Endpoints
+            toolBox.status = "Sorting Found Songs";
             SongEndPointCollection suggestedSongs = new SongEndPointCollection();
 
             percentDoneCalc = 0;
@@ -157,20 +160,23 @@ namespace Actions
             Console.WriteLine("Suggest Endpoint Done: " + timer.ElapsedMilliseconds);
 
             //Calculate the scores on the songs for suggestions
+            toolBox.status = "Evaluating Found Songs";
             suggestedSongs.SetRelevance(this, originSongs.endPoints.Count(), settings.styleFocus);
             Console.WriteLine("Completion: " + (songSuggestCompletion * 100) + "%");
             Console.WriteLine("Score Relevance Calculations Done: " + timer.ElapsedMilliseconds);
 
             //Find most relevant songs for playlist selection
+            toolBox.status = "Selecting Best Matching Songs";
             List<SongEndPoint> candidates = suggestedSongs.endPoints.Values.OrderByDescending(s => s.weightedRelevanceScore).ToList();
 
             candidates = candidates.GetRange(0, Math.Min(50, candidates.Count()));
             Console.WriteLine("Candidate Sorting Done: " + timer.ElapsedMilliseconds);
 
             //Make Playlist
-            Playlist playlist = new Playlist(fileHandler, songLibrary);
+            toolBox.status = "Making Playlist";
+            Playlist playlist = new Playlist(settings.playlistSettings) { toolBox = toolBox };
             playlist.AddSongs(candidates.Select(c => c.songID).ToList());
-            fileHandler.SavePlaylist(playlist.Generate(PlaylistType.SongSuggest), "SongSuggest");
+            fileHandler.SavePlaylist(playlist.Generate(), settings.playlistSettings.fileName);
 
             Console.WriteLine("Playlist Generation Done: " + timer.ElapsedMilliseconds);
 
@@ -178,6 +184,7 @@ namespace Actions
             Console.WriteLine("Time Spent: " + timer.ElapsedMilliseconds);
 
             songSuggestIDs = playlist.GetSongs();
+            toolBox.status = "Ready";
         }
 
 

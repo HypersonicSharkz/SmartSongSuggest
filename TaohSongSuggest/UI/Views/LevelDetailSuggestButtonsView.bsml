@@ -20,4 +20,4 @@
     <button text='Ban' face-color='red' pref-width='10' anchor-pos-x ='8' anchor-pos-y='-25' click-event='close-modal' size-delta-x='10' on-click='custom-day-ban'/>
 
   </modal>
-</bg>s
+</bg>

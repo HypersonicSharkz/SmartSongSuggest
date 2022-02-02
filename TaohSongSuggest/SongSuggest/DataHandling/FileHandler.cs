@@ -126,14 +126,14 @@ namespace FileHandling
             File.WriteAllText(bannedSongsPath + "Banned Songs.json", JsonConvert.SerializeObject(songBans));
         }
 
-        public FilesData LoadFilesData()
+        public FilesMeta LoadFilesMeta()
         {
-            if (!File.Exists(filesDataPath + "Files.meta")) SaveFilesData(new FilesData());
+            if (!File.Exists(filesDataPath + "Files.meta")) SaveFilesMeta(new FilesMeta());
             String filesDataString = File.ReadAllText(filesDataPath + "Files.meta");
-            return JsonConvert.DeserializeObject<FilesData>(filesDataString, serializerSettings);
+            return JsonConvert.DeserializeObject<FilesMeta>(filesDataString, serializerSettings);
         }
 
-        public void SaveFilesData(FilesData filesData)
+        public void SaveFilesMeta(FilesMeta filesData)
         {
             File.WriteAllText(filesDataPath + "Files.meta", JsonConvert.SerializeObject(filesData));
         }

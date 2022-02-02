@@ -137,7 +137,7 @@
     <Compile Include="SongSuggest\DataHandling\ActivePlayer.cs" />
     <Compile Include="SongSuggest\DataHandling\ActivePlayerScore.cs" />
     <Compile Include="SongSuggest\DataHandling\FileHandler.cs" />
-    <Compile Include="SongSuggest\DataHandling\FilesData.cs" />
+    <Compile Include="SongSuggest\DataHandling\FilesMeta.cs" />
     <Compile Include="SongSuggest\DataHandling\Playlist.cs" />
     <Compile Include="SongSuggest\DataHandling\Song.cs" />
     <Compile Include="SongSuggest\DataHandling\SongBan.cs" />

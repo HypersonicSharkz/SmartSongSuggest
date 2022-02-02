@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using ScoreSabersJson;
 using Newtonsoft.Json;
 using FileHandling;
@@ -26,19 +25,14 @@ namespace SongLibraryNS
         //Will add a song to the library if unknown, and update status to unsaved.
         public void AddSong(String scoreSaberID, String name, String hash, String difficulty)
         {
-            //If song is not in the library, create it, add it, and add it to the idLookup Dictionary
-            if (!songs.ContainsKey(scoreSaberID))
+            Song newSong = new Song
             {
-                Song newSong = new Song
-                {
-                    scoreSaberID = scoreSaberID,
-                    name = name,
-                    hash = hash,
-                    difficulty = difficulty
-                };
-                songs.Add(newSong.scoreSaberID, newSong);
-                updated = true;
-            }
+                scoreSaberID = scoreSaberID,
+                name = name,
+                hash = hash,
+                difficulty = difficulty
+            };
+            AddSong(newSong);
         }
 
         public String GetName(String scoreSaberID)
@@ -122,6 +116,27 @@ namespace SongLibraryNS
         public void AddSong(LeaderboardInfo leaderboardInfo)
         {
             AddSong(leaderboardInfo.id + "", leaderboardInfo.songName, leaderboardInfo.songHash, leaderboardInfo.difficulty.difficulty + "");
+        }
+
+        public void AddSong(Song song)
+        {
+            //If song is not in the library, create it, add it, and add it to the idLookup Dictionary
+            if (!songs.ContainsKey(song.scoreSaberID))
+            {
+                songs.Add(song.scoreSaberID, song);
+                updated = true;
+            }
+        }
+
+        public void AddLibrary(String libraryJSON)
+        {
+            JsonSerializerSettings serializerSettings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+            List<Song> songs = JsonConvert.DeserializeObject<List<Song>>(libraryJSON, serializerSettings);
+
+            foreach (Song song in songs)
+            {
+                AddSong(song);
+            }
         }
 
         //Returns true if songs has been added since data was loaded/library created.

@@ -14,12 +14,12 @@ namespace TaohSongSuggest.Configuration
         public virtual int toRank { get; set; } = 10000;
         public virtual bool ignorePlayedAll { get; set; } = true;
         public virtual int ignorePlayedDays { get; set; } = 60;
-        public virtual int styleFocus { get; set; } = 0;
+        public virtual int requiredMatches { get; set; } = 90;
         public virtual bool useLikedSongs { get; set; }
         public virtual bool fillLikedSongs { get; set; }
 
 
-        public virtual float old_highest_acc { get; set; }
+        public virtual float old_highest_acc { get; set; } = 100;
         public virtual int old_oldest_days { get; set; }
 
 
