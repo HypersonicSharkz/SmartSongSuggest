@@ -3,7 +3,7 @@
 namespace Data
 {
 
-    public class FilesData
+    public class FilesMeta
     {
         public string top10kVersion { get; set; }
         public DateTime top10kUpdated { get; set; }

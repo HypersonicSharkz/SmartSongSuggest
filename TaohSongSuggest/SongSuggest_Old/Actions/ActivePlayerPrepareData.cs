@@ -62,7 +62,7 @@ namespace Actions
                 toolBox.status = "Downloading Player History Page: " + page + "/" + maxPage;
                 Console.WriteLine("Page Start: " + page + " Search Mode: " + searchmode);
                 PlayerScoreCollection playerScoreCollection = webDownloader.GetScores(activePlayer.id, searchmode, 100, page);
-                maxPage = ""+Math.Ceiling((double)playerScoreCollection.metadata.total / 100);
+                maxPage = "" + Math.Ceiling((double)playerScoreCollection.metadata.total / 100);
                 //PlayerScoreCollection playerScoreCollection = JsonConvert.DeserializeObject<PlayerScoreCollection>(scoresJSON, serializerSettings);
                 toolBox.status = "Parsing Player History Page: " + page + "/" + maxPage;
                 Console.WriteLine("Page Parse: " + page);
@@ -80,7 +80,7 @@ namespace Actions
                             songID = score.leaderboard.id + "",
                             timeSet = score.score.timeSet,
                             pp = score.score.pp,
-                            accuracy = 100.0*score.score.baseScore / score.leaderboard.maxScore
+                            accuracy = 100.0 * score.score.baseScore / score.leaderboard.maxScore
                         };
                         //Attempts to add the found score, if it is a duplicate with same timestamp do not load next score page
                         //TODO: Break foreach as well
@@ -111,4 +111,4 @@ namespace Actions
         }
     }
 }
- 
+

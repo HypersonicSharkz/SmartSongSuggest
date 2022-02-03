@@ -39,7 +39,7 @@ namespace Actions
         //Creates a playlist with 50 suggested songs based on the link system.
         public void SuggestedSongs(SongSuggestSettings settings)
         {
-            toolBox.SetActivePlayer(settings.scoreSaberID);
+            toolBox.RefreshActivePlayer();
             activePlayer = toolBox.activePlayer;
              //Load Link Data
             Top10kPlayers players = fileHandler.LoadLinkedData();

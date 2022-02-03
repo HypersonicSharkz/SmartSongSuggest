@@ -100,12 +100,12 @@ namespace WebDownloading
             string metaWebPath = "https://raw.githubusercontent.com/HypersonicSharkz/SmartSongSuggest/master/TaohSongSuggest/Configuration/InitialData/Files.meta";
             string metaText = client.DownloadString(metaWebPath);
 
-            FilesData filesDataWeb = JsonConvert.DeserializeObject<FilesData>(metaText, serializerSettings);
-            FilesData filesDataLocal = toolBox.fileHandler.LoadFilesData();
+            FilesMeta filesMetaWeb = JsonConvert.DeserializeObject<FilesMeta>(metaText, serializerSettings);
+            FilesMeta filesMetaLocal = toolBox.fileHandler.LoadFilesMeta();
 
             //Check if local version is same as server version, else download the server version.
             //Also pulls an update of song library to add to local library.
-            if (filesDataWeb.top10kUpdated != filesDataLocal.top10kUpdated)
+            if (filesMetaWeb.top10kUpdated != filesMetaLocal.top10kUpdated)
             {
                 //Top 10k Download
                 //where to get the files from and where to save it.
@@ -133,7 +133,7 @@ namespace WebDownloading
                 File.Delete(filePath);
 
                 //save related Files.meta
-                toolBox.fileHandler.SaveFilesData(filesDataWeb);
+                toolBox.fileHandler.SaveFilesMeta(filesMetaWeb);
             }
             //toolBox.fileHandler.SaveLinkedData(client.DownloadString(webPath));
             

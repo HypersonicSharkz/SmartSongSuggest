@@ -20,15 +20,23 @@ namespace DataHandling
         public SongLiking songLiking { get; set; }
         public SongBanning songBanning { get; set; }
 
-        public ToolBox(FilePathSettings filePathSettings)
+        public ToolBox(FilePathSettings filePathSettings, String userID)
         {
+            Console.WriteLine("tool box 1");
+            //Set the active players ID
+            activePlayerID = userID;
+
             fileHandler = new FileHandler {toolBox = this};
             fileHandler.UpdatePaths(filePathSettings);
+
+            Console.WriteLine("tool box 2");
 
             webDownloader = new WebDownloader {toolBox = this };
             
             songLibrary = new SongLibrary(fileHandler, webDownloader);
             fileHandler.LoadSongLibrary(songLibrary);
+
+            Console.WriteLine("tool box 3");
 
             songLiking = new SongLiking(songLibrary)
             {
@@ -37,6 +45,8 @@ namespace DataHandling
                 likedSongs = fileHandler.LoadLikedSongs()
             };
 
+            Console.WriteLine("tool box 4");
+
             songBanning = new SongBanning
             {
                 songLibrary = this.songLibrary,
@@ -44,22 +54,28 @@ namespace DataHandling
                 bannedSongs = fileHandler.LoadBannedSongs()
             };
 
-            status = "Preparing Players Song History";
-            //creates an active player
-            //Needs loading of the data if user is no longer "-1"
-            activePlayer = new ActivePlayer(activePlayerID);
+            Console.WriteLine("tool box 5");
 
             status = "Checking for new Online Files";
             //prepares files
             webDownloader.UpdateLinkData();
-            Console.WriteLine("Ready");
+
+            Console.WriteLine("tool box 6");
+
+            status = "Preparing Players Song History";
+            //Creates an active player, and refreshes this players data.
+            activePlayer = new ActivePlayer(this);
+            //RefreshActivePlayer();
+
+            Console.WriteLine("tool box 7");
+
             status = "Ready";
         }
 
-        public void SetActivePlayer(String activePlayerID)
+        public void RefreshActivePlayer()
         {
-            ActivePlayerPrepareData activePlayerPrepareData = new ActivePlayerPrepareData{ toolBox = this };
-            activePlayerPrepareData.SetActivePlayer(activePlayerID);
+            ActivePlayerRefreshData activePlayerRefreshData = new ActivePlayerRefreshData{ toolBox = this };
+            activePlayerRefreshData.RefreshActivePlayer(activePlayerID);
         }
     }
 }

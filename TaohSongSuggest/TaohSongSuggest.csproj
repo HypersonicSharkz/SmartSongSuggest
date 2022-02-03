@@ -130,7 +130,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SongSuggest\Actions\ActivePlayerPrepareData.cs" />
+    <Compile Include="SongSuggest\Actions\ActivePlayerRefreshData.cs" />
     <Compile Include="SongSuggest\Actions\OldestSongs.cs" />
     <Compile Include="SongSuggest\Actions\SongSuggest.cs" />
     <Compile Include="SongSuggest\Actions\Top10kRefresh.cs" />

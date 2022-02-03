@@ -161,7 +161,7 @@ namespace Actions
 
             //Calculate the scores on the songs for suggestions
             toolBox.status = "Evaluating Found Songs";
-            suggestedSongs.SetRelevance(this, originSongs.endPoints.Count(), settings.styleFocus);
+            suggestedSongs.SetRelevance(this, originSongs.endPoints.Count(), settings.requiredMatches);
             Console.WriteLine("Completion: " + (songSuggestCompletion * 100) + "%");
             Console.WriteLine("Score Relevance Calculations Done: " + timer.ElapsedMilliseconds);
 
@@ -176,7 +176,7 @@ namespace Actions
             toolBox.status = "Making Playlist";
             Playlist playlist = new Playlist(settings.playlistSettings) { toolBox = toolBox };
             playlist.AddSongs(candidates.Select(c => c.songID).ToList());
-            fileHandler.SavePlaylist(playlist.Generate(), settings.playlistSettings.fileName);
+            playlist.Generate();
 
             Console.WriteLine("Playlist Generation Done: " + timer.ElapsedMilliseconds);
 

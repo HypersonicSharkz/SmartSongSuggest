@@ -2,26 +2,58 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using DataHandling;
 
 namespace ActivePlayerData
 {
     public class ActivePlayer
     {
-        private String currentVersion = "1.0";
-        public String currentSavedVersion;
+        private ToolBox toolBox;
+        private String currentVersion = "1.1";
+        public String currentSavedVersion { get; set; }
         public String id { get; set; }
         public String name { get; set; }
         public int rankedPlayCount { get; set; }
         public SortedDictionary<String, ActivePlayerScore> scores = new SortedDictionary<String, ActivePlayerScore>();
 
-        public ActivePlayer (String scoreSaberID)
+        //No selected user (json extract or new user)
+        public ActivePlayer()
         {
-            id = scoreSaberID;
-            currentSavedVersion = currentVersion;
+            Console.WriteLine("Non reference empty constructor called");
+        }
+
+        //Loads the user from drive if cache is available and correct version, else creates a new user.
+        public ActivePlayer(ToolBox toolBox)
+        {
+            this.toolBox = toolBox;
+            id = toolBox.activePlayerID;
+            ActivePlayer loadedPlayer = toolBox.fileHandler.LoadActivePlayer(id);
+            //Verify the loadedPlayer is in correct format.
+            if (loadedPlayer.currentSavedVersion == currentVersion)
+            {
+                //Move Data into this player
+                name = loadedPlayer.name;
+                rankedPlayCount = loadedPlayer.rankedPlayCount;
+                scores = loadedPlayer.scores;
+                currentSavedVersion = loadedPlayer.currentSavedVersion;
+            }
+            else
+            {
+                //Leave data empty but update version to current, and save the newly generated user.
+                currentSavedVersion = currentVersion;
+                Save();
+            }
+        }
+
+        public void Save()
+        {
+            toolBox.fileHandler.SaveActivePlayer(this, id);
         }
 
         public Boolean OutdatedVersion()
         {
+            Console.WriteLine("Secret Version: " + currentVersion);
+            Console.WriteLine("Disk Version: " + currentSavedVersion);
             return !(currentSavedVersion == currentVersion);
         }
 
@@ -72,7 +104,7 @@ namespace ActivePlayerData
             //Add the time of the songs and their id to a sorted list, for easy sorting on time and get the songID as output.
             SortedList<DateTime, String> candidatesList = new SortedList<DateTime, String>();
             //Only grab the songs with an accuracy lower than the cuttoff level.
-            foreach (ActivePlayerScore candidate in candidates.Where(c => c.accuracy<accuracy && c.timeSet< DateTime.UtcNow.AddDays(-days)))
+            foreach (ActivePlayerScore candidate in candidates.Where(c => c.accuracy < accuracy && c.timeSet < DateTime.UtcNow.AddDays(-days)))
             {
                 candidatesList.Add(candidate.timeSet, candidate.songID);
             }

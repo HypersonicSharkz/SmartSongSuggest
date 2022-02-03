@@ -7,8 +7,8 @@ namespace ActivePlayerData
 {
     public class ActivePlayer
     {
-        private String currentVersion = "1.0";
-        public String currentSavedVersion;
+        private String currentVersion = "1.1";
+        public String currentSavedVersion { get; set; }
         public String id { get; set; }
         public String name { get; set; }
         public int rankedPlayCount { get; set; }
@@ -17,7 +17,7 @@ namespace ActivePlayerData
         public ActivePlayer (String scoreSaberID)
         {
             id = scoreSaberID;
-            currentSavedVersion = currentVersion;
+            //currentSavedVersion = currentVersion;
         }
 
         public Boolean OutdatedVersion()

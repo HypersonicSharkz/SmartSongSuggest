@@ -34,6 +34,8 @@ namespace TaohSongSuggest.UI
         [UIComponent("bgProgress")] 
         public ImageView bgProgress;
 
+        [UIComponent("statusText")]
+        public TextMeshProUGUI statusComponent;
 
         [UIComponent("SuggestBTN")]
         public NoTransitionsButton suggestBTN;
@@ -108,6 +110,7 @@ namespace TaohSongSuggest.UI
             try
             {
                 //Plugin.Log.Info($"{prog} / 1");
+                statusComponent.text = Managers.SongSuggestManager.toolBox.status;
 
                 bgProgress.color = Color.green;
 

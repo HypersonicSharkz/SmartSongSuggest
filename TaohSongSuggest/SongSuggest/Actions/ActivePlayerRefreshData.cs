@@ -3,7 +3,6 @@ using System.Linq;
 using SongLibraryNS;
 using ScoreSabersJson;
 using ActivePlayerData;
-using FileHandling;
 using WebDownloading;
 using DataHandling;
 
@@ -14,43 +13,17 @@ namespace Actions
     //Checks if updated/added scores is same or higher than playcount total, if higher or equal stop (more scores could have been uploaded hency also higher)
 
     //Should be considered merged with Active Player ... need to decide on what is data, what is the action etc.
-    public class ActivePlayerPrepareData
+    public class ActivePlayerRefreshData
     {
         public ToolBox toolBox { get; set; }
-        public void SetActivePlayer(String scoreSaberID)
+        public void RefreshActivePlayer(String scoreSaberID)
         {
             ActivePlayer activePlayer = toolBox.activePlayer;
-            FileHandler fileHandler = toolBox.fileHandler;
             WebDownloader webDownloader = toolBox.webDownloader;
             SongLibrary songLibrary = toolBox.songLibrary;
 
-            String searchmode = "recent";
-            //Load player if changed
-            if (activePlayer.id != scoreSaberID)
-            {
-                //Console.WriteLine("Attempt to find File");
-                //Console.WriteLine("Attempting to find this file name: " + activePlayerDataPath + activePlayer.id + ".json");
-                //Console.WriteLine("File Found? " + (File.Exists(activePlayerDataPath + userID.Text + ".json")));
-
-                //Check if cached data is available and load it, else prepare a new user
-                if (fileHandler.ActivePlayerExist(scoreSaberID))
-                {
-                    activePlayer = fileHandler.LoadActivePlayer(scoreSaberID);
-                    //Reset data if a new format is used.
-                    if (activePlayer.OutdatedVersion())
-                    {
-                        activePlayer = new ActivePlayer(scoreSaberID);
-                        //On a new user search by best PP scores so we can break when we hit non ranked songs.
-                        searchmode = "top";
-                    }
-                }
-                else
-                {
-                    activePlayer = new ActivePlayer(scoreSaberID);
-                    //On a new user search by best PP scores so we can break when we hit non ranked songs.
-                    searchmode = "top";
-                }
-            }
+            //Figure out which searchmode to use. If 0 count songs, go through all ranked, else update via recent
+            String searchmode = (toolBox.activePlayer.rankedPlayCount == 0) ? "top" : "recent";
 
             //Prepare for updating from web until a duplicate score is found (then remaining scores are correct)
             int page = 0;
@@ -101,7 +74,7 @@ namespace Actions
             activePlayer.rankedPlayCount = activePlayer.scores.Count();
 
             //Save updated player
-            fileHandler.SaveActivePlayer(activePlayer);
+            activePlayer.Save();
 
             //If new songs was added, save the library.
             if (songLibrary.Updated()) songLibrary.Save();

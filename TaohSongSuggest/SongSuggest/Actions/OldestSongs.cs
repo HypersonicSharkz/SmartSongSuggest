@@ -17,7 +17,7 @@ namespace Actions
 
         public void Oldest100ActivePlayer(OldestSongSettings settings)
         {
-            toolBox.SetActivePlayer(settings.scoreSaberID);
+            toolBox.RefreshActivePlayer();
             //Create empty playlist, and reset output window.
             playlist = new Playlist(settings.playlistSettings) {toolBox = toolBox};
 

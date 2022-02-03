@@ -68,20 +68,21 @@ namespace FileHandling
             File.WriteAllText(playlistPath + fileName + ".bplist", playlistString);
         }
 
-        public Boolean ActivePlayerExist(String scoreSaberID)
-        {
-            return File.Exists(activePlayerDataPath + scoreSaberID + ".json");
-        }
+        //public Boolean ActivePlayerExist(String scoreSaberID)
+        //{
+        //    return File.Exists(activePlayerDataPath + scoreSaberID + ".json");
+        //}
 
         public ActivePlayer LoadActivePlayer(String scoreSaberID)
         {
+            if (!File.Exists(activePlayerDataPath + scoreSaberID+ ".json")) SaveActivePlayer(new ActivePlayer(), scoreSaberID);
             String activePlayerString = File.ReadAllText(activePlayerDataPath + scoreSaberID + ".json");
             return JsonConvert.DeserializeObject<ActivePlayer>(activePlayerString, serializerSettings);
         }
 
-        public void SaveActivePlayer(ActivePlayer activePlayer)
+        public void SaveActivePlayer(ActivePlayer activePlayer, String fileName)
         {
-            File.WriteAllText(activePlayerDataPath + activePlayer.id + ".json", JsonConvert.SerializeObject(activePlayer));
+            File.WriteAllText(activePlayerDataPath + fileName+ ".json", JsonConvert.SerializeObject(activePlayer));
         }
 
         public Top10kPlayers LoadLinkedData()

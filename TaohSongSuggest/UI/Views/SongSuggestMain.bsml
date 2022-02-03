@@ -53,9 +53,16 @@
       </macro.as-host>
     </horizontal>
 
-  
+  <vertical horizontal-fit='Unconstrained' ignore-layout='true' anchor-pos-y='-62'>
+    <label id='statusText' text='ready' color='magenta'></label>
+  </vertical>
+
+
+
   <vertical id='bgProgress' bg-color='Green' ignore-layout='true' anchor-max-x='0.0' horizontal-fit='Unconstrained' preferred-height='1' vertical-fit='PreferredSize' background='panel-fade-gradient' anchor-pos-y='-28'/>
+
   
+
   <horizontal bg='panel-fade-gradient' id='buttonsPanel' bg-color='Black'>
     <button id='OldestBTN' text='100 Oldest' align='Center' font-size='7' italics='true' on-click='GenerateOldest' active='~oldest-show' hover-hint='First time generating might take a while as it needs to fetch all your ranked scores!'/>
     <button id='SuggestBTN' text='Suggest Songs' align='Center' font-size='7' italics='true' on-click='GeneratePlaylist' active='~suggest-show' hover-hint='First time generating might take a while as it needs to fetch all your ranked scores!'/>
