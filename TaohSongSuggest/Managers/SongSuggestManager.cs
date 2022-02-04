@@ -45,6 +45,18 @@ namespace TaohSongSuggest.Managers
 
         }
 
+        static async void UpdateProgessNew()
+        {
+            while (toolBox.status.ToLower() != "ready")
+            {
+                TSSFlowCoordinator.settingsView.RefreshProgressBar(songSuggest != null ? (float)songSuggest.songSuggestCompletion : 0);
+                await Task.Delay(200);
+            }
+
+            toolBox.status = "ready";
+            TSSFlowCoordinator.settingsView.RefreshProgressBar(1);
+        }
+
         public static void Init()
         {
             Task.Run(async () =>
@@ -69,6 +81,8 @@ namespace TaohSongSuggest.Managers
 
                     };
 
+                    
+
                     Console.WriteLine("Before Toolbox");
 
 
@@ -79,6 +93,8 @@ namespace TaohSongSuggest.Managers
 
                         toolBox = new ToolBox(fps, userinf.platformUserId);
                     });
+
+                    songSuggest = new SongSuggest(toolBox);
 
                 }
                 catch (Exception e)
@@ -123,7 +139,7 @@ namespace TaohSongSuggest.Managers
 
                     songSuggest = new SongSuggest(toolBox);
 
-                    IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() => UpdateProgess());
+                    IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() => UpdateProgessNew());
 
                     songSuggest.SuggestedSongs(linkedSettings);
 
@@ -174,6 +190,10 @@ namespace TaohSongSuggest.Managers
                         ignorePlayedDays = SettingsController.cfgInstance.old_oldest_days,
                         playlistSettings = playListSettings
                     };
+
+                    toolBox.status = "Starting Search";
+
+                    IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() => UpdateProgessNew());
 
                     oldestSongs.Oldest100ActivePlayer(settings);
 
