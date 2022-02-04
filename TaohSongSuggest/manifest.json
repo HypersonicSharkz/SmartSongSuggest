@@ -1,9 +1,9 @@
 ﻿{
     "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
-    "id": "TaohSongSuggest",
-    "name": "TaohSongSuggest",
+    "id": "SmartSongSuggest",
+    "name": "SmartSongSuggest",
     "author": "HypersonicSharkz & Taoh",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "description": "",
     "gameVersion": "1.19.0",
     "dependsOn": {

@@ -8,13 +8,13 @@ using HMUI;
 using SongDetailsCache.Structs;
 using SongDetailsCache;
 using SongCore.Utilities;
-using TaohSongSuggest.Managers;
+using SmartSongSuggest.Managers;
 using TMPro;
 using BeatSaberMarkupLanguage.ViewControllers;
 using System.Collections;
 using BeatSaberMarkupLanguage.Parser;
 
-namespace TaohSongSuggest.UI
+namespace SmartSongSuggest.UI
 {
     class LevelDetailViewController : INotifyPropertyChanged
     {
@@ -140,7 +140,7 @@ namespace TaohSongSuggest.UI
             if (t == null)
                 return;
 
-            BSMLParser.instance.Parse(Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "TaohSongSuggest.UI.Views.LevelDetailSuggestButtonsView.bsml"), t.gameObject, persController);
+            BSMLParser.instance.Parse(Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "SmartSongSuggest.UI.Views.LevelDetailSuggestButtonsView.bsml"), t.gameObject, persController);
             persController.rootTransform.localScale *= 0.7f;
             persController.sldv = GameObject.FindObjectOfType<StandardLevelDetailViewController>();
             persController.sldv.didChangeContentEvent += persController.didChangeContent;

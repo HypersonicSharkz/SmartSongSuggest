@@ -17,16 +17,16 @@ using LinkedData;
 using PlaylistNS;
 using Settings;
 using SongLibraryNS;
-using TaohSongSuggest.Configuration;
-using TaohSongSuggest.Managers;
+using SmartSongSuggest.Configuration;
+using SmartSongSuggest.Managers;
 using TMPro;
 using UnityEngine;
 using WebDownloading;
 
-namespace TaohSongSuggest.UI
+namespace SmartSongSuggest.UI
 {
     [HotReload(RelativePathToLayout = @"Views\SongSuggestMain.bsml")]
-    [ViewDefinition("TaohSongSuggest.UI.Views.SongSuggestMain.bsml")]
+    [ViewDefinition("SmartSongSuggest.UI.Views.SongSuggestMain.bsml")]
     class SettingsController : BSMLAutomaticViewController, INotifyPropertyChanged
     {
         public static PluginConfig cfgInstance;

@@ -5,7 +5,7 @@ using IPA.Config.Stores;
 using UnityEngine;
 
 [assembly: InternalsVisibleTo(GeneratedStore.AssemblyVisibilityTarget)]
-namespace TaohSongSuggest.Configuration
+namespace SmartSongSuggest.Configuration
 {
     internal class PluginConfig
     {

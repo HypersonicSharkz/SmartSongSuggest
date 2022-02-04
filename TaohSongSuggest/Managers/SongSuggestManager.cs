@@ -11,8 +11,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaohSongSuggest.Configuration;
-using TaohSongSuggest.UI;
+using SmartSongSuggest.Configuration;
+using SmartSongSuggest.UI;
 using WebDownloading;
 using BeatSaberPlaylistsLib;
 using System.IO;
@@ -20,7 +20,7 @@ using PlaylistNS;
 using DataHandling;
 using IPA.Utilities;
 
-namespace TaohSongSuggest.Managers
+namespace SmartSongSuggest.Managers
 {
     static class SongSuggestManager
     {
@@ -32,19 +32,6 @@ namespace TaohSongSuggest.Managers
 
 
         //Method for sending progress info to the UI on the main thread
-        static async void UpdateProgess()
-        {
-            songSuggest.songSuggestCompletion = 0;
-
-            while (songSuggest.songSuggestCompletion != 1)
-            {
-                TSSFlowCoordinator.settingsView.RefreshProgressBar((float)songSuggest.songSuggestCompletion);
-                await Task.Delay(200);
-            }
-            TSSFlowCoordinator.settingsView.RefreshProgressBar(1);
-
-        }
-
         static async void UpdateProgessNew()
         {
             while (toolBox.status.ToLower() != "ready")
@@ -53,7 +40,7 @@ namespace TaohSongSuggest.Managers
                 await Task.Delay(200);
             }
 
-            toolBox.status = "ready";
+            toolBox.status = "Ready";
             TSSFlowCoordinator.settingsView.RefreshProgressBar(1);
         }
 
@@ -63,7 +50,7 @@ namespace TaohSongSuggest.Managers
             {
                 try
                 {
-                    string configDir = Path.Combine(UnityGame.UserDataPath, "TaohSongSuggest") + "/";
+                    string configDir = Path.Combine(UnityGame.UserDataPath, "SmartSongSuggest") + "/";
 
                     //Check directories
                     Directory.CreateDirectory(Path.GetDirectoryName(Path.Combine(configDir, "Players/")));
@@ -93,8 +80,6 @@ namespace TaohSongSuggest.Managers
 
                         toolBox = new ToolBox(fps, userinf.platformUserId);
                     });
-
-                    songSuggest = new SongSuggest(toolBox);
 
                 }
                 catch (Exception e)

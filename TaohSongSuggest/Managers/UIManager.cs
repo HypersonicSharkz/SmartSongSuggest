@@ -9,15 +9,15 @@ using BeatSaberMarkupLanguage;
 using System.Reflection;
 using UnityEngine;
 using System.Collections;
-using TaohSongSuggest.UI;
+using SmartSongSuggest.UI;
 
-namespace TaohSongSuggest.Managers
+namespace SmartSongSuggest.Managers
 {
     static class UIManager
     {
         public static void Init()
         {
-            MenuButtons.instance.RegisterButton(new MenuButton("Taoh Song Suggest", "Smart ranked song suggestions", ShowFlow, true));
+            MenuButtons.instance.RegisterButton(new MenuButton("Smart Song Suggest", "Smart ranked song suggestions", ShowFlow, true));
         }
 
         internal static FlowCoordinator _parentFlow { get; private set; }

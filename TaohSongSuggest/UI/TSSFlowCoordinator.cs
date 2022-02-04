@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaohSongSuggest.Managers;
+using SmartSongSuggest.Managers;
 using UnityEngine;
 
-namespace TaohSongSuggest.UI
+namespace SmartSongSuggest.UI
 {
     class TSSFlowCoordinator : FlowCoordinator
     {
@@ -23,7 +23,7 @@ namespace TaohSongSuggest.UI
 
             if (firstActivation)
             {
-                SetTitle("Taoh Song Suggest");
+                SetTitle("Smart Song Suggest");
                 settingsView = BeatSaberUI.CreateViewController<SettingsController>();
 
                 ProvideInitialViewControllers(settingsView);

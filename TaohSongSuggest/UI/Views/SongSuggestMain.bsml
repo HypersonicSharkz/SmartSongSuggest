@@ -54,7 +54,7 @@
     </horizontal>
 
   <vertical horizontal-fit='Unconstrained' ignore-layout='true' anchor-pos-y='-62'>
-    <label id='statusText' text='ready' color='magenta'></label>
+    <label id='statusText' text='Ready' color='magenta'></label>
   </vertical>
 
 

@@ -8,14 +8,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using TaohSongSuggest.Configuration;
-using TaohSongSuggest.Managers;
-using TaohSongSuggest.UI;
+using SmartSongSuggest.Configuration;
+using SmartSongSuggest.Managers;
+using SmartSongSuggest.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using IPALogger = IPA.Logging.Logger;
 
-namespace TaohSongSuggest
+namespace SmartSongSuggest
 {
     [Plugin(RuntimeOptions.DynamicInit)]
     public class Plugin
@@ -34,14 +34,14 @@ namespace TaohSongSuggest
         public void Init(IPALogger logger, Config conf)
         {
             Log = logger;
-            Log.Info("TaohSongSuggest initialized.");
+            Log.Info("SmartSongSuggest initialized.");
             SettingsController.cfgInstance = conf.Generated<PluginConfig>();
         }
 
         [OnStart]
         public void OnApplicationStart()
         {
-            harmony = new Harmony("HypersonicSharkz.BeatSaber.TaohSongSuggest");
+            harmony = new Harmony("HypersonicSharkz.BeatSaber.SmartSongSuggest");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
 
             UIManager.Init();

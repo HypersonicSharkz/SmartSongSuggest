@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TaohSongSuggest.UI
+namespace SmartSongSuggest.UI
 {
     class MapListController : BSMLAutomaticViewController, TableView.IDataSource
     {

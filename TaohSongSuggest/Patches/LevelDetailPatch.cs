@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaohSongSuggest.UI;
+using SmartSongSuggest.UI;
 using UnityEngine;
 
-namespace TaohSongSuggest.Patches
+namespace SmartSongSuggest.Patches
 {
     [HarmonyPatch(typeof(StandardLevelDetailViewController), "DidActivate")]
     static class LevelDetailPatch
