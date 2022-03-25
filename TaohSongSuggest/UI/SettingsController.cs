@@ -43,6 +43,9 @@ namespace SmartSongSuggest.UI
         [UIComponent("OldestBTN")]
         public NoTransitionsButton oldestBTN;
 
+        [UIComponent("SuggestBTNNon")]
+        public NoTransitionsButton suggestBTNNon;
+
         bool _suggestShow = true;
 
         [UIValue("suggest-show")]
@@ -95,14 +98,14 @@ namespace SmartSongSuggest.UI
 
         void GeneratePlaylist()
         {
-            Plugin.Log.Info("Generate pretty please");
-
-            SongSuggestManager.SuggestSongs();
+            SongSuggestManager.SuggestSongs(cfgInstance.removeOptimizedScores);
         }
+
         public void SetButtonsEnable(bool enable)
         {
             suggestBTN.interactable = enable;
             oldestBTN.interactable = enable;
+            suggestBTNNon.interactable = enable;
         }
 
         public void RefreshProgressBar(float prog)
@@ -110,7 +113,7 @@ namespace SmartSongSuggest.UI
             try
             {
                 //Plugin.Log.Info($"{prog} / 1");
-                statusComponent.text = Managers.SongSuggestManager.toolBox.status;
+                statusComponent.text = SongSuggestManager.toolBox.status;
 
                 bgProgress.color = Color.green;
 

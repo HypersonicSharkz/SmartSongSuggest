@@ -13,6 +13,7 @@ namespace SmartSongSuggest.UI
     class TSSFlowCoordinator : FlowCoordinator
     {
         internal static SettingsController settingsView;
+        internal static SettingsLeftController settingsLeftView;
         internal static MapListController mapListView;
 
         public static TSSFlowCoordinator Instance;
@@ -25,8 +26,9 @@ namespace SmartSongSuggest.UI
             {
                 SetTitle("Smart Song Suggest");
                 settingsView = BeatSaberUI.CreateViewController<SettingsController>();
+                settingsLeftView = BeatSaberUI.CreateViewController<SettingsLeftController>();
 
-                ProvideInitialViewControllers(settingsView);
+                ProvideInitialViewControllers(settingsView, settingsLeftView);
 
                 showBackButton = true;
             }

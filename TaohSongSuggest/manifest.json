@@ -3,7 +3,7 @@
     "id": "SmartSongSuggest",
     "name": "SmartSongSuggest",
     "author": "HypersonicSharkz & Taoh",
-    "version": "1.4.3",
+    "version": "1.5.3",
     "description": "",
     "gameVersion": "1.19.0",
     "dependsOn": {
@@ -12,6 +12,5 @@
         "BeatSaberPlaylistsLib": "^1.5.0",
         "BeatSaberMarkupLanguage": "^1.5.0",
         "SongDetailsCache": "^1.1.2"
-    },
-    "features": []
+    }
 }

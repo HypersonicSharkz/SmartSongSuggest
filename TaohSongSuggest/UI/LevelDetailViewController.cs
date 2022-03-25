@@ -40,8 +40,10 @@ namespace SmartSongSuggest.UI
         [UIComponent("addToLikedBTN")]
         public TextMeshProUGUI addToLikedBTNText;
 
-        bool _ignoreActive = true;
-        bool _likeActive = true;
+        [UIComponent("rankPlateText")]
+        public TextMeshProUGUI rankPlateText;
+
+        bool _mapRanked;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -53,6 +55,8 @@ namespace SmartSongSuggest.UI
         private string _likeColor;
 
         private int _banDays;
+
+        private string _rankPlate;
 
         [UIValue("ban-hover")]
         private string BanHover
@@ -111,6 +115,16 @@ namespace SmartSongSuggest.UI
             }
         }
 
+        [UIValue("rankplate")]
+        private string RankPlate
+        {
+            get => _rankPlate;
+            set
+            {
+                _rankPlate = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(RankPlate)));
+            }
+        }
 
 
 
@@ -167,11 +181,12 @@ namespace SmartSongSuggest.UI
 
             BanDays = "60";
 
-            _ignoreActive = false;
-            _likeActive = false;
+            _mapRanked = false;
 
             addToIgnoredBTN.gameObject.SetActive(false);
             addToLikedBTN.gameObject.SetActive(false);
+
+            _rankPlate = "";
 
 
 
@@ -179,17 +194,30 @@ namespace SmartSongSuggest.UI
             if (sldv.beatmapLevel is CustomBeatmapLevel && Plugin.songDetails.songs.FindByHash(Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel), out x))
             {
                 SongDifficulty difficulty;
-                x.GetDifficulty(out difficulty, (MapDifficulty)sldv.selectedDifficultyBeatmap.difficulty); 
+                x.GetDifficulty(out difficulty, (MapDifficulty)sldv.selectedDifficultyBeatmap.difficulty);
 
-                _ignoreActive = difficulty.ranked;
-                _likeActive = difficulty.ranked;
+                _mapRanked = difficulty.ranked;
+
+               
+                string levelHash = Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel);
+                string diffLabel = sldv.selectedDifficultyBeatmap.difficulty.Name();
+
+                Plugin.Log.Info(levelHash + " || " + diffLabel);
 
                 //Forgot to check if map was ranked before checking ban... oops
                 if (difficulty.ranked)
                 {
-                    if (SongSuggestManager.toolBox.songBanning.IsBanned(Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel), sldv.selectedDifficultyBeatmap.difficulty.Name()))
+                    string songrank = SongSuggestManager.toolBox.GetSongRanking(levelHash, diffLabel);
+
+                    if (songrank != "" && SettingsController.cfgInstance.showRankPlate)
+                        _rankPlate = songrank + "/" + SongSuggestManager.toolBox.GetSongRankingCount();
+                        
+
+                    Plugin.Log.Info("getRank back: " + _rankPlate);
+
+                    if (SongSuggestManager.toolBox.songBanning.IsBanned(levelHash, diffLabel))
                     {
-                        Console.WriteLine("Song is banned!");
+                        Plugin.Log.Info("Song is banned!");
                         BanHover = "Click to unban map from suggestions";
                         BanColor = "red";
                     }
@@ -201,29 +229,31 @@ namespace SmartSongSuggest.UI
                     }
 
 
-                    if (SongSuggestManager.toolBox.songLiking.IsLiked(Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel), sldv.selectedDifficultyBeatmap.difficulty.Name()))
+                    if (SongSuggestManager.toolBox.songLiking.IsLiked(levelHash, diffLabel))
                     {
-                        Console.WriteLine("Song is liked!");
+                        Plugin.Log.Info("Song is liked!");
                         LikeHover = "Click to remove the map from songs the suggestions are based on";
                         LikeColor = "green";
                     }
                     else
                     {
-                        LikeHover = "Want more maps like this in the suggestions? Press this";
+                        LikeHover = "Want more maps like this in the suggestions? Press this to like the song";
                         LikeColor = "white";
                     }
                 }
 
                 SharedCoroutineStarter.instance.StartCoroutine(SetActiveLate());
-            } 
+            }
+
+            rankPlateText.text = _rankPlate;
 
         }
 
         IEnumerator SetActiveLate()
         {
             yield return new WaitForEndOfFrame();
-            addToIgnoredBTN.gameObject.SetActive(_ignoreActive);
-            addToLikedBTN.gameObject.SetActive(_likeActive);
+            addToIgnoredBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.showBanButton);
+            addToLikedBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.showLikeButton);
         }
 
         void CheckBanState()

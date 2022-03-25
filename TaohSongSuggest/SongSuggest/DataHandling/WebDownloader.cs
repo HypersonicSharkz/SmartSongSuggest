@@ -2,7 +2,7 @@
 using System.Net;
 using ScoreSabersJson;
 using Newtonsoft.Json;
-using DataHandling;
+using SongSuggestNS;
 using System.IO;
 using Data;
 
@@ -10,11 +10,10 @@ namespace WebDownloading
 {
     public class WebDownloader
     {
-        public ToolBox toolBox { get; set; }
+        public SongSuggest songSuggest { get; set; }
 
-        public WebClient client = new WebClient();
-        public JsonSerializerSettings serializerSettings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-
+        private WebClient client = new WebClient();
+        private JsonSerializerSettings serializerSettings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
 
         public WebDownloader()
         {
@@ -27,8 +26,6 @@ namespace WebDownloading
         {
             try
             {
-                //Console.WriteLine("Starting page " + page);
-
                 //https://scoresaber.com/api/player/76561197993806676/scores?limit=20&sort=recent&page=2
                 String scoresJSON = client.DownloadString("https://scoresaber.com/api/player/" + id + "/scores?limit=" + count + "&sort=" + sorting + "&page=" + page);
                 return JsonConvert.DeserializeObject<PlayerScoreCollection>(scoresJSON, serializerSettings);
@@ -45,8 +42,6 @@ namespace WebDownloading
         {
             try
             {
-                Console.WriteLine("Starting page " + page);
-
                 //https://scoresaber.com/api/players?page=2
                 String playersJSON = client.DownloadString("https://scoresaber.com/api/players?page=" + page);
                 return JsonConvert.DeserializeObject<PlayerCollection>(playersJSON, serializerSettings);
@@ -83,7 +78,6 @@ namespace WebDownloading
             {
                 //https://scoresaber.com/api/leaderboard/by-id/382164/info
                 String songInfo = client.DownloadString("https://scoresaber.com/api/leaderboard/by-id/" + songID + "/info");
-                Console.WriteLine("Unknown Song found and downloaded");
                 return JsonConvert.DeserializeObject<LeaderboardInfo>(songInfo, serializerSettings);
             }
             catch
@@ -95,48 +89,57 @@ namespace WebDownloading
 
         public void UpdateLinkData()
         {
-            toolBox.status = "Getting Files.meta";
+            songSuggest.status = "Getting Files.meta";
             //Let us check meta for updates.
             string metaWebPath = "https://raw.githubusercontent.com/HypersonicSharkz/SmartSongSuggest/master/TaohSongSuggest/Configuration/InitialData/Files.meta";
             string metaText = client.DownloadString(metaWebPath);
 
+            Console.WriteLine(metaText);
+
             FilesMeta filesMetaWeb = JsonConvert.DeserializeObject<FilesMeta>(metaText, serializerSettings);
-            FilesMeta filesMetaLocal = toolBox.fileHandler.LoadFilesMeta();
+            FilesMeta filesMetaLocal = songSuggest.fileHandler.LoadFilesMeta();
 
             //Check if local version is same as server version, else download the server version.
             //Also pulls an update of song library to add to local library.
+            //Do not like that filepaths are so deep in data. Might need a better way of handling it.
             if (filesMetaWeb.top10kUpdated != filesMetaLocal.top10kUpdated)
             {
                 //Top 10k Download
                 //where to get the files from and where to save it.
                 string webPath = "https://raw.githubusercontent.com/HypersonicSharkz/SmartSongSuggest/master/TaohSongSuggest/Configuration/InitialData/Top10KPlayers.json";
-                string filePath = toolBox.fileHandler.top10kPlayersPath + "tmp10k.json";
-                string currentJSONPath = toolBox.fileHandler.top10kPlayersPath + "Top10KPlayers.json";
+                string filePath = songSuggest.fileHandler.filePathSettings.top10kPlayersPath + "tmp10k.json";
+                string currentJSONPath = songSuggest.fileHandler.filePathSettings.top10kPlayersPath + "Top10KPlayers.json";
 
                 //Download the file to a tmp file, and when done replace current file.
-                toolBox.status = "Downloading Player Scores";
+                songSuggest.status = "Downloading Player Scores";
                 client.DownloadFile(webPath, filePath);
-                //It is fine to delete a file that is not there.
-                toolBox.status = "Replacing Player Scores";
+                //It is fine to delete a file that is not there, so no need to check if it is there first.
+                songSuggest.status = "Replacing Player Scores";
                 File.Delete(currentJSONPath);
                 File.Move(filePath, currentJSONPath);
 
                 //Song Library pull
                 webPath = "https://raw.githubusercontent.com/HypersonicSharkz/SmartSongSuggest/master/TaohSongSuggest/Configuration/InitialData/SongLibrary.json";
-                filePath = toolBox.fileHandler.songLibraryPath + "tmplib.json";
+                filePath = songSuggest.fileHandler.filePathSettings.songLibraryPath + "tmplib.json";
                 //Download the file to a tmp file, add contents, and delete tmp when done.
-                toolBox.status = "Downloading Song Library";
+                songSuggest.status = "Downloading Song Library";
                 client.DownloadFile(webPath, filePath);
-                toolBox.status = "Combining Song Libraries";
-                toolBox.fileHandler.AddSongLibrary(filePath);
-                toolBox.status = "Removing Temporary Library";
+                songSuggest.status = "Combining Song Libraries";
+                songSuggest.fileHandler.AddSongLibrary(filePath);
+                songSuggest.status = "Removing Temporary Library";
                 File.Delete(filePath);
 
+
+                Console.WriteLine("Web: {0} - Files: {1}", filesMetaWeb.GetLargeVersion(), filesMetaLocal.GetLargeVersion());
+                //Check if the data require a profile reset on next update of the activeplayer
+                if (filesMetaWeb.GetLargeVersion() != filesMetaLocal.GetLargeVersion())
+                {
+                    songSuggest.fileHandler.TogglePlayerRefresh();
+                }
+
                 //save related Files.meta
-                toolBox.fileHandler.SaveFilesMeta(filesMetaWeb);
+                songSuggest.fileHandler.SaveFilesMeta(filesMetaWeb);
             }
-            //toolBox.fileHandler.SaveLinkedData(client.DownloadString(webPath));
-            
         }
     }
 }

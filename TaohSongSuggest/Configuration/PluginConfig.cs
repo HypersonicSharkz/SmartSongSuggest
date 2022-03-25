@@ -12,11 +12,19 @@ namespace SmartSongSuggest.Configuration
         public static PluginConfig Instance { get; set; }
         public virtual int fromRank { get; set; } = 1;
         public virtual int toRank { get; set; } = 10000;
-        public virtual bool ignorePlayedAll { get; set; } = true;
-        public virtual int ignorePlayedDays { get; set; } = 60;
+        public virtual bool ignorePlayedAll { get; set; } = false;
+        public virtual int ignorePlayedDays { get; set; } = 30;
         public virtual int requiredMatches { get; set; } = 90;
         public virtual bool useLikedSongs { get; set; }
         public virtual bool fillLikedSongs { get; set; }
+        public virtual int modifierPP { get; set; } = 20;
+        public virtual int modifierStyle { get; set; } = 100;
+        public virtual int modifierOverweight { get; set; } = 60;
+        public virtual bool removeOptimizedScores { get; set; } = true;
+
+        public virtual bool showRankPlate { get; set; } = true;
+        public virtual bool showLikeButton { get; set; } = true;
+        public virtual bool showBanButton { get; set; } = true;
 
 
         public virtual float old_highest_acc { get; set; } = 100;

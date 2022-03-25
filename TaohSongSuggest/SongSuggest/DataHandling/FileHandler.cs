@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Forms;
 using SongLibraryNS;
 using System.IO;
 using ActivePlayerData;
@@ -8,7 +7,7 @@ using LinkedData;
 using BanLike;
 using System.Collections.Generic;
 using Data;
-using DataHandling;
+using SongSuggestNS;
 using Settings;
 
 
@@ -18,127 +17,131 @@ namespace FileHandling
     {
         private JsonSerializerSettings serializerSettings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
 
-        public ToolBox toolBox { get; set; }
- 
-        public String songLibraryPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
-        public String playlistPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
-        public String activePlayerDataPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\Players\\";
-        public String top10kPlayersPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
-        public String bannedSongsPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
-        public String likedSongsPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
-        public String filesDataPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
-
-        public void UpdatePaths(FilePathSettings filePathSettings)
-        {
-            if (filePathSettings.songLibraryPath != null) this.songLibraryPath = filePathSettings.songLibraryPath;
-            if (filePathSettings.playlistPath != null) this.playlistPath = filePathSettings.playlistPath;
-            if (filePathSettings.activePlayerDataPath != null) this.activePlayerDataPath = filePathSettings.activePlayerDataPath;
-            if (filePathSettings.top10kPlayersPath != null) this.top10kPlayersPath = filePathSettings.top10kPlayersPath;
-            if (filePathSettings.bannedSongsPath != null) this.bannedSongsPath = filePathSettings.bannedSongsPath;
-            if (filePathSettings.likedSongsPath != null) this.likedSongsPath = filePathSettings.likedSongsPath;
-            if (filePathSettings.filesDataPath != null) this.filesDataPath = filePathSettings.filesDataPath;
-        }
+        public SongSuggest songSuggest { get; set; }
+        public FilePathSettings filePathSettings { get; set; }
 
         //Loads the primary song library from disc
-        //Needs to be changed so JSON is handled here instead of in library
-        public void LoadSongLibrary(SongLibrary songLibrary)
+        public List<Song> LoadSongLibrary()
         {
-            if (!File.Exists(songLibraryPath + "SongLibrary.json")) SaveSongLibrary("[]");
-            String songLibraryJSON = File.ReadAllText(songLibraryPath+"SongLibrary.json");
-            songLibrary.SetJSON(songLibraryJSON);
+            if (!File.Exists(filePathSettings.songLibraryPath + "SongLibrary.json")) SaveSongLibrary(new List<Song>());
+            String songLibraryJSON = File.ReadAllText(filePathSettings.songLibraryPath + "SongLibrary.json");
+            return JsonConvert.DeserializeObject<List<Song>>(songLibraryJSON, serializerSettings);
         }
 
-        //Needs updating so JSON is handled here instead of in library
-        public void SaveSongLibrary(String songLibraryJSON)
+        //Save the known Songs in the Library
+        public void SaveSongLibrary(List<Song> songLibrary)
         {
-            File.WriteAllText(songLibraryPath+ "SongLibrary.json", songLibraryJSON);
+            File.WriteAllText(filePathSettings.songLibraryPath + "SongLibrary.json", JsonConvert.SerializeObject(songLibrary));
         }
 
         //Add the songs from a library from the disc to the to the active library, and if new songs was added save the active library.
-        //Needs JSON handling moved here instead of library.
         public void AddSongLibrary(String path)
         {
             String songLibraryJSON = File.ReadAllText(path);
-            toolBox.songLibrary.AddLibrary(songLibraryJSON);
-            if (toolBox.songLibrary.Updated()) toolBox.songLibrary.Save();
+            songSuggest.songLibrary.AddLibrary(JsonConvert.DeserializeObject<List<Song>>(songLibraryJSON, serializerSettings));
         }
 
         public void SavePlaylist(String playlistString, String fileName)
         {
-            File.WriteAllText(playlistPath + fileName + ".bplist", playlistString);
+            File.WriteAllText(filePathSettings.playlistPath + fileName + ".bplist", playlistString);
         }
 
-        //public Boolean ActivePlayerExist(String scoreSaberID)
-        //{
-        //    return File.Exists(activePlayerDataPath + scoreSaberID + ".json");
-        //}
-
+        //Load Active Players Data
         public ActivePlayer LoadActivePlayer(String scoreSaberID)
         {
-            if (!File.Exists(activePlayerDataPath + scoreSaberID+ ".json")) SaveActivePlayer(new ActivePlayer(), scoreSaberID);
-            String activePlayerString = File.ReadAllText(activePlayerDataPath + scoreSaberID + ".json");
+            if (!File.Exists(filePathSettings.activePlayerDataPath + scoreSaberID+ ".json")) SaveActivePlayer(new ActivePlayer(), scoreSaberID);
+            String activePlayerString = File.ReadAllText(filePathSettings.activePlayerDataPath + scoreSaberID + ".json");
             return JsonConvert.DeserializeObject<ActivePlayer>(activePlayerString, serializerSettings);
         }
 
+        //Save Active Players Data
         public void SaveActivePlayer(ActivePlayer activePlayer, String fileName)
         {
-            File.WriteAllText(activePlayerDataPath + fileName+ ".json", JsonConvert.SerializeObject(activePlayer));
+            File.WriteAllText(filePathSettings.activePlayerDataPath + fileName+ ".json", JsonConvert.SerializeObject(activePlayer));
         }
 
-        public Top10kPlayers LoadLinkedData()
+        //Is there a player Refresh File
+        public Boolean CheckPlayerRefresh()
         {
-            String linkPlayerJSON = File.ReadAllText(top10kPlayersPath+ "Top10KPlayers.json");
-            Top10kPlayers players = new Top10kPlayers();
-            players.SetJSON(linkPlayerJSON);
-            return players;
+            return File.Exists(filePathSettings.activePlayerDataPath + "RefreshPlayer.txt");
         }
 
-        public void SaveLinkedData(String top10kPlayersString)
+        //Adds/removes the player refresh file
+        public void TogglePlayerRefresh()
         {
-            File.WriteAllText(top10kPlayersPath + "Top10kPlayers.json", top10kPlayersString);
+            if(CheckPlayerRefresh())
+            //Remove File
+            {
+                File.Delete(filePathSettings.activePlayerDataPath + "RefreshPlayer.txt");
+            }
+            //Add File
+            else
+            {
+                File.WriteAllText(filePathSettings.activePlayerDataPath + "RefreshPlayer.txt", "Remind Me: Reset Player Profile");
+            }
+        }
+
+        public List<Top10kPlayer> LoadLinkedData()
+        {
+            String linkPlayerJSON = File.ReadAllText(filePathSettings.top10kPlayersPath + "Top10KPlayers.json");
+            return JsonConvert.DeserializeObject<List<Top10kPlayer>>(linkPlayerJSON, serializerSettings);
+        }
+
+        public void SaveLinkedData(List<Top10kPlayer> players)
+        {
+            File.WriteAllText(filePathSettings.top10kPlayersPath + "Top10kPlayers.json", JsonConvert.SerializeObject(players));
         }
  
         public Boolean LinkedDataExist()
         {
-            return File.Exists(top10kPlayersPath+ "Top10KPlayers.json");
+            return File.Exists(filePathSettings.top10kPlayersPath + "Top10KPlayers.json");
         }
 
         public List<SongLike> LoadLikedSongs()
         {
-            if (!File.Exists(likedSongsPath+"Liked Songs.json")) SaveLikedSongs(new List<SongLike>());
-            String likedSongsString = File.ReadAllText(likedSongsPath + "Liked Songs.json");
+            if (!File.Exists(filePathSettings.likedSongsPath +"Liked Songs.json")) SaveLikedSongs(new List<SongLike>());
+            String likedSongsString = File.ReadAllText(filePathSettings.likedSongsPath + "Liked Songs.json");
             return JsonConvert.DeserializeObject<List<SongLike>>(likedSongsString, serializerSettings);
         }
 
         public void SaveLikedSongs(List<SongLike> songLiking)
         {
-            File.WriteAllText(likedSongsPath + "Liked Songs.json", JsonConvert.SerializeObject(songLiking));
+            File.WriteAllText(filePathSettings.likedSongsPath + "Liked Songs.json", JsonConvert.SerializeObject(songLiking));
         }
 
         public List<SongBan> LoadBannedSongs()
         {
-            if (!File.Exists(bannedSongsPath+"Banned Songs.json")) SaveBannedSongs(new List<SongBan>());
-            String bannedSongsString = File.ReadAllText(bannedSongsPath + "Banned Songs.json");
+            if (!File.Exists(filePathSettings.bannedSongsPath +"Banned Songs.json")) SaveBannedSongs(new List<SongBan>());
+            String bannedSongsString = File.ReadAllText(filePathSettings.bannedSongsPath + "Banned Songs.json");
             return JsonConvert.DeserializeObject<List<SongBan>>(bannedSongsString, serializerSettings);            
         }
 
         public void SaveBannedSongs(List<SongBan> songBans)
         {
-            File.WriteAllText(bannedSongsPath + "Banned Songs.json", JsonConvert.SerializeObject(songBans));
+            File.WriteAllText(filePathSettings.bannedSongsPath + "Banned Songs.json", JsonConvert.SerializeObject(songBans));
         }
 
         public FilesMeta LoadFilesMeta()
         {
-            if (!File.Exists(filesDataPath + "Files.meta")) SaveFilesMeta(new FilesMeta());
-            String filesDataString = File.ReadAllText(filesDataPath + "Files.meta");
+            if (!File.Exists(filePathSettings.filesDataPath + "Files.meta")) SaveFilesMeta(new FilesMeta());
+            String filesDataString = File.ReadAllText(filePathSettings.filesDataPath + "Files.meta");
             return JsonConvert.DeserializeObject<FilesMeta>(filesDataString, serializerSettings);
         }
 
         public void SaveFilesMeta(FilesMeta filesData)
         {
-            File.WriteAllText(filesDataPath + "Files.meta", JsonConvert.SerializeObject(filesData));
+            File.WriteAllText(filePathSettings.filesDataPath + "Files.meta", JsonConvert.SerializeObject(filesData));
+        }
+        public List<String> LoadRankedSuggestions()
+        {
+            if (!File.Exists(filePathSettings.lastSuggestionsPath + "LastSuggestions.json")) SaveRankedSuggestions(new List<String>());
+            String filesDataString = File.ReadAllText(filePathSettings.lastSuggestionsPath + "LastSuggestions.json");
+            return JsonConvert.DeserializeObject<List<String>>(filesDataString, serializerSettings);
         }
 
+        public void SaveRankedSuggestions(List<String> rankedSuggestions)
+        {
+            File.WriteAllText(filePathSettings.lastSuggestionsPath + "LastSuggestions.json", JsonConvert.SerializeObject(rankedSuggestions));
+        }
     }
-
 }

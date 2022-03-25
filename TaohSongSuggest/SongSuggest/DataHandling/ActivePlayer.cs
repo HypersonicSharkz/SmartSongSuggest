@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using DataHandling;
+using SongSuggestNS;
 
 namespace ActivePlayerData
 {
     public class ActivePlayer
     {
-        private ToolBox toolBox;
-        private String currentVersion = "1.1";
+        private SongSuggest songSuggest;
+        private String currentVersion = "1.2";
         public String currentSavedVersion { get; set; }
         public String id { get; set; }
         public String name { get; set; }
@@ -19,35 +19,53 @@ namespace ActivePlayerData
         //No selected user (json extract or new user)
         public ActivePlayer()
         {
-            Console.WriteLine("Non reference empty constructor called");
         }
 
-        //Loads the user from drive if cache is available and correct version, else creates a new user.
-        public ActivePlayer(ToolBox toolBox)
+        //If there has been a user switch (and user is not -1) load user, else make an empty object the user from drive if cache is available and correct version, else creates a new user.
+        public void LoadActivePlayer(SongSuggest songSuggest)
         {
-            this.toolBox = toolBox;
-            id = toolBox.activePlayerID;
-            ActivePlayer loadedPlayer = toolBox.fileHandler.LoadActivePlayer(id);
-            //Verify the loadedPlayer is in correct format.
-            if (loadedPlayer.currentSavedVersion == currentVersion)
+            //First chance to save the active songSuggest, as loaded instances do not have one, and it is kept private to avoid 
+            //saving it ... need to seperate data and actions to avoid this.
+            this.songSuggest = songSuggest;
+
+            //Find the ID that was requested.
+            String requestedID = songSuggest.activePlayerID;
+            String currentID = id;
+            
+            //Update the ID of the active user, then figure out if there is cached data to load.
+            id = requestedID;
+
+            //Load data if requested user has changed to a new valid user (not -1) and attempt to load the user, else keep the current.
+            if (currentID != requestedID && requestedID != "-1")
             {
-                //Move Data into this player
-                name = loadedPlayer.name;
-                rankedPlayCount = loadedPlayer.rankedPlayCount;
-                scores = loadedPlayer.scores;
-                currentSavedVersion = loadedPlayer.currentSavedVersion;
+                Console.WriteLine("Attempting to Load Player");
+                ActivePlayer loadedPlayer = songSuggest.fileHandler.LoadActivePlayer(requestedID);
+                //Verify the loadedPlayer is in correct format.
+                if (loadedPlayer.currentSavedVersion == currentVersion)
+                {
+                    //Move Data into this player
+                    name = loadedPlayer.name;
+                    rankedPlayCount = loadedPlayer.rankedPlayCount;
+                    scores = loadedPlayer.scores;
+                    currentSavedVersion = loadedPlayer.currentSavedVersion;
+                }
+                else
+                {
+                    //Leave data empty but update version to current, and set the user ID so it can be saved, and save the newly generated user.
+                    currentSavedVersion = currentVersion;
+                    Save();
+                }
             }
             else
             {
-                //Leave data empty but update version to current, and save the newly generated user.
-                currentSavedVersion = currentVersion;
-                Save();
+                Console.WriteLine("Correct player was loaded or -1 user");
             }
+            //Once data is updated, set the current cached users to this.
         }
 
         public void Save()
         {
-            toolBox.fileHandler.SaveActivePlayer(this, id);
+            songSuggest.fileHandler.SaveActivePlayer(this, id);
         }
 
         public Boolean OutdatedVersion()
@@ -148,6 +166,12 @@ namespace ActivePlayerData
 
             //select the first requested_amount candidates (or amount available if less than requested_amount ranked songs)
             return topList;
+        }
+
+        public void ResetScores()
+        {
+            rankedPlayCount = 0;
+            scores = new SortedDictionary<String, ActivePlayerScore>();
         }
     }
 }

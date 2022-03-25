@@ -4,7 +4,7 @@ using SongLibraryNS;
 using ScoreSabersJson;
 using ActivePlayerData;
 using WebDownloading;
-using DataHandling;
+using SongSuggestNS;
 
 namespace Actions
 {
@@ -15,15 +15,25 @@ namespace Actions
     //Should be considered merged with Active Player ... need to decide on what is data, what is the action etc.
     public class ActivePlayerRefreshData
     {
-        public ToolBox toolBox { get; set; }
-        public void RefreshActivePlayer(String scoreSaberID)
+        public SongSuggest songSuggest { get; set; }
+        public void RefreshActivePlayer()
         {
-            ActivePlayer activePlayer = toolBox.activePlayer;
-            WebDownloader webDownloader = toolBox.webDownloader;
-            SongLibrary songLibrary = toolBox.songLibrary;
+            ActivePlayer activePlayer = songSuggest.activePlayer;
+            WebDownloader webDownloader = songSuggest.webDownloader;
+            SongLibrary songLibrary = songSuggest.songLibrary;
+
+            //Have the active player verify the active version and the wanted version is the same, else load any cached version or present an empty user
+            activePlayer.LoadActivePlayer(songSuggest);
+
+            //Reset Data if required
+            if (songSuggest.fileHandler.CheckPlayerRefresh())
+            {
+                activePlayer.ResetScores();
+                songSuggest.fileHandler.TogglePlayerRefresh();
+            }
 
             //Figure out which searchmode to use. If 0 count songs, go through all ranked, else update via recent
-            String searchmode = (toolBox.activePlayer.rankedPlayCount == 0) ? "top" : "recent";
+            String searchmode = (songSuggest.activePlayer.rankedPlayCount == 0) ? "top" : "recent";
 
             //Prepare for updating from web until a duplicate score is found (then remaining scores are correct)
             int page = 0;
@@ -32,12 +42,12 @@ namespace Actions
             while (continueLoad)
             {
                 page++;
-                toolBox.status = "Downloading Player History Page: " + page + "/" + maxPage;
+                songSuggest.status = "Downloading Player History Page: " + page + "/" + maxPage;
                 Console.WriteLine("Page Start: " + page + " Search Mode: " + searchmode);
                 PlayerScoreCollection playerScoreCollection = webDownloader.GetScores(activePlayer.id, searchmode, 100, page);
                 maxPage = ""+Math.Ceiling((double)playerScoreCollection.metadata.total / 100);
                 //PlayerScoreCollection playerScoreCollection = JsonConvert.DeserializeObject<PlayerScoreCollection>(scoresJSON, serializerSettings);
-                toolBox.status = "Parsing Player History Page: " + page + "/" + maxPage;
+                songSuggest.status = "Parsing Player History Page: " + page + "/" + maxPage;
                 Console.WriteLine("Page Parse: " + page);
                 //Parse Player Scores
                 foreach (PlayerScore score in playerScoreCollection.playerScores)
@@ -80,7 +90,7 @@ namespace Actions
             if (songLibrary.Updated()) songLibrary.Save();
 
             Console.WriteLine("PlayerScores Count" + activePlayer.scores.Count());
-            toolBox.activePlayer = activePlayer;
+            songSuggest.activePlayer = activePlayer;
         }
     }
 }

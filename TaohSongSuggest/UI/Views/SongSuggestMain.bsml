@@ -5,17 +5,16 @@
 
       <clickable-text text='Oldest ⛛' default-color='~color-oldest' highlight-color='cyan' on-click='settingsOldest'/>
       <clickable-text text='Suggestions ⛛' default-color='~color-suggest' highlight-color='cyan' on-click='settingsSuggest'/>
-
     </horizontal>    
 
     <horizontal bg='panel-top' bg-color='white' size-delta-y='1' pref-height='0.5'></horizontal>
     
-    <horizontal horizontal-fit='PreferredSize' pad='10' preferred-height='79' vertical-fit='PreferredSize' child-control-height='false' active='~suggest-show'>
+    <horizontal horizontal-fit='PreferredSize' pad='8' preferred-height='79' vertical-fit='PreferredSize' child-control-height='false' active='~suggest-show'>
       
       <macro.as-host host='cfgInstance'>
         
 
-        <vertical spacing='2' child-expand-height='false'>
+        <vertical spacing='0.5' child-expand-height='false'>
    
           <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' active='false'>
             <slider-setting interactable='true' text='From Rank' show-buttons='true' value="fromRank" bind-value="true" apply-on-change="true" min='1' max='10000' increment='1' integer-only='true'/>
@@ -25,19 +24,22 @@
           <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80'>
             <toggle-setting interactable='true' text='Ignore All Played' value='ignorePlayedAll' apply-on-change='true' bind-value="true" hover-hint="If enabled, only songs you have not already completed will be suggested."/>
             <slider-setting text='Days' show-buttons='true' value="ignorePlayedDays" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='day-formatter' hover-hint='Ignore the songs you improved within the given amount of days.' />
+            <toggle-setting interactable='true' text='Remove Optimized Scores' value='removeOptimizedScores' apply-on-change='true' bind-value="true" hover-hint="If enabled, maps that you already have a great score on will be ignored"/>
           </vertical>
 
-          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' spacing='6'>              
+          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' active='true'>     
+            <slider-setting text='Distance' show-buttons='true' value="modifierPP" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='Tries to keep the song near your performance level.' />
+            <slider-setting text='Style' show-buttons='true' value="modifierStyle" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='Tries to find songs you will perform the best on.' />
+            <slider-setting text='Overweight' show-buttons='true' value="modifierOverweight" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='Gives a boost to songs that are overweighted.' />
+          </vertical>
+            
+          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' spacing='6' active='false'>              
               <slider-setting text='Required Matches' pref-width='45' show-buttons='true' value="requiredMatches" bind-value="true" apply-on-change="true" min='5' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='Lowering this can cause songs that match better on your play style to appear, but at the same time also add a higher skill difference in displayed songs. Suggested usages are between 50%-100%.'/>
           </vertical>
           
           <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80'>
             <toggle-setting interactable='true' text='Use Liked Songs' value='useLikedSongs' apply-on-change='true' bind-value="true" hover-hint="Standard suggestions are based on your current top 50 ranked song plays, if you enable Use Liked Songs it instead uses your Liked Songs as the seeds."/>
-            <toggle-setting interactable='true' text='Fill Liked Songs' value='fillLikedSongs' apply-on-change='true' bind-value="true" hover-hint="If you have less than 50 Liked Songs, additional songs of your top 50 best are added"/>
           </vertical>
-          
-
-          
         </vertical>
       </macro.as-host>
     </horizontal>
@@ -65,6 +67,7 @@
 
   <horizontal bg='panel-fade-gradient' id='buttonsPanel' bg-color='Black'>
     <button id='OldestBTN' text='100 Oldest' align='Center' font-size='7' italics='true' on-click='GenerateOldest' active='~oldest-show' hover-hint='First time generating might take a while as it needs to fetch all your ranked scores!'/>
+    
     <button id='SuggestBTN' text='Suggest Songs' align='Center' font-size='7' italics='true' on-click='GeneratePlaylist' active='~suggest-show' hover-hint='First time generating might take a while as it needs to fetch all your ranked scores!'/>
   </horizontal>
 </vertical>

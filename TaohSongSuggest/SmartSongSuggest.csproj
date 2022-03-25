@@ -132,12 +132,13 @@
     </Compile>
     <Compile Include="SongSuggest\Actions\ActivePlayerRefreshData.cs" />
     <Compile Include="SongSuggest\Actions\OldestSongs.cs" />
-    <Compile Include="SongSuggest\Actions\SongSuggest.cs" />
+    <Compile Include="SongSuggest\Actions\RankedSongsSuggest.cs" />
     <Compile Include="SongSuggest\Actions\Top10kRefresh.cs" />
     <Compile Include="SongSuggest\DataHandling\ActivePlayer.cs" />
     <Compile Include="SongSuggest\DataHandling\ActivePlayerScore.cs" />
     <Compile Include="SongSuggest\DataHandling\FileHandler.cs" />
     <Compile Include="SongSuggest\DataHandling\FilesMeta.cs" />
+    <Compile Include="SongSuggest\DataHandling\LastRankedSuggestions.cs" />
     <Compile Include="SongSuggest\DataHandling\Playlist.cs" />
     <Compile Include="SongSuggest\DataHandling\Song.cs" />
     <Compile Include="SongSuggest\DataHandling\SongBan.cs" />
@@ -145,7 +146,7 @@
     <Compile Include="SongSuggest\DataHandling\SongLibrary.cs" />
     <Compile Include="SongSuggest\DataHandling\SongLike.cs" />
     <Compile Include="SongSuggest\DataHandling\SongLiking.cs" />
-    <Compile Include="SongSuggest\DataHandling\ToolBox.cs" />
+    <Compile Include="SongSuggest\DataHandling\SongSuggest.cs" />
     <Compile Include="SongSuggest\DataHandling\WebDownloader.cs" />
     <Compile Include="SongSuggest\LinkedData\SongEndPoint.cs" />
     <Compile Include="SongSuggest\LinkedData\SongEndPointCollection.cs" />
@@ -153,6 +154,7 @@
     <Compile Include="SongSuggest\LinkedData\Top10kPlayer.cs" />
     <Compile Include="SongSuggest\LinkedData\Top10kPlayers.cs" />
     <Compile Include="SongSuggest\LinkedData\Top10kScore.cs" />
+    <Compile Include="SongSuggest\LinkedData\Top10kSongMeta.cs" />
     <Compile Include="SongSuggest\ScoreSaberJSON\Badge.cs" />
     <Compile Include="SongSuggest\ScoreSaberJSON\Difficulty.cs" />
     <Compile Include="SongSuggest\ScoreSaberJSON\LeaderboardInfo.cs" />
@@ -166,6 +168,7 @@
     <Compile Include="SongSuggest\ScoreSaberJSON\ScoreCollection.cs" />
     <Compile Include="SongSuggest\ScoreSaberJSON\ScoreStats.cs" />
     <Compile Include="SongSuggest\Settings\FilePathSettings.cs" />
+    <Compile Include="SongSuggest\Settings\FilterSettings.cs" />
     <Compile Include="SongSuggest\Settings\OldestSongSettings.cs" />
     <Compile Include="SongSuggest\Settings\PlaylistSettings.cs" />
     <Compile Include="SongSuggest\Settings\SongSuggestSettings.cs" />
@@ -173,6 +176,7 @@
     <Compile Include="Managers\UIManager.cs" />
     <Compile Include="UI\MapListController.cs" />
     <Compile Include="UI\SettingsController.cs" />
+    <Compile Include="UI\SettingsLeftController.cs" />
     <Compile Include="UI\TSSFlowCoordinator.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -191,10 +195,11 @@
     <None Include="TaohSongSuggest.csproj.user" Condition="Exists('TaohSongSuggest.csproj.user')" />
     <EmbeddedResource Include="UI\Views\LevelDetailSuggestButtonsView.bsml" />
     <EmbeddedResource Include="UI\Views\SongSuggestMain.bsml" />
+    <EmbeddedResource Include="UI\Views\SongSuggestLeft.bsml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BeatSaberModdingTools.Tasks">
-      <Version>1.2.3</Version>
+      <Version>2.0.0-beta4</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>

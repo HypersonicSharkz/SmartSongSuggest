@@ -1,10 +1,12 @@
 ﻿<bg id='root' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
-  <horizontal horizontal-fit='PreferredSize' vertical-fit='PreferredSize' pref-width='30' child-expand-width='false' anchor-pos-x='-10' anchor-pos-y='20' child-align='UpperRight'>
+  <horizontal horizontal-fit='PreferredSize' vertical-fit='PreferredSize' pref-width='50' child-expand-width='false' anchor-pos-x='-2' anchor-pos-y='20' child-align='UpperLeft'>
     
 		<button id='addToIgnoredBTN' text='🚫' face-color='~ban-color' italics='false' hover-hint="~ban-hover" pref-width='10' pref-height='10' on-click='CheckBanState'/>
 
     <button id='addToLikedBTN' text='👍' face-color='~like-color' italics='false' hover-hint='~like-hover' pref-width='10' pref-height='10' on-click='AddDifficultyBeatmapToLiked'/>
-	</horizontal>
+
+    <text id='rankPlateText' text='' italics='false' pref-width='20' pref-height='10' align='Center' font-size='5'/>
+  </horizontal>
 
   <modal id='modal' show-event='open-modal' hide-event='close-modal' clickerino-offerino-closerino='true' anchor-pos-x='-23.5' anchor-pos-y='10' size-delta-x='80' size-delta-y='30' move-to-center='false'>
 
