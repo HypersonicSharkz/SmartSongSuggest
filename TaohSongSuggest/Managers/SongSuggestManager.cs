@@ -122,6 +122,16 @@ namespace SmartSongSuggest.Managers
 
                     IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
                     {
+                        if (toolBox.noFoundSongs)
+                        {
+                            TSSFlowCoordinator.settingsView.ShowError("You stomped me! I could not find any songs. This is 50 random songs.", @"This may be due to following:
+                            *All linked songs was banned/filtered out (e.g. only new songs).
+                            *You have no top 50 ranked songs that matches known ranked songs.
+                            *Your accuracy on known ranked songs are too low.
+                            *A broken cache file of your data, try hitting 'CLEAR CACHE'");
+                        }
+
+
                         UpdatePlaylists("Song Suggest");
                         TSSFlowCoordinator.Instance.ToggleBackButton(true);
                     });
@@ -129,8 +139,8 @@ namespace SmartSongSuggest.Managers
                 catch (Exception e)
                 {
                     Plugin.Log.Error(e);
-
                     TSSFlowCoordinator.Instance.ToggleBackButton(true);
+                    TSSFlowCoordinator.settingsView.ShowError("Oops something went wrong...", $"Try again later. If issue persist try clearing cache. Error message: {e.Message}");
                 }
             });
 

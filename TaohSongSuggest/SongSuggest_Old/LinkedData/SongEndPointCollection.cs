@@ -35,13 +35,5 @@ namespace LinkedData
                 songEndPoint.SetStyle(originSongs);
             }
         }
-
-        public void SetPP(SongSuggest songSuggest)
-        {
-            foreach (SongEndPoint songEndPoint in endPoints.Values)
-            {
-                songEndPoint.SetPP(songSuggest);
-            }
-        }
     }
 }

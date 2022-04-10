@@ -74,7 +74,7 @@ namespace SongLibraryNS
             //Try and find the songs information and return it from library
             foreach (Song song in songs.Values)
             {
-                if (song.hash.ToUpper() == hash.ToUpper() && song.difficulty == GetDifficultyValue(difficulty)) foundSong = song ;
+                if (song.hash == hash && song.difficulty == GetDifficultyValue(difficulty)) foundSong = song ;
             }
 
             //If the song was not found, try pulling info from web and then find it
@@ -84,7 +84,7 @@ namespace SongLibraryNS
                 WebGetSongInfo(hash, GetDifficultyValue(difficulty));
                 foreach (Song song in songs.Values)
                 {
-                    if (song.hash.ToUpper() == hash.ToUpper() && song.difficulty == GetDifficultyValue(difficulty)) foundSong = song;
+                    if (song.hash == hash && song.difficulty == GetDifficultyValue(difficulty)) foundSong = song;
                 }
             }
             return foundSong.scoreSaberID;
@@ -175,6 +175,7 @@ namespace SongLibraryNS
                     return "5";
                 case "Expert":
                     return "7";
+                //GUIs Expert+ reference
                 case "Expert+":
                     return "9";
                 //Playlists Expert+ reference

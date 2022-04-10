@@ -70,4 +70,21 @@
     
     <button id='SuggestBTN' text='Suggest Songs' align='Center' font-size='7' italics='true' on-click='GeneratePlaylist' active='~suggest-show' hover-hint='First time generating might take a while as it needs to fetch all your ranked scores!'/>
   </horizontal>
+
+
+
+
+  <modal id='modal' show-event='open-modal' hide-event='close-modal' clickerino-offerino-closerino="true" anchor-pos-y='10' size-delta-x='92' size-delta-y='35' move-to-center='true'>
+    <vertical horizontal-fit='PreferredSize' vertical-fit='PreferredSize'>
+
+      <label text='~error-header' font-size='4' TextOverflowModes='Ellipsis'/>
+      <label text='~error-description' font-size='3' italics='true' TextOverflowModes='Ellipsis'/>
+
+
+      <button text='ok' click-event='close-modal'/>
+    </vertical>
+
+    
+  </modal>
+
 </vertical>

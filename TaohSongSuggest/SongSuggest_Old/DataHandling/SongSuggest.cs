@@ -31,9 +31,6 @@ namespace SongSuggestNS
         //List of last ranked song suggestions
         public LastRankedSuggestions lastSuggestions { get; set; }
 
-        //Boolean set to true if no songs was found in RankedSongSuggest and the list was filled with 50 random songs
-        public Boolean noFoundSongs { get; set; } = false;
-
         public SongSuggest(FilePathSettings filePathSettings, String userID)
         {
             //Set the active players ID

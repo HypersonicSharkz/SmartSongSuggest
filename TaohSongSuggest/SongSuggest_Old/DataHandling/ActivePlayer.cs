@@ -173,10 +173,5 @@ namespace ActivePlayerData
             rankedPlayCount = 0;
             scores = new SortedDictionary<String, ActivePlayerScore>();
         }
-
-        public double GetScore(string songID)
-        {
-            return scores.Keys.Contains(songID) ? scores[songID].pp : -1.0;
-        }
     }
 }

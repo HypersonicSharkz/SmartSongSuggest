@@ -22,6 +22,7 @@ using SmartSongSuggest.Managers;
 using TMPro;
 using UnityEngine;
 using WebDownloading;
+using BeatSaberMarkupLanguage.Parser;
 
 namespace SmartSongSuggest.UI
 {
@@ -30,6 +31,9 @@ namespace SmartSongSuggest.UI
     class SettingsController : BSMLAutomaticViewController, INotifyPropertyChanged
     {
         public static PluginConfig cfgInstance;
+
+        [UIParams]
+        private readonly BSMLParserParams parserParams;
 
         [UIComponent("bgProgress")] 
         public ImageView bgProgress;
@@ -68,6 +72,16 @@ namespace SmartSongSuggest.UI
 
         [UIValue("color-suggest")]
         public string SuggestColor => _suggestShow ? "#00ff00" : "white";
+
+
+        string _errorHeader = "";
+        [UIValue("error-header")]
+        public string ErrorHeader => _errorHeader;
+
+        string _errorDescription = "";
+        [UIValue("error-description")]
+        public string ErrorDescription => _errorDescription;
+
 
 
         [UIValue("color-oldest")]
@@ -131,6 +145,18 @@ namespace SmartSongSuggest.UI
 
         }
 
+        public void ShowError(string header, string description)
+        {
+            Plugin.Log.Info("Should show error");
 
+            _errorHeader = header;
+            _errorDescription = description;
+
+            NotifyPropertyChanged(nameof(ErrorDescription));
+            NotifyPropertyChanged(nameof(ErrorHeader));
+
+            this.parserParams.EmitEvent("close-modal");
+            this.parserParams.EmitEvent("open-modal");
+        }
     }
 }
