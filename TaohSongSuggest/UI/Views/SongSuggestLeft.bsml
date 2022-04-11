@@ -30,4 +30,11 @@
       
     </vertical>
   </horizontal>
+
+  <horizontal horizontal-fit="PreferredSize" spacing="2" pad-left="60">
+    <label text="Mod Version:" face-color="magenta"/>
+    <label text="~mod-version" face-color="white" />
+  </horizontal>
+
+
 </vertical>

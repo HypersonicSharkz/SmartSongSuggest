@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +17,10 @@ namespace SmartSongSuggest.UI
     class SettingsLeftController : BSMLAutomaticViewController, INotifyPropertyChanged
     {
         public static PluginConfig cfgInstance = SettingsController.cfgInstance;
+
+
+        [UIValue("mod-version")]
+        public string modVersion => Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         public void ClearCache()
         {

@@ -115,7 +115,7 @@ namespace SongLibraryNS
             //Try and find the songs information and return if it was in the library.
             foreach (Song song in songs.Values)
             {
-                if (song.hash == hash && song.difficulty == GetDifficultyValue(difficulty)) foundSong = true;
+                if (song.hash.ToUpper() == hash.ToUpper() && song.difficulty == GetDifficultyValue(difficulty)) foundSong = true;
             }
             return foundSong;
         }
