@@ -27,6 +27,11 @@ namespace LinkedData
         //PP Estimate
         public double estimatedPP = 0;
 
+        //Local PP vs Global
+        public double localPPAverage = 0;
+        public double localVSGlobalPP = 0;
+
+
         public void SetRelevance(int originPoints,int requiredMatches)
         {
             //Get a list of all origin songs
@@ -110,6 +115,20 @@ namespace LinkedData
             //!!!CONSIDER REMOVING/ALTERNATIVE FOR HANDLING UNKNOWN MATCHES WHEN SPLITTING PP!!!
             //Sets the estimate to 0 if there is low amount of links to a song.
             if (totalSongs < 50) estimatedPP = 0;
+        }
+
+        public void SetLocalPP(SongSuggest songSuggest)
+        {
+            //Get linked originSongs
+            List<String> originSongIDs = songLinks.Select(c => c.originSongScore.songID).Distinct().ToList();
+            //Count the averages for each song (so we end up with weighted averages).
+            foreach (String originSongID in originSongIDs)
+            {
+                localPPAverage += songLinks.Where(c => c.originSongScore.songID == originSongID).Average(c => c.targetSongScore.pp);
+            }
+            //Reduce it to average per song
+            localPPAverage = localPPAverage / 50;// originSongIDs.Count();
+            localVSGlobalPP = localPPAverage / songSuggest.top10kPlayers.top10kSongMeta[songID].averageScore;
         }
     }
 }

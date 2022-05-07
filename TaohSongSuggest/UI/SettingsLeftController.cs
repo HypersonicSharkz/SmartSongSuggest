@@ -22,6 +22,12 @@ namespace SmartSongSuggest.UI
         [UIValue("mod-version")]
         public string modVersion => Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
+        [UIAction("open-kofi")]
+        public void OpenKoFi()
+        {
+            System.Diagnostics.Process.Start("https://ko-fi.com/smartsongsuggest");
+        }
+
         public void ClearCache()
         {
             SongSuggestManager.toolBox.ClearUser();

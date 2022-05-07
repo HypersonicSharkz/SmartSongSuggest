@@ -19,7 +19,7 @@ namespace Actions
 
         //All found songs ordered by current filter settings.
         public List<String> sortedSuggestions { get; set; }
-        
+
         //Found songs with ignored songs removed
         public List<String> filteredSuggestions { get; set; }
         //ID's of songs used in actual playlist (50 songs)
@@ -46,7 +46,9 @@ namespace Actions
         //1.2 = 120%, 1.1 = 110% etc.
         //1.2 seems to be a good value to cut off low/high acc linkage, while still allowing a player room for growth suggestions
         //This may be a usefull Difficulty setting in the future.
-        readonly double betterAccCap = 1.2;
+        double betterAccCap = 1.2;
+        //Set to true if a link is created, used to remove betterAccCap on players with low acc first, before giving them random songs.
+        Boolean foundSongs = false;
 
         //Value for how many spots must be expected to be improved before being shown in suggestions (unplayed songs are always shown)
         int improveSpots = 5;
@@ -57,10 +59,16 @@ namespace Actions
         List<String> styleFilterOrdered;
         List<String> overWeightFilterOrdered;
         //in test        
-        //List<String> ppFilterOrdered;
+        //PP for new distance
+        List<String> ppFilterOrdered;
+        //PP local vs Global
+        List<String> ppLocalVSGlobalOrdered;
 
         //Hate having random selections, but if nothing is found we still have a list to make, so lets make a randomizer for it.
-        Random rnd = new Random();
+        //Random rnd = new Random();
+
+        //Output Active?
+        Boolean showDetailedOutout = false;
 
         //Creates a playlist with 50 suggested songs based on the link system.
         public void SuggestedSongs()
@@ -91,7 +99,7 @@ namespace Actions
             Console.WriteLine("Time Spent: " + timer.ElapsedMilliseconds);
 
             //Outputs results in the Console with how the different styles rankings
-            //ConsoleWriteStyleBreakdown();
+            ConsoleWriteStyleBreakdown();
         }
 
         public void Recalculate()
@@ -103,9 +111,9 @@ namespace Actions
             RemoveIgnoredSongs();
             CreatePlaylist();
             Console.WriteLine("Recalculations Done: " + timer.ElapsedMilliseconds);
-            
+
             ////Outputs results in the Console with how the different styles rankings
-            //ConsoleWriteStyleBreakdown();
+            ConsoleWriteStyleBreakdown();
         }
 
         //Creates the needed linked data for song evaluation for the Active Player.
@@ -125,10 +133,19 @@ namespace Actions
             //Find the Origin Song ID's based on Active Players data.
             songSuggest.status = "Finding Songs to Match";
             List<String> originSongIDs = OriginSongs(settings.useLikedSongs, settings.fillLikedSongs);
+            //originSongIDs = AlternateOriginSongs();
 
             //Create the Origin Points collection, and have them linked in Origin Points (Permabanned songs are not to be used).
             songSuggest.status = "Preparing Origin Songs";
             originSongs = CreateOriginPoints(originSongIDs, songSuggest.songBanning.GetPermaBannedIDs());
+            //Check if there is no links and if, retry this time without removing lower acc links
+            if (!foundSongs)
+            {
+                Console.WriteLine("No Songs Found with Acc Limit on. Activate Limit Breaker.");
+                betterAccCap = Double.MaxValue;
+                originSongs = CreateOriginPoints(originSongIDs, songSuggest.songBanning.GetPermaBannedIDs());
+            }
+
             Console.WriteLine("Completion: " + (songSuggestCompletion * 100) + "%");
             Console.WriteLine("Origin Endpoint Done: " + timer.ElapsedMilliseconds);
 
@@ -152,7 +169,7 @@ namespace Actions
 
             //Filter on PP value compared to users songs PP values
             distanceFilterOrdered = targetSongs.endPoints.Values.OrderByDescending(s => s.weightedRelevanceScore).Select(p => p.songID).ToList();
-            
+
             //Filter on how much over/under linked a song is in the active players data vs the global player population
             styleFilterOrdered = targetSongs.endPoints.Values.OrderBy(s => (0.0 + top10kPlayers.top10kSongMeta[s.songID].count) / (0.0 + s.proportionalStyle)).Select(p => p.songID).ToList();
             //Old bias for more suggestions from highly linked songs.
@@ -163,10 +180,12 @@ namespace Actions
 
             //***test
             //Filter on what the expected PP would be on a song.
-            //ppFilterOrdered = targetSongs.endPoints.Values.OrderByDescending(s => s.estimatedPP).Select(p => p.songID).ToList();
+            ppFilterOrdered = targetSongs.endPoints.Values.OrderByDescending(s => s.estimatedPP).Select(p => p.songID).ToList();
+            //Filter on which PP is strongest in Local vs Global
+            ppLocalVSGlobalOrdered = targetSongs.endPoints.Values.OrderByDescending(s => s.localVSGlobalPP).Select(p => p.songID).ToList();
         }
 
-        //Creates a list of the origin songs (Liked and top 50
+        //Creates a list of the origin songs (Liked and top 50)
         public List<String> OriginSongs(Boolean useLikedSongs, Boolean fillLikedSongs)
         {
             List<String> originSongsIDs = new List<String>();
@@ -182,6 +201,19 @@ namespace Actions
 
             Console.WriteLine("Songs in list: " + originSongsIDs.Count());
 
+            return originSongsIDs;
+        }
+
+        //TMP ALTERNATE ORIGINSONGS ... 50 last scores
+        public List<String> AlternateOriginSongs()
+        {
+            int days = 30;
+            List<String> originSongsIDs = songSuggest.activePlayer.scores //Look at players scores
+                .Where(c => c.Value.timeSet > DateTime.Now.AddDays(-days)) //Reduce the list to those within the given time
+                .OrderByDescending(c => c.Value.pp) //Sort with biggest PP score first
+                .Select(c => c.Value.songID) //Get the IDs
+                .Take(50) //Reduce the selections to 50
+                .ToList(); //Put them in a list
             return originSongsIDs;
         }
 
@@ -212,6 +244,7 @@ namespace Actions
                     //Skip link if the targetsongs PP is too high compared to original players score
                     if (validSong) // && songSuggest.activePlayer.scores[playerSong.songID].pp / betterAccCap < playerSong.pp)
                     {
+                        foundSongs = true;
                         //Loop songs again for endpoints, skipping linking itself, as well as ignoreSongs
                         foreach (Top10kScore suggestedSong in player.top10kScore.Where(suggestedSong => suggestedSong.rank != playerSong.rank && !ignoreSongs.Contains(suggestedSong.songID)))
                         {
@@ -275,6 +308,9 @@ namespace Actions
             //New test to try and guess PP
             targetSongs.SetPP(songSuggest);
 
+            //New test to compare local group vs global group stuff
+            targetSongs.SetLocalPP(songSuggest);
+
         }
 
         //Takes the orderes suggestions and apply the filter values to their ranks, and create the nameplate orderings
@@ -288,6 +324,7 @@ namespace Actions
             double modifierOverweight = settings.filterSettings.modifierOverweight / 100;
             //***test (hardcoded to max)
             double modifierPP = 0;
+            double modifierPPLocalVSGlobal = 0;
 
             //reset if all = 0, reset to 100%.
             if (modifierDistance == 0 && modifierStyle == 0 && modifierOverweight == 0) modifierDistance = modifierStyle = modifierOverweight = 1.0;
@@ -305,7 +342,10 @@ namespace Actions
                 double styleValue = styleFilterOrdered.IndexOf(distanceCandidate) / totalCandidates;
                 double overWeightedValue = overWeightFilterOrdered.IndexOf(distanceCandidate) / totalCandidates;
                 //***test
-                //double ppValue = ppFilterOrdered.IndexOf(distanceCandidate) / totalCandidates;
+                //ppValue for distance replacement
+                double ppValue = ppFilterOrdered.IndexOf(distanceCandidate) / totalCandidates;
+                //ppLocalvsGlobal
+                double ppLocalVSGlobalValue = ppLocalVSGlobalOrdered.IndexOf(distanceCandidate) / totalCandidates;
 
                 //Switch the range from [0-1] to [0.5-1.5] and reduce the gap based on modifier weight.
                 //**Spacing between values may be more correct to consider a log spacing (e.g. due to 1.5*.0.5 != 1)
@@ -316,10 +356,11 @@ namespace Actions
                 double distanceTotal = distanceValue * modifierDistance + (1.0 - 0.5 * modifierDistance);
                 double styleTotal = styleValue * modifierStyle + (1.0 - 0.5 * modifierStyle);
                 double overWeightedTotal = overWeightedValue * modifierOverweight + (1.0 - 0.5 * modifierOverweight);
-                //double ppTotal = ppValue * modifierPP + (1.0 - 0.5 * modifierPP);
+                double ppTotal = ppValue * modifierPP + (1.0 - 0.5 * modifierPP);
+                double ppLocalVSGlobalTotal = ppLocalVSGlobalValue * modifierPPLocalVSGlobal + (1.0 - 0.5 * modifierPPLocalVSGlobal);
 
                 //Get the songs multiplied average 
-                double score = distanceTotal * styleTotal * overWeightedTotal;
+                double score = distanceTotal * styleTotal * overWeightedTotal * ppTotal * ppLocalVSGlobalTotal;
 
                 //Add song ID and its score to a list for sorting and reducing size for the playlist generation
                 totalScore.Add(distanceCandidate, score);
@@ -392,17 +433,19 @@ namespace Actions
 
             //Select 50 best suggestions
             songSuggestIDs = filteredSuggestions.GetRange(0, Math.Min(50, filteredSuggestions.Count()));
-
-            //If no songs was found, make a list of 50 random songs (if any songs are found those are kept as is)
+            //If no songs was found, make a list of the 50 songs with lowest MaxPP gained with at least 3 entries
+            //(if any songs are found those are kept as is)
             if (songSuggestIDs.Count() == 0)
             {
+                Console.WriteLine("No Songs found, selecting 50 lowest PP songs with over 10 links");
                 songSuggest.noFoundSongs = true;
-                while (songSuggestIDs.Count() < 50)
-                {
-                    //Select a random player within the 9001-10000 player range.
-                    String randomSongID = RandomSongID(9000, 10000);
-                    if (!songSuggestIDs.Contains(randomSongID)) songSuggestIDs.Add(randomSongID);
-                }
+
+                songSuggestIDs = songSuggest.top10kPlayers.top10kSongMeta
+                    .Where(c => c.Value.count >= 3)
+                    .OrderBy(c => c.Value.maxScore)
+                    .Select(c => c.Value.songID)
+                    .Take(50)
+                    .ToList();
             }
             else
             {
@@ -416,42 +459,41 @@ namespace Actions
 
         public void ConsoleWriteStyleBreakdown()
         {
-            int rank = 0;
-            foreach (string songID in sortedSuggestions)
+            if (showDetailedOutout)
             {
-                rank++;
-                List<String> playerRankedPP = songSuggest.activePlayer.scores.Values.OrderByDescending(p => p.pp).ToList().Select(p => p.songID).ToList();
+                int rank = 0;
+                foreach (string songID in sortedSuggestions)
+                {
+                    rank++;
+                    List<String> playerRankedPP = songSuggest.activePlayer.scores.Values.OrderByDescending(p => p.pp).ToList().Select(p => p.songID).ToList();
 
-                int actualPlayerRank = playerRankedPP.IndexOf(songID) + 1;
-                String actualPlayerRankTxt = actualPlayerRank == 0 ? "-" : "" + actualPlayerRank;
+                    int actualPlayerRank = playerRankedPP.IndexOf(songID) + 1;
+                    String actualPlayerRankTxt = actualPlayerRank == 0 ? "-" : "" + actualPlayerRank;
 
-                int ppRank = distanceFilterOrdered.IndexOf(songID) + 1;
-                int styleRank = styleFilterOrdered.IndexOf(songID) + 1;
-                int owRank = overWeightFilterOrdered.IndexOf(songID) + 1;
+                    int ppRank = distanceFilterOrdered.IndexOf(songID) + 1;
+                    int styleRank = styleFilterOrdered.IndexOf(songID) + 1;
+                    int owRank = overWeightFilterOrdered.IndexOf(songID) + 1;
 
+                    String songName = songSuggest.songLibrary.GetName(songID);
+                    String songDifc = songSuggest.songLibrary.GetDifficultyName(songID);
 
+                    String songInfo = songName + " (" + songDifc + " - " + songID + ")";
 
-                String songName = songSuggest.songLibrary.GetName(songID);
-                String songDifc = songSuggest.songLibrary.GetDifficultyName(songID);
+                    double globalPP = songSuggest.top10kPlayers.top10kSongMeta[songID].maxScore;
 
-                ////***test
-                //double playerPP = songSuggest.activePlayer.GetScore(songID);
-                //double estimatedPP = targetSongs.endPoints[songID].estimatedPP;
-                //double gainablePP = estimatedPP - playerPP;
+                    ////***test PP -> Distance
+                    double playerPP = songSuggest.activePlayer.GetScore(songID);
+                    double estimatedPP = targetSongs.endPoints[songID].estimatedPP;
+                    double gainablePP = estimatedPP - playerPP;
 
-                //Console.WriteLine("#:{0}\tPPdiff:{8}\testPP:{9}\tactPP:{10}\tAc:{1}\tPP:{2}\tSt:{3}\tOw:{4}\t: {5} ({6} - {7})", rank, actualPlayerRankTxt, ppRank, styleRank, owRank, songName, songDifc, songID, gainablePP,estimatedPP,playerPP);
+                    //***Test PP local vs global
+                    double localVSGlobalPP = targetSongs.endPoints[songID].localVSGlobalPP;
+
+                    //Console.WriteLine("#:{0}\tPPdiff:{8}\testPP:{9}\tactPP:{10}\tAc:{1}\tPP:{2}\tSt:{3}\tOw:{4}\t: {5} ({6} - {7})", rank, actualPlayerRankTxt, ppRank, styleRank, owRank, songName, songDifc, songID, gainablePP,estimatedPP,playerPP);
+
+                    Console.WriteLine("#:{0}\t{2}\tRatio:{3}\t{1}", rank, songInfo, actualPlayerRankTxt, localVSGlobalPP);
+                }
             }
-        }
-
-        private String RandomSongID(int playerRankStart, int playerRankEnd)
-        {
-            //This int is used to find the index (0-9999 range), so playerRankStart needs to be counted 1 down and
-            //playerRankEnd is included, even if normal rnd excludes last.
-            int playerID = rnd.Next(playerRankStart-1, playerRankEnd);
-            Top10kPlayer player = songSuggest.top10kPlayers.top10kPlayers[playerID];
-            int songPlacement = rnd.Next(0, player.top10kScore.Count());
-            Console.WriteLine("Random Song Requested: Player: {0} Song: {1}",playerID,songPlacement);
-            return player.top10kScore[songPlacement].songID;
         }
     }
 }

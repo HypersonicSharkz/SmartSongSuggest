@@ -120,7 +120,7 @@ namespace ActivePlayerData
             Console.WriteLine("candidates found: " + candidates.Count());
 
             //Add the time of the songs and their id to a sorted list, for easy sorting on time and get the songID as output.
-            SortedList<DateTime, String> candidatesList = new SortedList<DateTime, String>();
+            System.Collections.Generic.SortedList<DateTime, String> candidatesList = new System.Collections.Generic.SortedList<DateTime, String>();
             //Only grab the songs with an accuracy lower than the cuttoff level.
             foreach (ActivePlayerScore candidate in candidates.Where(c => c.accuracy < accuracy && c.timeSet < DateTime.UtcNow.AddDays(-days)))
             {

@@ -43,5 +43,13 @@ namespace LinkedData
                 songEndPoint.SetPP(songSuggest);
             }
         }
+
+        public void SetLocalPP(SongSuggest songSuggest)
+        {
+            foreach (SongEndPoint songEndPoint in endPoints.Values)
+            {
+                songEndPoint.SetLocalPP(songSuggest);
+            }
+        }
     }
 }

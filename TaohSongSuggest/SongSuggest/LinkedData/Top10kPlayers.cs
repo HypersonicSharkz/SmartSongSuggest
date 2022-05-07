@@ -36,7 +36,14 @@ namespace LinkedData
                     songMeta.count++;
                     songMeta.totalRank += score.rank;
                     songMeta.maxScore = Math.Max(songMeta.maxScore, score.pp);
+                    songMeta.totalScore += score.pp;
                 }
+            }
+
+            //set average for localvsglobal PP values
+            foreach (Top10kSongMeta songMeta in top10kSongMeta.Values)
+            {
+                songMeta.averageScore = songMeta.totalScore / songMeta.count;
             }
             Console.WriteLine("*Total Songs*: " + top10kSongMeta.Count);
         }

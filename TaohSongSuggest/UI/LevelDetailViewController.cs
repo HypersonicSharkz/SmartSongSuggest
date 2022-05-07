@@ -177,75 +177,81 @@ namespace SmartSongSuggest.UI
 
         void CheckButtons()
         {
-
-
-            BanDays = "60";
-
-            _mapRanked = false;
-
-            addToIgnoredBTN.gameObject.SetActive(false);
-            addToLikedBTN.gameObject.SetActive(false);
-
-            _rankPlate = "";
-
-
-
-            Song x;
-            if (sldv.beatmapLevel is CustomBeatmapLevel && Plugin.songDetails.songs.FindByHash(Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel), out x))
+            try
             {
-                SongDifficulty difficulty;
-                x.GetDifficulty(out difficulty, (MapDifficulty)sldv.selectedDifficultyBeatmap.difficulty);
+                BanDays = "60";
 
-                _mapRanked = difficulty.ranked;
+                _mapRanked = false;
 
-               
-                string levelHash = Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel);
-                string diffLabel = sldv.selectedDifficultyBeatmap.difficulty.Name();
+                addToIgnoredBTN.gameObject.SetActive(false);
+                addToLikedBTN.gameObject.SetActive(false);
 
-                Plugin.Log.Info(levelHash + " || " + diffLabel);
+                _rankPlate = "";
 
-                //Forgot to check if map was ranked before checking ban... oops
-                if (difficulty.ranked)
+
+
+                Song x;
+                if (sldv.beatmapLevel is CustomBeatmapLevel && Plugin.songDetails.songs.FindByHash(Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel), out x))
                 {
-                    string songrank = SongSuggestManager.toolBox.GetSongRanking(levelHash, diffLabel);
+                    SongDifficulty difficulty;
+                    x.GetDifficulty(out difficulty, (MapDifficulty)sldv.selectedDifficultyBeatmap.difficulty);
 
-                    if (songrank != "" && SettingsController.cfgInstance.showRankPlate)
-                        _rankPlate = songrank + "/" + SongSuggestManager.toolBox.GetSongRankingCount();
-                        
+                    _mapRanked = difficulty.ranked;
 
-                    Plugin.Log.Info("getRank back: " + _rankPlate);
 
-                    if (SongSuggestManager.toolBox.songBanning.IsBanned(levelHash, diffLabel))
+                    string levelHash = Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel);
+                    string diffLabel = sldv.selectedDifficultyBeatmap.difficulty.SerializedName();
+
+                    Plugin.Log.Info(levelHash + " || " + diffLabel);
+
+                    //Forgot to check if map was ranked before checking ban... oops
+                    if (difficulty.ranked)
                     {
-                        Plugin.Log.Info("Song is banned!");
-                        BanHover = "Click to unban map from suggestions";
-                        BanColor = "red";
-                    }
-                    else
-                    {
-                        BanHover = "Don't want to see this map in your suggestions? Press this";
-                        BanColor = "white";
+                        string songrank = SongSuggestManager.toolBox.GetSongRanking(levelHash, diffLabel);
 
-                    }
+                        if (songrank != "" && SettingsController.cfgInstance.showRankPlate)
+                            _rankPlate = songrank + "/" + SongSuggestManager.toolBox.GetSongRankingCount();
 
 
-                    if (SongSuggestManager.toolBox.songLiking.IsLiked(levelHash, diffLabel))
-                    {
-                        Plugin.Log.Info("Song is liked!");
-                        LikeHover = "Click to remove the map from songs the suggestions are based on";
-                        LikeColor = "green";
+                        Plugin.Log.Info("getRank back: " + _rankPlate);
+
+                        if (SongSuggestManager.toolBox.songBanning.IsBanned(levelHash, diffLabel))
+                        {
+                            Plugin.Log.Info("Song is banned!");
+                            BanHover = "Click to unban map from suggestions";
+                            BanColor = "red";
+                        }
+                        else
+                        {
+                            BanHover = "Don't want to see this map in your suggestions? Press this";
+                            BanColor = "white";
+
+                        }
+
+
+                        if (SongSuggestManager.toolBox.songLiking.IsLiked(levelHash, diffLabel))
+                        {
+                            Plugin.Log.Info("Song is liked!");
+                            LikeHover = "Click to remove the map from songs the suggestions are based on";
+                            LikeColor = "green";
+                        }
+                        else
+                        {
+                            LikeHover = "Want more maps like this in the suggestions? Press this to like the song";
+                            LikeColor = "white";
+                        }
                     }
-                    else
-                    {
-                        LikeHover = "Want more maps like this in the suggestions? Press this to like the song";
-                        LikeColor = "white";
-                    }
+
+                    SharedCoroutineStarter.instance.StartCoroutine(SetActiveLate());
                 }
 
-                SharedCoroutineStarter.instance.StartCoroutine(SetActiveLate());
-            }
+                rankPlateText.text = _rankPlate;
 
-            rankPlateText.text = _rankPlate;
+            }
+            catch (Exception e)
+            {
+                Plugin.Log.Error(e);
+            }
 
         }
 

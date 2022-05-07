@@ -65,7 +65,7 @@
 
   
 
-  <horizontal bg='panel-fade-gradient' id='buttonsPanel' bg-color='Black'>
+  <horizontal bg='panel-fade-gradient' id='buttonsPanel' bg-color='black'>
     <button id='OldestBTN' text='100 Oldest' align='Center' font-size='7' italics='true' on-click='GenerateOldest' active='~oldest-show' hover-hint='First time generating might take a while as it needs to fetch all your ranked scores!'/>
     
     <button id='SuggestBTN' text='Suggest Songs' align='Center' font-size='7' italics='true' on-click='GeneratePlaylist' active='~suggest-show' hover-hint='First time generating might take a while as it needs to fetch all your ranked scores!'/>

@@ -181,7 +181,7 @@ namespace SongLibraryNS
                 case "ExpertPlus":
                     return "9";
                 default:
-                    return "1";
+                    return "0";
             }
         }
     }
