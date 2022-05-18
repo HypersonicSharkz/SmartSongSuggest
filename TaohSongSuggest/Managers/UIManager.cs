@@ -1,14 +1,6 @@
 ﻿using BeatSaberMarkupLanguage.MenuButtons;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using HMUI;
 using BeatSaberMarkupLanguage;
-using System.Reflection;
-using UnityEngine;
-using System.Collections;
 using SmartSongSuggest.UI;
 
 namespace SmartSongSuggest.Managers

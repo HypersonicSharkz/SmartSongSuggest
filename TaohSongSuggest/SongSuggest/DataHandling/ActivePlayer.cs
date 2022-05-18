@@ -38,7 +38,7 @@ namespace ActivePlayerData
             //Load data if requested user has changed to a new valid user (not -1) and attempt to load the user, else keep the current.
             if (currentID != requestedID && requestedID != "-1")
             {
-                Console.WriteLine("Attempting to Load Player");
+                songSuggest.log?.WriteLine("Attempting to Load Player");
                 ActivePlayer loadedPlayer = songSuggest.fileHandler.LoadActivePlayer(requestedID);
                 //Verify the loadedPlayer is in correct format.
                 if (loadedPlayer.currentSavedVersion == currentVersion)
@@ -58,7 +58,7 @@ namespace ActivePlayerData
             }
             else
             {
-                Console.WriteLine("Correct player was loaded or -1 user");
+                songSuggest.log?.WriteLine("Correct player was loaded or -1 user");
             }
             //Once data is updated, set the current cached users to this.
         }
@@ -70,8 +70,8 @@ namespace ActivePlayerData
 
         public Boolean OutdatedVersion()
         {
-            Console.WriteLine("Secret Version: " + currentVersion);
-            Console.WriteLine("Disk Version: " + currentSavedVersion);
+            songSuggest.log?.WriteLine("Secret Version: " + currentVersion);
+            songSuggest.log?.WriteLine("Disk Version: " + currentSavedVersion);
             return !(currentSavedVersion == currentVersion);
         }
 
@@ -86,7 +86,7 @@ namespace ActivePlayerData
                 //Check if it is a newer score
                 if (storedScore.timeSet == score.timeSet)
                 {
-                    //Console.WriteLine("Unchanged Score on: " + score.songID);
+                    //songSuggest.log?.WriteLine("Unchanged Score on: " + score.songID);
 
                     //Both scores have same timestamp, so ignore it inform requester nothing was changed.
                     return false;
@@ -96,14 +96,14 @@ namespace ActivePlayerData
                     //Updated score ... update timestamp and pp value.
                     storedScore.timeSet = score.timeSet;
                     storedScore.pp = score.pp;
-                    //Console.WriteLine("Updated Score on: " + score.songID);
+                    //songSuggest.log?.WriteLine("Updated Score on: " + score.songID);
                 }
             }
             //New score
             else
             {
                 scores.Add(score.songID, score);
-                //Console.WriteLine("New Score on: " + score.songID);
+                //songSuggest.log?.WriteLine("New Score on: " + score.songID);
             }
 
             return true;
@@ -113,13 +113,14 @@ namespace ActivePlayerData
         public List<String> GetOldest(int count, double accuracy, int days)
         {
             //Pull Scores into a new List from Dictionary for the playlist
-            Console.WriteLine("scores available: " + scores.Count());
+            songSuggest.log?.WriteLine("scores available: " + scores.Count());
 
             List<ActivePlayerScore> candidates = new List<ActivePlayerScore>(scores.Values);
 
-            Console.WriteLine("candidates found: " + candidates.Count());
+            songSuggest.log?.WriteLine("candidates found: " + candidates.Count());
 
             //Add the time of the songs and their id to a sorted list, for easy sorting on time and get the songID as output.
+            //***Bug Fix: Beat Saber now uses a homebrew version of SortedList, so needs to be specified.***
             System.Collections.Generic.SortedList<DateTime, String> candidatesList = new System.Collections.Generic.SortedList<DateTime, String>();
             //Only grab the songs with an accuracy lower than the cuttoff level.
             foreach (ActivePlayerScore candidate in candidates.Where(c => c.accuracy < accuracy && c.timeSet < DateTime.UtcNow.AddDays(-days)))

@@ -75,10 +75,10 @@
 
 
   <modal id='modal' show-event='open-modal' hide-event='close-modal' clickerino-offerino-closerino="true" anchor-pos-y='10' size-delta-x='92' size-delta-y='35' move-to-center='true'>
-    <vertical horizontal-fit='PreferredSize' vertical-fit='PreferredSize'>
+    <vertical preferred-width='88' vertical-fit='PreferredSize'>
 
-      <label text='~error-header' font-size='4' TextOverflowModes='Ellipsis'/>
-      <label text='~error-description' font-size='3' italics='true' TextOverflowModes='Ellipsis'/>
+      <label text='~error-header' font-size='4' word-wrapping='true'/>
+      <label text='~error-description' font-size='3' italics='true' word-wrapping='true'/>
 
 
       <button text='ok' click-event='close-modal'/>

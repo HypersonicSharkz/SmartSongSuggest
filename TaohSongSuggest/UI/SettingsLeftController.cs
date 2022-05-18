@@ -2,13 +2,8 @@
 using BeatSaberMarkupLanguage.ViewControllers;
 using SmartSongSuggest.Configuration;
 using SmartSongSuggest.Managers;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartSongSuggest.UI
 {

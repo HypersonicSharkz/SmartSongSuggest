@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using PlaylistNS;
-using ActivePlayerData;
 using System.Diagnostics;
 using LinkedData;
 using Settings;
@@ -13,6 +12,9 @@ namespace Actions
 {
     public class RankedSongsSuggest
     {
+        //Output Active?
+        Boolean showDetailedOutout = false;
+
         public SongSuggest songSuggest { get; set; }
         //Information for the GUI on how far the update progress is.
         public double songSuggestCompletion { get; set; }
@@ -47,12 +49,16 @@ namespace Actions
         //1.2 seems to be a good value to cut off low/high acc linkage, while still allowing a player room for growth suggestions
         //This may be a usefull Difficulty setting in the future.
         double betterAccCap = 1.2;
-        //Set to true if a link is created, used to remove betterAccCap on players with low acc first, before giving them random songs.
-        Boolean foundSongs = false;
+
+        //Amount of Players the user got linked to. Low count then we remove betterAccCap limits.
+        //Still low count, then the suggestions may be strange (Way too hard songs), we make sure to evaluate songs
+        //(compare the songs min and max range to the players max PP on any song, and remove
+        //unrealistic suggestions)
+        int minPlayerLinks = 1000;
+        int linkedPlayers = 0;
 
         //Value for how many spots must be expected to be improved before being shown in suggestions (unplayed songs are always shown)
         int improveSpots = 5;
-
 
         //Filter Results
         List<String> distanceFilterOrdered;
@@ -64,18 +70,15 @@ namespace Actions
         //PP local vs Global
         List<String> ppLocalVSGlobalOrdered;
 
-        //Hate having random selections, but if nothing is found we still have a list to make, so lets make a randomizer for it.
-        //Random rnd = new Random();
-
-        //Output Active?
-        Boolean showDetailedOutout = false;
-
         //Creates a playlist with 50 suggested songs based on the link system.
         public void SuggestedSongs()
         {
             //TODO: When done splitting into groups, call groups from SongSuggest instead, and remove this Function.
 
-            Console.WriteLine("Starting Song Suggest");
+            songSuggest.log?.WriteLine("Starting Song Suggest");
+
+            //Sets the lower quality suggestions to false, different parts of the song evaluations can turn it true.
+            songSuggest.lowQualitySuggestions = false;
 
             //Setup Base Linking (song links).
             CreateLinks();
@@ -93,10 +96,11 @@ namespace Actions
             CreatePlaylist();
 
             //----- Console Writeline for Debug -----
-            Console.WriteLine("Playlist Generation Done: " + timer.ElapsedMilliseconds);
+            songSuggest.log?.WriteLine("Players Linked: {0}", linkedPlayers);
+            songSuggest.log?.WriteLine("Playlist Generation Done: " + timer.ElapsedMilliseconds);
 
             timer.Stop();
-            Console.WriteLine("Time Spent: " + timer.ElapsedMilliseconds);
+            songSuggest.log?.WriteLine("Time Spent: " + timer.ElapsedMilliseconds);
 
             //Outputs results in the Console with how the different styles rankings
             ConsoleWriteStyleBreakdown();
@@ -106,11 +110,11 @@ namespace Actions
         {
             timer.Reset();
             timer.Start();
-            Console.WriteLine("Starting Recalculations");
+            songSuggest.log?.WriteLine("Starting Recalculations");
             EvaluateFilters();
             RemoveIgnoredSongs();
             CreatePlaylist();
-            Console.WriteLine("Recalculations Done: " + timer.ElapsedMilliseconds);
+            songSuggest.log?.WriteLine("Recalculations Done: " + timer.ElapsedMilliseconds);
 
             ////Outputs results in the Console with how the different styles rankings
             ConsoleWriteStyleBreakdown();
@@ -122,13 +126,13 @@ namespace Actions
         public void CreateLinks()
         {
             //Updating scores has external wait time of the API call, so restarting measurement for the remainder of the update.
-            Console.WriteLine("Starts the timer");
+            songSuggest.log?.WriteLine("Starts the timer");
             timer.Start();
 
             //Get Link Data
             songSuggest.status = "Finding Link Data";
             top10kPlayers = songSuggest.top10kPlayers;
-            Console.WriteLine("Done loading and generating the top10k player data: " + timer.ElapsedMilliseconds);
+            songSuggest.log?.WriteLine("Done loading and generating the top10k player data: " + timer.ElapsedMilliseconds);
 
             //Find the Origin Song ID's based on Active Players data.
             songSuggest.status = "Finding Songs to Match";
@@ -139,20 +143,21 @@ namespace Actions
             songSuggest.status = "Preparing Origin Songs";
             originSongs = CreateOriginPoints(originSongIDs, songSuggest.songBanning.GetPermaBannedIDs());
             //Check if there is no links and if, retry this time without removing lower acc links
-            if (!foundSongs)
+            if (linkedPlayers < minPlayerLinks)
             {
-                Console.WriteLine("No Songs Found with Acc Limit on. Activate Limit Breaker.");
+                songSuggest.lowQualitySuggestions = true;
+                songSuggest.log?.WriteLine("Not Enough Player Links Found ({0}) with Acc Limit on. Activate Limit Breaker.", linkedPlayers);
                 betterAccCap = Double.MaxValue;
                 originSongs = CreateOriginPoints(originSongIDs, songSuggest.songBanning.GetPermaBannedIDs());
             }
 
-            Console.WriteLine("Completion: " + (songSuggestCompletion * 100) + "%");
-            Console.WriteLine("Origin Endpoint Done: " + timer.ElapsedMilliseconds);
+            songSuggest.log?.WriteLine("Completion: " + (songSuggestCompletion * 100) + "%");
+            songSuggest.log?.WriteLine("Origin Endpoint Done: " + timer.ElapsedMilliseconds);
 
             //Link the Target end points in the Target End Point Collection
             targetSongs = CreateTargetPoints();
-            Console.WriteLine("Completion: " + (songSuggestCompletion * 100) + "%");
-            Console.WriteLine("Suggest Endpoint Done: " + timer.ElapsedMilliseconds);
+            songSuggest.log?.WriteLine("Completion: " + (songSuggestCompletion * 100) + "%");
+            songSuggest.log?.WriteLine("Suggest Endpoint Done: " + timer.ElapsedMilliseconds);
         }
 
         //Order the songs via the different active filters
@@ -161,8 +166,8 @@ namespace Actions
             //Calculate the scores on the songs for suggestions
             songSuggest.status = "Evaluating Found Songs";
             EvaluateSongs();
-            Console.WriteLine("Completion: " + (songSuggestCompletion * 100) + "%");
-            Console.WriteLine("Score Relevance Calculations Done: " + timer.ElapsedMilliseconds);
+            songSuggest.log?.WriteLine("Completion: " + (songSuggestCompletion * 100) + "%");
+            songSuggest.log?.WriteLine("Score Relevance Calculations Done: " + timer.ElapsedMilliseconds);
 
             //Find most relevant songs for playlist selection
             songSuggest.status = "Selecting Best Matching Songs";
@@ -190,16 +195,16 @@ namespace Actions
         {
             List<String> originSongsIDs = new List<String>();
             //Add Liked songs.
-            Console.WriteLine("Use Liked Songs: " + useLikedSongs);
+            songSuggest.log?.WriteLine("Use Liked Songs: " + useLikedSongs);
 
             if (useLikedSongs) originSongsIDs = originSongsIDs.Union(songSuggest.songLiking.GetLikedIDs()).ToList();
 
-            Console.WriteLine("Songs in list: " + originSongsIDs.Count());
+            songSuggest.log?.WriteLine("Songs in list: " + originSongsIDs.Count());
 
             //Fill list to 50 if liked songs are not used, or the selection is made to fill
             if (!useLikedSongs || fillLikedSongs) originSongsIDs = originSongsIDs.Union(songSuggest.activePlayer.GetTop(50 - originSongsIDs.Count())).ToList();
 
-            Console.WriteLine("Songs in list: " + originSongsIDs.Count());
+            songSuggest.log?.WriteLine("Songs in list: " + originSongsIDs.Count());
 
             return originSongsIDs;
         }
@@ -232,6 +237,9 @@ namespace Actions
             }
 
             //Prepare the starting endpoints for the above selected songs and tie them to the origin collection, ignoring the player itself.
+
+            //Reset link count for new generation.
+            linkedPlayers = 0;
             foreach (Top10kPlayer player in top10kPlayers.top10kPlayers.Where(player => player.id != songSuggest.activePlayer.id && player.rank >= settings.rankFrom && player.rank <= settings.rankTo))
             {
                 //Loop all preselected origin songs on a player
@@ -244,7 +252,8 @@ namespace Actions
                     //Skip link if the targetsongs PP is too high compared to original players score
                     if (validSong) // && songSuggest.activePlayer.scores[playerSong.songID].pp / betterAccCap < playerSong.pp)
                     {
-                        foundSongs = true;
+                        //Each player can be counted 50 times, as there is 50 songs to link from.
+                        linkedPlayers++;
                         //Loop songs again for endpoints, skipping linking itself, as well as ignoreSongs
                         foreach (Top10kScore suggestedSong in player.top10kScore.Where(suggestedSong => suggestedSong.rank != playerSong.rank && !ignoreSongs.Contains(suggestedSong.songID)))
                         {
@@ -329,7 +338,7 @@ namespace Actions
             //reset if all = 0, reset to 100%.
             if (modifierDistance == 0 && modifierStyle == 0 && modifierOverweight == 0) modifierDistance = modifierStyle = modifierOverweight = 1.0;
 
-            Console.WriteLine("PP: {0} Style: {1} Overweight: {2}", modifierDistance, modifierStyle, modifierOverweight);
+            songSuggest.log?.WriteLine("PP: {0} Style: {1} Overweight: {2}", modifierDistance, modifierStyle, modifierOverweight);
 
             //Get count of candidates, and remove 1, as index start as 0, so max value is songs-1
             double totalCandidates = distanceFilterOrdered.Count() - 1;
@@ -368,7 +377,58 @@ namespace Actions
 
             //Sort list, and get song ID's only
             sortedSuggestions = totalScore.OrderBy(s => s.Value).Select(s => s.Key).ToList();
+
+            //The suggestions may be weak if there is a low amount of Links, so current suggestions needs evaluation to make
+            //sure if link count is low that potential too hard songs are removed.
+            //readd all remaining songs to the ends of the list from easiest to hardest (if they are on enough top 20's), as this makes
+            //it possible to filter disliked, too hard songs etc normally, and always provide a list of 50 songs.
+            LowLinkEvaluation();
         }
+
+        //There is not enough links to have a high confidence in all results are doable
+        //So removes any songs outside expected range in min/max PP values
+        //Then takes all remaining songs with at least a few plays and readd them after actual suggestions to make sure player
+        //Can ban/have recently played songs removed without dropping under 50 suggestions.
+        public void LowLinkEvaluation()
+        {
+            //Skip this if enough links. (It is possible that removing the low accuracy filter ended up giving enough links that song
+            //suggestions are good, even if the players acc is so low that the Better Acc filter was triggered).
+            if (linkedPlayers < minPlayerLinks)
+            {
+                songSuggest.log?.WriteLine("Low Linking found");
+                //Enable the warning for additonal steps to ensure enough songs.
+                songSuggest.lowQualitySuggestions = true;
+                //Get the players max PP
+                //Find all pp scores of the active player, and if none are found set max score to 0 (new player)
+                List<float> allPlayerPPScores = songSuggest.activePlayer.scores.OrderByDescending(c => c.Value.pp).Take(1).Select(c => c.Value.pp).ToList();
+                //Get largst PP score, or set to 0 if none achieved.                
+                double playerMaxPP = allPlayerPPScores.Count > 0 ? allPlayerPPScores[0] : 0;
+                songSuggest.log?.WriteLine("PP:" + playerMaxPP);
+                songSuggest.log?.WriteLine("Filtering out songs that are expected too hard");
+
+                //Remove songs that have too high a min PP (expected song is outside the players skill)                
+                //Remove songs that have too high a max PP (expected players Acc is lacking)
+                //Remove songs without 3 plays (The songs scores could be random values, so rather remove them for now)
+
+                sortedSuggestions = sortedSuggestions
+                    .Where(c => songSuggest.top10kPlayers.top10kSongMeta[c].minScore < 1.2 * playerMaxPP
+                    && songSuggest.top10kPlayers.top10kSongMeta[c].maxScore < 1.5 * playerMaxPP
+                    && songSuggest.top10kPlayers.top10kSongMeta[c].count >= 3)
+                    .ToList();
+
+                //Find all songs with at least 3 plays, and sort them by MaxPP scores, so easiest is first, and remove already approved songs
+                List<String> remainingSongs = songSuggest.top10kPlayers.top10kSongMeta
+                    .Where(c => c.Value.count >= 3)
+                    .OrderBy(c => c.Value.maxScore)
+                    .Select(c => c.Value.songID)
+                    .Except(sortedSuggestions)
+                    .ToList();
+
+                //Add the songs not already suggested to the list.
+                sortedSuggestions.AddRange(remainingSongs);
+            }
+        }
+
 
         //Filters out any songs that should not be in the generated playlist
         //Ignore All Played
@@ -433,24 +493,6 @@ namespace Actions
 
             //Select 50 best suggestions
             songSuggestIDs = filteredSuggestions.GetRange(0, Math.Min(50, filteredSuggestions.Count()));
-            //If no songs was found, make a list of the 50 songs with lowest MaxPP gained with at least 3 entries
-            //(if any songs are found those are kept as is)
-            if (songSuggestIDs.Count() == 0)
-            {
-                Console.WriteLine("No Songs found, selecting 50 lowest PP songs with over 10 links");
-                songSuggest.noFoundSongs = true;
-
-                songSuggestIDs = songSuggest.top10kPlayers.top10kSongMeta
-                    .Where(c => c.Value.count >= 3)
-                    .OrderBy(c => c.Value.maxScore)
-                    .Select(c => c.Value.songID)
-                    .Take(50)
-                    .ToList();
-            }
-            else
-            {
-                songSuggest.noFoundSongs = false;
-            }
 
             Playlist playlist = new Playlist(settings.playlistSettings) { songSuggest = songSuggest };
             playlist.AddSongs(songSuggestIDs);
@@ -489,9 +531,10 @@ namespace Actions
                     //***Test PP local vs global
                     double localVSGlobalPP = targetSongs.endPoints[songID].localVSGlobalPP;
 
-                    //Console.WriteLine("#:{0}\tPPdiff:{8}\testPP:{9}\tactPP:{10}\tAc:{1}\tPP:{2}\tSt:{3}\tOw:{4}\t: {5} ({6} - {7})", rank, actualPlayerRankTxt, ppRank, styleRank, owRank, songName, songDifc, songID, gainablePP,estimatedPP,playerPP);
+                    //songSuggest.log?.WriteLine("#:{0}\tPPdiff:{8}\testPP:{9}\tactPP:{10}\tAc:{1}\tPP:{2}\tSt:{3}\tOw:{4}\t: {5} ({6} - {7})", rank, actualPlayerRankTxt, ppRank, styleRank, owRank, songName, songDifc, songID, gainablePP,estimatedPP,playerPP);
 
-                    Console.WriteLine("#:{0}\t{2}\tRatio:{3}\t{1}", rank, songInfo, actualPlayerRankTxt, localVSGlobalPP);
+                    //songSuggest.log?.WriteLine("#:{0}\t{2}\tRatio:{3}\t{1}", rank, songInfo, actualPlayerRankTxt, localVSGlobalPP);
+                    songSuggest.log?.WriteLine("#:{0}\tDistance:{3}\tStyle :{4}\tOW:{5}\tActual:{2}\t{1}", rank, songInfo, actualPlayerRankTxt, ppRank, styleRank, owRank);
                 }
             }
         }

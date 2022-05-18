@@ -43,12 +43,12 @@ namespace Actions
             {
                 page++;
                 songSuggest.status = "Downloading Player History Page: " + page + "/" + maxPage;
-                Console.WriteLine("Page Start: " + page + " Search Mode: " + searchmode);
+                songSuggest.log?.WriteLine("Page Start: " + page + " Search Mode: " + searchmode);
                 PlayerScoreCollection playerScoreCollection = webDownloader.GetScores(activePlayer.id, searchmode, 100, page);
                 maxPage = ""+Math.Ceiling((double)playerScoreCollection.metadata.total / 100);
                 //PlayerScoreCollection playerScoreCollection = JsonConvert.DeserializeObject<PlayerScoreCollection>(scoresJSON, serializerSettings);
                 songSuggest.status = "Parsing Player History Page: " + page + "/" + maxPage;
-                Console.WriteLine("Page Parse: " + page);
+                songSuggest.log?.WriteLine("Page Parse: " + page);
                 //Parse Player Scores
                 foreach (PlayerScore score in playerScoreCollection.playerScores)
                 {
@@ -72,12 +72,12 @@ namespace Actions
                     //break if we are doing initial user search and hit the non ranked songs
                     else if (searchmode == "top")
                     {
-                        //Console.WriteLine("Hit unranked song");
+                        //songSuggest.log?.WriteLine("Hit unranked song");
                         continueLoad = false;
                     }
                 }
 
-                Console.WriteLine("Page " + page + "/" + Math.Ceiling((double)playerScoreCollection.metadata.total / 100) + " Done.");
+                songSuggest.log?.WriteLine("Page " + page + "/" + Math.Ceiling((double)playerScoreCollection.metadata.total / 100) + " Done.");
                 //Last Page check, sets loop to finish if on it.
                 if (playerScoreCollection.metadata.total <= page * 100) continueLoad = false;
             }
@@ -89,7 +89,7 @@ namespace Actions
             //If new songs was added, save the library.
             if (songLibrary.Updated()) songLibrary.Save();
 
-            Console.WriteLine("PlayerScores Count" + activePlayer.scores.Count());
+            songSuggest.log?.WriteLine("PlayerScores Count" + activePlayer.scores.Count());
             songSuggest.activePlayer = activePlayer;
         }
     }

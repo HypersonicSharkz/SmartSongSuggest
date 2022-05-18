@@ -1,19 +1,18 @@
 ﻿using System;
-using System.Windows.Forms; //Application
-using System.IO; //Path
 
 namespace Settings
 {
+    //All these values MUST be set before passing it on to SongSuggest, suggested default locations in comments.
     public class FilePathSettings
     {
-        public String songLibraryPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
-        public String playlistPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
-        public String activePlayerDataPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\Players\\";
-        public String top10kPlayersPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
-        public String bannedSongsPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
-        public String likedSongsPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
-        public String filesDataPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
-        public String lastSuggestionsPath { get; set; } = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
+        public String songLibraryPath { get; set; }// "\\";
+        public String playlistPath { get; set; }// "\\";
+        public String activePlayerDataPath { get; set; }// "\\Players\\";
+        public String top10kPlayersPath { get; set; }// "\\";
+        public String bannedSongsPath { get; set; }// "\\";
+        public String likedSongsPath { get; set; }// "\\";
+        public String filesDataPath { get; set; }// "\\";
+        public String lastSuggestionsPath { get; set; }// "\\";
     }
 }
 

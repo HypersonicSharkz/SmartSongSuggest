@@ -109,8 +109,8 @@ namespace LinkedData
 
             //double playerScore = songSuggest.activePlayer.GetScore(songID);
             //double diffPP = playerScore - estimatedPP;
-            //Console.WriteLine("diffPP;estimatedPP;playerScore;songIndex;totalLinks;songName(songDifc-songID)");
-            //if (songIndex != 0&&totalSongs > 50) Console.WriteLine("{0};{1};{2};{3};{4};{5}({6}-{7})",diffPP,estimatedPP,playerScore,songIndex,totalSongs,songName,songDifc,songID);
+            //songSuggest.log?.WriteLine("diffPP;estimatedPP;playerScore;songIndex;totalLinks;songName(songDifc-songID)");
+            //if (songIndex != 0&&totalSongs > 50) songSuggest.log?.WriteLine("{0};{1};{2};{3};{4};{5}({6}-{7})",diffPP,estimatedPP,playerScore,songIndex,totalSongs,songName,songDifc,songID);
 
             //!!!CONSIDER REMOVING/ALTERNATIVE FOR HANDLING UNKNOWN MATCHES WHEN SPLITTING PP!!!
             //Sets the estimate to 0 if there is low amount of links to a song.

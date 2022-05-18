@@ -32,7 +32,7 @@ namespace WebDownloading
             }
             catch
             {
-                Console.WriteLine("Error on " + page);
+                songSuggest.log?.WriteLine("Error on " + page);
             }
             return new PlayerScoreCollection();
         }
@@ -49,7 +49,7 @@ namespace WebDownloading
             }
             catch
             {
-                Console.WriteLine("Error on " + page);
+                songSuggest.log?.WriteLine("Error on " + page);
             }
             return new PlayerCollection();
         }
@@ -61,12 +61,12 @@ namespace WebDownloading
             {
                 //https://scoresaber.com/api/leaderboard/by-hash/E42BCDF50EA1F961CB8CEFE502E82806866F6479/info?difficulty=9&gameMode=SoloStandard
                 String songInfo = client.DownloadString("https://scoresaber.com/api/leaderboard/by-hash/"+hash+"/info?difficulty="+difficulty+"&gameMode=SoloStandard");
-                Console.WriteLine("Unknown Song found and downloaded");
+                songSuggest.log?.WriteLine("Unknown Song found and downloaded");
                 return JsonConvert.DeserializeObject<LeaderboardInfo>(songInfo, serializerSettings);
             }
             catch
             {
-                Console.WriteLine("Error finding song Hash: " + hash + " Difficulty: " + difficulty);
+                songSuggest.log?.WriteLine("Error finding song Hash: " + hash + " Difficulty: " + difficulty);
             }
             return new LeaderboardInfo();
         }
@@ -82,7 +82,7 @@ namespace WebDownloading
             }
             catch
             {
-                Console.WriteLine("Error finding song with ID: " + songID);
+                songSuggest.log?.WriteLine("Error finding song with ID: " + songID);
             }
             return new LeaderboardInfo();
         }
@@ -94,7 +94,7 @@ namespace WebDownloading
             string metaWebPath = "https://raw.githubusercontent.com/HypersonicSharkz/SmartSongSuggest/master/TaohSongSuggest/Configuration/InitialData/Files.meta";
             string metaText = client.DownloadString(metaWebPath);
 
-            Console.WriteLine(metaText);
+            songSuggest.log?.WriteLine(metaText);
 
             FilesMeta filesMetaWeb = JsonConvert.DeserializeObject<FilesMeta>(metaText, serializerSettings);
             FilesMeta filesMetaLocal = songSuggest.fileHandler.LoadFilesMeta();
@@ -130,7 +130,7 @@ namespace WebDownloading
                 File.Delete(filePath);
 
 
-                Console.WriteLine("Web: {0} - Files: {1}", filesMetaWeb.GetLargeVersion(), filesMetaLocal.GetLargeVersion());
+                songSuggest.log?.WriteLine("Web: {0} - Files: {1}", filesMetaWeb.GetLargeVersion(), filesMetaLocal.GetLargeVersion());
                 //Check if the data require a profile reset on next update of the activeplayer
                 if (filesMetaWeb.GetLargeVersion() != filesMetaLocal.GetLargeVersion())
                 {

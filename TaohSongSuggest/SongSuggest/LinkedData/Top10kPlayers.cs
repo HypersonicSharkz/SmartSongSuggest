@@ -36,6 +36,7 @@ namespace LinkedData
                     songMeta.count++;
                     songMeta.totalRank += score.rank;
                     songMeta.maxScore = Math.Max(songMeta.maxScore, score.pp);
+                    songMeta.minScore = Math.Min(songMeta.minScore, score.pp);
                     songMeta.totalScore += score.pp;
                 }
             }
@@ -45,7 +46,7 @@ namespace LinkedData
             {
                 songMeta.averageScore = songMeta.totalScore / songMeta.count;
             }
-            Console.WriteLine("*Total Songs*: " + top10kSongMeta.Count);
+            songSuggest.log?.WriteLine("*Total Songs*: " + top10kSongMeta.Count);
         }
 
         public void Add(String id, String name, int rank)

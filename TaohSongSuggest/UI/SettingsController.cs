@@ -1,27 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using ActivePlayerData;
-using BanLike;
-using BeatSaberMarkupLanguage;
+﻿using System.ComponentModel;
 using BeatSaberMarkupLanguage.Attributes;
 using BeatSaberMarkupLanguage.ViewControllers;
-using FileHandling;
 using HMUI;
-using LinkedData;
-using PlaylistNS;
-using Settings;
-using SongLibraryNS;
 using SmartSongSuggest.Configuration;
 using SmartSongSuggest.Managers;
 using TMPro;
 using UnityEngine;
-using WebDownloading;
 using BeatSaberMarkupLanguage.Parser;
 
 namespace SmartSongSuggest.UI
@@ -126,7 +110,6 @@ namespace SmartSongSuggest.UI
         {
             try
             {
-                //Plugin.Log.Info($"{prog} / 1");
                 statusComponent.text = SongSuggestManager.toolBox.status;
 
                 bgProgress.color = Color.green;
@@ -147,8 +130,6 @@ namespace SmartSongSuggest.UI
 
         public void ShowError(string header, string description)
         {
-            Plugin.Log.Info("Should show error");
-
             _errorHeader = header;
             _errorDescription = description;
 

@@ -3,16 +3,10 @@ using IPA;
 using IPA.Config;
 using IPA.Config.Stores;
 using SongDetailsCache;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using SmartSongSuggest.Configuration;
 using SmartSongSuggest.Managers;
 using SmartSongSuggest.UI;
-using UnityEngine;
-using UnityEngine.SceneManagement;
 using IPALogger = IPA.Logging.Logger;
 
 namespace SmartSongSuggest

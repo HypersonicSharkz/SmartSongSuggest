@@ -27,7 +27,7 @@ namespace Actions
             //If partial refresh, current data is loaded, else a new dataset is made.
             if (fileHandler.LinkedDataExist()&&!fullRefresh)
             {
-                Console.WriteLine("Keeping Users");
+                songSuggest.log?.WriteLine("Keeping Users");
                 //Current players and their score data is loaded, and the score data is cleared
                 top10kPlayers.Load();
                 foreach (Top10kPlayer player in top10kPlayers.top10kPlayers)
@@ -37,11 +37,11 @@ namespace Actions
             }
             else
             {
-                Console.WriteLine("New Users");
+                songSuggest.log?.WriteLine("New Users");
                 //Make fresh dataset and get the players
                 Retrieve10kTopPlayers();
             }
-            Console.WriteLine(top10kPlayers.top10kPlayers.Count());
+            songSuggest.log?.WriteLine(top10kPlayers.top10kPlayers.Count());
             //Set true if you want scores updates on the players
             Retrieve10kTopPlayersScores();
             UpdateFilesMeta();
@@ -63,14 +63,14 @@ namespace Actions
                     top10kPlayers.Add(player.id + "", player.name, player.rank);
                 }
                 rateLimiter.Stop();
-                Console.WriteLine("{0} Players Parsed: {1}",rateLimiter.ElapsedMilliseconds, top10kPlayers.top10kPlayers.Count);
+                songSuggest.log?.WriteLine("{0} Players Parsed: {1}",rateLimiter.ElapsedMilliseconds, top10kPlayers.top10kPlayers.Count);
                 if ((int)rateLimiter.ElapsedMilliseconds < 160) Thread.Sleep(160 - (int)rateLimiter.ElapsedMilliseconds);
                 rateLimiter.Reset();
             }
             top10kPlayers.Save();
             //File.WriteAllText(top10kPlayersPath, top10kPlayers.GetJSON());
-            Console.WriteLine(top10kPlayers.top10kPlayers.Count);
-            Console.WriteLine(top10kPlayers.top10kPlayers[0].name);
+            songSuggest.log?.WriteLine(top10kPlayers.top10kPlayers.Count);
+            songSuggest.log?.WriteLine(top10kPlayers.top10kPlayers[0].name);
         }
 
 
@@ -84,14 +84,14 @@ namespace Actions
 
             int totalCount = 0;
             Stopwatch rateLimiter = new Stopwatch();
-            Console.WriteLine("Starting loads");
+            songSuggest.log?.WriteLine("Starting loads");
             foreach (Top10kPlayer player in top10kPlayers.top10kPlayers)
             {
 
                 totalCount++;
                 if (totalCount % 100 == 0)
                 {
-                    Console.WriteLine("Working on player: " + totalCount);
+                    songSuggest.log?.WriteLine("Working on player: " + totalCount);
                     //Saves files every 100 entries
                     top10kPlayers.Save();
                     if (songLibrary.Updated()) songLibrary.Save();

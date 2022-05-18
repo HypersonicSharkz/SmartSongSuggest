@@ -8,6 +8,7 @@ namespace LinkedData
         public double count { get; set; } = 0;
         public double totalRank { get; set; } = 0;
         public double maxScore { get; set; } = 0;
+        public double minScore { get; set; } = double.MaxValue;
 
         //Used for localvsglobal PP
         //---

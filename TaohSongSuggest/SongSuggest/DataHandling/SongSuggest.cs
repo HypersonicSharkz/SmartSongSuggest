@@ -7,6 +7,7 @@ using System;
 using Actions;
 using Settings;
 using LinkedData;
+using System.IO;
 
 namespace SongSuggestNS
 {
@@ -23,19 +24,27 @@ namespace SongSuggestNS
         public SongBanning songBanning { get; set; }
         public Top10kPlayers top10kPlayers { get; set; }
 
-
-        //Last used action is stored here if the UI wants to use them for further information than just creation of the playlists
+        //Last used Song Evaluation is stored here if the UI wants to use them for further information than just creation of the playlists
         public RankedSongsSuggest songSuggest { get; private set; }
         public OldestSongs oldestSongs { get; private set; }
 
         //List of last ranked song suggestions
         public LastRankedSuggestions lastSuggestions { get; set; }
 
-        //Boolean set to true if no songs was found in RankedSongSuggest and the list was filled with 50 random songs
-        public Boolean noFoundSongs { get; set; } = false;
+        //Boolean set to true if the quality of the found songs was not high enough
+        //e.g. Had to remove the betterAcc and/or songs was missing from generating 50 suggestions.
+        public Boolean lowQualitySuggestions { get; set; } = false;
 
-        public SongSuggest(FilePathSettings filePathSettings, String userID)
+        //Log Details Target (null means it is off), else set the writer here.
+        public TextWriter log = null;
+
+        //Initializes the class, different Constructors calls this.
+        private void Initialize(FilePathSettings filePathSettings, String userID, TextWriter log)
         {
+            //Enable Log
+            this.log = log;
+            log?.WriteLine("Log Enabled in Constructor");
+
             //Set the active players ID
             activePlayerID = userID;
 
@@ -75,6 +84,19 @@ namespace SongSuggestNS
             top10kPlayers.Load();
 
             status = "Ready";
+
+        }
+
+        //Constructor Where log can be enabled.
+        public SongSuggest(FilePathSettings filePathSettings, String userID, TextWriter log)
+        {
+            Initialize(filePathSettings, userID, log);
+        }
+
+        //Old Constructor where Log Enabling/Disabling was not possible.
+        public SongSuggest(FilePathSettings filePathSettings, String userID)
+        {
+            Initialize(filePathSettings, userID, null);
         }
 
         public void GenerateSongSuggestions(SongSuggestSettings settings)
@@ -161,6 +183,5 @@ namespace SongSuggestNS
             //Set Reminder file if missing (Can be set to true multiple times, hence check if already set)
             if (!fileHandler.CheckPlayerRefresh()) fileHandler.TogglePlayerRefresh();
         }
-
     }
 }
