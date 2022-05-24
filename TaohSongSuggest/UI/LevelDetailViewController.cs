@@ -159,6 +159,9 @@ namespace SmartSongSuggest.UI
             persController.sldv = GameObject.FindObjectOfType<StandardLevelDetailViewController>();
             persController.sldv.didChangeContentEvent += persController.didChangeContent;
             persController.sldv.didChangeDifficultyBeatmapEvent += persController.didChangeDifficulty;
+
+            persController.CheckButtons();
+
             HasAttached = true;
         }
 
@@ -170,9 +173,9 @@ namespace SmartSongSuggest.UI
         private void didChangeContent(StandardLevelDetailViewController arg1, StandardLevelDetailViewController.ContentType arg2)
         {
             if (arg2 == StandardLevelDetailViewController.ContentType.OwnedAndReady)
-            {
+            { 
                 CheckButtons();
-            }
+            } 
         }
 
         void CheckButtons()
@@ -188,7 +191,7 @@ namespace SmartSongSuggest.UI
 
                 _rankPlate = "";
 
-                if (sldv.beatmapLevel is CustomBeatmapLevel)
+                if (sldv.beatmapLevel != null && sldv.beatmapLevel is CustomBeatmapLevel)
                 {
                     levelHash = Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel);
 
