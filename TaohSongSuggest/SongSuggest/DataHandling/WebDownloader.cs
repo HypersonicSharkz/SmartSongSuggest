@@ -71,7 +71,7 @@ namespace WebDownloading
             return new LeaderboardInfo();
         }
 
-        //Generic web puller for song leaderboards via Hash and Difficulty
+        //Generic web puller for song leaderboards via SongID
         public LeaderboardInfo GetLeaderboardInfo(String songID)
         {
             try

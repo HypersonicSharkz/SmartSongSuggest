@@ -132,7 +132,7 @@ namespace Actions
         {
             FilesMeta filesMeta = songSuggest.fileHandler.LoadFilesMeta();
             String oldVersion = filesMeta.top10kVersion;
-            int seperatorLocation = oldVersion.IndexOf(".");
+            int seperatorLocation = oldVersion.IndexOf(".", StringComparison.Ordinal);
             String before = oldVersion.Substring(0, seperatorLocation);
             String after = oldVersion.Substring(seperatorLocation+1);
             String updatedAfter = ""+(int.Parse(after)+1);

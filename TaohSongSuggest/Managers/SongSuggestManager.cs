@@ -17,7 +17,7 @@ namespace SmartSongSuggest.Managers
         //Method for sending progress info to the UI on the main thread
         static async void UpdateProgessNew()
         {
-            while (toolBox.status.ToLower() != "ready")
+            while (toolBox.status.ToLowerInvariant() != "ready")
             {
                 TSSFlowCoordinator.settingsView.RefreshProgressBar(toolBox.songSuggest != null ? (float)toolBox.songSuggest.songSuggestCompletion : 0);
                 await Task.Delay(200);
@@ -69,11 +69,11 @@ namespace SmartSongSuggest.Managers
 
         public static void SuggestSongs(bool p_ignoreNonImprovable = false)
         {
-            Task.Run(() =>
+            Task.Run(async () =>
             {
                 try
                 {
-                    IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew( () => TSSFlowCoordinator.Instance.ToggleBackButton(false));
+                    await IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew( () => TSSFlowCoordinator.Instance.ToggleBackButton(false));
 
                     PluginConfig cfg = SettingsController.cfgInstance;
 
@@ -115,17 +115,22 @@ namespace SmartSongSuggest.Managers
 
                     toolBox.songSuggest.songSuggestCompletion = 1;
 
-                    Task.Delay(100);
+                    await Task.Delay(100);
 
-                    IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
+                    await IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
                     {
                         if (toolBox.lowQualitySuggestions)
                         {
-                            TSSFlowCoordinator.settingsView.ShowError("A low amount of links was found when generating your suggestions.", @"Due to this the suggestions may be more random and less personalized.
+                            if (cfg.useLikedSongs)
+                            {
+                                TSSFlowCoordinator.settingsView.ShowError("Not enough liked songs", @"You do currently not have enough liked songs for the program to find personalized maps, this will result in a less optimal playlist.");
+                            } else
+                            {
+                                TSSFlowCoordinator.settingsView.ShowError("A low amount of links was found when generating your suggestions.", @"Due to this the suggestions may be more random and less personalized.
 This warning will disappear on song generation when you complete more suggested songs at a high enough accuracy. A simple way to greatly improve accuracy is ensuring you full swing as much as possible.
 If this warning persists your Cached data may be broken, try using the 'CLEAR CACHE'.");
+                            }
                         }
-
 
                         UpdatePlaylists("Song Suggest");
                         TSSFlowCoordinator.Instance.ToggleBackButton(true);

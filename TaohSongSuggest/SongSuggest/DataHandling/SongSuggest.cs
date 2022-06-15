@@ -166,14 +166,20 @@ namespace SongSuggestNS
         //Clear all Banned Songs
         public void ClearBan()
         {
-            songBanning = new SongBanning();
+            songBanning = new SongBanning() 
+            {
+                songSuggest = this
+            };
             fileHandler.SaveBannedSongs(songBanning.bannedSongs);
         }
 
         //Clears liked Songs
         public void ClearLiked()
         {
-            songLiking = new SongLiking();
+            songLiking = new SongLiking()
+            {
+                songSuggest = this
+            };
             fileHandler.SaveLikedSongs(songLiking.likedSongs);
         }
 

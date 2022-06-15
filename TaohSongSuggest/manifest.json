@@ -3,14 +3,15 @@
     "id": "SmartSongSuggest",
     "name": "SmartSongSuggest",
     "author": "HypersonicSharkz & Taoh",
-    "version": "1.5.16",
-    "description": "",
+    "version": "1.5.18",
+    "description": "Can make and update a playlist with ranked song suggestions, based on played and liked songs. Option to ban songs temporary or permanent. Can also make a playlist based on oldest ranked scores.",
     "gameVersion": "1.21.0",
     "dependsOn": {
         "BSIPA": "^4.2.0",
         "SongCore": "^3.8.0",
         "BeatSaberPlaylistsLib": "^1.5.0",
         "BeatSaberMarkupLanguage": "^1.5.0",
-        "SongDetailsCache": "^1.1.2"
+        "SongDetailsCache": "^1.1.2",
+        "BS Utils": "^1.12.0"
     }
 }

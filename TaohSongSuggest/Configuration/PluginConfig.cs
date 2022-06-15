@@ -9,7 +9,6 @@ namespace SmartSongSuggest.Configuration
 {
     internal class PluginConfig
     {
-        public static PluginConfig Instance { get; set; }
         public virtual int fromRank { get; set; } = 1;
         public virtual int toRank { get; set; } = 10000;
         public virtual bool ignorePlayedAll { get; set; } = false;

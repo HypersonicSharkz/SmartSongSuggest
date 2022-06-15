@@ -405,7 +405,7 @@ namespace Actions
                 double playerMaxPP = allPlayerPPScores.Count > 0 ? allPlayerPPScores[0] : 0;
                 songSuggest.log?.WriteLine("PP:" + playerMaxPP);
                 songSuggest.log?.WriteLine("Filtering out songs that are expected too hard");
-
+                songSuggest.log?.WriteLine("Songs before filtering: {0}", sortedSuggestions.Count());
                 //Remove songs that have too high a min PP (expected song is outside the players skill)                
                 //Remove songs that have too high a max PP (expected players Acc is lacking)
                 //Remove songs without 3 plays (The songs scores could be random values, so rather remove them for now)
@@ -415,6 +415,8 @@ namespace Actions
                     && songSuggest.top10kPlayers.top10kSongMeta[c].maxScore < 1.5 * playerMaxPP
                     && songSuggest.top10kPlayers.top10kSongMeta[c].count >= 3)
                     .ToList();
+
+                songSuggest.log?.WriteLine("Songs left after filtering: {0}",sortedSuggestions.Count());
 
                 //Find all songs with at least 3 plays, and sort them by MaxPP scores, so easiest is first, and remove already approved songs
                 List<String> remainingSongs = songSuggest.top10kPlayers.top10kSongMeta

@@ -191,6 +191,8 @@ namespace SmartSongSuggest.UI
 
                 _rankPlate = "";
 
+               
+
                 if (sldv.beatmapLevel != null && sldv.beatmapLevel is CustomBeatmapLevel)
                 {
                     levelHash = Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel);
