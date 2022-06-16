@@ -31,9 +31,6 @@ namespace SmartSongSuggest.UI
         [UIComponent("OldestBTN")]
         public NoTransitionsButton oldestBTN;
 
-        [UIComponent("SuggestBTNNon")]
-        public NoTransitionsButton suggestBTNNon;
-
         bool _suggestShow = true;
 
         [UIValue("suggest-show")]
@@ -103,7 +100,6 @@ namespace SmartSongSuggest.UI
         {
             suggestBTN.interactable = enable;
             oldestBTN.interactable = enable;
-            suggestBTNNon.interactable = enable;
         }
 
         public void RefreshProgressBar(float prog)

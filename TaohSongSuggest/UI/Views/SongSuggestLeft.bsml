@@ -1,14 +1,15 @@
 ﻿<vertical preferred-width='120' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
-  <horizontal horizontal-fit='PreferredSize' pad='8' preferred-height='79' vertical-fit='PreferredSize' child-control-height='false'>
+  <horizontal horizontal-fit='PreferredSize' pad='8' preferred-height='79' vertical-fit='PreferredSize'  child-control-height='false'>
     <vertical spacing='2' child-expand-height='false'>
       
-      <vertical child-control-height='false' child-control-width='true' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='90'>
-        <horizontal spacing='5'>
+      <vertical child-control-height='true' child-control-width='true' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='90' spacing='0'>
+        <horizontal spacing='5' child-control-height='false'>
           <button text='Clear Bans' font-size='5' italics='false' on-click='ClearBans' face-color='Red'/>
           <button text='Clear Likes' font-size='5' italics='false' on-click='ClearLikes' face-color='Red'/>
           <button text='Clear Cache' font-size='5' italics='false' on-click='ClearCache' face-color='Red'/>
         </horizontal>
       </vertical>
+      
       <horizontal bg='panel-top' bg-color='white' size-delta-y='1' pref-height='0.5'></horizontal>
 
       <macro.as-host host='cfgInstance'>

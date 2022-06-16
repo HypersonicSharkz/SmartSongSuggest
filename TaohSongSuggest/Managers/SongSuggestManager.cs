@@ -115,16 +115,18 @@ namespace SmartSongSuggest.Managers
 
                     toolBox.songSuggest.songSuggestCompletion = 1;
 
-                    await Task.Delay(100);
+                    Task.Delay(100);
 
                     await IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
                     {
+
                         if (toolBox.lowQualitySuggestions)
                         {
                             if (cfg.useLikedSongs)
                             {
                                 TSSFlowCoordinator.settingsView.ShowError("Not enough liked songs", @"You do currently not have enough liked songs for the program to find personalized maps, this will result in a less optimal playlist.");
-                            } else
+                            }
+                            else
                             {
                                 TSSFlowCoordinator.settingsView.ShowError("A low amount of links was found when generating your suggestions.", @"Due to this the suggestions may be more random and less personalized.
 This warning will disappear on song generation when you complete more suggested songs at a high enough accuracy. A simple way to greatly improve accuracy is ensuring you full swing as much as possible.
@@ -134,18 +136,24 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
 
                         UpdatePlaylists("Song Suggest");
                         TSSFlowCoordinator.Instance.ToggleBackButton(true);
+
                     });
                 }
                 catch (Exception e)
                 {
-                    Plugin.Log.Error(e);
-                    TSSFlowCoordinator.Instance.ToggleBackButton(true);
-                    TSSFlowCoordinator.settingsView.ShowError("Oops something went wrong...", $"Try again later. If issue persist try clearing cache. Error message: {e.Message}");
+                    CallException(e);
                 }
             });
 
 
             
+        }
+
+        public static void CallException(Exception e)
+        {
+            Plugin.Log.Error(e);
+            TSSFlowCoordinator.Instance.ToggleBackButton(true);
+            TSSFlowCoordinator.settingsView.ShowError("Oops something went wrong...", $"Try again later. If issue persist try clearing cache. Error message: {e.Message}");
         }
 
         public static void Oldest100ActivePlayer()

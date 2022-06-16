@@ -12,7 +12,7 @@ namespace SmartSongSuggest.Configuration
         public virtual int fromRank { get; set; } = 1;
         public virtual int toRank { get; set; } = 10000;
         public virtual bool ignorePlayedAll { get; set; } = false;
-        public virtual int ignorePlayedDays { get; set; } = 30;
+        public virtual int ignorePlayedDays { get; set; } = 7;
         public virtual int requiredMatches { get; set; } = 90;
         public virtual bool useLikedSongs { get; set; }
         public virtual bool fillLikedSongs { get; set; }
@@ -40,6 +40,17 @@ namespace SmartSongSuggest.Configuration
         public string DayFormatter(int sliderVal)
         {
             return sliderVal + " Days";
+        }
+
+        public void ResetSettings()
+        {
+            CopyFrom(new PluginConfig()
+            {
+                showRankPlate = showRankPlate,
+                showLikeButton = showLikeButton,
+                showBanButton = showBanButton
+            });
+
         }
 
         /// <summary>
