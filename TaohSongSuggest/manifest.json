@@ -3,7 +3,7 @@
     "id": "SmartSongSuggest",
     "name": "SmartSongSuggest",
     "author": "HypersonicSharkz & Taoh",
-    "version": "1.5.18",
+    "version": "1.5.19",
     "description": "Can make and update a playlist with ranked song suggestions, based on played and liked songs. Option to ban songs temporary or permanent. Can also make a playlist based on oldest ranked scores.",
     "gameVersion": "1.21.0",
     "dependsOn": {

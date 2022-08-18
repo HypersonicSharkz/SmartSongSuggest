@@ -102,6 +102,7 @@ namespace SongSuggestNS
         public void GenerateSongSuggestions(SongSuggestSettings settings)
         {
             //Refresh Player Data
+            activePlayerID = settings.scoreSaberID;
             RefreshActivePlayer();
 
             //Create the Song Suggestion (so once the creation has been made additional information can be kept and loaded from it.
@@ -121,7 +122,7 @@ namespace SongSuggestNS
 
         //Requires a RankedSongsSuggest has been performed, then it evaluates the linked songs without updating the user via new settings.
         //**Consider checks for updates of user, and that RankedSongsSuggest has already been performed**
-        public void Recalculate (SongSuggestSettings settings)
+        public void Recalculate(SongSuggestSettings settings)
         {
             songSuggest.settings = settings;
             songSuggest.Recalculate();
@@ -134,6 +135,10 @@ namespace SongSuggestNS
 
         public void GenerateOldestSongs(OldestSongSettings settings)
         {
+            //Refresh Player Data
+            activePlayerID = settings.scoreSaberID;
+            RefreshActivePlayer();
+
             oldestSongs = new OldestSongs(this);
             oldestSongs.Oldest100ActivePlayer(settings);
             status = "Ready";
@@ -166,7 +171,7 @@ namespace SongSuggestNS
         //Clear all Banned Songs
         public void ClearBan()
         {
-            songBanning = new SongBanning() 
+            songBanning = new SongBanning()
             {
                 songSuggest = this
             };

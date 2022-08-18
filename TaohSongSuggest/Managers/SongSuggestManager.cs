@@ -29,7 +29,7 @@ namespace SmartSongSuggest.Managers
 
         public static void Init()
         {
-            Task.Run(async () =>
+            Task.Run(() =>
             {
                 try
                 {
@@ -51,14 +51,7 @@ namespace SmartSongSuggest.Managers
                         lastSuggestionsPath = configDir
                     };
 
-
-                    await IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(async() =>
-                    {
-                        var userinf = await BS_Utils.Gameplay.GetUserInfo.GetUserAsync();
-
-                        toolBox = new SongSuggest(fps, userinf.platformUserId);
-                    });
-
+                    toolBox = new SongSuggest(fps, "-1");
                 }
                 catch (Exception e)
                 {
@@ -115,7 +108,7 @@ namespace SmartSongSuggest.Managers
 
                     toolBox.songSuggest.songSuggestCompletion = 1;
 
-                    Task.Delay(100);
+                    //Task.Delay(100);
 
                     await IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
                     {
@@ -186,7 +179,7 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
 
                     toolBox.GenerateOldestSongs(settings);
 
-                    Task.Delay(200);
+                    //Task.Delay(200);
 
                     IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
                     {
