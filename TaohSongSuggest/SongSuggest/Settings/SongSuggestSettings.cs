@@ -15,5 +15,8 @@ namespace Settings
         public bool fillLikedSongs { get; set; } = true;
         public FilterSettings filterSettings {get;set;}
         public PlaylistSettings playlistSettings { get; set; }
+        public int extraSongs { get; set; } = 25;
+        public int skipSongsCount { get; set; } = 0;
+        public int playlistLength { get; set; } = 50;
     }
 }

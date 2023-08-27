@@ -42,31 +42,31 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\Libs\0Harmony.dll</HintPath>
+      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\IPA\Libs\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="BeatmapCore">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\BeatmapCore.dll</HintPath>
+      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Beat Saber_Data\Managed\BeatmapCore.dll</HintPath>
     </Reference>
     <Reference Include="BeatSaberPlaylistsLib">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\Libs\BeatSaberPlaylistsLib.dll</HintPath>
+      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Libs\BeatSaberPlaylistsLib.dll</HintPath>
     </Reference>
     <Reference Include="BSML">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\Plugins\BSML.dll</HintPath>
+      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Plugins\BSML.dll</HintPath>
     </Reference>
     <Reference Include="BS_Utils, Version=1.11.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\Plugins\BS_Utils.dll</HintPath>
+      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Plugins\BS_Utils.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\Libs\Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Libs\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SongCore, Version=3.9.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\Plugins\SongCore.dll</HintPath>
+      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Plugins\SongCore.dll</HintPath>
     </Reference>
     <Reference Include="SongDetailsCache">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\Libs\SongDetailsCache.dll</HintPath>
+      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Libs\SongDetailsCache.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -131,15 +131,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SongSuggest\Actions\ActivePlayerRefreshData.cs" />
-    <Compile Include="SongSuggest\Actions\OldestSongs.cs" />
+    <Compile Include="SongSuggest\Actions\OldAndNew.cs" />
     <Compile Include="SongSuggest\Actions\RankedSongsSuggest.cs" />
     <Compile Include="SongSuggest\Actions\Top10kRefresh.cs" />
     <Compile Include="SongSuggest\DataHandling\ActivePlayer.cs" />
     <Compile Include="SongSuggest\DataHandling\ActivePlayerScore.cs" />
+    <Compile Include="SongSuggest\DataHandling\FileFormatVersions.cs" />
     <Compile Include="SongSuggest\DataHandling\FileHandler.cs" />
     <Compile Include="SongSuggest\DataHandling\FilesMeta.cs" />
     <Compile Include="SongSuggest\DataHandling\LastRankedSuggestions.cs" />
-    <Compile Include="SongSuggest\DataHandling\Playlist.cs" />
+    <Compile Include="SongSuggest\DataHandling\PlaylistManager.cs" />
     <Compile Include="SongSuggest\DataHandling\Song.cs" />
     <Compile Include="SongSuggest\DataHandling\SongBan.cs" />
     <Compile Include="SongSuggest\DataHandling\SongBanning.cs" />
@@ -148,6 +149,25 @@
     <Compile Include="SongSuggest\DataHandling\SongLiking.cs" />
     <Compile Include="SongSuggest\DataHandling\SongSuggest.cs" />
     <Compile Include="SongSuggest\DataHandling\WebDownloader.cs" />
+    <Compile Include="SongSuggest\JSON\AccSaberJSON\AccSaberSongMeta.cs" />
+    <Compile Include="SongSuggest\JSON\BeatLeaderJSON\Score.cs" />
+    <Compile Include="SongSuggest\JSON\BeatSaverJSON\Song.cs" />
+    <Compile Include="SongSuggest\JSON\PlaylistJSON\Difficulty.cs" />
+    <Compile Include="SongSuggest\JSON\PlaylistJSON\Playlist.cs" />
+    <Compile Include="SongSuggest\JSON\PlaylistJSON\Song.cs" />
+    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\Badge.cs" />
+    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\Difficulty.cs" />
+    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\LeaderboardInfo.cs" />
+    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\LeaderboardInfoCollection.cs" />
+    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\LeaderboardPlayer.cs" />
+    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\Metadata.cs" />
+    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\Player.cs" />
+    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\PlayerCollection.cs" />
+    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\PlayerScore.cs" />
+    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\PlayerScoreCollection.cs" />
+    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\Score.cs" />
+    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\ScoreCollection.cs" />
+    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\ScoreStats.cs" />
     <Compile Include="SongSuggest\LinkedData\SongEndPoint.cs" />
     <Compile Include="SongSuggest\LinkedData\SongEndPointCollection.cs" />
     <Compile Include="SongSuggest\LinkedData\SongLink.cs" />
@@ -155,21 +175,9 @@
     <Compile Include="SongSuggest\LinkedData\Top10kPlayers.cs" />
     <Compile Include="SongSuggest\LinkedData\Top10kScore.cs" />
     <Compile Include="SongSuggest\LinkedData\Top10kSongMeta.cs" />
-    <Compile Include="SongSuggest\ScoreSaberJSON\Badge.cs" />
-    <Compile Include="SongSuggest\ScoreSaberJSON\Difficulty.cs" />
-    <Compile Include="SongSuggest\ScoreSaberJSON\LeaderboardInfo.cs" />
-    <Compile Include="SongSuggest\ScoreSaberJSON\LeaderboardPlayer.cs" />
-    <Compile Include="SongSuggest\ScoreSaberJSON\Metadata.cs" />
-    <Compile Include="SongSuggest\ScoreSaberJSON\Player.cs" />
-    <Compile Include="SongSuggest\ScoreSaberJSON\PlayerCollection.cs" />
-    <Compile Include="SongSuggest\ScoreSaberJSON\PlayerScore.cs" />
-    <Compile Include="SongSuggest\ScoreSaberJSON\PlayerScoreCollection.cs" />
-    <Compile Include="SongSuggest\ScoreSaberJSON\Score.cs" />
-    <Compile Include="SongSuggest\ScoreSaberJSON\ScoreCollection.cs" />
-    <Compile Include="SongSuggest\ScoreSaberJSON\ScoreStats.cs" />
     <Compile Include="SongSuggest\Settings\FilePathSettings.cs" />
     <Compile Include="SongSuggest\Settings\FilterSettings.cs" />
-    <Compile Include="SongSuggest\Settings\OldestSongSettings.cs" />
+    <Compile Include="SongSuggest\Settings\OldAndNewSettings.cs" />
     <Compile Include="SongSuggest\Settings\PlaylistSettings.cs" />
     <Compile Include="SongSuggest\Settings\SongSuggestSettings.cs" />
     <Compile Include="UI\LevelDetailViewController.cs" />
@@ -187,9 +195,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Configuration\InitialData\Files.meta" />
-    <None Include="Configuration\InitialData\SongLibrary.json" />
-    <None Include="Configuration\InitialData\Top10KPlayers.json" />
     <None Include="Directory.Build.props" Condition="Exists('Directory.Build.props')" />
     <None Include="Directory.Build.targets" Condition="Exists('Directory.Build.targets')" />
     <None Include="TaohSongSuggest.csproj.user" Condition="Exists('TaohSongSuggest.csproj.user')" />
@@ -204,7 +209,9 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Configuration\InitialData\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="UI\Images\kofilogo.png" />
   </ItemGroup>

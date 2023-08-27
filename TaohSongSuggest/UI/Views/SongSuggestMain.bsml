@@ -3,7 +3,7 @@
   
     <horizontal id='top-pannel'> 
 
-      <clickable-text text='Oldest ⛛' default-color='~color-oldest' highlight-color='cyan' on-click='settingsOldest'/>
+      <clickable-text text='Old &amp; New ⛛' default-color='~color-oldest' highlight-color='cyan' on-click='settingsOldest'/>
       <clickable-text text='Suggestions ⛛' default-color='~color-suggest' highlight-color='cyan' on-click='settingsSuggest'/>
     </horizontal>    
 
@@ -20,39 +20,54 @@
             <slider-setting interactable='true' text='From Rank' show-buttons='true' value="fromRank" bind-value="true" apply-on-change="true" min='1' max='10000' increment='1' integer-only='true'/>
             <slider-setting interactable='true' text='To Rank' show-buttons='true' value="toRank" bind-value="true" apply-on-change="true" min='1' max='10000' increment='100' integer-only='true'/>
           </vertical>
-        
+          
           <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80'>
-            <toggle-setting interactable='true' text='Ignore All Played' value='ignorePlayedAll' apply-on-change='true' bind-value="true" hover-hint="If enabled, only songs you have not already completed will be suggested."/>
-            <slider-setting text='Days' show-buttons='true' value="ignorePlayedDays" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='day-formatter' hover-hint='Ignore the songs you improved within the given amount of days.' />
+            <slider-setting interactable='true' text='Playlist Count' show-buttons='true' value="suggest_playlist_count" bind-value="true" apply-on-change="true" min='10' max='100' increment='1' integer-only='true' formatter='song-formatter'/>
+          </vertical>
+
+          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80'>
+            <toggle-setting interactable='true' text='Ignore All Played' value='ignorePlayedAll' apply-on-change='true' bind-value="true" active='false' hover-hint="If enabled, only songs you have not already completed will be suggested."/>
+            <slider-setting text='Days' show-buttons='true' value="ignorePlayedDays" bind-value="true" apply-on-change="true" min='0' max='~ignoreAllPlayedDays' increment='1' integer-only='true' formatter='day-ignorePlayed-formatter' hover-hint='Ignore the songs you improved within the given amount of days.' />
             <toggle-setting interactable='true' text='Remove Optimized Scores' value='removeOptimizedScores' apply-on-change='true' bind-value="true" hover-hint="If enabled, maps that you already have a great score on will be ignored"/>
           </vertical>
 
-          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' active='true'>     
-            <slider-setting text='Distance' show-buttons='true' value="modifierPP" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='Tries to keep the song near your performance level.' />
-            <slider-setting text='Style' show-buttons='true' value="modifierStyle" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='Tries to find songs you will perform the best on.' />
-            <slider-setting text='Overweight' show-buttons='true' value="modifierOverweight" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='Gives a boost to songs that are overweighted.' />
+          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' active='true'>
+            <slider-setting text='PP Potential' show-buttons='true' value="extraSongs" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint= 'Higher values gives a playlist with more challenging songs and a higher PP Potential. Lower values have easier songs that demand high accuracy to maintain their PP value. An optimal balance is expected around 75%.' />
+            <slider-setting text='Style Focus' show-buttons='true' value="modifierStyle" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='Style is areas you have shown skill or preferences for in your top plays. A high style focus prioritize songs that players similar to you have performed the best on.' />
+            <slider-setting text='Tech Focus' show-buttons='true' value="modifierOverweight" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='A higher Tech level prioritize songs that players similar to you gained the most PP from. This means that even Speed-oriented players can benefit from values above 80%.' />
+            <slider-setting text='Reduce Difficulty' show-buttons='true' value="skipSongsCount" bind-value="true" apply-on-change="true" min='0' max='200' increment='1' integer-only='true' formatter='song-formatter' active='false' hover-hint='Attempts to lower difficulty of suggsted songs by removing suggestions from best plays. Songs will likely not be worth peak PP, and might contain more songs outside main style range.' />
           </vertical>
             
           <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' spacing='6' active='false'>              
               <slider-setting text='Required Matches' pref-width='45' show-buttons='true' value="requiredMatches" bind-value="true" apply-on-change="true" min='5' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='Lowering this can cause songs that match better on your play style to appear, but at the same time also add a higher skill difference in displayed songs. Suggested usages are between 50%-100%.'/>
           </vertical>
           
-          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80'>
+          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' active='~showLikedOptions'>
             <toggle-setting interactable='true' text='Use Liked Songs' value='useLikedSongs' apply-on-change='true' bind-value="true" hover-hint="Standard suggestions are based on your current top 50 ranked song plays, if you enable Use Liked Songs it instead uses your Liked Songs as the seeds."/>
           </vertical>
         </vertical>
       </macro.as-host>
     </horizontal>
 
-    <horizontal horizontal-fit='PreferredSize' pad='10' preferred-height='79' vertical-fit='PreferredSize' child-control-height='false' active='~oldest-show'>
-      <macro.as-host host='cfgInstance'>
-        <vertical spacing='2' child-expand-height='false'>
-          <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80'>
-            <slider-setting interactable='true' text='Ignore Score Above' show-buttons='true' value="old_highest_acc" bind-value="true" apply-on-change="true" min='1' max='100' increment='0.1' integer-only='false' formatter='percent-formatter'/>
-            <slider-setting text='Scores Older Than' show-buttons='true' value="old_oldest_days" bind-value="true" apply-on-change="true" min='0' max='120' increment='1' integer-only='true' formatter='day-formatter'/>
-          </vertical>
-        </vertical>
-      </macro.as-host>
+    <horizontal horizontal-fit='PreferredSize' pad='8' preferred-height='79' vertical-fit='PreferredSize' active='~oldest-show'>
+          <vertical bg='panel-top' vertical-fit='PreferredSize' pad='2'>
+            <horizontal>
+              <button text='Settings' on-click='settings-click'/>
+              <button text='Categories' on-click='categories-click'/>              
+            </horizontal>
+            <macro.as-host host='cfgInstance'>
+              <slider-setting interactable='true' text='Playlist Count' show-buttons='true' value="old_playlist_count" bind-value="true" apply-on-change="true" min='10' max='100' increment='1' integer-only='true' formatter='song-formatter'/>
+              <slider-setting interactable='true' text='Random Weight' show-buttons='true' value="weighted" bind-value="true" apply-on-change="true" min='0' max='100' increment='10' integer-only='true' formatter='percent-weighted' hover-hint="Selects how random selection among matching songs are performed."/>
+              <horizontal>
+                <dropdown-list-setting text='Selection' value='oldest_selection' choices='oldest_sorting' bind-value="true" apply-on-change="true" pref-width="60"/> 
+                <button text='~selection-order' hover-hint='Order' italics='false' pref-width='22' pref-height='8' on-click='selection-order-click'/>
+              </horizontal>
+              <horizontal active='~showOrderOptions'>
+                <dropdown-list-setting text='Order' value='oldest_order' choices='oldest_sorting' bind-value="true" apply-on-change="true" pref-width="60" />
+                <button text='~order-order' hover-hint='Order' italics='false' pref-width='22' pref-height='8' on-click='order-order-click'/>
+              </horizontal>
+            </macro.as-host> 
+          </vertical>      
     </horizontal>
 
   <vertical horizontal-fit='Unconstrained' ignore-layout='true' anchor-pos-y='-62'>
@@ -66,12 +81,87 @@
   
 
   <horizontal bg='panel-fade-gradient' id='buttonsPanel' bg-color='black'>
-    <button id='OldestBTN' text='100 Oldest' align='Center' font-size='7' italics='true' on-click='GenerateOldest' active='~oldest-show' hover-hint='First time generating might take a while as it needs to fetch all your ranked scores!'/>
+    <button id='OldestBTN' text='Old &amp; New' align='Center' font-size='7' italics='true' on-click='GenerateOldest' active='~oldest-show' hover-hint='First time generating might take a while as it needs to fetch all your scores!'/>
     
-    <button id='SuggestBTN' text='Suggest Songs' align='Center' font-size='7' italics='true' on-click='GeneratePlaylist' active='~suggest-show' hover-hint='First time generating might take a while as it needs to fetch all your ranked scores!'/>
+    <button id='SuggestBTN' text='Suggest Songs' align='Center' font-size='7' italics='true' on-click='GeneratePlaylist' active='~suggest-show' hover-hint='First time generating might take a while as it needs to fetch all your scores!'/>
   </horizontal>
+  
+  <modal id='modal' show-event='open-settings' hide-event='close-settings' clickerino-offerino-closerino="true" move-to-center="false" anchor-pos-y='0' size-delta-x='92' size-delta-y='100'>
+    <vertical preferred-width='88' vertical-fit='PreferredSize'>
+      <macro.as-host host='cfgInstance'>
+        <horizontal bg='panel-top' bg-color='white' size-delta-y='1' pref-height='0.5'></horizontal>
 
+        <horizontal>
+          <toggle-setting interactable='true' text='Use Accuracy' value='use_acc' apply-on-change='true' bind-value="true" pref-width="20"/>
+          <horizontal min-width="20"/>
+        </horizontal>
+        
+        <slider-setting interactable='~use_acc' text='Ignore Score Above' color='~use-acc-color' show-buttons='true' value="old_highest_acc" bind-value="true" apply-on-change="true" min='69.9' max='100' increment='0.1' integer-only='false' formatter='percent-formatter-above'/>
+        <slider-setting interactable='~use_acc' text='Ignore Score Below' color='~use-acc-color' show-buttons='true' value="old_lowest_acc" bind-value="true" apply-on-change="true" min='69.9' max='100' increment='0.1' integer-only='false' formatter='percent-formatter-below'/>
 
+        <horizontal active='~use_acc_inv' bg="panel-top" ignore-layout="true" anchor-max-y="1.69" bg-color="#00000000" pref-height="15"/>
+
+        <horizontal bg='panel-top' bg-color='white' size-delta-y='1' pref-height='0.5'></horizontal>
+
+        <horizontal>
+          <toggle-setting interactable='true' text='Use Days' value='use_days' apply-on-change='true' bind-value="true" pref-width="20"/>
+          <horizontal min-width="20"/>
+        </horizontal>
+        
+        <slider-setting interactable="~use_days" text='Scores Older Than' color='~use-days-color' show-buttons='true' value="old_oldest_days" bind-value="true" apply-on-change="true" min='0' max='366' increment='1' integer-only='true' formatter='day-formatter'/>
+        <slider-setting interactable="~use_days" text='Scores Newer Than' color='~use-days-color' show-buttons='true' value="old_newest_days" bind-value="true" apply-on-change="true" min='0' max='366' increment='1' integer-only='true' formatter='day-formatter'/>
+
+        <horizontal active='~use_days_inv' bg="panel-top" ignore-layout="true" anchor-max-y="1.25" bg-color="#00000000" pref-height="15"/>
+
+        <horizontal bg='panel-top' bg-color='white' size-delta-y='1' pref-height='0.5'></horizontal>
+
+        <horizontal>
+          <toggle-setting interactable='true' text='Use Star Rating' value='use_stars' apply-on-change='true' bind-value="true" pref-width="20"/>
+          <horizontal min-width="20"/>
+        </horizontal>
+        
+        <slider-setting interactable="~use_stars" text='Star Rating Above' color='~use-stars-color' show-buttons='true' value="old_lowest_stars" bind-value="true" apply-on-change="true" min='0' max='~max-star-rating' increment='0.1' integer-only='false' formatter='star-formatter'/>
+        <slider-setting interactable="~use_stars" text='Star Rating Below' color='~use-stars-color' show-buttons='true' value="old_highest_stars" bind-value="true" apply-on-change="true" min='0' max='~max-star-rating' increment='0.1' integer-only='false' formatter='star-formatter'/>
+
+        <horizontal active='~use_stars_inv' bg="panel-top" ignore-layout="true" anchor-max-y="0.8" bg-color="#00000000" pref-height="15"/>
+
+        <horizontal bg='panel-top' bg-color='white' size-delta-y='1' pref-height='0.5'></horizontal>
+
+        <horizontal>
+          <toggle-setting interactable='true' text='Use Complexity' value='use_complexity' apply-on-change='true' bind-value="true" pref-width="20"/>
+          <horizontal min-width="20"/>
+        </horizontal>
+        
+        <slider-setting interactable="~use_complexity" text='Complexity Above' color='~use-complexity-color' show-buttons='true' value="old_lowest_complexity" bind-value="true" apply-on-change="true" min='0' max='~max-complexity' increment='0.1' integer-only='false' formatter='star-formatter'/>
+        <slider-setting interactable="~use_complexity" text='Complexity Below' color='~use-complexity-color' show-buttons='true' value="old_highest_complexity" bind-value="true" apply-on-change="true" min='0' max='~max-complexity' increment='0.1' integer-only='false' formatter='star-formatter'/>
+
+        <horizontal active='~use_complexity_inv' bg="panel-top" ignore-layout="true" anchor-max-y="0.35" bg-color="#00000000" pref-height="15"/>
+
+        <horizontal bg='panel-top' bg-color='white' size-delta-y='1' pref-height='0.5'></horizontal>
+      
+      </macro.as-host>  
+      <button text='OK' click-event='close-settings' pad-top='2' min-width='25'/>
+    </vertical>
+  </modal>
+    
+
+  <modal id='modal' show-event='open-categories' hide-event='close-categories' clickerino-offerino-closerino="true" anchor-pos-y='10' size-delta-x='92' size-delta-y='~category-size'>
+    <vertical preferred-width='88' vertical-fit='PreferredSize'>
+      <grid cell-size-y='5' cell-size-x='24' spacing-x='2' spacing-y='2' align='Center'>
+        <label text=''/>
+        <label text='      Played' align='Center'/>
+        <label text='      Unplayed' align='Center'/>
+          
+        <macro.for-each hosts='contents'>
+            <label text='~title' hover-hint='~hover' align='Left'/>
+            <toggle-setting interactable='true' text='' value='played' apply-on-change='true' bind-value="true" on-change="onchange" pref-width='0'/>
+            <toggle-setting interactable='true' text='' value='unplayed' apply-on-change='true' bind-value="true" on-change="onchange" pref-width='0'/>
+        </macro.for-each>    
+      </grid>
+      <button text='OK' click-event='close-categories' pad-top='2' min-width='25'/>
+    </vertical>
+  </modal>
+  
 
 
   <modal id='modal' show-event='open-modal' hide-event='close-modal' clickerino-offerino-closerino="true" anchor-pos-y='10' size-delta-x='92' size-delta-y='35' move-to-center='true'>
@@ -81,10 +171,8 @@
       <label text='~error-description' font-size='3' italics='true' word-wrapping='true'/>
 
 
-      <button text='ok' click-event='close-modal'/>
+      <button text='OK' click-event='close-modal'/>
     </vertical>
-
-    
   </modal>
 
 </vertical>

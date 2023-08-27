@@ -11,6 +11,7 @@ using SmartSongSuggest.Managers;
 using TMPro;
 using System.Collections;
 using BeatSaberMarkupLanguage.Parser;
+using SongSuggestNS;
 
 namespace SmartSongSuggest.UI
 {
@@ -202,12 +203,15 @@ namespace SmartSongSuggest.UI
                         SongDifficulty difficulty;
                         if (x.GetDifficulty(out difficulty, (MapDifficulty)sldv.selectedDifficultyBeatmap.difficulty))
                         {
-                            _mapRanked = difficulty.ranked;
-
+                            //Taoh Changed!!
                             string diffLabel = sldv.selectedDifficultyBeatmap.difficulty.SerializedName();
 
+                            _mapRanked = SongSuggestManager.toolBox.songLibrary.HasSongCategory(levelHash, diffLabel);//difficulty.ranked;
+
                             //Forgot to check if map was ranked before checking ban... oops
-                            if (difficulty.ranked)
+
+                            //TaohChanged!!
+                            if (_mapRanked)//difficulty.ranked)
                             {
                                 string songrank = SongSuggestManager.toolBox.GetSongRanking(levelHash, diffLabel);
 
@@ -257,7 +261,7 @@ namespace SmartSongSuggest.UI
         {
             yield return new WaitForEndOfFrame();
             addToIgnoredBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.showBanButton);
-            addToLikedBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.showLikeButton);
+            addToLikedBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.showLikeButton && SettingsController.cfgInstance.showLikedOptions);
         }
 
         void CheckBanState()

@@ -45,6 +45,11 @@ namespace Actions
                 songSuggest.status = "Downloading Player History Page: " + page + "/" + maxPage;
                 songSuggest.log?.WriteLine("Page Start: " + page + " Search Mode: " + searchmode);
                 PlayerScoreCollection playerScoreCollection = webDownloader.GetScores(activePlayer.id, searchmode, 100, page);
+                if (playerScoreCollection.metadata == null)
+                { 
+                    playerScoreCollection.metadata = new Metadata();
+                    playerScoreCollection.playerScores = new PlayerScore[0];
+                }
                 maxPage = ""+Math.Ceiling((double)playerScoreCollection.metadata.total / 100);
                 //PlayerScoreCollection playerScoreCollection = JsonConvert.DeserializeObject<PlayerScoreCollection>(scoresJSON, serializerSettings);
                 songSuggest.status = "Parsing Player History Page: " + page + "/" + maxPage;
@@ -52,10 +57,10 @@ namespace Actions
                 //Parse Player Scores
                 foreach (PlayerScore score in playerScoreCollection.playerScores)
                 {
-                    if (score.leaderboard.ranked)
+                    if (true)//(score.leaderboard.ranked)
                     {
                         //attempt to add the song to the library.
-                        songLibrary.AddSong(score.leaderboard.id + "", score.leaderboard.songName, score.leaderboard.songHash, score.leaderboard.difficulty.difficulty + "");
+                        songLibrary.AddSong(score.leaderboard.id + "", score.leaderboard.songName, score.leaderboard.songHash, score.leaderboard.difficulty.difficulty + "",score.leaderboard.stars);
 
                         //Create a score object from the website Score, and add it to the candidates
                         ActivePlayerScore tmpScore = new ActivePlayerScore
@@ -63,7 +68,10 @@ namespace Actions
                             songID = score.leaderboard.id + "",
                             timeSet = score.score.timeSet,
                             pp = score.score.pp,
-                            accuracy = 100.0*score.score.baseScore / score.leaderboard.maxScore
+                            accuracy = 100.0*score.score.baseScore / score.leaderboard.maxScore,
+                            rankPercentile = 100.0*score.score.rank / score.leaderboard.plays,
+                            rankScoreSaber = score.score.rank,
+                            playsScoreSaber = score.leaderboard.plays
                         };
                         //Attempts to add the found score, if it is a duplicate with same timestamp do not load next score page
                         //TODO: Break foreach as well

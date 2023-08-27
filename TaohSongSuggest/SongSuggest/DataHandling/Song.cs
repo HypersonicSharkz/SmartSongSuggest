@@ -1,4 +1,6 @@
 ﻿using System;
+using Newtonsoft.Json;
+using SongSuggestNS;
 
 
 namespace SongLibraryNS
@@ -9,6 +11,9 @@ namespace SongLibraryNS
         public String name { get; set; }
         public String hash { get; set; }
         public String difficulty { get; set; }
+        public SongCategory songCategory { get; set; }
+        public double starBeatSaber { get; set; }
+        public double complexityAccSaber { get; set; }
 
         public Song()
         {

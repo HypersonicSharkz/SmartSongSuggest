@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using Data;
 using SongSuggestNS;
 using Settings;
+using PlaylistJson;
 
 
 namespace FileHandling
@@ -34,17 +35,33 @@ namespace FileHandling
             File.WriteAllText(filePathSettings.songLibraryPath + "SongLibrary.json", JsonConvert.SerializeObject(songLibrary));
         }
 
-        //Add the songs from a library from the disc to the to the active library, and if new songs was added save the active library.
-        public void AddSongLibrary(String path)
-        {
-            String songLibraryJSON = File.ReadAllText(path);
-            songSuggest.songLibrary.AddLibrary(JsonConvert.DeserializeObject<List<Song>>(songLibraryJSON, serializerSettings));
-        }
+        ////Add the songs from a library from the disc to the to the active library, and if new songs was added save the active library.
+        //public void AddSongLibrary(String path)
+        //{
+        //    String songLibraryJSON = File.ReadAllText(path);
+        //    songSuggest.songLibrary.AddLibrary(JsonConvert.DeserializeObject<List<Song>>(songLibraryJSON, serializerSettings));
+        //}
 
         public void SavePlaylist(String playlistString, String fileName)
         {
             File.WriteAllText(filePathSettings.playlistPath + fileName + ".bplist", playlistString);
         }
+
+        //Load Playlist json
+        public Playlist LoadPlaylist(String fileName)
+        {
+            if (!File.Exists(filePathSettings.playlistPath + fileName + ".bplist")) SavePlaylist(new Playlist(), fileName);
+            String playlistString = File.ReadAllText(filePathSettings.playlistPath + fileName + ".bplist");
+            return JsonConvert.DeserializeObject<Playlist>(playlistString, serializerSettings);
+        }
+
+        //save Playlist json
+        public void SavePlaylist(Playlist playlist, String fileName)
+        {
+            File.WriteAllText(filePathSettings.playlistPath + fileName + ".bplist", JsonConvert.SerializeObject(playlist, serializerSettings));
+        }
+
+
 
         //Load Active Players Data
         public ActivePlayer LoadActivePlayer(String scoreSaberID)
@@ -83,13 +100,14 @@ namespace FileHandling
 
         public List<Top10kPlayer> LoadLinkedData()
         {
+            if (!File.Exists(filePathSettings.likedSongsPath + "Top10KPlayers.json")) SaveLinkedData(new List<Top10kPlayer>());
             String linkPlayerJSON = File.ReadAllText(filePathSettings.top10kPlayersPath + "Top10KPlayers.json");
             return JsonConvert.DeserializeObject<List<Top10kPlayer>>(linkPlayerJSON, serializerSettings);
         }
 
         public void SaveLinkedData(List<Top10kPlayer> players)
         {
-            File.WriteAllText(filePathSettings.top10kPlayersPath + "Top10kPlayers.json", JsonConvert.SerializeObject(players));
+            File.WriteAllText(filePathSettings.top10kPlayersPath + "Top10KPlayers.json", JsonConvert.SerializeObject(players));
         }
  
         public Boolean LinkedDataExist()
@@ -142,6 +160,30 @@ namespace FileHandling
         public void SaveRankedSuggestions(List<String> rankedSuggestions)
         {
             File.WriteAllText(filePathSettings.lastSuggestionsPath + "LastSuggestions.json", JsonConvert.SerializeObject(rankedSuggestions));
+        }
+
+        public List<String> LoadAllRankedSongs()
+        {
+            if (!File.Exists(filePathSettings.rankedData + "allrankedsongs.json")) SaveAllRankedSongs(new List<String>());
+            String fileDataString = File.ReadAllText(filePathSettings.rankedData + "allrankedsongs.json");
+            return JsonConvert.DeserializeObject<List<String>>(fileDataString, serializerSettings);
+        }
+
+        public void SaveAllRankedSongs(List<String> allRankedSongs)
+        {
+            File.WriteAllText(filePathSettings.rankedData + "allrankedsongs.json", JsonConvert.SerializeObject(allRankedSongs));
+        }
+
+        public FileFormatVersions LoadFileFormatVersions()
+        {
+            if (!File.Exists(filePathSettings.filesDataPath + "FileFormatVersions.json")) SaveFilesFormatVersions(new FileFormatVersions());
+            String fileDataString = File.ReadAllText(filePathSettings.filesDataPath + "FileFormatVersions.json");
+            return JsonConvert.DeserializeObject<FileFormatVersions>(fileDataString, serializerSettings);
+        }
+
+        public void SaveFilesFormatVersions(FileFormatVersions versions)
+        {
+            File.WriteAllText(filePathSettings.filesDataPath + "FileFormatVersions.json", JsonConvert.SerializeObject(versions));
         }
     }
 }

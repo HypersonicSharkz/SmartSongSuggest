@@ -7,6 +7,12 @@ using SmartSongSuggest.Managers;
 using TMPro;
 using UnityEngine;
 using BeatSaberMarkupLanguage.Parser;
+using System.Collections.Generic;
+using System.Linq;
+using SongSuggestNS;
+using System.Collections;
+using System;
+using Newtonsoft.Json;
 
 namespace SmartSongSuggest.UI
 {
@@ -134,6 +140,61 @@ namespace SmartSongSuggest.UI
 
             this.parserParams.EmitEvent("close-modal");
             this.parserParams.EmitEvent("open-modal");
+        }
+
+        [UIValue("contents")]
+        public IList Contents
+        {
+            get
+            {
+                List<SongCategoryDisplay> contents = new List<SongCategoryDisplay>();
+
+                IEnumerable<SongCategory> songCategories = Enum.GetValues(typeof(SongCategory)).Cast<SongCategory>();
+                bool update = false;
+
+                foreach (SongCategory category in songCategories)
+                {
+                    SongCategoryDisplay savedCategory = cfgInstance.SongCategories.FirstOrDefault(c => c.songCategory == category);
+                    if (savedCategory == null)
+                    {
+                        savedCategory = new SongCategoryDisplay();
+                        savedCategory.songCategory = category;
+                        cfgInstance.SongCategories.Add(savedCategory);
+                        update = true;
+                    }
+
+                    contents.Add(savedCategory);
+                }
+
+                if (update)
+                    cfgInstance.Changed();
+
+                return contents;
+            }
+        }
+
+        [UIAction("settings-click")]
+        private void ShowSettings()
+        {
+            this.parserParams.EmitEvent("close-settings");
+            this.parserParams.EmitEvent("open-settings");
+        }
+
+        [UIAction("categories-click")]
+        private void ShowCategories()
+        {
+            this.parserParams.EmitEvent("close-categories");
+            this.parserParams.EmitEvent("open-categories");
+        }
+
+        [UIValue("category-size")]
+        private int CategorySize
+        {
+            get
+            {
+                int count = Enum.GetValues(typeof(SongCategory)).Length;
+                return count * 8 + 15;
+            }
         }
     }
 }

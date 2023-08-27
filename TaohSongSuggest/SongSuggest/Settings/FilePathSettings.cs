@@ -13,6 +13,8 @@ namespace Settings
         public String likedSongsPath { get; set; }// "\\";
         public String filesDataPath { get; set; }// "\\";
         public String lastSuggestionsPath { get; set; }// "\\";
+        public String rankedData { get; set; }// "\\RankedSongs";
+        
     }
 }
 
