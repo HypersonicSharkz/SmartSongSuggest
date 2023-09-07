@@ -215,7 +215,7 @@ namespace SmartSongSuggest.UI
                             {
                                 string songrank = SongSuggestManager.toolBox.GetSongRanking(levelHash, diffLabel);
 
-                                if (songrank != "" && SettingsController.cfgInstance.showRankPlate)
+                                if (songrank != "" && SettingsController.cfgInstance.ShowRankPlate)
                                     _rankPlate = songrank + "/" + SongSuggestManager.toolBox.GetSongRankingCount();
 
                                 if (SongSuggestManager.toolBox.songBanning.IsBanned(levelHash, diffLabel))
@@ -260,8 +260,8 @@ namespace SmartSongSuggest.UI
         IEnumerator SetActiveLate()
         {
             yield return new WaitForEndOfFrame();
-            addToIgnoredBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.showBanButton);
-            addToLikedBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.showLikeButton && SettingsController.cfgInstance.showLikedOptions);
+            addToIgnoredBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.ShowBanButton);
+            addToLikedBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.ShowLikeButton && SettingsController.cfgInstance.ShowLikedOptions);
         }
 
         void CheckBanState()

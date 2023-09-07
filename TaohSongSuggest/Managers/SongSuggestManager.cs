@@ -74,9 +74,8 @@ namespace SmartSongSuggest.Managers
 
                     FilterSettings filterSettings = new FilterSettings
                     {
-                        //modifierPP = cfg.modifierPP,  //Disabled due to being depricated. Default value is used which has been reset to 0.0.
-                        modifierStyle = cfg.modifierStyle,
-                        modifierOverweight = cfg.modifierOverweight
+                        modifierStyle = cfg.ModifierStyle,
+                        modifierOverweight = cfg.ModifierOverweight
                     };
 
                     PlaylistSettings playListSettings = new PlaylistSettings
@@ -90,19 +89,15 @@ namespace SmartSongSuggest.Managers
                     SongSuggestSettings linkedSettings = new SongSuggestSettings
                     {
                         scoreSaberID = BS_Utils.Gameplay.GetUserInfo.GetUserID(),
-                        playlistLength = cfg.suggest_playlist_count,
-                        rankFrom = cfg.fromRank,
-                        rankTo = cfg.toRank,
-                        ignorePlayedAll = cfg.ignorePlayedDays == cfg.ignoreAllPlayedDays,
-                        ignorePlayedDays = cfg.ignorePlayedDays,
-                        requiredMatches = cfg.requiredMatches,
-                        useLikedSongs = cfg.useLikedSongs && cfg.showLikedOptions,
-                        fillLikedSongs = cfg.fillLikedSongs && cfg.showLikedOptions,
+                        playlistLength = cfg.SuggestPlaylistCount,
+                        ignorePlayedAll = cfg.IgnorePlayedDays == cfg.SuggestIgnorePlayedDaysAllCount,
+                        ignorePlayedDays = cfg.IgnorePlayedDays,
+                        useLikedSongs = cfg.UseLikedSongs && cfg.ShowLikedOptions,
+                        fillLikedSongs = cfg.FillLikedSongs && cfg.ShowLikedOptions,
                         ignoreNonImproveable = p_ignoreNonImprovable,
                         playlistSettings = playListSettings,
                         filterSettings = filterSettings,
-                        extraSongs = 100 - cfg.extraSongs,
-                        skipSongsCount = cfg.skipSongsCount
+                        extraSongs = 100 - cfg.ExtraSongs,
                     };
 
                     toolBox.status = "Starting Search";
@@ -120,7 +115,7 @@ namespace SmartSongSuggest.Managers
 
                         if (toolBox.lowQualitySuggestions)
                         {
-                            if (cfg.useLikedSongs)
+                            if (cfg.UseLikedSongs)
                             {
                                 TSSFlowCoordinator.settingsView.ShowError("Not enough liked songs", @"You do currently not have enough liked songs for the program to find personalized maps, this will result in a less optimal playlist.");
                             }
@@ -171,26 +166,31 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
                         image = "base64,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"
                     };
 
+                    var ui = SettingsController.cfgInstance;
+
                     OldAndNewSettings settings = new OldAndNewSettings
                     {
                         scoreSaberID = BS_Utils.Gameplay.GetUserInfo.GetUserID(),
-                        ignoreAccuracyEqualAbove = SettingsController.cfgInstance.use_acc ? (double)SettingsController.cfgInstance.old_highest_acc : 100,
-                        ignoreAccuracyEqualBelow = SettingsController.cfgInstance.use_acc ? ((double)SettingsController.cfgInstance.old_lowest_acc < 70 ? 0 : SettingsController.cfgInstance.old_lowest_acc) : 0,
-                        ignorePlayedDaysBelow = SettingsController.cfgInstance.use_days ? SettingsController.cfgInstance.old_oldest_days : 0,
-                        ignorePlayedDaysAbove = SettingsController.cfgInstance.use_days ? (SettingsController.cfgInstance.old_newest_days > 365 ? int.MaxValue : SettingsController.cfgInstance.old_newest_days) : int.MaxValue,
-                        ignoreAccSaberComplexityAbove = SettingsController.cfgInstance.use_complexity ? SettingsController.cfgInstance.old_highest_complexity : float.MaxValue,
-                        ignoreAccSaberComplexityBelow = SettingsController.cfgInstance.use_complexity ? SettingsController.cfgInstance.old_lowest_complexity : 0,
-                        ignoreBeatSaberStarAbove = SettingsController.cfgInstance.use_stars ? SettingsController.cfgInstance.old_highest_stars : float.MaxValue,
-                        ignoreBeatSaberStarBelow = SettingsController.cfgInstance.use_stars ? SettingsController.cfgInstance.old_lowest_stars : 0,
+
+                        //Check if slider is active, and selection is not outer values.
+                        ignoreAccuracyEqualAbove = ui.UseAcc && ui.AccUserSelectionMax <= ui.AccSliderMax ? ui.AccUserSelectionMax : float.MaxValue,
+                        ignoreAccuracyEqualBelow = ui.UseAcc && ui.AccUserSelectionMin >= ui.AccSliderMin ? ui.AccUserSelectionMin : float.MinValue,
+                        ignorePlayedDaysAbove = ui.UseAge && ui.AgeUserSelectionMax <= ui.AgeSliderMax ? ui.AgeUserSelectionMax : int.MaxValue,
+                        ignorePlayedDaysBelow = ui.UseAge && ui.AgeUserSelectionMin >= ui.AgeSliderMin ? ui.AgeUserSelectionMin : 0,
+                        ignoreBeatSaberStarAbove = ui.UseStars && ui.StarUserSelectionMax <= ui.StarSliderMax ? ui.StarUserSelectionMax : float.MaxValue,
+                        ignoreBeatSaberStarBelow = ui.UseStars && ui.StarUserSelectionMin >= ui.StarSliderIncrement ? ui.StarUserSelectionMin : 0,
+                        ignoreAccSaberComplexityAbove = ui.UseComplexity && ui.ComplexityUserSelectionMax <= ui.ComplexitySliderMax ? ui.ComplexityUserSelectionMax : float.MaxValue,
+                        ignoreAccSaberComplexityBelow = ui.UseComplexity && ui.ComplexityUserSelectionMin >= ui.StarSliderIncrement ? ui.ComplexityUserSelectionMin : 0,
+
                         playlistSettings = playListSettings,
-                        songSelection = SettingsController.cfgInstance.oldest_selection,
-                        songOrdering = SettingsController.cfgInstance.showOrderOptions ? SettingsController.cfgInstance.oldest_order : SongSortCriteria.None, //Use selected ordering, else No ordering
-                        reverseSelectionOrdering = !SettingsController.cfgInstance.selectionBestWorst,
-                        reversePlaylistOrdering = !SettingsController.cfgInstance.orderBestWorst,
-                        playedSongCategories = (SongCategory)SettingsController.cfgInstance.SongCategories.Sum(c => (int)(c.Played ? c.songCategory : 0)),
-                        unplayedSongCategories = (SongCategory)SettingsController.cfgInstance.SongCategories.Sum(c => (int)(c.Unplayed ? c.songCategory : 0)),
-                        playlistLength = SettingsController.cfgInstance.old_playlist_count,
-                        songWeighting = (double)SettingsController.cfgInstance.weighted/100.0
+                        songSelection = SettingsController.cfgInstance.PlaylistSelectionSort,
+                        songOrdering = SettingsController.cfgInstance.ShowOrderOptions ? SettingsController.cfgInstance.PlaylistOrderingSort : SongSortCriteria.None, //Use selected ordering, else No ordering
+                        reverseSelectionOrdering = !SettingsController.cfgInstance.SelectionBestWorst,
+                        reversePlaylistOrdering = !SettingsController.cfgInstance.OrderBestWorst,
+                        playedSongCategories = (SongCategory)SettingsController.cfgInstance.SongCategories.Sum(c => (int)(c.Played ? c.SongCategory : 0)),
+                        unplayedSongCategories = (SongCategory)SettingsController.cfgInstance.SongCategories.Sum(c => (int)(c.Unplayed ? c.SongCategory : 0)),
+                        playlistLength = SettingsController.cfgInstance.OldnNewPlaylistCount,
+                        songWeighting = (double)SettingsController.cfgInstance.RandomWeight/100.0
                     };
 
                     toolBox.status = "Starting Search";

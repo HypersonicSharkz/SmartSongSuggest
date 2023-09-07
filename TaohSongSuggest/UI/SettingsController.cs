@@ -99,7 +99,7 @@ namespace SmartSongSuggest.UI
 
         void GeneratePlaylist()
         {
-            SongSuggestManager.SuggestSongs(cfgInstance.removeOptimizedScores);
+            SongSuggestManager.SuggestSongs(cfgInstance.RemoveOptimizedScores);
         }
 
         public void SetButtonsEnable(bool enable)
@@ -154,11 +154,11 @@ namespace SmartSongSuggest.UI
 
                 foreach (SongCategory category in songCategories)
                 {
-                    SongCategoryDisplay savedCategory = cfgInstance.SongCategories.FirstOrDefault(c => c.songCategory == category);
+                    SongCategoryDisplay savedCategory = cfgInstance.SongCategories.FirstOrDefault(c => c.SongCategory == category);
                     if (savedCategory == null)
                     {
                         savedCategory = new SongCategoryDisplay();
-                        savedCategory.songCategory = category;
+                        savedCategory.SongCategory = category;
                         cfgInstance.SongCategories.Add(savedCategory);
                         update = true;
                     }
