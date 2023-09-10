@@ -1,0 +1,12 @@
+﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+  <settings-container child-control-width='true' child-expand-width='true' size-delta-y='-15'>
+			<button id='RegenSuggest' text='Regen Song Suggest' align='Center' italics='true' on-click='RegenSuggest'/>
+			<button id='RegenOldNew' text='Regen Old &amp; New' align='Center' italics='true' on-click='RegenOldest'/>
+      <button id='Settings' text='Settings' align='Center' italics='true' on-click='Settings'/>
+	</settings-container>
+  
+  <vertical horizontal-fit='Unconstrained' ignore-layout='true' anchor-pos-y='-52'>
+    <label id='statusText' text='Ready' color='magenta'></label>
+  </vertical>
+	<vertical id='bgProgress' bg-color='Green' ignore-layout='true' anchor-max-x='0.0' horizontal-fit='Unconstrained' preferred-height='1' vertical-fit='PreferredSize' background='panel-fade-gradient' anchor-pos-y='-28'/>
+</bg>

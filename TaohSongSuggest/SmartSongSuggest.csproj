@@ -185,6 +185,7 @@
     <Compile Include="UI\MapListController.cs" />
     <Compile Include="UI\SettingsController.cs" />
     <Compile Include="UI\SettingsLeftController.cs" />
+    <Compile Include="UI\TabViewController.cs" />
     <Compile Include="UI\TSSFlowCoordinator.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +202,7 @@
     <EmbeddedResource Include="UI\Views\LevelDetailSuggestButtonsView.bsml" />
     <EmbeddedResource Include="UI\Views\SongSuggestMain.bsml" />
     <EmbeddedResource Include="UI\Views\SongSuggestLeft.bsml" />
+    <EmbeddedResource Include="UI\Views\SongSuggestTab.bsml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BeatSaberModdingTools.Tasks">

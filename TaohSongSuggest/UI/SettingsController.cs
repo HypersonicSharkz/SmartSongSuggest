@@ -99,7 +99,7 @@ namespace SmartSongSuggest.UI
 
         void GeneratePlaylist()
         {
-            SongSuggestManager.SuggestSongs(cfgInstance.RemoveOptimizedScores);
+            SongSuggestManager.SuggestSongs();
         }
 
         public void SetButtonsEnable(bool enable)
