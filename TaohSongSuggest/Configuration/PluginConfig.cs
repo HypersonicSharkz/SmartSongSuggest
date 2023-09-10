@@ -20,22 +20,20 @@ namespace SmartSongSuggest.Configuration
 {
     internal class PluginConfig : INotifyPropertyChanged
     {
-        //DaysSliderMin: This variable represents the minimum value for the accuracy range set by the slider in your UI.
-        //DaysSliderMax: This variable represents the maximum value for the accuracy range set by the slider in your UI.
-        //DaysSliderIncrement: This variable represents the increment or step size for adjusting the accuracy range on the slider.
-        //DaysUserSelectionMin: This variable represents the minimum value selected by the user within the accuracy range.
-        //DaysUserSelectionMax: This variable represents the maximum value selected by the user within the accuracy range.
-
-
-
-        //Min/Max Values for Sliders/Selections. Adjustable in Config.
         public virtual string __comment_Suggest__ { get; set; } = "Configureable Values for the Suggestions Tab starts here";
+
+        [UIValue("suggest-playlist-min-count")] 
         public virtual int SuggestPlaylistMinCount { get; set; } = 10;
+        [UIValue("suggest-playlist-max-count")]
         public virtual int SuggestPlaylistMaxCount { get; set; } = 100;
         public virtual int SuggestIgnorePlayedDaysMaxCount { get; set; } = 100;
 
+
+
         public virtual string __comment_OldnNew__ { get; set; } = "Configureable Values for the Old & New Tab starts here";
+        [UIValue("oldnnew-playlist-min-count")] 
         public virtual int OldnNewPlaylistMinCount { get; set; } = 10;
+        [UIValue("oldnnew-playlist-max-count")] 
         public virtual int OldnNewPlaylistMaxCount { get; set; } = 100;
         [UIValue("acc-slider-min")]
         public virtual float AccSliderMin { get; set; } = 70f;
@@ -44,7 +42,6 @@ namespace SmartSongSuggest.Configuration
         [UIValue("acc-slider-increment")]
         public virtual float AccSliderIncrement { get; set; } = 0.1f;
         public virtual int AccSliderDecimals { get; set; } = 1;
-
         [UIValue("age-slider-min")]
         public virtual int AgeSliderMin { get; set; } = 5;
         [UIValue("age-slider-max")]
@@ -57,6 +54,8 @@ namespace SmartSongSuggest.Configuration
         [UIValue("complexity-slider-increment")]
         public virtual float ComplexitySliderIncrement { get; set; } = 0.1f;
         public virtual int ComplexitySliderDecimals { get; set; } = 1;
+
+
 
         public virtual string __comment_Variables__ { get; set; } = "Remaining Values are in game selectable Values";
 
@@ -92,42 +91,42 @@ namespace SmartSongSuggest.Configuration
         public virtual bool useComplexityInv { get => !UseComplexity; }
 
         //[UIValue("")]
-        [UIValue("ignorePlayedDays")]
+        [UIValue("ignore-played-days")]
         public virtual int IgnorePlayedDays { get; set; } = 7;
-        [UIValue("useLikedSongs")]
+        [UIValue("use-liked-songs")]
         public virtual bool UseLikedSongs { get; set; }
-        [UIValue("fillLikedSongs")]
+        [UIValue("fill-liked-songs")]
         public virtual bool FillLikedSongs { get; set; }
-        [UIValue("modifierStyle")]
+        [UIValue("modifier-style")]
         public virtual int ModifierStyle { get; set; } = 100;
-        [UIValue("modifierOverweight")]
+        [UIValue("modifier-overweight")]
         public virtual int ModifierOverweight { get; set; } = 81;
-        [UIValue("removeOptimizedScores")]
+        [UIValue("remove-optimized-scores")]
         public virtual bool RemoveOptimizedScores { get; set; } = true;
-        [UIValue("extraSongs")]
+        [UIValue("extra-songs")]
         public virtual int ExtraSongs { get; set; } = 75;
 
-        [UIValue("showRankPlate")]
+        [UIValue("show-rank-plate")]
         public virtual bool ShowRankPlate { get; set; } = true;
-        [UIValue("showLikeButton")]
+        [UIValue("show-like-button")]
         public virtual bool ShowLikeButton { get; set; } = false;
-        [UIValue("showBanButton")]
+        [UIValue("show-ban-button")]
         public virtual bool ShowBanButton { get; set; } = true;
-        [UIValue("oldnNew_playlist_count")]
+        [UIValue("oldnnew_playlist_count")]
         public virtual int OldnNewPlaylistCount { get; set; } = 25;
         [UIValue("suggest_playlist_count")]
         public virtual int SuggestPlaylistCount { get; set; } = 50;
-        [UIValue("weighted")]
+        [UIValue("random-weight")]
         public virtual int RandomWeight { get; set; } = 30;
 
         //SuggestIgnorePlayedDaysMaxCount + 1
-        [UIValue("ignoreAllPlayedDays")]
+        [UIValue("ignore-all-played-days")]
         public virtual int SuggestIgnorePlayedDaysAllCount 
         {
             get => SuggestIgnorePlayedDaysMaxCount + 1;
         }
 
-        [UIValue("old_lowest_acc")]
+        [UIValue("old-lowest-acc")]
         public virtual float AccUserSelectionMin
         {
             get => _accUserSelectionMin;
@@ -145,7 +144,7 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        [UIValue("old_highest_acc")]
+        [UIValue("old-highest-acc")]
         public virtual float AccUserSelectionMax
         {
             get => _accUserSelectionMax;
@@ -177,7 +176,7 @@ namespace SmartSongSuggest.Configuration
             get => AccSliderMax + AccSliderIncrement;
         }
 
-        [UIValue("old_oldest_days")]
+        [UIValue("old-oldest-days")]
         public virtual int AgeUserSelectionMin
         {
             get => _ageUserSelectionMin;
@@ -195,7 +194,7 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        [UIValue("old_newest_days")]
+        [UIValue("old-newest-days")]
         public virtual int AgeUserSelectionMax
         {
             get => _ageUserSelectionMax;
@@ -213,7 +212,7 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        [UIValue("old_lowest_stars")]
+        [UIValue("old-lowest-stars")]
         public virtual float StarUserSelectionMin
         {
             get => _starUserSelectionMin;
@@ -231,7 +230,7 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        [UIValue("old_highest_stars")]
+        [UIValue("old-highest-stars")]
         public virtual float StarUserSelectionMax
         {
             get => _starUserSelectionMax;
@@ -249,7 +248,7 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        [UIValue("old_lowest_complexity")]
+        [UIValue("old-lowest-complexity")]
         public virtual float ComplexityUserSelectionMin
         {
             get => _complexityUserSelectionMin;
@@ -267,7 +266,7 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        [UIValue("old_highest_complexity")]
+        [UIValue("old-highest-complexity")]
         public virtual float ComplexityUserSelectionMax
         {
             get => _complexityUserSelectionMax;

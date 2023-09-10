@@ -269,7 +269,8 @@ namespace SmartSongSuggest.UI
             if (SongSuggestManager.toolBox.songBanning.IsBanned(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name()))
             {
                 SongSuggestManager.toolBox.songBanning.LiftBan(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name());
-            } else
+            } 
+            else
             {
                 parserParams.EmitEvent("open-modal");
             }
@@ -282,7 +283,8 @@ namespace SmartSongSuggest.UI
             if (days == -1)
             {
                 SongSuggestManager.toolBox.songBanning.SetPermaBan(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name());
-            } else
+            } 
+            else
             {
                 SongSuggestManager.toolBox.songBanning.SetBan(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name(), days);
             }
@@ -295,9 +297,9 @@ namespace SmartSongSuggest.UI
             if (SongSuggestManager.toolBox.songLiking.IsLiked(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name()))
             {
                 SongSuggestManager.toolBox.songLiking.RemoveLike(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name());
-            } else
+            } 
+            else
             {
-
                 SongSuggestManager.toolBox.songLiking.SetLike(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name());
             }
 

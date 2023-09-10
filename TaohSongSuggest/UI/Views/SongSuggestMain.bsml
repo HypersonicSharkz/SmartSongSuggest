@@ -16,21 +16,21 @@
 
         <vertical spacing='0.5' child-expand-height='false'>
           <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80'>
-            <slider-setting interactable='true' text='Playlist Count' show-buttons='true' value="suggest_playlist_count" bind-value="true" apply-on-change="true" min='~SuggestPlaylistMinCount' max='~SuggestPlaylistMaxCount' increment='1' integer-only='true' formatter='song-formatter'/>
+            <slider-setting interactable='true' text='Playlist Count' show-buttons='true' value="suggest_playlist_count" bind-value="true" apply-on-change="true" min='~suggest-playlist-min-count' max='~suggest-playlist-max-count' increment='1' integer-only='true' formatter='song-formatter'/>
           </vertical>
 
           <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80'>
-            <slider-setting text='Days' show-buttons='true' value="ignorePlayedDays" bind-value="true" apply-on-change="true" min='0' max='~ignoreAllPlayedDays' increment='1' integer-only='true' formatter='day-ignorePlayed-formatter' hover-hint='Ignore the songs you improved within the given amount of days.' />
-            <toggle-setting interactable='true' text='Remove Optimized Scores' value='removeOptimizedScores' apply-on-change='true' bind-value="true" hover-hint="If enabled, maps that you already have a great score on will be ignored"/>
+            <slider-setting text='Days' show-buttons='true' value="ignore-played-days" bind-value="true" apply-on-change="true" min='0' max='~ignore-all-played-days' increment='1' integer-only='true' formatter='day-ignorePlayed-formatter' hover-hint='Ignore the songs you improved within the given amount of days.' />
+            <toggle-setting interactable='true' text='Remove Optimized Scores' value='remove-optimized-scores' apply-on-change='true' bind-value="true" hover-hint="If enabled, maps that you already have a great score on will be ignored"/>
           </vertical>
 
           <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' active='true'>
-            <slider-setting text='PP Potential' show-buttons='true' value="extraSongs" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint= 'Higher values gives a playlist with more challenging songs and a higher PP Potential. Lower values have easier songs that demand high accuracy to maintain their PP value. An optimal balance is expected around 75%.' />
-            <slider-setting text='Style Focus' show-buttons='true' value="modifierStyle" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='Style is areas you have shown skill or preferences for in your top plays. A high style focus prioritize songs that players similar to you have performed the best on.' />
-            <slider-setting text='Tech Focus' show-buttons='true' value="modifierOverweight" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='A higher Tech level prioritize songs that players similar to you gained the most PP from. This means that even Speed-oriented players can benefit from values above 80%.' />
+            <slider-setting text='PP Potential' show-buttons='true' value="extra-songs" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint= 'Higher values gives a playlist with more challenging songs and a higher PP Potential. Lower values have easier songs that demand high accuracy to maintain their PP value. An optimal balance is expected around 75%.' />
+            <slider-setting text='Style Focus' show-buttons='true' value="modifier-style" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='Style is areas you have shown skill or preferences for in your top plays. A high style focus prioritize songs that players similar to you have performed the best on.' />
+            <slider-setting text='Tech Focus' show-buttons='true' value="modifier-overweight" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='A higher Tech level prioritize songs that players similar to you gained the most PP from. This means that even Speed-oriented players can benefit from values above 80%.' />
           </vertical>
           <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' active='~showLikedOptions'>
-            <toggle-setting interactable='true' text='Use Liked Songs' value='useLikedSongs' apply-on-change='true' bind-value="true" hover-hint="Standard suggestions are based on your current top 50 ranked song plays, if you enable Use Liked Songs it instead uses your Liked Songs as the seeds."/>
+            <toggle-setting interactable='true' text='Use Liked Songs' value='use-liked-songs' apply-on-change='true' bind-value="true" hover-hint="Standard suggestions are based on your current top 50 ranked song plays, if you enable Use Liked Songs it instead uses your Liked Songs as the seeds."/>
           </vertical>
         </vertical>
       </macro.as-host>
@@ -43,8 +43,8 @@
               <button text='Categories' on-click='categories-click'/>              
             </horizontal>
             <macro.as-host host='cfgInstance'>
-              <slider-setting interactable='true' text='Playlist Count' show-buttons='true' value="oldnNew_playlist_count" bind-value="true" apply-on-change="true" min='~OldnNewPlaylistMinCount' max='~OldnNewPlaylistMaxCount' increment='1' integer-only='true' formatter='song-formatter'/>
-              <slider-setting interactable='true' text='Random Weight' show-buttons='true' value="weighted" bind-value="true" apply-on-change="true" min='0' max='100' increment='10' integer-only='true' formatter='percent-weighted' hover-hint="Selects how random selection among matching songs are performed."/>
+              <slider-setting interactable='true' text='Playlist Count' show-buttons='true' value="oldnnew_playlist_count" bind-value="true" apply-on-change="true" min='~oldnnew-playlist-min-count' max='~oldnnew-playlist-max-count' increment='1' integer-only='true' formatter='song-formatter'/>
+              <slider-setting interactable='true' text='Random Weight' show-buttons='true' value="random-weight" bind-value="true" apply-on-change="true" min='0' max='100' increment='10' integer-only='true' formatter='percent-weighted' hover-hint="Selects how random selection among matching songs are performed."/>
               <horizontal>
                 <dropdown-list-setting text='Selection' value='oldest_selection' choices='oldest_sorting' bind-value="true" apply-on-change="true" pref-width="60"/> 
                 <button text='~selection-order' hover-hint='Order' italics='false' pref-width='22' pref-height='8' on-click='selection-order-click'/>
@@ -83,8 +83,8 @@
           <horizontal min-width="20"/>
         </horizontal>
 
-        <slider-setting interactable='~use_acc' text='Accuracy Above' color='~use-acc-color' show-buttons='true' value="old_lowest_acc" bind-value="true" apply-on-change="true" min='~acc-slider-abs-min' max='~acc-slider-max' increment='~acc-slider-increment' integer-only='false' formatter='percent-formatter-accuracy'/>
-        <slider-setting interactable='~use_acc' text='Accuracy Below' color='~use-acc-color' show-buttons='true' value="old_highest_acc" bind-value="true" apply-on-change="true" min='~acc-slider-min' max='~acc-slider-abs-max' increment='~acc-slider-increment' integer-only='false' formatter='percent-formatter-accuracy'/>
+        <slider-setting interactable='~use_acc' text='Accuracy Above' color='~use-acc-color' show-buttons='true' value="old-lowest-acc" bind-value="true" apply-on-change="true" min='~acc-slider-abs-min' max='~acc-slider-max' increment='~acc-slider-increment' integer-only='false' formatter='percent-formatter-accuracy'/>
+        <slider-setting interactable='~use_acc' text='Accuracy Below' color='~use-acc-color' show-buttons='true' value="old-highest-acc" bind-value="true" apply-on-change="true" min='~acc-slider-min' max='~acc-slider-abs-max' increment='~acc-slider-increment' integer-only='false' formatter='percent-formatter-accuracy'/>
 
 
         <horizontal active='~use_acc_inv' bg="panel-top" ignore-layout="true" anchor-max-y="1.69" bg-color="#00000000" pref-height="15"/>
@@ -96,8 +96,8 @@
           <horizontal min-width="20"/>
         </horizontal>
         
-        <slider-setting interactable="~use_age" text='Scores Older Than' color='~use-days-color' show-buttons='true' value="old_oldest_days" bind-value="true" apply-on-change="true" min='~age-slider-abs-min' max='~age-slider-max' increment='~age-slider-increment' integer-only='true' formatter='day-formatter'/>
-        <slider-setting interactable="~use_age" text='Scores Newer Than' color='~use-days-color' show-buttons='true' value="old_newest_days" bind-value="true" apply-on-change="true" min='~age-slider-min' max='~age-slider-abs-max' increment='~age-slider-increment' integer-only='true' formatter='day-formatter'/>
+        <slider-setting interactable="~use_age" text='Scores Older Than' color='~use-days-color' show-buttons='true' value="old-oldest-days" bind-value="true" apply-on-change="true" min='~age-slider-abs-min' max='~age-slider-max' increment='~age-slider-increment' integer-only='true' formatter='day-formatter'/>
+        <slider-setting interactable="~use_age" text='Scores Newer Than' color='~use-days-color' show-buttons='true' value="old-newest-days" bind-value="true" apply-on-change="true" min='~age-slider-min' max='~age-slider-abs-max' increment='~age-slider-increment' integer-only='true' formatter='day-formatter'/>
 
         <horizontal active='~use_age_inv' bg="panel-top" ignore-layout="true" anchor-max-y="1.25" bg-color="#00000000" pref-height="15"/>
 
@@ -108,8 +108,8 @@
           <horizontal min-width="20"/>
         </horizontal>
         
-        <slider-setting interactable="~use_stars" text='Star Rating Above' color='~use-stars-color' show-buttons='true' value="old_lowest_stars" bind-value="true" apply-on-change="true" min='0' max='~star-slider-max' increment='~star-slider-increment' integer-only='false' formatter='star-formatter'/>
-        <slider-setting interactable="~use_stars" text='Star Rating Below' color='~use-stars-color' show-buttons='true' value="old_highest_stars" bind-value="true" apply-on-change="true" min='~star-slider-increment' max='~star-slider-abs-max' increment='~star-slider-increment' integer-only='false' formatter='star-formatter'/>
+        <slider-setting interactable="~use_stars" text='Star Rating Above' color='~use-stars-color' show-buttons='true' value="old-lowest-stars" bind-value="true" apply-on-change="true" min='0' max='~star-slider-max' increment='~star-slider-increment' integer-only='false' formatter='star-formatter'/>
+        <slider-setting interactable="~use_stars" text='Star Rating Below' color='~use-stars-color' show-buttons='true' value="old-highest-stars" bind-value="true" apply-on-change="true" min='~star-slider-increment' max='~star-slider-abs-max' increment='~star-slider-increment' integer-only='false' formatter='star-formatter'/>
 
         <horizontal active='~use_stars_inv' bg="panel-top" ignore-layout="true" anchor-max-y="0.8" bg-color="#00000000" pref-height="15"/>
 
@@ -120,8 +120,8 @@
           <horizontal min-width="20"/>
         </horizontal>
         
-        <slider-setting interactable="~use_complexity" text='Complexity Above' color='~use-complexity-color' show-buttons='true' value="old_lowest_complexity" bind-value="true" apply-on-change="true" min='0' max='~complexity-slider-max' increment='~complexity-slider-increment' integer-only='false' formatter='complexity-formatter'/>
-        <slider-setting interactable="~use_complexity" text='Complexity Below' color='~use-complexity-color' show-buttons='true' value="old_highest_complexity" bind-value="true" apply-on-change="true" min='~complexity-slider-increment' max='~complexity-slider-abs-max' increment='~complexity-slider-increment' integer-only='false' formatter='complexity-formatter'/>
+        <slider-setting interactable="~use_complexity" text='Complexity Above' color='~use-complexity-color' show-buttons='true' value="old-lowest-complexity" bind-value="true" apply-on-change="true" min='0' max='~complexity-slider-max' increment='~complexity-slider-increment' integer-only='false' formatter='complexity-formatter'/>
+        <slider-setting interactable="~use_complexity" text='Complexity Below' color='~use-complexity-color' show-buttons='true' value="old-highest-complexity" bind-value="true" apply-on-change="true" min='~complexity-slider-increment' max='~complexity-slider-abs-max' increment='~complexity-slider-increment' integer-only='false' formatter='complexity-formatter'/>
 
         <horizontal active='~use_complexity_inv' bg="panel-top" ignore-layout="true" anchor-max-y="0.35" bg-color="#00000000" pref-height="15"/>
 
