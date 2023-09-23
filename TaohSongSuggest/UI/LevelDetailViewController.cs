@@ -206,7 +206,7 @@ namespace SmartSongSuggest.UI
                             //Taoh Changed!!
                             string diffLabel = sldv.selectedDifficultyBeatmap.difficulty.SerializedName();
 
-                            _mapRanked = SongSuggestManager.toolBox.songLibrary.HasSongCategory(levelHash, diffLabel);//difficulty.ranked;
+                            _mapRanked = SongSuggestManager.toolBox.songLibrary.HasAnySongCategory(levelHash, diffLabel);//difficulty.ranked;
 
                             //Forgot to check if map was ranked before checking ban... oops
 

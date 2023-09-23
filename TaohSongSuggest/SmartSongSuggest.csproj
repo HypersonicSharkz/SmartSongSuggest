@@ -68,6 +68,9 @@
     <Reference Include="SongDetailsCache">
       <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Libs\SongDetailsCache.dll</HintPath>
     </Reference>
+    <Reference Include="SongSuggestCore">
+      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Libs\SongSuggestCore.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -130,56 +133,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SongSuggest\Actions\ActivePlayerRefreshData.cs" />
-    <Compile Include="SongSuggest\Actions\OldAndNew.cs" />
-    <Compile Include="SongSuggest\Actions\RankedSongsSuggest.cs" />
-    <Compile Include="SongSuggest\Actions\Top10kRefresh.cs" />
-    <Compile Include="SongSuggest\DataHandling\ActivePlayer.cs" />
-    <Compile Include="SongSuggest\DataHandling\ActivePlayerScore.cs" />
-    <Compile Include="SongSuggest\DataHandling\FileFormatVersions.cs" />
-    <Compile Include="SongSuggest\DataHandling\FileHandler.cs" />
-    <Compile Include="SongSuggest\DataHandling\FilesMeta.cs" />
-    <Compile Include="SongSuggest\DataHandling\LastRankedSuggestions.cs" />
-    <Compile Include="SongSuggest\DataHandling\PlaylistManager.cs" />
-    <Compile Include="SongSuggest\DataHandling\Song.cs" />
-    <Compile Include="SongSuggest\DataHandling\SongBan.cs" />
-    <Compile Include="SongSuggest\DataHandling\SongBanning.cs" />
-    <Compile Include="SongSuggest\DataHandling\SongLibrary.cs" />
-    <Compile Include="SongSuggest\DataHandling\SongLike.cs" />
-    <Compile Include="SongSuggest\DataHandling\SongLiking.cs" />
-    <Compile Include="SongSuggest\DataHandling\SongSuggest.cs" />
-    <Compile Include="SongSuggest\DataHandling\WebDownloader.cs" />
-    <Compile Include="SongSuggest\JSON\AccSaberJSON\AccSaberSongMeta.cs" />
-    <Compile Include="SongSuggest\JSON\BeatLeaderJSON\Score.cs" />
-    <Compile Include="SongSuggest\JSON\BeatSaverJSON\Song.cs" />
-    <Compile Include="SongSuggest\JSON\PlaylistJSON\Difficulty.cs" />
-    <Compile Include="SongSuggest\JSON\PlaylistJSON\Playlist.cs" />
-    <Compile Include="SongSuggest\JSON\PlaylistJSON\Song.cs" />
-    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\Badge.cs" />
-    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\Difficulty.cs" />
-    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\LeaderboardInfo.cs" />
-    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\LeaderboardInfoCollection.cs" />
-    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\LeaderboardPlayer.cs" />
-    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\Metadata.cs" />
-    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\Player.cs" />
-    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\PlayerCollection.cs" />
-    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\PlayerScore.cs" />
-    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\PlayerScoreCollection.cs" />
-    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\Score.cs" />
-    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\ScoreCollection.cs" />
-    <Compile Include="SongSuggest\JSON\ScoreSaberJSON\ScoreStats.cs" />
-    <Compile Include="SongSuggest\LinkedData\SongEndPoint.cs" />
-    <Compile Include="SongSuggest\LinkedData\SongEndPointCollection.cs" />
-    <Compile Include="SongSuggest\LinkedData\SongLink.cs" />
-    <Compile Include="SongSuggest\LinkedData\Top10kPlayer.cs" />
-    <Compile Include="SongSuggest\LinkedData\Top10kPlayers.cs" />
-    <Compile Include="SongSuggest\LinkedData\Top10kScore.cs" />
-    <Compile Include="SongSuggest\LinkedData\Top10kSongMeta.cs" />
-    <Compile Include="SongSuggest\Settings\FilePathSettings.cs" />
-    <Compile Include="SongSuggest\Settings\FilterSettings.cs" />
-    <Compile Include="SongSuggest\Settings\OldAndNewSettings.cs" />
-    <Compile Include="SongSuggest\Settings\PlaylistSettings.cs" />
-    <Compile Include="SongSuggest\Settings\SongSuggestSettings.cs" />
     <Compile Include="UI\LevelDetailViewController.cs" />
     <Compile Include="Managers\UIManager.cs" />
     <Compile Include="UI\MapListController.cs" />
