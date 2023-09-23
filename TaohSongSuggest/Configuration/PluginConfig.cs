@@ -81,13 +81,13 @@ namespace SmartSongSuggest.Configuration
         //Mutex to ensure slider updates does not cause infinite recall loops at certain increment values
         private bool sliderMutexFree = true;
 
-        [UIValue("use_acc_inv")]
+        [UIValue("use-acc-inv")]
         public virtual bool useAccInv { get => !UseAcc; }
-        [UIValue("use_age_inv")]
+        [UIValue("use-age-inv")]
         public virtual bool useAgeInv { get => !UseAge; }
-        [UIValue("use_stars_inv")]
+        [UIValue("use-stars-inv")]
         public virtual bool useStarsInv { get => !UseStars; }
-        [UIValue("use_complexity_inv")]
+        [UIValue("use-complexity-inv")]
         public virtual bool useComplexityInv { get => !UseComplexity; }
 
         //[UIValue("")]
@@ -345,7 +345,7 @@ namespace SmartSongSuggest.Configuration
 
         private bool _showOrderOptions { get; set; } = false;
         
-        [UIValue("showOrderOptions")]
+        [UIValue("show-order-options")]
         public virtual bool ShowOrderOptions
         {
             get => _showOrderOptions;
@@ -358,7 +358,7 @@ namespace SmartSongSuggest.Configuration
 
         private bool _showLikedOptions { get; set; } = false;
 
-        [UIValue("showLikedOptions")]
+        [UIValue("show-liked-options")]
         public virtual bool ShowLikedOptions
         {
             get => _showLikedOptions;
@@ -369,7 +369,7 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        [UIValue("use_acc")]
+        [UIValue("use-acc")]
         public virtual bool UseAcc
         {
             get => _useAcc;
@@ -382,7 +382,7 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        [UIValue("use_age")]
+        [UIValue("use-age")]
         public virtual bool UseAge
         {
             get => _useAge;
@@ -395,7 +395,7 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        [UIValue("use_stars")]
+        [UIValue("use-stars")]
         public virtual bool UseStars
         {
             get => _useStars;
@@ -408,7 +408,7 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        [UIValue("use_complexity")]
+        [UIValue("use-complexity")]
         public virtual bool UseComplexity
         {
             get => _useComplexity;
@@ -421,21 +421,34 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        [UIValue("selectionBestWorst")]
-        public virtual bool SelectionBestWorst { get => _selectionBestWorst; set { _selectionBestWorst = value; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SelectionOrder))); } }
+        public virtual bool SelectionBestWorst 
+        { 
+            get => _selectionBestWorst; 
+            set 
+            { 
+                _selectionBestWorst = value; 
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SelectionOrder))); 
+            } 
+        }
 
-        [UIValue("orderBestWorst")]
-        public virtual bool OrderBestWorst { get => _orderBestWorst; set { _orderBestWorst = value; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(OrderOrder))); } }
+        public virtual bool OrderBestWorst 
+        { 
+            get => _orderBestWorst; 
+            set 
+            { 
+                _orderBestWorst = value; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(OrderOrder))); 
+            } 
+        }
 
         //Assigns the first entry that is not .None to the default selections as well as generate the ordering list for the UI without the .None option
 
-        [UIValue("oldest_selection")]
+        [UIValue("oldest-selection")]
         public virtual SongSortCriteria PlaylistSelectionSort { get; set; } = Enum.GetValues(typeof(SongSortCriteria)).Cast<SongSortCriteria>().Skip(1).First();
-        [UIValue("oldest_order")]
+        [UIValue("oldest-order")]
         public virtual SongSortCriteria PlaylistOrderingSort { get; set; } = Enum.GetValues(typeof(SongSortCriteria)).Cast<SongSortCriteria>().Skip(1).First();
 
         [Ignore]
-        [UIValue("oldest_sorting")]
+        [UIValue("oldest-sorting")]
         //Skip the None option.
         public List<object> options = Enum.GetValues(typeof(SongSortCriteria)).Cast<object>().ToList().Skip(1).ToList();
 
@@ -535,7 +548,7 @@ namespace SmartSongSuggest.Configuration
             return (Mathf.Round(sliderVal * 10) / 10).ToString("0.0") + "% Random";
         }
 
-        [UIAction("day-ignorePlayed-formatter")]
+        [UIAction("day-ignore-played-formatter")]
         public string DayIgnorePlayedFormatter(int sliderVal)
         {
             if (sliderVal == SuggestIgnorePlayedDaysAllCount)
