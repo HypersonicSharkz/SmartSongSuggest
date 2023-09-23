@@ -57,6 +57,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Plugins\BS_Utils.dll</HintPath>
     </Reference>
+    <Reference Include="GameplayCore, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\BSLegacyLauncher\Installed Versions\Beat Saber 1.29.1\Beat Saber_Data\Managed\GameplayCore.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Libs\Newtonsoft.Json.dll</HintPath>
@@ -122,6 +126,7 @@
   <ItemGroup>
     <Compile Include="Managers\SongSuggestManager.cs" />
     <Compile Include="Patches\LevelDetailPatch.cs" />
+    <Compile Include="Patches\ProcessScorePatch.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Configuration\PluginConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
