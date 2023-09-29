@@ -53,7 +53,8 @@ namespace SmartSongSuggest.Managers
                         lastSuggestionsPath = configDir
                     };
 
-                    toolBox = new SongSuggest(fps, "-1");
+                    if (SettingsController.cfgInstance.LogEnabled) toolBox = new SongSuggest(fps, "-1", Console.Out);
+                    else toolBox = new SongSuggest(fps, "-1");
                 }
                 catch (Exception e)
                 {
@@ -141,6 +142,7 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
                 playlistSettings = playListSettings,
                 filterSettings = filterSettings,
                 extraSongs = 100 - cfg.ExtraSongs,
+                useLocalScores = cfg.UseLocalScores
             };
 
             return linkedSettings;

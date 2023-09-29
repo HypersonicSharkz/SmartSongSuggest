@@ -55,7 +55,8 @@ namespace SmartSongSuggest.Configuration
         public virtual float ComplexitySliderIncrement { get; set; } = 0.1f;
         public virtual int ComplexitySliderDecimals { get; set; } = 1;
 
-
+        public virtual string __comment_Config_Options__ { get; set; } = "Logging Enabled";
+        public virtual bool LogEnabled { get; set; } = false;
 
         public virtual string __comment_Variables__ { get; set; } = "Remaining Values are in game selectable Values";
 
@@ -304,7 +305,7 @@ namespace SmartSongSuggest.Configuration
         {
             get
             {
-                double star = SmartSongSuggest.Managers.SongSuggestManager.toolBox.songLibrary.songs.OrderByDescending(c => c.Value.starBeatSaber).First().Value.starBeatSaber;
+                double star = SmartSongSuggest.Managers.SongSuggestManager.toolBox.songLibrary.songs.OrderByDescending(c => c.Value.starScoreSaber).First().Value.starScoreSaber;
                 star = Math.Ceiling(star / StarSliderIncrement) * StarSliderIncrement - StarSliderIncrement;
                 return (float)star;
             }
@@ -342,6 +343,12 @@ namespace SmartSongSuggest.Configuration
                 return ComplexitySliderMax + ComplexitySliderIncrement;
             }
         }
+
+        [UIValue("record-local-scores")]
+        public virtual bool RecordLocalScores { get; set; } = false;
+
+        [UIValue("use-local-scores")]
+        public virtual bool UseLocalScores { get; set; } = false;
 
         private bool _showOrderOptions { get; set; } = false;
         
