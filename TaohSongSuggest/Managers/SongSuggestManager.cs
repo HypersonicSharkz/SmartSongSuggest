@@ -8,7 +8,6 @@ using System.IO;
 using IPA.Utilities;
 using SongSuggestNS;
 using System.Linq;
-using Newtonsoft.Json;
 
 namespace SmartSongSuggest.Managers
 {
@@ -53,8 +52,14 @@ namespace SmartSongSuggest.Managers
                         lastSuggestionsPath = configDir
                     };
 
-                    if (SettingsController.cfgInstance.LogEnabled) toolBox = new SongSuggest(fps, "-1", Console.Out);
-                    else toolBox = new SongSuggest(fps, "-1");
+                    if (SettingsController.cfgInstance.LogEnabled)
+                    {
+                        Console.WriteLine("Logging Enabled. Direct Console Write");
+                        toolBox = new SongSuggest(fps, "-1", Console.Out);
+                        Console.WriteLine("Logging Enabled. Direct Console Write After Toolbox Create");
+                        toolBox.log?.WriteLine("Logging Enabled. Write Via ToolBox");
+                    }
+                    else toolBox = new SongSuggest(fps, "-1", null);
                 }
                 catch (Exception e)
                 {
@@ -132,17 +137,19 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
 
             SongSuggestSettings linkedSettings = new SongSuggestSettings
             {
-                scoreSaberID = BS_Utils.Gameplay.GetUserInfo.GetUserID(),
-                playlistLength = cfg.SuggestPlaylistCount,
-                ignorePlayedAll = cfg.IgnorePlayedDays == cfg.SuggestIgnorePlayedDaysAllCount,
-                ignorePlayedDays = cfg.IgnorePlayedDays,
-                useLikedSongs = cfg.UseLikedSongs && cfg.ShowLikedOptions,
-                fillLikedSongs = cfg.FillLikedSongs && cfg.ShowLikedOptions,
-                ignoreNonImproveable = cfg.RemoveOptimizedScores,
-                playlistSettings = playListSettings,
-                filterSettings = filterSettings,
-                extraSongs = 100 - cfg.ExtraSongs,
-                useLocalScores = cfg.UseLocalScores
+                ScoreSaberID = BS_Utils.Gameplay.GetUserInfo.GetUserID(),
+                PlaylistLength = cfg.SuggestPlaylistCount,
+                IgnorePlayedAll = cfg.IgnorePlayedDays == cfg.SuggestIgnorePlayedDaysAllCount,
+                IgnorePlayedDays = cfg.IgnorePlayedDays,
+                UseLikedSongs = cfg.UseLikedSongs && cfg.ShowLikedOptions,
+                FillLikedSongs = cfg.FillLikedSongs && cfg.ShowLikedOptions,
+                IgnoreNonImproveable = cfg.RemoveOptimizedScores,
+                PlaylistSettings = playListSettings,
+                FilterSettings = filterSettings,
+                ExtraSongs = 100 - cfg.ExtraSongs,
+                UseLocalScores = cfg.UseLocalScores,
+                BetterAccCap = cfg.BetterAccCap,
+                WorseAccCap = cfg.WorseAccCap
             };
 
             return linkedSettings;

@@ -192,31 +192,35 @@ namespace SmartSongSuggest.UI
 
                 _rankPlate = "";
 
-               
 
+                SongSuggestManager.toolBox.log?.WriteLine("Checking For Custom Map");
                 if (sldv.beatmapLevel != null && sldv.beatmapLevel is CustomBeatmapLevel)
                 {
                     levelHash = Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel);
-
-                    if (Plugin.songDetails.songs.FindByHash(levelHash, out Song x))
+                    SongSuggestManager.toolBox.log?.WriteLine("Getting Hash");
+                    if (Plugin.songDetails.songs.FindByHash(levelHash, out Song song))
                     {
+                        SongSuggestManager.toolBox.log?.WriteLine("Getting Difficulty");
                         SongDifficulty difficulty;
-                        if (x.GetDifficulty(out difficulty, (MapDifficulty)sldv.selectedDifficultyBeatmap.difficulty))
+                        if (song.GetDifficulty(out difficulty, (MapDifficulty)sldv.selectedDifficultyBeatmap.difficulty))
                         {
-                            //Taoh Changed!!
+                            SongSuggestManager.toolBox.log?.WriteLine("Getting difc name");
                             string diffLabel = sldv.selectedDifficultyBeatmap.difficulty.SerializedName();
 
+                            SongSuggestManager.toolBox.log?.WriteLine("Checking if map is Ranked");
                             _mapRanked = SongSuggestManager.toolBox.songLibrary.HasAnySongCategory(levelHash, diffLabel);//difficulty.ranked;
 
-                            //Forgot to check if map was ranked before checking ban... oops
-
-                            //TaohChanged!!
                             if (_mapRanked)//difficulty.ranked)
                             {
+                                SongSuggestManager.toolBox.log?.WriteLine("Getting Songrank");
                                 string songrank = SongSuggestManager.toolBox.GetSongRanking(levelHash, diffLabel);
 
+                                SongSuggestManager.toolBox.log?.WriteLine("Checking if RankPlate is active, and song got a Ranking");
                                 if (songrank != "" && SettingsController.cfgInstance.ShowRankPlate)
+                                {
+                                    SongSuggestManager.toolBox.log?.WriteLine("Setting Rank Plate Text");
                                     _rankPlate = songrank + "/" + SongSuggestManager.toolBox.GetSongRankingCount();
+                                }
 
                                 if (SongSuggestManager.toolBox.songBanning.IsBanned(levelHash, diffLabel))
                                 {
@@ -229,7 +233,6 @@ namespace SmartSongSuggest.UI
                                     BanColor = "white";
 
                                 }
-
 
                                 if (SongSuggestManager.toolBox.songLiking.IsLiked(levelHash, diffLabel))
                                 {

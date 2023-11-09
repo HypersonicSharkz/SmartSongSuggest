@@ -28,7 +28,8 @@ namespace SmartSongSuggest.Configuration
         public virtual int SuggestPlaylistMaxCount { get; set; } = 100;
         public virtual int SuggestIgnorePlayedDaysMaxCount { get; set; } = 100;
 
-
+        public virtual float BetterAccCap { get; set; } = 1.2f;
+        public virtual float WorseAccCap { get; set; } = 0.7f;
 
         public virtual string __comment_OldnNew__ { get; set; } = "Configureable Values for the Old & New Tab starts here";
         [UIValue("oldnnew-playlist-min-count")] 
@@ -105,7 +106,7 @@ namespace SmartSongSuggest.Configuration
         [UIValue("remove-optimized-scores")]
         public virtual bool RemoveOptimizedScores { get; set; } = true;
         [UIValue("extra-songs")]
-        public virtual int ExtraSongs { get; set; } = 75;
+        public virtual int ExtraSongs { get; set; } = 85;
 
         [UIValue("show-rank-plate")]
         public virtual bool ShowRankPlate { get; set; } = true;
