@@ -164,6 +164,7 @@
     <EmbeddedResource Include="UI\Views\SongSuggestMain.bsml" />
     <EmbeddedResource Include="UI\Views\SongSuggestLeft.bsml" />
     <EmbeddedResource Include="UI\Views\SongSuggestTab.bsml" />
+    <EmbeddedResource Include="UI\Views\AccSaberSettings.bsml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BeatSaberModdingTools.Tasks">

@@ -24,11 +24,16 @@
             <toggle-setting interactable='true' text='Remove Optimized Scores' value='remove-optimized-scores' apply-on-change='true' bind-value="true" hover-hint="If enabled, maps that you already have a great score on will be ignored"/>
           </vertical>
 
+          <horizontal>
+            <button text='Settings' on-click='accsaber-click'/>
+          </horizontal>
+          
           <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' active='true'>
             <slider-setting text='PP Potential' show-buttons='true' value="extra-songs" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint= 'Higher values gives a playlist with more challenging songs and a higher PP Potential. Lower values have easier songs that demand high accuracy to maintain their PP value. An optimal balance is expected around 75%.' />
             <slider-setting text='Style Focus' show-buttons='true' value="modifier-style" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='Style is areas you have shown skill or preferences for in your top plays. A high style focus prioritize songs that players similar to you have performed the best on.' />
             <slider-setting text='Tech Focus' show-buttons='true' value="modifier-overweight" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='A higher Tech level prioritize songs that players similar to you gained the most PP from. This means that even Speed-oriented players can benefit from values above 80%.' />
           </vertical>
+
           <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' active='~show-liked-options'>
             <toggle-setting interactable='true' text='Use Liked Songs' value='use-liked-songs' apply-on-change='true' bind-value="true" hover-hint="Standard suggestions are based on your current top 50 ranked song plays, if you enable Use Liked Songs it instead uses your Liked Songs as the seeds."/>
           </vertical>

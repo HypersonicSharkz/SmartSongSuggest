@@ -14,6 +14,8 @@ namespace SmartSongSuggest.Managers
     static class SongSuggestManager
     {
         internal static SongSuggest toolBox;
+        public static bool needsAssignment = false;
+        public static bool readyForAssignment = false;
 
         //Method for sending progress info to the UI on the main thread
         static async void UpdateProgessNew()
@@ -56,6 +58,7 @@ namespace SmartSongSuggest.Managers
                     {
                         Console.WriteLine("Logging Enabled. Direct Console Write");
                         toolBox = new SongSuggest(fps, "-1", Console.Out);
+                        readyForAssignment = true;
                         Console.WriteLine("Logging Enabled. Direct Console Write After Toolbox Create");
                         toolBox.log?.WriteLine("Logging Enabled. Write Via ToolBox");
                     }

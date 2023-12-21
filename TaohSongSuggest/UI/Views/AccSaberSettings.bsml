@@ -1,0 +1,11 @@
+﻿<modal id='modal' show-event='open-accsaber' hide-event='close-accsaber' clickerino-offerino-closerino="true" anchor-pos-y='10' size-delta-x='92' size-delta-y='~category-size'>
+  <vertical preferred-width='88' vertical-fit='PreferredSize'>
+    <horizontal horizontal-fit='PreferredSize' pad='8' preferred-height='79' vertical-fit='PreferredSize' child-control-height='false' active='~suggest-show'>
+      <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='80' active='true'>
+        <slider-setting text='Style Focus' show-buttons='true' value="modifier-style" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='Style is areas you have shown skill or preferences for in your top plays. A high style focus prioritize songs that players similar to you have performed the best on.' />
+        <slider-setting text='Tech Focus' show-buttons='true' value="modifier-overweight" bind-value="true" apply-on-change="true" min='0' max='100' increment='1' integer-only='true' formatter='percent-formatter' hover-hint='A higher Tech level prioritize songs that players similar to you gained the most PP from. This means that even Speed-oriented players can benefit from values above 80%.' />
+      </vertical>
+    </horizontal>
+    <button text='OK' click-event='close-accsaber'/>
+  </vertical>
+</modal>

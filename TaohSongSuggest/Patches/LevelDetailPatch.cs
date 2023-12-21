@@ -2,6 +2,8 @@
 using System.Collections;
 using SmartSongSuggest.UI;
 using UnityEngine;
+using SmartSongSuggest.Managers;
+using System;
 
 namespace SmartSongSuggest.Patches
 {
@@ -10,10 +12,19 @@ namespace SmartSongSuggest.Patches
     {
         static void Prefix(StandardLevelDetailViewController __instance, bool firstActivation)
         {
-            if (!firstActivation)
-                return;
+            //Informs the SongSuggestManager a new assignment is needed.
+            if (firstActivation)
+            {
+                if (SettingsController.cfgInstance.LogEnabled) Console.WriteLine("Prefix: First Activation");
+                SongSuggestManager.needsAssignment = true;
+            }
 
-            SharedCoroutineStarter.instance.StartCoroutine(InitDelayed(__instance.transform));
+            //Only activate once on a new reload, and only after SongSuggestCore is done loading
+            if (SongSuggestManager.needsAssignment && SongSuggestManager.readyForAssignment)
+            {
+                SongSuggestManager.needsAssignment = false;
+                SharedCoroutineStarter.instance.StartCoroutine(InitDelayed(__instance.transform));
+            }
         }
 
         static IEnumerator InitDelayed(Transform t)

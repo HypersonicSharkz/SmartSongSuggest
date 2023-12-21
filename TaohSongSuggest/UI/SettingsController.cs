@@ -13,6 +13,7 @@ using SongSuggestNS;
 using System.Collections;
 using System;
 using Newtonsoft.Json;
+using BeatSaberMarkupLanguage;
 
 namespace SmartSongSuggest.UI
 {
@@ -179,6 +180,14 @@ namespace SmartSongSuggest.UI
             this.parserParams.EmitEvent("close-settings");
             this.parserParams.EmitEvent("open-settings");
         }
+
+        [UIAction("accsaber-click")]
+        private void ShowScoreSaber()
+        {
+            this.parserParams.EmitEvent("close-accsaber");
+            this.parserParams.EmitEvent("open-accsaber");
+        }
+
 
         [UIAction("categories-click")]
         private void ShowCategories()
