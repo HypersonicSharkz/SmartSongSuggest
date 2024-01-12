@@ -42,27 +42,23 @@ namespace SmartSongSuggest.Managers
                     Directory.CreateDirectory(Path.GetDirectoryName(Path.Combine(configDir, "Players/")));
 
                     
-                    FilePathSettings fps = new FilePathSettings()
+                    FilePathSettings fps = new FilePathSettings(configDir)
                     {
-                        activePlayerDataPath = Path.Combine(configDir, "Players/"),
-                        bannedSongsPath = configDir,
-                        likedSongsPath = configDir,
-                        top10kPlayersPath = configDir,
-                        playlistPath = Path.Combine(UnityGame.InstallPath, "Playlists/"),
-                        songLibraryPath = configDir,
-                        filesDataPath = configDir,
-                        lastSuggestionsPath = configDir
+                          playlistPath = Path.Combine(UnityGame.InstallPath, "Playlists/"),
                     };
+
+                    CoreSettings coreSettings = new CoreSettings() {FilePathSettings = fps};
 
                     if (SettingsController.cfgInstance.LogEnabled)
                     {
                         Console.WriteLine("Logging Enabled. Direct Console Write");
-                        toolBox = new SongSuggest(fps, "-1", Console.Out);
+                        coreSettings.Log = Console.Out;
+                        toolBox = new SongSuggest(coreSettings);
                         readyForAssignment = true;
                         Console.WriteLine("Logging Enabled. Direct Console Write After Toolbox Create");
                         toolBox.log?.WriteLine("Logging Enabled. Write Via ToolBox");
                     }
-                    else toolBox = new SongSuggest(fps, "-1", null);
+                    else toolBox = new SongSuggest(coreSettings);  //(fps, "-1", null);
                 }
                 catch (Exception e)
                 {
