@@ -34,7 +34,7 @@ namespace SmartSongSuggest.UI
 
                     PluginConfig cfg = SettingsController.cfgInstance;
 
-                    SongSuggestSettings linkedSettings = SongSuggestManager.GetSongSuggestSettings(cfg);
+                    SongSuggestSettings linkedSettings = SongSuggestManager.GetSongSuggestSettingsOld(cfg);
 
                     SongSuggestManager.toolBox.status = "Starting Search";
 

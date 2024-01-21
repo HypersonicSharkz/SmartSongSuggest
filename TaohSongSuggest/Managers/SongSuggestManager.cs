@@ -8,6 +8,12 @@ using System.IO;
 using IPA.Utilities;
 using SongSuggestNS;
 using System.Linq;
+using System.Collections.Generic;
+using System.ComponentModel;
+using IPA.Config.Data;
+using Newtonsoft.Json;
+using ScoreSabersJson;
+using Actions;
 
 namespace SmartSongSuggest.Managers
 {
@@ -54,16 +60,96 @@ namespace SmartSongSuggest.Managers
                         Console.WriteLine("Logging Enabled. Direct Console Write");
                         coreSettings.Log = Console.Out;
                         toolBox = new SongSuggest(coreSettings);
-                        readyForAssignment = true;
                         Console.WriteLine("Logging Enabled. Direct Console Write After Toolbox Create");
                         toolBox.log?.WriteLine("Logging Enabled. Write Via ToolBox");
                     }
-                    else toolBox = new SongSuggest(coreSettings);  //(fps, "-1", null);
+                    else
+                    { 
+                        toolBox = new SongSuggest(coreSettings); //(fps, "-1", null);
+                    }  
+                    readyForAssignment = true;
                 }
                 catch (Exception e)
                 {
                     Plugin.Log.Error(e);
                 }
+
+                //Prepare Active Settings files for Suggest, and ensure a valid option is set active
+                //(mostly relevant on first load, but also if the current active Leaderboard has been set inactive, as well as
+                //ensure there is a default value set if all are set inactive). There should be a settingfile for each leaderboard regardless.
+
+                //var suggestSettings = SettingsController.cfgInstance.suggestSettings;
+                //bool scoreSaberActive = SettingsController.cfgInstance.LoadScoreSaberLeaderboard;
+                //bool accSaberActive = SettingsController.cfgInstance.LoadAccSaberLeaderboard;
+                //bool beatLeaderActive = SettingsController.cfgInstance.LoadBeatLeaderLeaderboard;
+                //var activeLeaderboardName = SettingsController.cfgInstance.LeaderboardsSelection;
+                //var leaderboardOptions = SettingsController.cfgInstance.LeaderboardsOptions;
+                //List<string> defaultSettings = SettingsController.cfgInstance.DefaultLeaderboards;
+                toolBox.log?.WriteLine("LeaderBoard Creation Start");
+                var cfg = SettingsController.cfgInstance;
+
+                cfg.DefaultLeaderboardNames = new List<string>{ "Score Saber", "Acc Saber", "Beat Leader" };
+                cfg.SuggestSettings = JsonConvert.DeserializeObject<List<SongSuggestSettings>>(cfg.SuggestSettingsString);
+                toolBox.log?.WriteLine($"Leaderboards Loaded: {cfg.SuggestSettings.Count}");
+                toolBox.log?.WriteLine($"String Loaded: {cfg.SuggestSettingsString}");
+
+                //Ensure Default Leaderboards are present
+                foreach (var settingString in cfg.DefaultLeaderboardNames)
+                {
+                    var activeSetting = cfg.SuggestSettings.Where(c => c.SuggestionName == settingString).FirstOrDefault();
+                    //Create Missing Configs.
+                    if (activeSetting == null)
+                    {
+                        toolBox.log?.WriteLine($"Creating New Leaderboard : {settingString}");
+                        activeSetting = CreateSuggestSetting(settingString);
+                        
+                        //Custom Configs for leaderboards
+                        switch (settingString)
+                        {
+                            case "Score Saber":
+                                activeSetting.Leaderboard = LeaderboardType.ScoreSaber;
+                                break;
+                            case "Acc Saber":
+                                activeSetting.Leaderboard = LeaderboardType.AccSaber;
+                                activeSetting.WorseAccCap = 0.9;
+                                activeSetting.BetterAccCap = 1.1;
+                                activeSetting.FilterSettings.modifierOverweight = 70;
+                                activeSetting.ExtraSongs = 0;
+                                break;
+                            case "Beat Leader":
+                                activeSetting.Leaderboard = LeaderboardType.BeatLeader;
+                                break;
+                            default:
+                                break;
+                        }
+
+                        cfg.SuggestSettings.Add(activeSetting);
+
+                    }
+                }
+                cfg.SaveSuggestSettings();
+
+                //cfg.ActiveLeaderboard = CreateSuggestSetting("test");
+                toolBox.log?.WriteLine($"Leaderboards After Create: {cfg.SuggestSettings.Count}");
+                toolBox.log?.WriteLine($"String After Create: {cfg.SuggestSettingsString}");
+
+                toolBox.log?.WriteLine($"TestLoadValue Days: {cfg.ActiveLeaderboard.IgnorePlayedDays}");
+                toolBox.log?.WriteLine($"TestLoadValue Strength: {cfg.ActiveLeaderboard.FilterSettings.modifierStyle}");
+                //Add active default leaderboard to selection
+                if (cfg.LoadScoreSaberLeaderboard) cfg.LeaderboardOptions.Add("Score Saber");
+                if (cfg.LoadAccSaberLeaderboard) cfg.LeaderboardOptions.Add("Acc Saber");
+                if (cfg.LoadBeatLeaderLeaderboard) cfg.LeaderboardOptions.Add("Beat Leader");
+
+                //If no leaderboards is found we add scoresaber regardless
+                if (cfg.LeaderboardOptions.Count == 0) cfg.LeaderboardOptions.Add("Score Saber");
+
+                //Set active leaderboard, if the current set is null, or an illegal option has been set (disabled leaderboard in config outside game)
+                if (cfg.SuggestSettings.Where(c => c.SuggestionName == cfg.LeaderboardSelection).FirstOrDefault() == null) cfg.LeaderboardSelection = (string)cfg.LeaderboardOptions.First();
+
+                cfg.ActiveLeaderboard = cfg.SuggestSettings.Where(c => c.SuggestionName == cfg.LeaderboardSelection).FirstOrDefault();
+                
+                //Reset UI to newly loaded values.
+                //cfg.SuggestSourceChanged();
             });
         }
 
@@ -77,7 +163,7 @@ namespace SmartSongSuggest.Managers
 
                     PluginConfig cfg = SettingsController.cfgInstance;
 
-                    SongSuggestSettings linkedSettings = GetSongSuggestSettings(cfg);
+                    SongSuggestSettings linkedSettings = GetSongSuggestSettingsOld(cfg);
 
                     toolBox.status = "Starting Search";
 
@@ -118,7 +204,9 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
             });
         }
 
-        public static SongSuggestSettings GetSongSuggestSettings(PluginConfig cfg)
+        //We could use the linked data directly if available, and if not the data in the leaderboard if updated. The reason is to avoid adding non needed
+        //data in the config stored data (such as Playlist Settings, or player ID, or specific derived data as ignore played all).
+        public static SongSuggestSettings GetSongSuggestSettingsOld(PluginConfig cfg)
         {
             FilterSettings filterSettings = new FilterSettings
             {
@@ -136,7 +224,7 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
 
             SongSuggestSettings linkedSettings = new SongSuggestSettings
             {
-                ScoreSaberID = BS_Utils.Gameplay.GetUserInfo.GetUserID(),
+                PlayerID = BS_Utils.Gameplay.GetUserInfo.GetUserID(),
                 PlaylistLength = cfg.SuggestPlaylistCount,
                 IgnorePlayedAll = cfg.IgnorePlayedDays == cfg.SuggestIgnorePlayedDaysAllCount,
                 IgnorePlayedDays = cfg.IgnorePlayedDays,
@@ -148,7 +236,9 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
                 ExtraSongs = 100 - cfg.ExtraSongs,
                 UseLocalScores = cfg.UseLocalScores,
                 BetterAccCap = cfg.BetterAccCap,
-                WorseAccCap = cfg.WorseAccCap
+                WorseAccCap = cfg.WorseAccCap,
+                AccSaberPlaylistCategories = cfg.ActiveLeaderboard.AccSaberPlaylistCategories,
+                Leaderboard = cfg.ActiveLeaderboard.Leaderboard,
             };
 
             return linkedSettings;
@@ -246,6 +336,21 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
                 PlaylistManager.DefaultManager.MarkPlaylistChanged(pl);
                 PlaylistManager.DefaultManager.RefreshPlaylists(true);
             }
+        }
+        public static SongSuggestSettings CreateSuggestSetting(string settingString)
+        {
+            FilterSettings filterSettings = new FilterSettings
+            {
+                modifierStyle = 100,
+                modifierOverweight = 81
+            };
+            SongSuggestSettings setting = new SongSuggestSettings()
+            {
+                FilterSettings = filterSettings,
+                SuggestionName = settingString,
+            };
+
+            return setting;
         }
     }
 }

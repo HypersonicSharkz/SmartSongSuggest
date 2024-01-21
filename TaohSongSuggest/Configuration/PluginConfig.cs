@@ -13,7 +13,8 @@ using Newtonsoft.Json;
 using SmartSongSuggest.UI;
 using System.ComponentModel;
 using IPA.Config.Data;
-
+using Settings;
+using SmartSongSuggest.Managers;
 
 [assembly: InternalsVisibleTo(GeneratedStore.AssemblyVisibilityTarget)]
 namespace SmartSongSuggest.Configuration
@@ -21,16 +22,44 @@ namespace SmartSongSuggest.Configuration
     internal class PluginConfig : INotifyPropertyChanged
     {
         public virtual string __comment_Suggest__ { get; set; } = "Configureable Values for the Suggestions Tab starts here";
+        [NonNullable]
+        [UseConverter(typeof(ListConverter<string>))]
+        public virtual List<string> DefaultLeaderboardNames { get; set; }
+        [UIValue("suggest-leaderboard-options")]
+        [Ignore]
+        public List<object> LeaderboardOptions { get; set; } = new List<object>();
+        [Ignore]
+        public SongSuggestSettings ActiveLeaderboard { get; set; } = SongSuggestManager.CreateSuggestSetting("");
 
+        private string _leaderboardSelection = "";
+        [UIValue("suggest-leaderboard-selection")]
+        public virtual string LeaderboardSelection 
+        { 
+            get => _leaderboardSelection;
+            set
+            {
+                _leaderboardSelection = value;
+                var matchingLeaderboard = SuggestSettings.FirstOrDefault(c => c.SuggestionName == value);
+                if (matchingLeaderboard != null)
+                {
+                    ActiveLeaderboard = matchingLeaderboard;
+                    SuggestSourceChanged();
+                }
+            } 
+        }
         [UIValue("suggest-playlist-min-count")] 
         public virtual int SuggestPlaylistMinCount { get; set; } = 10;
         [UIValue("suggest-playlist-max-count")]
         public virtual int SuggestPlaylistMaxCount { get; set; } = 100;
         public virtual int SuggestIgnorePlayedDaysMaxCount { get; set; } = 100;
-
         public virtual float BetterAccCap { get; set; } = 1.2f;
         public virtual float WorseAccCap { get; set; } = 0.7f;
-
+        public virtual bool UpdateScoreSaberLeaderboard { get; set; } = true;
+        public virtual bool LoadScoreSaberLeaderboard { get; set; } = true;
+        public virtual bool UpdateAccSaberLeaderboard { get; set; } = false;
+        public virtual bool LoadAccSaberLeaderboard { get; set; } = false;
+        public virtual bool UpdateBeatLeaderLeaderboard { get; set; } = true;
+        public virtual bool LoadBeatLeaderLeaderboard { get; set; } = true;
         public virtual string __comment_OldnNew__ { get; set; } = "Configureable Values for the Old & New Tab starts here";
         [UIValue("oldnnew-playlist-min-count")] 
         public virtual int OldnNewPlaylistMinCount { get; set; } = 10;
@@ -79,7 +108,7 @@ namespace SmartSongSuggest.Configuration
         private bool _useAge = false;
         private bool _useStars = false;
         private bool _useComplexity = false;
-
+        private string _activeLeaderboard = "Score Saber";
         //Mutex to ensure slider updates does not cause infinite recall loops at certain increment values
         private bool sliderMutexFree = true;
 
@@ -92,21 +121,94 @@ namespace SmartSongSuggest.Configuration
         [UIValue("use-complexity-inv")]
         public virtual bool useComplexityInv { get => !UseComplexity; }
 
-        //[UIValue("")]
-        [UIValue("ignore-played-days")]
-        public virtual int IgnorePlayedDays { get; set; } = 7;
-        [UIValue("use-liked-songs")]
-        public virtual bool UseLikedSongs { get; set; }
-        [UIValue("fill-liked-songs")]
-        public virtual bool FillLikedSongs { get; set; }
-        [UIValue("modifier-style")]
-        public virtual int ModifierStyle { get; set; } = 100;
-        [UIValue("modifier-overweight")]
-        public virtual int ModifierOverweight { get; set; } = 81;
-        [UIValue("remove-optimized-scores")]
-        public virtual bool RemoveOptimizedScores { get; set; } = true;
-        [UIValue("extra-songs")]
-        public virtual int ExtraSongs { get; set; } = 85;
+        [UIValue("suggest-playlist-count")][Ignore]
+        public virtual int SuggestPlaylistCount
+        {
+            get => ActiveLeaderboard.PlaylistLength;
+            set
+            {
+                ActiveLeaderboard.PlaylistLength = value;
+                SaveSuggestSettings();
+            }
+        }
+
+        [UIValue("ignore-played-days")][Ignore]
+        public virtual int IgnorePlayedDays
+        {
+            get => ActiveLeaderboard.IgnorePlayedDays;
+            set
+            {
+                ActiveLeaderboard.IgnorePlayedDays = value;
+                SaveSuggestSettings();
+            }
+        }
+
+        [UIValue("use-liked-songs")][Ignore]
+        public virtual bool UseLikedSongs
+        {
+            get => ActiveLeaderboard.UseLikedSongs;
+            set
+            {
+                ActiveLeaderboard.UseLikedSongs = value;
+                SaveSuggestSettings();
+            }
+        }
+
+        [UIValue("fill-liked-songs")][Ignore]
+        public virtual bool FillLikedSongs
+        {
+            get => ActiveLeaderboard.FillLikedSongs;
+            set
+            {
+                ActiveLeaderboard.FillLikedSongs = value;
+                SaveSuggestSettings();
+            }
+        }
+
+        [UIValue("modifier-style")][Ignore]
+        public virtual int ModifierStyle
+        {
+            get => (int)ActiveLeaderboard.FilterSettings.modifierStyle;
+            set
+            {
+                ActiveLeaderboard.FilterSettings.modifierStyle = value;
+                SaveSuggestSettings();
+            }
+        }
+ 
+        [UIValue("modifier-overweight")][Ignore]
+        public virtual int ModifierOverweight 
+        {
+            get => (int)ActiveLeaderboard.FilterSettings.modifierOverweight;
+            set
+            {
+                ActiveLeaderboard.FilterSettings.modifierOverweight = value;
+                SaveSuggestSettings();
+            }
+        }
+
+        [UIValue("remove-optimized-scores")][Ignore]
+        public virtual bool RemoveOptimizedScores 
+        {
+            get => ActiveLeaderboard.IgnoreNonImproveable; 
+            set
+            {
+                ActiveLeaderboard.IgnoreNonImproveable = value;
+                SaveSuggestSettings();
+            } 
+        }
+
+        [UIValue("extra-songs")][Ignore]
+        public int ExtraSongs
+        {
+            get => 100 - ActiveLeaderboard.ExtraSongs;
+            set
+            {
+                ActiveLeaderboard.ExtraSongs = 100 - value;
+                SaveSuggestSettings();
+            }
+        }
+
 
         [UIValue("show-rank-plate")]
         public virtual bool ShowRankPlate { get; set; } = true;
@@ -114,10 +216,8 @@ namespace SmartSongSuggest.Configuration
         public virtual bool ShowLikeButton { get; set; } = false;
         [UIValue("show-ban-button")]
         public virtual bool ShowBanButton { get; set; } = true;
-        [UIValue("oldnnew_playlist_count")]
+        [UIValue("oldnnew-playlist-count")]
         public virtual int OldnNewPlaylistCount { get; set; } = 25;
-        [UIValue("suggest_playlist_count")]
-        public virtual int SuggestPlaylistCount { get; set; } = 50;
         [UIValue("random-weight")]
         public virtual int RandomWeight { get; set; } = 30;
 
@@ -584,6 +684,11 @@ namespace SmartSongSuggest.Configuration
             SelectionBestWorst = !SelectionBestWorst;
         }
 
+        public virtual string SuggestSettingsString { get; set; } = "[]";
+
+        [Ignore]
+        public List<SongSuggestSettings> SuggestSettings { get; set; } = new List<SongSuggestSettings>();
+
         public void ResetSettings()
         {
             CopyFrom(new PluginConfig()
@@ -627,6 +732,23 @@ namespace SmartSongSuggest.Configuration
         public virtual void CopyFrom(PluginConfig other)
         {
             // This instance's members populated from other
+        }
+
+        public void SaveSuggestSettings()
+        {
+            SuggestSettingsString = JsonConvert.SerializeObject(SuggestSettings);
+        }
+
+        public virtual void SuggestSourceChanged()
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ExtraSongs)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(RemoveOptimizedScores)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ModifierOverweight)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ModifierStyle)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(FillLikedSongs)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(UseLikedSongs)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IgnorePlayedDays)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SuggestPlaylistCount)));
         }
     }
 
