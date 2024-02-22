@@ -12,6 +12,7 @@ using TMPro;
 using System.Collections;
 using BeatSaberMarkupLanguage.Parser;
 using SongSuggestNS;
+using SmartSongSuggest.Configuration;
 
 namespace SmartSongSuggest.UI
 {
@@ -213,13 +214,20 @@ namespace SmartSongSuggest.UI
                             if (_mapRanked)//difficulty.ranked)
                             {
                                 SongSuggestManager.toolBox.log?.WriteLine("Getting Songrank");
-                                string songrank = SongSuggestManager.toolBox.GetSongRanking(levelHash, diffLabel);
+                                string songRank = $"{SongSuggestManager.toolBox.GetSongRanking(levelHash, diffLabel)}";
+                                string maxRank = $"{SongSuggestManager.toolBox.GetSongRankingCount()}";
+                                string AP = $"{SongSuggestManager.toolBox.GetAPString(levelHash, diffLabel)}";
+
+                                string rankPlateString = "";
+                                if (songRank != "") rankPlateString = $"{rankPlateString} {songRank}/{maxRank}";
+                                if (AP != "") rankPlateString = $"{rankPlateString} {AP}";
+                                rankPlateString = rankPlateString.Trim();
 
                                 SongSuggestManager.toolBox.log?.WriteLine("Checking if RankPlate is active, and song got a Ranking");
-                                if (songrank != "" && SettingsController.cfgInstance.ShowRankPlate)
+                                if (rankPlateString != "" && SettingsController.cfgInstance.ShowRankPlate)
                                 {
                                     SongSuggestManager.toolBox.log?.WriteLine("Setting Rank Plate Text");
-                                    _rankPlate = songrank + "/" + SongSuggestManager.toolBox.GetSongRankingCount();
+                                    _rankPlate = rankPlateString;//songrank + "/" + SongSuggestManager.toolBox.GetSongRankingCount();
                                 }
 
                                 if (SongSuggestManager.toolBox.songBanning.IsBanned(levelHash, diffLabel))
@@ -308,6 +316,11 @@ namespace SmartSongSuggest.UI
 
             CheckButtons();
 
+        }
+
+        public virtual void RankPlateChanged()
+        {
+            CheckButtons();
         }
     }
 }

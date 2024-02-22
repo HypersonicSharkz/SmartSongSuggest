@@ -28,6 +28,7 @@ namespace SmartSongSuggest.Patches
             string difficulty = difficultyBeatmap.difficulty.SerializedName();
 
             Managers.SongSuggestManager.toolBox.AddLocalScore(mapId, difficulty, acc);
+            LevelDetailViewController.persController.RankPlateChanged();
         }
     }
 }

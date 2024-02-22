@@ -24,6 +24,7 @@ namespace SmartSongSuggest.Patches
             {
                 SongSuggestManager.needsAssignment = false;
                 SharedCoroutineStarter.instance.StartCoroutine(InitDelayed(__instance.transform));
+                SettingsController.cfgInstance.CachedPlayerID = BS_Utils.Gameplay.GetUserInfo.GetUserID();
             }
         }
 

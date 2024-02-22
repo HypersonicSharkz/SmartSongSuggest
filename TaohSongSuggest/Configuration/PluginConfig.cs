@@ -92,6 +92,9 @@ namespace SmartSongSuggest.Configuration
 
         //Stores if defaults been updated.
         public virtual bool HasResetDefaultValuesTo2_0 { get; set; } = false;
+        //Cached player ID between sessions
+        public virtual string CachedPlayerID { get; set; } = "-1"; //Defaults to -1 until set. Updates on entering Song Suggest as well as first display refresh
+        //BS_Utils.Gameplay.GetUserInfo.GetUserID()
 
         //Storage of Active Selected Sliders Values and default selection Value (on new create).
         private float _accUserSelectionMin = 0;         //Old & New Min Sliders Accuracy Value (value set between OldnNewAccuracyMin and _highestAcc)
@@ -197,7 +200,6 @@ namespace SmartSongSuggest.Configuration
                 SaveSuggestSettings();
             } 
         }
-
         [UIValue("extra-songs")][Ignore]
         public int ExtraSongs
         {
@@ -208,8 +210,6 @@ namespace SmartSongSuggest.Configuration
                 SaveSuggestSettings();
             }
         }
-
-
         [UIValue("show-rank-plate")]
         public virtual bool ShowRankPlate { get; set; } = true;
         [UIValue("show-like-button")]
@@ -220,7 +220,6 @@ namespace SmartSongSuggest.Configuration
         public virtual int OldnNewPlaylistCount { get; set; } = 25;
         [UIValue("random-weight")]
         public virtual int RandomWeight { get; set; } = 30;
-
         //SuggestIgnorePlayedDaysMaxCount + 1
         [UIValue("ignore-all-played-days")]
         public virtual int SuggestIgnorePlayedDaysAllCount 
@@ -446,7 +445,7 @@ namespace SmartSongSuggest.Configuration
         }
 
         [UIValue("record-local-scores")]
-        public virtual bool RecordLocalScores { get; set; } = false;
+        public virtual bool RecordLocalScores { get; set; } = true;
 
         [UIValue("use-local-scores")]
         public virtual bool UseLocalScores { get; set; } = false;
@@ -590,10 +589,7 @@ namespace SmartSongSuggest.Configuration
         [UIValue("use-complexity-color")]
         public string ComplexityColor => UseComplexity ? "white" : "grey";
 
-
-
         public event PropertyChangedEventHandler PropertyChanged;
-
 
         //Used by Suggest Sliders.
         [UIAction("percent-formatter")]

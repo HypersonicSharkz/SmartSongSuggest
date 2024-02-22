@@ -54,6 +54,7 @@ namespace SmartSongSuggest.Managers
                     };
 
                     CoreSettings coreSettings = new CoreSettings() {FilePathSettings = fps};
+                    coreSettings.UserID = SettingsController.cfgInstance.CachedPlayerID;
 
                     if (SettingsController.cfgInstance.LogEnabled)
                     {
@@ -114,6 +115,7 @@ namespace SmartSongSuggest.Managers
                                 activeSetting.WorseAccCap = 0.9;
                                 activeSetting.BetterAccCap = 1.1;
                                 activeSetting.FilterSettings.modifierOverweight = 70;
+                                activeSetting.OriginSongCount = 25;
                                 activeSetting.ExtraSongs = 0;
                                 break;
                             case "Beat Leader":
@@ -208,6 +210,8 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
         //data in the config stored data (such as Playlist Settings, or player ID, or specific derived data as ignore played all).
         public static SongSuggestSettings GetSongSuggestSettingsOld(PluginConfig cfg)
         {
+            cfg.CachedPlayerID = BS_Utils.Gameplay.GetUserInfo.GetUserID();
+
             FilterSettings filterSettings = new FilterSettings
             {
                 modifierStyle = cfg.ModifierStyle,
@@ -224,7 +228,7 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
 
             SongSuggestSettings linkedSettings = new SongSuggestSettings
             {
-                PlayerID = BS_Utils.Gameplay.GetUserInfo.GetUserID(),
+                PlayerID = cfg.CachedPlayerID,
                 PlaylistLength = cfg.SuggestPlaylistCount,
                 IgnorePlayedAll = cfg.IgnorePlayedDays == cfg.SuggestIgnorePlayedDaysAllCount,
                 IgnorePlayedDays = cfg.IgnorePlayedDays,
@@ -254,6 +258,8 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
 
         public static OldAndNewSettings GetOldAndNewSettings(PluginConfig ui)
         {
+            ui.CachedPlayerID = BS_Utils.Gameplay.GetUserInfo.GetUserID();
+
             PlaylistSettings playListSettings = new PlaylistSettings
             {
                 title = "Old & New",
@@ -265,7 +271,7 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
 
             OldAndNewSettings settings = new OldAndNewSettings
             {
-                scoreSaberID = BS_Utils.Gameplay.GetUserInfo.GetUserID(),
+                scoreSaberID = ui.CachedPlayerID,
 
                 //Check if slider is active, and selection is not outer values.
                 ignoreAccuracyEqualAbove = ui.UseAcc && ui.AccUserSelectionMax <= ui.AccSliderMax ? ui.AccUserSelectionMax : float.MaxValue,
