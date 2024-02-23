@@ -42,15 +42,15 @@ namespace SmartSongSuggest.Managers
             {
                 try
                 {
-                    string configDir = Path.Combine(UnityGame.UserDataPath, "SmartSongSuggest") + "/";
+                    string configDir = Path.Combine(UnityGame.UserDataPath, "SmartSongSuggest");
 
                     //Check directories
-                    Directory.CreateDirectory(Path.GetDirectoryName(Path.Combine(configDir, "Players/")));
+                    Directory.CreateDirectory(Path.GetDirectoryName(Path.Combine(configDir, "Players")));
 
                     
                     FilePathSettings fps = new FilePathSettings(configDir)
                     {
-                          playlistPath = Path.Combine(UnityGame.InstallPath, "Playlists/"),
+                        playlistPath = Path.Combine(UnityGame.InstallPath, "Playlists"),
                     };
 
                     CoreSettings coreSettings = new CoreSettings() {FilePathSettings = fps};
