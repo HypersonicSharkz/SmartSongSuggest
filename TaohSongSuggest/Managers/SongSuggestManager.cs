@@ -149,9 +149,10 @@ namespace SmartSongSuggest.Managers
                 if (cfg.SuggestSettings.Where(c => c.SuggestionName == cfg.LeaderboardSelection).FirstOrDefault() == null) cfg.LeaderboardSelection = (string)cfg.LeaderboardOptions.First();
 
                 cfg.ActiveLeaderboard = cfg.SuggestSettings.Where(c => c.SuggestionName == cfg.LeaderboardSelection).FirstOrDefault();
-                
+
                 //Reset UI to newly loaded values.
                 //cfg.SuggestSourceChanged();
+                UIManager.SmartSongSuggestButton.Interactable = true;
             });
         }
 
