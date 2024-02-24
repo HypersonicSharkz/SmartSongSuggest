@@ -731,7 +731,6 @@ namespace SmartSongSuggest.Configuration
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ModifierOverweight)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ModifierStyle)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(FillLikedSongs)));
-            //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(UseLikedSongs)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IgnorePlayedDays)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SuggestPlaylistCount)));
         }
