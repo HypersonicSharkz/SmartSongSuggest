@@ -18,15 +18,15 @@
             <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='45' spacing='1'>
               <toggle-setting interactable='true' text='Show Rank Plate' value='show-rank-plate' apply-on-change='true' bind-value="true" hover-hint=""/>
               <toggle-setting interactable='true' text='Show Ban Button' value='show-ban-button' apply-on-change='true' bind-value="true" hover-hint=""/>
-              <toggle-setting interactable='true' text='Show Like Button' value='show-like-button' apply-on-change='true' bind-value="true" active='~show-liked-options' hover-hint=""/>
+              <toggle-setting interactable='true' text='Show Like Button' value='show-like-button' apply-on-change='true' bind-value="true" active='~use-liked-songs' hover-hint=""/>
               <toggle-setting interactable='true' text='Record Local Scores' value='record-local-scores' apply-on-change='true' bind-value="true" hover-hint="Records your scores so you may receive suggestions based on these instead of your best all time"/>
             </vertical>
           </vertical>
           <vertical spacing='2' child-expand-height='false'>
             <vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='45'>
               <toggle-setting interactable='true' text='Order Playlist' value='show-order-options' apply-on-change='true' bind-value="true" hover-hint="Allow alternative ordering of Old &amp; New Playlists"/>
-              <toggle-setting interactable='true' text='Use Liked Songs' value='show-liked-options' apply-on-change='true' bind-value="true" hover-hint="Mark songs to always be seed songs for new Suggest lists."/>
-              <toggle-setting interactable='true' text='Fill Liked Songs' value='fill-liked-songs' apply-on-change='true' bind-value="true" active='~show-liked-options' hover-hint="If you have less than 50 Liked Songs, additional songs of your top 50 best are added"/>
+              <toggle-setting interactable='true' text='Use Liked Songs' value='use-liked-songs' apply-on-change='true' bind-value="true" hover-hint="Mark songs to always be seed songs for new Suggest lists."/>
+              <toggle-setting interactable='true' text='Fill Liked Songs' value='fill-liked-songs' apply-on-change='true' bind-value="true" active='~use-liked-songs' hover-hint="If you have less than 50 Liked Songs, additional songs of your top 50 best are added"/>
               <toggle-setting interactable='true' text='Local Scores Suggest' value='use-local-scores' apply-on-change='true' bind-value="true" hover-hint="Use the recorded local scores for suggestions instead of profile best."/>
             </vertical>
           </vertical>

@@ -272,7 +272,7 @@ namespace SmartSongSuggest.UI
         {
             yield return new WaitForEndOfFrame();
             addToIgnoredBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.ShowBanButton);
-            addToLikedBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.ShowLikeButton && SettingsController.cfgInstance.ShowLikedOptions);
+            addToLikedBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.ShowLikeButton && SettingsController.cfgInstance.UseLikedSongs);
         }
 
         void CheckBanState()

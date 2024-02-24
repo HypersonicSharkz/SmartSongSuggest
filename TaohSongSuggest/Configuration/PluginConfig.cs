@@ -146,17 +146,6 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        [UIValue("use-liked-songs")][Ignore]
-        public virtual bool UseLikedSongs
-        {
-            get => ActiveLeaderboard.UseLikedSongs;
-            set
-            {
-                ActiveLeaderboard.UseLikedSongs = value;
-                SaveSuggestSettings();
-            }
-        }
-
         [UIValue("fill-liked-songs")][Ignore]
         public virtual bool FillLikedSongs
         {
@@ -463,16 +452,16 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        private bool _showLikedOptions { get; set; } = false;
+        private bool _useLikedSongs { get; set; } = false;
 
-        [UIValue("show-liked-options")]
-        public virtual bool ShowLikedOptions
+        [UIValue("use-liked-songs")]
+        public virtual bool UseLikedSongs
         {
-            get => _showLikedOptions;
+            get => _useLikedSongs;
             set
             {
-                _showLikedOptions = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ShowLikedOptions)));
+                _useLikedSongs = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(UseLikedSongs)));
             }
         }
 
@@ -742,7 +731,7 @@ namespace SmartSongSuggest.Configuration
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ModifierOverweight)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ModifierStyle)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(FillLikedSongs)));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(UseLikedSongs)));
+            //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(UseLikedSongs)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IgnorePlayedDays)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SuggestPlaylistCount)));
         }
