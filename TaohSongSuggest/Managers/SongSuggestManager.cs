@@ -124,9 +124,7 @@ namespace SmartSongSuggest.Managers
                             default:
                                 break;
                         }
-
                         cfg.SuggestSettings.Add(activeSetting);
-
                     }
                 }
                 cfg.SaveSuggestSettings();
@@ -142,6 +140,10 @@ namespace SmartSongSuggest.Managers
                 if (cfg.LoadAccSaberLeaderboard) cfg.LeaderboardOptions.Add("Acc Saber");
                 if (cfg.LoadBeatLeaderLeaderboard) cfg.LeaderboardOptions.Add("Beat Leader");
 
+                //Add remaining leaderboards
+                var remainingOptions = cfg.SuggestSettings.Select(c => c.SuggestionName).Except(cfg.DefaultLeaderboardNames).ToList();
+                cfg.LeaderboardOptions.AddRange(remainingOptions);
+
                 //If no leaderboards is found we add scoresaber regardless
                 if (cfg.LeaderboardOptions.Count == 0) cfg.LeaderboardOptions.Add("Score Saber");
 
@@ -150,8 +152,7 @@ namespace SmartSongSuggest.Managers
 
                 cfg.ActiveLeaderboard = cfg.SuggestSettings.Where(c => c.SuggestionName == cfg.LeaderboardSelection).FirstOrDefault();
 
-                //Reset UI to newly loaded values.
-                //cfg.SuggestSourceChanged();
+                //Everything loaded. Reenable access to Smart Song Suggest
                 UIManager.SmartSongSuggestButton.Interactable = true;
             });
         }
