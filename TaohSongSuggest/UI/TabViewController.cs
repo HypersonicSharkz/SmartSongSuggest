@@ -1,6 +1,7 @@
 ﻿using BeatSaberMarkupLanguage.Attributes;
 using BeatSaberMarkupLanguage.Components;
 using BeatSaberMarkupLanguage.ViewControllers;
+using BeatSaberPlaylistsLib.Types;
 using HMUI;
 using Settings;
 using SmartSongSuggest.Configuration;
@@ -48,8 +49,9 @@ namespace SmartSongSuggest.UI
 
                     IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
                     {
-                        SongSuggestManager.UpdatePlaylists("Song Suggest");
-                        SongCore.Loader.Instance.RefreshSongs(false);
+                        IPlaylist pl = SongSuggestManager.UpdatePlaylists("Song Suggest");
+                        var lfnc = GameObject.FindObjectOfType<LevelFilteringNavigationController>();
+                        lfnc.SelectAnnotatedBeatmapLevelCollection(pl);
                     });
                 }
                 catch (Exception e)
@@ -80,8 +82,9 @@ namespace SmartSongSuggest.UI
 
                     IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
                     {
-                        SongSuggestManager.UpdatePlaylists("Old and New");
-                        SongCore.Loader.Instance.RefreshSongs(false);
+                        IPlaylist pl = SongSuggestManager.UpdatePlaylists("Old and New");
+                        var lfnc = GameObject.FindObjectOfType<LevelFilteringNavigationController>();
+                        lfnc.SelectAnnotatedBeatmapLevelCollection(pl);
                     });
                 }
                 catch (Exception e)

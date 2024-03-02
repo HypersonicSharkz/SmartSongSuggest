@@ -41,7 +41,10 @@ namespace SmartSongSuggest.UI
         {
             UIManager._parentFlow.DismissFlowCoordinator(this, () =>
             {
-                SongCore.Loader.Instance.RefreshSongs(false);
+                if (SongSuggestManager.lastPlaylist != null)
+                {
+                    SongSuggestManager.GoToPlaylist(SongSuggestManager.lastPlaylist);
+                }
             }, ViewController.AnimationDirection.Horizontal, false);
         }
     }

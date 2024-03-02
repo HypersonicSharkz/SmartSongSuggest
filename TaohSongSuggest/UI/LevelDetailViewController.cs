@@ -19,7 +19,6 @@ namespace SmartSongSuggest.UI
     class LevelDetailViewController : INotifyPropertyChanged
     {
         internal static readonly LevelDetailViewController persController = new LevelDetailViewController();
-        internal static bool HasAttached;
         internal StandardLevelDetailViewController sldv;
 
         [UIParams]
@@ -163,8 +162,6 @@ namespace SmartSongSuggest.UI
             persController.sldv.didChangeDifficultyBeatmapEvent += persController.didChangeDifficulty;
 
             persController.CheckButtons();
-
-            HasAttached = true;
         }
 
         private void didChangeDifficulty(StandardLevelDetailViewController arg1, IDifficultyBeatmap arg2)

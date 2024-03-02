@@ -8,6 +8,8 @@ using SmartSongSuggest.Configuration;
 using SmartSongSuggest.Managers;
 using SmartSongSuggest.UI;
 using IPALogger = IPA.Logging.Logger;
+using UnityEngine;
+using System.Collections;
 
 namespace SmartSongSuggest
 {

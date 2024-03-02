@@ -128,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Managers\SongSuggestManager.cs" />
+    <Compile Include="Patches\LevelPackPatch.cs" />
     <Compile Include="Patches\LevelDetailPatch.cs" />
     <Compile Include="Patches\ProcessScorePatch.cs" />
     <Compile Include="Plugin.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="UI\LevelDetailViewController.cs" />
     <Compile Include="Managers\UIManager.cs" />
     <Compile Include="UI\MapListController.cs" />
+    <Compile Include="UI\PlaylistDetailViewController.cs" />
     <Compile Include="UI\SettingsController.cs" />
     <Compile Include="UI\SettingsLeftController.cs" />
     <Compile Include="UI\TabViewController.cs" />
@@ -165,6 +167,7 @@
     <EmbeddedResource Include="UI\Views\SongSuggestLeft.bsml" />
     <EmbeddedResource Include="UI\Views\SongSuggestTab.bsml" />
     <EmbeddedResource Include="UI\Views\AccSaberSettings.bsml" />
+    <EmbeddedResource Include="UI\Views\PlaylistDetailView.bsml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BeatSaberModdingTools.Tasks">
@@ -178,6 +181,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="UI\Images\kofilogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\Images\sync.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

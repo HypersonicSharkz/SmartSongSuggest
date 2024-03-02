@@ -14,6 +14,8 @@ using IPA.Config.Data;
 using Newtonsoft.Json;
 using ScoreSabersJson;
 using Actions;
+using UnityEngine;
+using BeatSaberPlaylistsLib.Types;
 
 namespace SmartSongSuggest.Managers
 {
@@ -22,6 +24,7 @@ namespace SmartSongSuggest.Managers
         internal static SongSuggest toolBox;
         public static bool needsAssignment = false;
         public static bool readyForAssignment = false;
+        internal static IPlaylist lastPlaylist;
 
         //Method for sending progress info to the UI on the main thread
         static async void UpdateProgessNew()
@@ -198,7 +201,6 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
 
                         UpdatePlaylists("Song Suggest");
                         TSSFlowCoordinator.Instance.ToggleBackButton(true);
-
                     });
                 }
                 catch (Exception e)
@@ -336,15 +338,38 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
 
         }
 
-        internal static void UpdatePlaylists(string playlist)
+        internal static IPlaylist UpdatePlaylists(string playlist)
         {
             BeatSaberPlaylistsLib.Types.IPlaylist pl;
             if (PlaylistManager.DefaultManager.TryGetPlaylist(playlist, out pl))
             {
                 PlaylistManager.DefaultManager.MarkPlaylistChanged(pl);
                 PlaylistManager.DefaultManager.RefreshPlaylists(true);
+                PlaylistManager.DefaultManager.RequestRefresh("SmartSongSuggest (Plugin)");
+                lastPlaylist = pl;
             }
+            return pl;
         }
+
+        internal static void GoToPlaylist(IPlaylist playlist)
+        {
+            if (GameObject.FindObjectOfType<MainFlowCoordinator>().YoungestChildFlowCoordinatorOrSelf() is LevelSelectionFlowCoordinator)
+            {
+                GameObject.FindObjectOfType<LevelFilteringNavigationController>().SelectAnnotatedBeatmapLevelCollection(playlist);
+                return;
+            }
+            GameObject.FindObjectOfType<SoloFreePlayFlowCoordinator>().Setup(GetStateForPlaylist(playlist));
+            GameObject.FindObjectOfType<MainMenuViewController>().HandleMenuButton(MainMenuViewController.MenuButton.SoloFreePlay);
+
+            lastPlaylist = null;
+        }
+
+        public static LevelSelectionFlowCoordinator.State GetStateForPlaylist(IPlaylist beatmapLevelPack)
+        {
+            var state = new LevelSelectionFlowCoordinator.State(SelectLevelCategoryViewController.LevelCategory.CustomSongs, beatmapLevelPack, new EmptyDifficultyBeatmap());
+            return state;
+        }
+
         public static SongSuggestSettings CreateSuggestSetting(string settingString)
         {
             FilterSettings filterSettings = new FilterSettings
