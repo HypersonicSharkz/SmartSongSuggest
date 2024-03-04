@@ -5,6 +5,8 @@ using BeatSaberPlaylistsLib;
 using BeatSaberPlaylistsLib.Types;
 using HMUI;
 using Settings;
+using SmartSongSuggest.Configuration;
+using SmartSongSuggest.Managers;
 using SongSuggestNS;
 using System;
 using System.Collections.Generic;
@@ -48,6 +50,7 @@ namespace SmartSongSuggest.UI
 
             PlaylistPath playlistPath = new PlaylistPath() { FileExtension = selectedPlaylist.SuggestedExtension, FileName = selectedPlaylist.Filename, Subfolders = path };
             SongSuggest.MainInstance.FilterSyncURL(playlistPath, playlistPath);
+            SongSuggestManager.UpdatePlaylists(selectedPlaylist.Filename);
         }
 
         public static void AttachTo(Transform t, LevelPackDetailViewController pack)
@@ -86,7 +89,10 @@ namespace SmartSongSuggest.UI
 
         private void UpdateView()
         {
-            syncUrlButton.gameObject.SetActive(selectedPlaylist != null && selectedPlaylist.TryGetCustomData("syncURL", out var outSyncURL));
+            var cfg = SettingsController.cfgInstance;
+            bool active = selectedPlaylist != null && selectedPlaylist.TryGetCustomData("syncURL", out var outSyncURL) && cfg.ShowSyncURL;
+            syncUrlButton.gameObject.SetActive(active);
+            //syncUrlButton.gameObject.SetActive(selectedPlaylist != null && selectedPlaylist.TryGetCustomData("syncURL", out var outSyncURL));
         }
     }
 }

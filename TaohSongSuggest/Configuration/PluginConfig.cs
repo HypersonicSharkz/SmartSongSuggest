@@ -205,6 +205,8 @@ namespace SmartSongSuggest.Configuration
         public virtual bool ShowLikeButton { get; set; } = false;
         [UIValue("show-ban-button")]
         public virtual bool ShowBanButton { get; set; } = true;
+        [UIValue("show-sync-url")]
+        public virtual bool ShowSyncURL { get; set; } = true;
         [UIValue("oldnnew-playlist-count")]
         public virtual int OldnNewPlaylistCount { get; set; } = 25;
         [UIValue("random-weight")]
