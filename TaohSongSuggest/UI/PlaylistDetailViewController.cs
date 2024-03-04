@@ -39,33 +39,45 @@ namespace SmartSongSuggest.UI
 
         private void ProcessSyncPlaylist()
         {
-            if (selectedPlaylist == null)
-                return;
+            Task.Run(() =>
+            {
+                if (selectedPlaylist == null)
+                    return;
 
-            Plugin.Log.Info("PlaylistName = \"" + selectedPlaylist.Filename + "\"");
-            string path = PlaylistManager.DefaultManager.GetManagerForPlaylist(selectedPlaylist).PlaylistPath;
-            path = path.Replace(PlaylistManager.DefaultManager.PlaylistPath, "");
-            Plugin.Log.Info("SubPath = \"" + path + "\"");
-            Plugin.Log.Info("Extension = \"" + selectedPlaylist.SuggestedExtension + "\"");
+                string path = PlaylistManager.DefaultManager.GetManagerForPlaylist(selectedPlaylist).PlaylistPath;
+                path = path.Replace(PlaylistManager.DefaultManager.PlaylistPath, "");
 
-            PlaylistPath playlistPath = new PlaylistPath() { FileExtension = selectedPlaylist.SuggestedExtension, FileName = selectedPlaylist.Filename, Subfolders = path };
-            SongSuggest.MainInstance.FilterSyncURL(playlistPath, playlistPath);
-            SongSuggestManager.UpdatePlaylists(selectedPlaylist.Filename);
+                PlaylistPath playlistPath = new PlaylistPath() { FileExtension = selectedPlaylist.SuggestedExtension, FileName = selectedPlaylist.Filename, Subfolders = path };
+                SongSuggest.MainInstance.FilterSyncURL(playlistPath, playlistPath);
+
+                IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
+                {
+                    SongSuggestManager.UpdatePlaylists(selectedPlaylist.Filename);
+                });
+            });
         }
 
-        public static void AttachTo(Transform t, LevelPackDetailViewController pack)
+        public static bool AttachTo(Transform t, LevelPackDetailViewController pack)
         {
             if (t == null)
-                return;
+                return false;
 
-            annotatedBeatmapLevelCollectionsViewController = GameObject.FindObjectOfType<AnnotatedBeatmapLevelCollectionsViewController>();
+            try
+            {
+                annotatedBeatmapLevelCollectionsViewController = GameObject.FindObjectOfType<AnnotatedBeatmapLevelCollectionsViewController>();
 
-            BSMLParser.instance.Parse(BeatSaberMarkupLanguage.Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "SmartSongSuggest.UI.Views.PlaylistDetailView.bsml"), t.gameObject, persController);
-            persController.rootTransform.localScale *= 0.6f;
-            persController.lpdvc = pack;
-            persController.lpdvc.didActivateEvent += Lpdvc_didActivateEvent;
-            annotatedBeatmapLevelCollectionsViewController.didSelectAnnotatedBeatmapLevelCollectionEvent += collectionSelected;
-            collectionSelected(annotatedBeatmapLevelCollectionsViewController.selectedAnnotatedBeatmapLevelCollection);
+                BSMLParser.instance.Parse(BeatSaberMarkupLanguage.Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "SmartSongSuggest.UI.Views.PlaylistDetailView.bsml"), t.gameObject, persController);
+                persController.rootTransform.localScale *= 0.6f;
+                persController.lpdvc = pack;
+                persController.lpdvc.didActivateEvent += Lpdvc_didActivateEvent;
+                annotatedBeatmapLevelCollectionsViewController.didSelectAnnotatedBeatmapLevelCollectionEvent += collectionSelected;
+                collectionSelected(annotatedBeatmapLevelCollectionsViewController.selectedAnnotatedBeatmapLevelCollection);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
         private static void collectionSelected(IAnnotatedBeatmapLevelCollection obj)

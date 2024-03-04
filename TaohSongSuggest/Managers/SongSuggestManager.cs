@@ -341,14 +341,25 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
         internal static IPlaylist UpdatePlaylists(string playlist)
         {
             BeatSaberPlaylistsLib.Types.IPlaylist pl;
-            if (PlaylistManager.DefaultManager.TryGetPlaylist(playlist, out pl))
+            if (PlaylistManager.DefaultManager.TryGetPlaylist(playlist, true, out pl))
             {
-                PlaylistManager.DefaultManager.MarkPlaylistChanged(pl);
-                PlaylistManager.DefaultManager.RefreshPlaylists(true);
-                PlaylistManager.DefaultManager.RequestRefresh("SmartSongSuggest (Plugin)");
-                lastPlaylist = pl;
+                return UpdatePlaylists(pl);
             }
             return pl;
+        }
+
+        internal static IPlaylist UpdatePlaylists(IPlaylist playlist)
+        {
+            PlaylistManager playlistManager = PlaylistManager.DefaultManager.GetManagerForPlaylist(playlist);
+            if (playlistManager == null)
+                return null;
+
+            playlistManager.MarkPlaylistChanged(playlist);
+            playlistManager.RefreshPlaylists(true);
+            playlistManager.RequestRefresh("SmartSongSuggest (Plugin)");
+
+            lastPlaylist = playlist;
+            return playlist;
         }
 
         internal static void GoToPlaylist(IPlaylist playlist)

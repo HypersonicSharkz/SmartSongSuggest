@@ -50,6 +50,9 @@ namespace SmartSongSuggest.UI
                     IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
                     {
                         IPlaylist pl = SongSuggestManager.UpdatePlaylists("Song Suggest");
+                        if (pl == null)
+                            return;
+
                         var lfnc = GameObject.FindObjectOfType<LevelFilteringNavigationController>();
                         lfnc.SelectAnnotatedBeatmapLevelCollection(pl);
                     });
@@ -83,6 +86,9 @@ namespace SmartSongSuggest.UI
                     IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
                     {
                         IPlaylist pl = SongSuggestManager.UpdatePlaylists("Old and New");
+                        if (pl == null)
+                            return;
+
                         var lfnc = GameObject.FindObjectOfType<LevelFilteringNavigationController>();
                         lfnc.SelectAnnotatedBeatmapLevelCollection(pl);
                     });

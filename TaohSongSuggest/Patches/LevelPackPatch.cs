@@ -4,6 +4,8 @@ using SmartSongSuggest.UI;
 using UnityEngine;
 using SmartSongSuggest.Managers;
 using System;
+using SongSuggestNS;
+using Newtonsoft.Json.Linq;
 
 namespace SmartSongSuggest.Patches
 {
@@ -22,7 +24,13 @@ namespace SmartSongSuggest.Patches
         static IEnumerator InitDelayed(Transform t, LevelPackDetailViewController l)
         {
             yield return new WaitForEndOfFrame();
-            PlaylistDetailViewController.AttachTo(t.Find("Detail"), l);
+            int attempts = 0;
+            while (!PlaylistDetailViewController.AttachTo(t.Find("Detail"), l) && attempts < 5)
+            {
+                yield return new WaitForSeconds(1);
+                attempts++;
+            }
+            Plugin.Log.Error("Could not attach to LevelPackDetailViewController");
         }
     }
 }

@@ -42,38 +42,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\IPA\Libs\0Harmony.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\IPA\Libs\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="BeatmapCore">
-      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Beat Saber_Data\Managed\BeatmapCore.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\BeatmapCore.dll</HintPath>
     </Reference>
     <Reference Include="BeatSaberPlaylistsLib">
-      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Libs\BeatSaberPlaylistsLib.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Libs\BeatSaberPlaylistsLib.dll</HintPath>
     </Reference>
     <Reference Include="BSML">
-      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Plugins\BSML.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Plugins\BSML.dll</HintPath>
     </Reference>
     <Reference Include="BS_Utils, Version=1.11.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Plugins\BS_Utils.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Plugins\BS_Utils.dll</HintPath>
     </Reference>
     <Reference Include="GameplayCore, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\BSLegacyLauncher\Installed Versions\Beat Saber 1.29.1\Beat Saber_Data\Managed\GameplayCore.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\GameplayCore.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Libs\Newtonsoft.Json.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Libs\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SongCore, Version=3.9.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Plugins\SongCore.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Plugins\SongCore.dll</HintPath>
     </Reference>
     <Reference Include="SongDetailsCache">
-      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Libs\SongDetailsCache.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Libs\SongDetailsCache.dll</HintPath>
     </Reference>
     <Reference Include="SongSuggestCore">
-      <HintPath>D:\SteamLibrary\steamapps\common\Beat Saber\Libs\SongSuggestCore.dll</HintPath>
+      <HintPath>$(BeatSaberDir)\Libs\SongSuggestCore.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
