@@ -7903,6 +7903,7 @@
     "name": "Xronier",
     "scoreSaberID": "284040",
     "beatLeaderID": "cd5c91",
+    "beatSaverID": "cd5c",
     "hash": "30AF0D575A468F26B5E61BA0F2B7B15ED9ECA48C",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -37916,6 +37917,7 @@
   {
     "name": "To Live and Let Go",
     "scoreSaberID": "549417",
+    "beatSaverID": "2f45f",
     "hash": "4355013AEC49FFEDF31D655A97E92C1F6F49ED98",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -45065,6 +45067,7 @@
   {
     "name": "Onus Rēgulus",
     "scoreSaberID": "598551",
+    "beatSaverID": "35933",
     "hash": "88E7C2EEF1CE8EAD2AAC60F743F6DF99BE7C890E",
     "difficulty": "5",
     "characteristic": "Standard",
