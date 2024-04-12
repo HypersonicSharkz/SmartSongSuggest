@@ -45482,47 +45482,57 @@
   {
     "name": "message within the rift",
     "scoreSaberID": "597760",
+    "beatLeaderID": "35ba6xxxxxx11",
     "hash": "9B0DB9EB1FF4B0BD03D0555AC96CC5B116BCCE09",
     "difficulty": "1",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.940000057220459
+    "songCategory": 17,
+    "starScoreSaber": 4.940000057220459,
+    "starBeatLeader": 3.4308474063873291
   },
   {
     "name": "message within the rift",
     "scoreSaberID": "597878",
+    "beatLeaderID": "35ba6xxxxxx31",
     "hash": "9B0DB9EB1FF4B0BD03D0555AC96CC5B116BCCE09",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 6.6599998474121094
+    "songCategory": 17,
+    "starScoreSaber": 6.6599998474121094,
+    "starBeatLeader": 7.08416223526001
   },
   {
     "name": "message within the rift",
     "scoreSaberID": "597884",
+    "beatLeaderID": "35ba6xxxxxx51",
     "hash": "9B0DB9EB1FF4B0BD03D0555AC96CC5B116BCCE09",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 8.380000114440918
+    "songCategory": 17,
+    "starScoreSaber": 8.380000114440918,
+    "starBeatLeader": 8.9118442535400391
   },
   {
     "name": "message within the rift",
     "scoreSaberID": "597885",
+    "beatLeaderID": "35ba6xxxxxx71",
     "hash": "9B0DB9EB1FF4B0BD03D0555AC96CC5B116BCCE09",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 9.84000015258789
+    "songCategory": 17,
+    "starScoreSaber": 9.84000015258789,
+    "starBeatLeader": 9.519984245300293
   },
   {
     "name": "message within the rift",
     "scoreSaberID": "597733",
+    "beatLeaderID": "35ba6xxxxxx91",
     "hash": "9B0DB9EB1FF4B0BD03D0555AC96CC5B116BCCE09",
     "difficulty": "9",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 9.2299995422363281
+    "songCategory": 17,
+    "starScoreSaber": 9.2299995422363281,
+    "starBeatLeader": 10.109732627868652
   },
   {
     "name": "Anti Safety Zone",
