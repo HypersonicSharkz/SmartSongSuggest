@@ -16,6 +16,7 @@ using ScoreSabersJson;
 using Actions;
 using UnityEngine;
 using BeatSaberPlaylistsLib.Types;
+using System.Reflection;
 
 namespace SmartSongSuggest.Managers
 {
@@ -370,7 +371,12 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
                 return;
             }
             GameObject.FindObjectOfType<SoloFreePlayFlowCoordinator>().Setup(GetStateForPlaylist(playlist));
-            GameObject.FindObjectOfType<MainMenuViewController>().HandleMenuButton(MainMenuViewController.MenuButton.SoloFreePlay);
+
+            MainMenuViewController mainMenu = GameObject.FindObjectOfType<MainMenuViewController>();
+
+            MethodInfo dynMethod = mainMenu.GetType().GetMethod("HandleMenuButton",
+                BindingFlags.NonPublic | BindingFlags.Instance);
+            dynMethod.Invoke(mainMenu, new object[] { MainMenuViewController.MenuButton.SoloFreePlay });
 
             lastPlaylist = null;
         }

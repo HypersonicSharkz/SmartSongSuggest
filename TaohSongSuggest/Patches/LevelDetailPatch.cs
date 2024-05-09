@@ -4,6 +4,7 @@ using SmartSongSuggest.UI;
 using UnityEngine;
 using SmartSongSuggest.Managers;
 using System;
+using BeatSaberPlaylistsLib;
 
 namespace SmartSongSuggest.Patches
 {

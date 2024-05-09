@@ -6,6 +6,7 @@ using SmartSongSuggest.Managers;
 using System;
 using SongSuggestNS;
 using Newtonsoft.Json.Linq;
+using BeatSaberPlaylistsLib;
 
 namespace SmartSongSuggest.Patches
 {

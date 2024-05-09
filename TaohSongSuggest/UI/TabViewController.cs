@@ -1,5 +1,6 @@
 ﻿using BeatSaberMarkupLanguage.Attributes;
 using BeatSaberMarkupLanguage.Components;
+using BeatSaberMarkupLanguage.Util;
 using BeatSaberMarkupLanguage.ViewControllers;
 using BeatSaberPlaylistsLib.Types;
 using HMUI;
