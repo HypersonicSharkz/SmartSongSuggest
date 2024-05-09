@@ -66,7 +66,7 @@ namespace SmartSongSuggest.UI
             {
                 annotatedBeatmapLevelCollectionsViewController = GameObject.FindObjectOfType<AnnotatedBeatmapLevelCollectionsViewController>();
 
-                BSMLParser.instance.Parse(BeatSaberMarkupLanguage.Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "SmartSongSuggest.UI.Views.PlaylistDetailView.bsml"), t.gameObject, persController);
+                BSMLReflectionsManager.Instance.Parse(BeatSaberMarkupLanguage.Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "SmartSongSuggest.UI.Views.PlaylistDetailView.bsml"), t.gameObject, persController);
                 persController.rootTransform.localScale *= 0.6f;
                 persController.lpdvc = pack;
                 persController.lpdvc.didActivateEvent += Lpdvc_didActivateEvent;

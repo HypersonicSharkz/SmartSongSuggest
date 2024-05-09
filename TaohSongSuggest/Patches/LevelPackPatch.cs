@@ -18,7 +18,7 @@ namespace SmartSongSuggest.Patches
             //Informs the SongSuggestManager a new assignment is needed.
             if (firstActivation)
             {
-                SharedCoroutineStarter.instance.StartCoroutine(InitDelayed(__instance.transform, __instance));
+                TabViewController.instance.StartCoroutine(InitDelayed(__instance.transform, __instance));
             }
         }
 

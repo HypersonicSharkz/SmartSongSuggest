@@ -24,7 +24,7 @@ namespace SmartSongSuggest.Patches
             if (SongSuggestManager.needsAssignment && SongSuggestManager.readyForAssignment)
             {
                 SongSuggestManager.needsAssignment = false;
-                SharedCoroutineStarter.instance.StartCoroutine(InitDelayed(__instance.transform));
+                TabViewController.instance.StartCoroutine(InitDelayed(__instance.transform));
                 SettingsController.cfgInstance.CachedPlayerID = BS_Utils.Gameplay.GetUserInfo.GetUserID();
             }
         }

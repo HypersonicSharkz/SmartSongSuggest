@@ -37,12 +37,18 @@ namespace SmartSongSuggest
         [OnStart]
         public void OnApplicationStart()
         {
+            Log.Info("1");
             harmony = new Harmony("HypersonicSharkz.BeatSaber.SmartSongSuggest");
+            Log.Info("2");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
+            Log.Info("3");
 
             UIManager.Init();
+            Log.Info("4");
             SongSuggestManager.Init();
+            Log.Info("5");
             songDetails = SongDetails.Init().Result;
+            Log.Info("6");
         }
 
         [OnExit]

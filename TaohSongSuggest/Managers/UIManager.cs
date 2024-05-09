@@ -2,7 +2,8 @@
 using HMUI;
 using BeatSaberMarkupLanguage;
 using SmartSongSuggest.UI;
-using BeatSaberMarkupLanguage.GameplaySetup;
+using System.Reflection;
+using System;
 
 namespace SmartSongSuggest.Managers
 {
@@ -13,9 +14,11 @@ namespace SmartSongSuggest.Managers
         public static void Init()
         {
             SmartSongSuggestButton = new MenuButton("Smart Song Suggest", "Smart ranked song suggestions", ShowFlow, true);
-            MenuButtons.instance.RegisterButton(SmartSongSuggestButton);
+
+            BSMLReflectionsManager.Instance.RegisterButton(SmartSongSuggestButton);
             SmartSongSuggestButton.Interactable = false;
-            GameplaySetup.instance.AddTab("Smart Song Suggest", "SmartSongSuggest.UI.Views.SongSuggestTab.bsml", TabViewController.instance);
+
+            BSMLReflectionsManager.Instance.AddTab("Smart Song Suggest", "SmartSongSuggest.UI.Views.SongSuggestTab.bsml", TabViewController.instance);
         }
 
         internal static FlowCoordinator _parentFlow { get; private set; }

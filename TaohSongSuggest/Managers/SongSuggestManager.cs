@@ -374,8 +374,10 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
 
             MainMenuViewController mainMenu = GameObject.FindObjectOfType<MainMenuViewController>();
 
-            MethodInfo dynMethod = mainMenu.GetType().GetMethod("HandleMenuButton",
-                BindingFlags.NonPublic | BindingFlags.Instance);
+            MethodInfo dynMethod = mainMenu.GetType().GetMethod("HandleMenuButton");
+            if (dynMethod == null)
+                dynMethod = mainMenu.GetType().GetMethod("HandleMenuButton", BindingFlags.NonPublic | BindingFlags.Instance);
+
             dynMethod.Invoke(mainMenu, new object[] { MainMenuViewController.MenuButton.SoloFreePlay });
 
             lastPlaylist = null;
