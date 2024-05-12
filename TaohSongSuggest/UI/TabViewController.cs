@@ -1,6 +1,4 @@
 ﻿using BeatSaberMarkupLanguage.Attributes;
-using BeatSaberMarkupLanguage.Components;
-using BeatSaberMarkupLanguage.ViewControllers;
 using BeatSaberPlaylistsLib.Types;
 using HMUI;
 using Settings;
@@ -8,7 +6,9 @@ using SmartSongSuggest.Configuration;
 using SmartSongSuggest.Managers;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using TMPro;
@@ -16,13 +16,37 @@ using UnityEngine;
 
 namespace SmartSongSuggest.UI
 {
-    internal class TabViewController : NotifiableSingleton<TabViewController>
+    internal class TabViewController : MonoBehaviour, INotifyPropertyChanged
     {
+        protected static TabViewController _instance;
+
+        public static TabViewController instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = FindObjectOfType<TabViewController>();
+                    if (_instance == null)
+                    {
+                        GameObject obj = new GameObject();
+                        _instance = obj.AddComponent<TabViewController>();
+                        obj.name = typeof(TabViewController).ToString();
+                        DontDestroyOnLoad(obj);
+                    }
+                }
+
+                return _instance;
+            }
+        }
+
         [UIComponent("bgProgress")]
         public ImageView bgProgress;
 
         [UIComponent("statusText")]
         public TextMeshProUGUI statusComponent;
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         [UIAction("RegenSuggest")]
         public void RegenSuggest()
@@ -139,6 +163,21 @@ namespace SmartSongSuggest.UI
 
             }
 
+        }
+
+
+
+        protected void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            try
+            {
+                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }
+            catch (Exception ex)
+            {
+                Plugin.Log?.Error("Error Invoking PropertyChanged: " + ex.Message);
+                Plugin.Log?.Error(ex);
+            }
         }
     }
 }

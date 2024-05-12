@@ -13,6 +13,7 @@ using System.Collections;
 using BeatSaberMarkupLanguage.Parser;
 using SongSuggestNS;
 using SmartSongSuggest.Configuration;
+using BeatSaberPlaylistsLib;
 
 namespace SmartSongSuggest.UI
 {
@@ -155,7 +156,7 @@ namespace SmartSongSuggest.UI
             if (t == null)
                 return;
 
-            BSMLParser.instance.Parse(Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "SmartSongSuggest.UI.Views.LevelDetailSuggestButtonsView.bsml"), t.gameObject, persController);
+            BSMLReflectionsManager.Instance.Parse(BeatSaberMarkupLanguage.Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "SmartSongSuggest.UI.Views.LevelDetailSuggestButtonsView.bsml"), t.gameObject, persController);
             persController.rootTransform.localScale *= 0.7f;
             persController.sldv = GameObject.FindObjectOfType<StandardLevelDetailViewController>();
             persController.sldv.didChangeContentEvent += persController.didChangeContent;
@@ -251,7 +252,7 @@ namespace SmartSongSuggest.UI
                                 }
                             }
 
-                            SharedCoroutineStarter.instance.StartCoroutine(SetActiveLate());
+                            TabViewController.instance.StartCoroutine(SetActiveLate());
                         }
                     }
                 }
