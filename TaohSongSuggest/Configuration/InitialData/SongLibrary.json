@@ -7347,6 +7347,7 @@
     "name": "Digital Girl",
     "scoreSaberID": "281216",
     "beatLeaderID": "c64391",
+    "beatSaverID": "c643",
     "hash": "43B8C6AE3128C2060B38905662C85E0884BB98E2",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -11605,6 +11606,7 @@
     "name": "Splatter Party",
     "scoreSaberID": "302580",
     "beatLeaderID": "1040591",
+    "beatSaverID": "10405",
     "hash": "7B9DAB9DDAD1BD3234C1E12D83E6BC2D4A48EC5B",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -14495,6 +14497,7 @@
   {
     "name": "In my room",
     "scoreSaberID": "322404",
+    "beatSaverID": "12ca8",
     "hash": "649B22C635D6E19434FD03D362AB68B2AF5BCC94",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -21632,6 +21635,7 @@
   {
     "name": "Paranoia",
     "scoreSaberID": "364421",
+    "beatSaverID": "1988c",
     "hash": "4C9BE2EE9CABB12A7D0E9D2DC68CE9D5C2A6DAFB",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -25852,6 +25856,7 @@
   {
     "name": "Metal Bat",
     "scoreSaberID": "392310",
+    "beatSaverID": "1b148",
     "hash": "169D407A1B6C02F8FC4EC56EB4CC5B152D658457",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -30642,6 +30647,7 @@
   {
     "name": "Sanctuary",
     "scoreSaberID": "422633",
+    "beatSaverID": "20a96",
     "hash": "9302BD51CD2118C5392BDB93A1E8E00534F73488",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -45150,6 +45156,7 @@
   {
     "name": "Non Stop Vol D'r Op",
     "scoreSaberID": "588850",
+    "beatSaverID": "38a4b",
     "hash": "1DE0B34278076F558AA35EF85888D3933D48A885",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -46843,38 +46850,46 @@
   {
     "name": "Friendly Gigant Fire",
     "scoreSaberID": "607635",
+    "beatLeaderID": "3712dxxx91",
     "hash": "7C71478BE50723A908AA46B8536F9D169BA6A75C",
     "difficulty": "9",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 10.930000305175781
+    "songCategory": 17,
+    "starScoreSaber": 10.930000305175781,
+    "starBeatLeader": 11.739249229431152
   },
   {
     "name": "Friendly Gigant Fire",
     "scoreSaberID": "607633",
+    "beatLeaderID": "3712dxxx71",
     "hash": "7C71478BE50723A908AA46B8536F9D169BA6A75C",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 10.649999618530273
+    "songCategory": 17,
+    "starScoreSaber": 10.649999618530273,
+    "starBeatLeader": 10.658046722412109
   },
   {
     "name": "Friendly Gigant Fire",
     "scoreSaberID": "607632",
+    "beatLeaderID": "3712dxxx51",
     "hash": "7C71478BE50723A908AA46B8536F9D169BA6A75C",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 7.53000020980835
+    "songCategory": 17,
+    "starScoreSaber": 7.53000020980835,
+    "starBeatLeader": 6.9173269271850586
   },
   {
     "name": "Friendly Gigant Fire",
     "scoreSaberID": "607630",
+    "beatLeaderID": "3712dxxx31",
     "hash": "7C71478BE50723A908AA46B8536F9D169BA6A75C",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 3.4000000953674316
+    "songCategory": 17,
+    "starScoreSaber": 3.4000000953674316,
+    "starBeatLeader": 3.1376309394836426
   },
   {
     "name": "WYNEHOUSE",
