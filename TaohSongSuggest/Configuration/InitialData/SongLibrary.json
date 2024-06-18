@@ -4471,6 +4471,7 @@
   {
     "name": "VECTLEGGENDARIA",
     "scoreSaberID": "219508",
+    "beatSaverID": "995e",
     "hash": "1C09E823E2B9720E573EA46C53C62EDAAAD51665",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -5202,6 +5203,7 @@
     "name": "The Government Knows",
     "scoreSaberID": "235375",
     "beatLeaderID": "a2de51",
+    "beatSaverID": "a2de",
     "hash": "237109CFBDF4594DE63BD16C52A18204D85AD778",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -8143,6 +8145,7 @@
     "name": "Bassline Yatteru? w",
     "scoreSaberID": "285224",
     "beatLeaderID": "d0f671",
+    "beatSaverID": "d0f6",
     "hash": "75CCD1DEF27021C38B58246F650802D9702BC70E",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -9314,6 +9317,7 @@
   {
     "name": "Night SURFING",
     "scoreSaberID": "290680",
+    "beatSaverID": "e23f",
     "hash": "7AE4747A006C6E64F3C6E63E0139B11046E0FD87",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -10178,6 +10182,7 @@
     "name": "Snow Halation",
     "scoreSaberID": "29547",
     "beatLeaderID": "75a71",
+    "beatSaverID": "75a",
     "hash": "AFF9AEDB62CC789EF43AFB5B69DD9310907970D6",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -16484,6 +16489,7 @@
     "name": "Echo",
     "scoreSaberID": "332148",
     "beatLeaderID": "1428391",
+    "beatSaverID": "14283",
     "hash": "A2CF9B16427E8E764133D93A004869EC07F6748B",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -16892,6 +16898,7 @@
     "name": "Spectral",
     "scoreSaberID": "335268",
     "beatLeaderID": "14af891",
+    "beatSaverID": "14af8",
     "hash": "1CDCCEEC6F4710A7ED10C7385BA71FEEED41A566",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -17435,6 +17442,7 @@
     "name": "Bassline Yatteru? w",
     "scoreSaberID": "341656",
     "beatLeaderID": "15b6e51",
+    "beatSaverID": "15b6e",
     "hash": "0CAC133F16A319DE4788AD5F27002994E120D818",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -18420,6 +18428,7 @@
     "name": "Among Us",
     "scoreSaberID": "347381",
     "beatLeaderID": "1689a71",
+    "beatSaverID": "1689a",
     "hash": "982D3905470C6755B49F72238603A5B33DE56B38",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -18600,6 +18609,7 @@
     "name": "We Are LSM",
     "scoreSaberID": "347668",
     "beatLeaderID": "1694e91",
+    "beatSaverID": "1694e",
     "hash": "ED430D72B59591377C10AF1D354F802F103FB432",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -19331,6 +19341,7 @@
   {
     "name": "Black Magic",
     "scoreSaberID": "348871",
+    "beatSaverID": "16c53",
     "hash": "D04138A245357F230A3BFC568DE9AF89D4FAC687",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -22064,6 +22075,7 @@
   {
     "name": "Oyasumi",
     "scoreSaberID": "368040",
+    "beatSaverID": "1a32a",
     "hash": "8B7FC7B898AECE2967690846DA7889048C0880FF",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -22434,6 +22446,7 @@
     "name": "Wirepuller",
     "scoreSaberID": "369871",
     "beatLeaderID": "1a7c091",
+    "beatSaverID": "1a7c0",
     "hash": "15D17C6057709BEBAAF9F133E46D660DFFD516FE",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -23011,6 +23024,7 @@
     "name": "Trapped in the Past",
     "scoreSaberID": "372418",
     "beatLeaderID": "1770791",
+    "beatSaverID": "17707",
     "hash": "2DC048E407309B8D7813BF294B2F5657F27E4831",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -23914,35 +23928,29 @@
   {
     "name": "FLUFFY FLASH",
     "scoreSaberID": "378367",
-    "beatLeaderID": "1bf9691",
     "hash": "D4567C5E32D8EB66DBCCB169D5E2A267D340385A",
     "difficulty": "9",
     "characteristic": "Standard",
-    "songCategory": 17,
-    "starScoreSaber": 8.6499996185302734,
-    "starBeatLeader": 9.1115808486938477
+    "songCategory": 1,
+    "starScoreSaber": 8.6499996185302734
   },
   {
     "name": "FLUFFY FLASH",
     "scoreSaberID": "378369",
-    "beatLeaderID": "1bf9671",
     "hash": "D4567C5E32D8EB66DBCCB169D5E2A267D340385A",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 17,
-    "starScoreSaber": 7.53000020980835,
-    "starBeatLeader": 8.2142419815063477
+    "songCategory": 1,
+    "starScoreSaber": 7.53000020980835
   },
   {
     "name": "FLUFFY FLASH",
     "scoreSaberID": "378371",
-    "beatLeaderID": "1bf9651",
     "hash": "D4567C5E32D8EB66DBCCB169D5E2A267D340385A",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 17,
-    "starScoreSaber": 5.25,
-    "starBeatLeader": 4.8416876792907715
+    "songCategory": 1,
+    "starScoreSaber": 5.25
   },
   {
     "name": "Big Daddy",
@@ -23958,25 +23966,20 @@
   {
     "name": "FLUFFY FLASH",
     "scoreSaberID": "378374",
-    "beatLeaderID": "1bf9631",
     "hash": "D4567C5E32D8EB66DBCCB169D5E2A267D340385A",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 21,
-    "starScoreSaber": 4.1500000953674316,
-    "starBeatLeader": 3.1834001541137695,
-    "complexityAccSaber": 8.0
+    "songCategory": 1,
+    "starScoreSaber": 4.1500000953674316
   },
   {
     "name": "FLUFFY FLASH",
     "scoreSaberID": "378376",
-    "beatLeaderID": "1bf9611",
     "hash": "D4567C5E32D8EB66DBCCB169D5E2A267D340385A",
     "difficulty": "1",
     "characteristic": "Standard",
-    "songCategory": 17,
-    "starScoreSaber": 3.5699999332427979,
-    "starBeatLeader": 2.5062856674194336
+    "songCategory": 1,
+    "starScoreSaber": 3.5699999332427979
   },
   {
     "name": "Big Daddy",
@@ -24656,6 +24659,7 @@
   {
     "name": "Vertex Gamma",
     "scoreSaberID": "380675",
+    "beatSaverID": "19ccf",
     "hash": "7494C06408B8532D62D516892FE57FD0FFD53330",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -25140,6 +25144,7 @@
     "name": "Yotsuya-san ni Yoroshiku",
     "scoreSaberID": "384301",
     "beatLeaderID": "1a55271",
+    "beatSaverID": "1a552",
     "hash": "666EEAC0F3EEE2278DCB971AC1D27421A0335801",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -29364,6 +29369,7 @@
   {
     "name": "Donkey Donk",
     "scoreSaberID": "414594",
+    "beatSaverID": "1bf53",
     "hash": "B855DC68594177B950A6922ADF48E8A7D4F39946",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -29624,6 +29630,7 @@
   {
     "name": "HELLOHELL",
     "scoreSaberID": "416537",
+    "beatSaverID": "21380",
     "hash": "7B593A99940898B637846A875C5B8405A9D63722",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -30925,6 +30932,7 @@
   {
     "name": "Vocaloids are Lame",
     "scoreSaberID": "426812",
+    "beatSaverID": "1c4f6",
     "hash": "7F6E3587A0130F5C4E817B41867A7FD4B1C4F4F3",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -35060,6 +35068,7 @@
   {
     "name": "Rebuff",
     "scoreSaberID": "532166",
+    "beatSaverID": "265dd",
     "hash": "45E261FE93ABFDC263B3670E84AC39451725881F",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -35141,6 +35150,7 @@
   {
     "name": "SUPER;JAPAN",
     "scoreSaberID": "532698",
+    "beatSaverID": "20848",
     "hash": "C825450FEADA2737909B414D4E6F4B199C6CFE9A",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -35465,6 +35475,7 @@
   {
     "name": "Guruguru Mero Melody",
     "scoreSaberID": "535252",
+    "beatSaverID": "28348",
     "hash": "D6B72B128630B6CA00630835FC7721EB96D41A5F",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -41275,6 +41286,7 @@
     "name": "Golden Hour",
     "scoreSaberID": "60496",
     "beatLeaderID": "d6171",
+    "beatSaverID": "d61",
     "hash": "CE72041935118A3271971239D59D6DFE5DEDDD41",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -41631,6 +41643,7 @@
   {
     "name": "R4V3 B0Y (Rave Boy)",
     "scoreSaberID": "70583",
+    "beatSaverID": "1493",
     "hash": "A5C831BAE7B74BB1CDF02FDE8EB93E40023EE15B",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -43121,6 +43134,7 @@
   {
     "name": "level One",
     "scoreSaberID": "96408",
+    "beatSaverID": "257c",
     "hash": "F2CBCAF5C58BA9F7218CC4BCB304A401F874B784",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -46553,6 +46567,7 @@
   {
     "name": "Catch The Siren",
     "scoreSaberID": "602250",
+    "beatSaverID": "3b7b1",
     "hash": "90FBC4F40E1BFAC37EC7F28055811AAC22EFF19B",
     "difficulty": "7",
     "characteristic": "Standard",
