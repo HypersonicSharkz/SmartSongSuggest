@@ -43963,8 +43963,7 @@
     "hash": "9A8581460386E3D3CCA3BA62EE4BD621C131980C",
     "difficulty": "9",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 11.109999656677246
+    "songCategory": 1
   },
   {
     "name": "Eviternity",
@@ -43972,8 +43971,7 @@
     "hash": "2BAD9A0EA20D908FD9190723F0B62B881CFA3C9D",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 7.5199999809265137
+    "songCategory": 1
   },
   {
     "name": "Eviternity",
@@ -43981,8 +43979,7 @@
     "hash": "2BAD9A0EA20D908FD9190723F0B62B881CFA3C9D",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 9.8299999237060547
+    "songCategory": 1
   },
   {
     "name": "Eviternity",
@@ -43990,8 +43987,7 @@
     "hash": "2BAD9A0EA20D908FD9190723F0B62B881CFA3C9D",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 12.130000114440918
+    "songCategory": 1
   },
   {
     "name": "Eviternity",
@@ -43999,8 +43995,7 @@
     "hash": "2BAD9A0EA20D908FD9190723F0B62B881CFA3C9D",
     "difficulty": "9",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 12.319999694824219
+    "songCategory": 1
   },
   {
     "name": "Looking for Edge of Ground",
@@ -44008,8 +44003,7 @@
     "hash": "05BF7E8A04779969CF79C8534183765614DBB692",
     "difficulty": "9",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 9.619999885559082
+    "songCategory": 1
   },
   {
     "name": "666",
@@ -46419,7 +46413,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.1899995803833
+    "starScoreSaber": 12.119999885559082
   },
   {
     "name": "KOKUSHIMUSOU",
@@ -46871,7 +46865,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 17,
-    "starScoreSaber": 10.930000305175781,
+    "starScoreSaber": 10.850000381469727,
     "starBeatLeader": 11.739249229431152
   },
   {
@@ -46882,7 +46876,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 17,
-    "starScoreSaber": 10.649999618530273,
+    "starScoreSaber": 10.420000076293945,
     "starBeatLeader": 10.658046722412109
   },
   {
@@ -46893,7 +46887,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 17,
-    "starScoreSaber": 7.53000020980835,
+    "starScoreSaber": 7.0,
     "starBeatLeader": 6.9173269271850586
   },
   {
@@ -46914,7 +46908,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.119999885559082
+    "starScoreSaber": 4.96999979019165
   },
   {
     "name": "WYNEHOUSE",
@@ -46923,7 +46917,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.6700000762939453
+    "starScoreSaber": 6.130000114440918
   },
   {
     "name": "WYNEHOUSE",
@@ -46932,7 +46926,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.2100000381469727
+    "starScoreSaber": 9.1099996566772461
   },
   {
     "name": "WYNEHOUSE",
@@ -46950,7 +46944,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 11.720000267028809
+    "starScoreSaber": 12.029999732971191
   },
   {
     "name": "Chrome Vox",
@@ -46977,7 +46971,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.8899998664855957
+    "starScoreSaber": 5.03000020980835
   },
   {
     "name": "Chrome Vox",
@@ -46986,7 +46980,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.5399999618530273
+    "starScoreSaber": 7.0199999809265137
   },
   {
     "name": "Chrome Vox",
@@ -46995,7 +46989,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.25
+    "starScoreSaber": 9.15999984741211
   },
   {
     "name": "RATATA",
@@ -47013,7 +47007,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.53000020980835
+    "starScoreSaber": 6.8600001335144043
   },
   {
     "name": "RATATA",
@@ -47022,7 +47016,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.800000190734863
+    "starScoreSaber": 10.479999542236328
   },
   {
     "name": "CH4NGE",
@@ -47031,7 +47025,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 3.369999885559082
+    "starScoreSaber": 3.7300000190734863
   },
   {
     "name": "CH4NGE",
@@ -47049,7 +47043,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.4000000953674316
+    "starScoreSaber": 6.880000114440918
   },
   {
     "name": "KOKUSHIMUSOU",
@@ -47058,7 +47052,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.4099998474121094
+    "starScoreSaber": 4.570000171661377
   },
   {
     "name": "KOKUSHIMUSOU",
@@ -47067,7 +47061,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.8299999237060547
+    "starScoreSaber": 5.53000020980835
   },
   {
     "name": "KOKUSHIMUSOU",
@@ -47076,7 +47070,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.7100000381469727
+    "starScoreSaber": 6.9499998092651367
   },
   {
     "name": "KOKUSHIMUSOU",
@@ -47085,7 +47079,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.0100002288818359
+    "starScoreSaber": 8.3000001907348633
   },
   {
     "name": "KOKUSHIMUSOU",
@@ -47094,7 +47088,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.359999656677246
+    "starScoreSaber": 9.9799995422363281
   },
   {
     "name": "w / WWW",
@@ -47121,7 +47115,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.6899995803833
+    "starScoreSaber": 8.6400003433227539
   },
   {
     "name": "w / WWW",
@@ -47130,7 +47124,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.4399995803833
+    "starScoreSaber": 10.260000228881836
   },
   {
     "name": "w / WWW",
@@ -47139,7 +47133,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.020000457763672
+    "starScoreSaber": 11.069999694824219
   },
   {
     "name": "fuck this town",
@@ -47166,7 +47160,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.96999979019165
+    "starScoreSaber": 7.6100001335144043
   },
   {
     "name": "Reikoku Assassins",
@@ -47175,7 +47169,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.8600001335144043
+    "starScoreSaber": 6.809999942779541
   },
   {
     "name": "Reikoku Assassins",
@@ -47184,7 +47178,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 11.090000152587891
+    "starScoreSaber": 10.149999618530273
   },
   {
     "name": "Secret Illumination",
@@ -47193,7 +47187,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.1500000953674316
+    "starScoreSaber": 4.0999999046325684
   },
   {
     "name": "Secret Illumination",
@@ -47211,7 +47205,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.59000015258789
+    "starScoreSaber": 9.5799999237060547
   },
   {
     "name": "In Seventh Heaven",
@@ -47220,6 +47214,321 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 11.869999885559082
+    "starScoreSaber": 12.050000190734863
+  },
+  {
+    "name": "Hold Angel",
+    "scoreSaberID": "611875",
+    "hash": "082E46B0256DE953A765038A461979AB50DA4DEB",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.690000057220459
+  },
+  {
+    "name": "Hold Angel",
+    "scoreSaberID": "611874",
+    "hash": "082E46B0256DE953A765038A461979AB50DA4DEB",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 5.929999828338623
+  },
+  {
+    "name": "Hold Angel",
+    "scoreSaberID": "611872",
+    "hash": "082E46B0256DE953A765038A461979AB50DA4DEB",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.5600004196167
+  },
+  {
+    "name": "Hold Angel",
+    "scoreSaberID": "611871",
+    "hash": "082E46B0256DE953A765038A461979AB50DA4DEB",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 9.8199996948242188
+  },
+  {
+    "name": "Hold Angel",
+    "scoreSaberID": "611869",
+    "hash": "082E46B0256DE953A765038A461979AB50DA4DEB",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 12.489999771118164
+  },
+  {
+    "name": "Abstruse Dilemma",
+    "scoreSaberID": "607676",
+    "hash": "CFF3F82F88D9BDD727462E818FB1F786AA7ECB96",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.179999828338623
+  },
+  {
+    "name": "Abstruse Dilemma",
+    "scoreSaberID": "607679",
+    "hash": "CFF3F82F88D9BDD727462E818FB1F786AA7ECB96",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.7899999618530273
+  },
+  {
+    "name": "Abstruse Dilemma",
+    "scoreSaberID": "607678",
+    "hash": "CFF3F82F88D9BDD727462E818FB1F786AA7ECB96",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 8.3500003814697266
+  },
+  {
+    "name": "Abstruse Dilemma",
+    "scoreSaberID": "607674",
+    "hash": "CFF3F82F88D9BDD727462E818FB1F786AA7ECB96",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 12.0600004196167
+  },
+  {
+    "name": "Why Do I",
+    "scoreSaberID": "604296",
+    "hash": "4B2BA9A0AA6DD0AAAAF5EC2ED83BEC11999D0EF6",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.5799999237060547
+  },
+  {
+    "name": "Why Do I",
+    "scoreSaberID": "604297",
+    "hash": "4B2BA9A0AA6DD0AAAAF5EC2ED83BEC11999D0EF6",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 5.3299999237060547
+  },
+  {
+    "name": "Ljusa Stjärnan",
+    "scoreSaberID": "610640",
+    "hash": "9988E50D064E05424813E98597E878C161F5D311",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 2.9700000286102295
+  },
+  {
+    "name": "Ljusa Stjärnan",
+    "scoreSaberID": "610932",
+    "hash": "9988E50D064E05424813E98597E878C161F5D311",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.1400001049041748
+  },
+  {
+    "name": "Ljusa Stjärnan",
+    "scoreSaberID": "610646",
+    "hash": "9988E50D064E05424813E98597E878C161F5D311",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.309999942779541
+  },
+  {
+    "name": "Ljusa Stjärnan",
+    "scoreSaberID": "610623",
+    "hash": "9988E50D064E05424813E98597E878C161F5D311",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 5.679999828338623
+  },
+  {
+    "name": "Ljusa Stjärnan",
+    "scoreSaberID": "610624",
+    "hash": "9988E50D064E05424813E98597E878C161F5D311",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 7.8299999237060547
+  },
+  {
+    "name": "Flamewall",
+    "scoreSaberID": "608466",
+    "hash": "BC4B36C8E21FF06972877820BD7EF914F94CD799",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 9.9200000762939453
+  },
+  {
+    "name": "Flamewall",
+    "scoreSaberID": "608462",
+    "hash": "BC4B36C8E21FF06972877820BD7EF914F94CD799",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 12.390000343322754
+  },
+  {
+    "name": "G.U.Y. (I Want You)",
+    "scoreSaberID": "608826",
+    "hash": "F8B9E89DD03A54C5B33E4E2773604F5A8693CFAE",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.8899998664855957
+  },
+  {
+    "name": "G.U.Y. (I Want You)",
+    "scoreSaberID": "608812",
+    "hash": "F8B9E89DD03A54C5B33E4E2773604F5A8693CFAE",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.710000038146973
+  },
+  {
+    "name": "Frozen One",
+    "scoreSaberID": "609186",
+    "hash": "6432E64AA7B30ABCD45326DFB8546359C80A3E18",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.369999885559082
+  },
+  {
+    "name": "Frozen One",
+    "scoreSaberID": "609203",
+    "hash": "6432E64AA7B30ABCD45326DFB8546359C80A3E18",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 5.96999979019165
+  },
+  {
+    "name": "Frozen One",
+    "scoreSaberID": "609184",
+    "hash": "6432E64AA7B30ABCD45326DFB8546359C80A3E18",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 8.7399997711181641
+  },
+  {
+    "name": "LaμreLs",
+    "scoreSaberID": "610967",
+    "hash": "DF260543DA266B254328ED4891B8BA8700F85177",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.25
+  },
+  {
+    "name": "LaμreLs",
+    "scoreSaberID": "610968",
+    "hash": "DF260543DA266B254328ED4891B8BA8700F85177",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.7899999618530273
+  },
+  {
+    "name": "LaμreLs",
+    "scoreSaberID": "611031",
+    "hash": "DF260543DA266B254328ED4891B8BA8700F85177",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 7.96999979019165
+  },
+  {
+    "name": "LaμreLs",
+    "scoreSaberID": "611032",
+    "hash": "DF260543DA266B254328ED4891B8BA8700F85177",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.630000114440918
+  },
+  {
+    "name": "LaμreLs",
+    "scoreSaberID": "610963",
+    "hash": "DF260543DA266B254328ED4891B8BA8700F85177",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 12.529999732971191
+  },
+  {
+    "name": "Chopper",
+    "scoreSaberID": "609030",
+    "hash": "C77D7D717C9CAC47EE167FDD1FE843F987174C19",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.0399999618530273
+  },
+  {
+    "name": "Chopper",
+    "scoreSaberID": "609029",
+    "hash": "C77D7D717C9CAC47EE167FDD1FE843F987174C19",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 5.4899997711181641
+  },
+  {
+    "name": "Chopper",
+    "scoreSaberID": "609028",
+    "hash": "C77D7D717C9CAC47EE167FDD1FE843F987174C19",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.3000001907348633
+  },
+  {
+    "name": "Chopper",
+    "scoreSaberID": "609026",
+    "hash": "C77D7D717C9CAC47EE167FDD1FE843F987174C19",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 8.5
+  },
+  {
+    "name": "TMHC",
+    "scoreSaberID": "607015",
+    "hash": "4B7AF48B79B504ED8AD92D8E250BC7EEFFCFCD9E",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 7.5199999809265137
+  },
+  {
+    "name": "TMHC",
+    "scoreSaberID": "607014",
+    "hash": "4B7AF48B79B504ED8AD92D8E250BC7EEFFCFCD9E",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 9.3000001907348633
+  },
+  {
+    "name": "TMHC",
+    "scoreSaberID": "607012",
+    "hash": "4B7AF48B79B504ED8AD92D8E250BC7EEFFCFCD9E",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 9.5399999618530273
   }
 ]
