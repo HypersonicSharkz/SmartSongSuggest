@@ -2384,6 +2384,7 @@
     "name": "Hidamari no Uta",
     "scoreSaberID": "188640",
     "beatLeaderID": "72ef91",
+    "beatSaverID": "72ef",
     "hash": "3DC717E1B6AC8EFBD709D021665774B4D3B08430",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -3253,6 +3254,7 @@
     "name": "The Girl",
     "scoreSaberID": "198039",
     "beatLeaderID": "7f3f91",
+    "beatSaverID": "7f3f",
     "hash": "33197B762060BD8FA2952BBBA3BEDDB9E9832DEE",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -4206,6 +4208,7 @@
     "name": "Life Will Change",
     "scoreSaberID": "2144",
     "beatLeaderID": "17d71",
+    "beatSaverID": "17d",
     "hash": "532D6987004E927B5B54ED2AFC9EFC20C5970D51",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -12423,6 +12426,7 @@
   {
     "name": "Pandora",
     "scoreSaberID": "30818",
+    "beatSaverID": "76a",
     "hash": "00CCD52A38D10E367D78402270182EBD21D43F85",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -12519,6 +12523,7 @@
     "name": "THE LAUNCH OF THE MEGANTO METEOR",
     "scoreSaberID": "310951",
     "beatLeaderID": "119f051",
+    "beatSaverID": "119f0",
     "hash": "8B0954E826D02175872F9D80BF8BB96DE5A1B227",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -14322,6 +14327,7 @@
     "name": "Superpower",
     "scoreSaberID": "321762",
     "beatLeaderID": "12c0c71",
+    "beatSaverID": "12c0c",
     "hash": "8A952D18D0DD2CB04E8A8E7E027C1E28B1FA478A",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -16829,6 +16835,7 @@
   {
     "name": "FLOWER",
     "scoreSaberID": "334818",
+    "beatSaverID": "14972",
     "hash": "B736B0AA8465561A42C46672FE39AC95F8E413E3",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -22326,6 +22333,7 @@
   {
     "name": "cold weather",
     "scoreSaberID": "369371",
+    "beatSaverID": "1a67e",
     "hash": "A043595F41E8B23CE5DB900218C4B13C74149BCA",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -37059,6 +37067,7 @@
   {
     "name": "Voices From Heaven",
     "scoreSaberID": "544790",
+    "beatSaverID": "1f1ae",
     "hash": "377EAD7E024E8A1F8A0C56358A299151B9D3241F",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -38016,6 +38025,7 @@
   {
     "name": "Hyadain no Joujou Yuujou",
     "scoreSaberID": "549634",
+    "beatSaverID": "25b0b",
     "hash": "8C9346022BBF5D123D6DCB8B76635A68F06DE185",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -39543,6 +39553,7 @@
     "name": "G e n g a o z o - f o o n",
     "scoreSaberID": "561745",
     "beatLeaderID": "2ceacxxxxx71",
+    "beatSaverID": "2ceac",
     "hash": "D5EBC9C4E38A700AB971C6256AE3A175C63B5B1D",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -41174,6 +41185,7 @@
   {
     "name": "Always",
     "scoreSaberID": "58412",
+    "beatSaverID": "116b",
     "hash": "022C187AE58A1897BBC309B4F6B62ECB4ADC5760",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -41897,6 +41909,7 @@
   {
     "name": "La Grange",
     "scoreSaberID": "77199",
+    "beatSaverID": "188c",
     "hash": "8A959C2FCB00A410DC8E0C13C04ADE3F75F195E9",
     "difficulty": "9",
     "characteristic": "Standard",
