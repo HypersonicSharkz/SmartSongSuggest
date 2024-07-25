@@ -1,0 +1,5 @@
+﻿<bg id='root' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+  <horizontal horizontal-fit='PreferredSize' vertical-fit='PreferredSize' pref-width='50' child-expand-width='false' anchor-pos-x='56' anchor-pos-y='30' child-align='UpperLeft'>
+    <icon-button id='syncurl-button' icon='SmartSongSuggest.UI.Images.sync.png' hover-hint='Syncs and Filters via Song Suggest banning' pref-width='14' pref-height='10' on-click='ProcessSyncPlaylist'/>
+  </horizontal>
+</bg>

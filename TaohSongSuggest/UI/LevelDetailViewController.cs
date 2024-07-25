@@ -11,13 +11,15 @@ using SmartSongSuggest.Managers;
 using TMPro;
 using System.Collections;
 using BeatSaberMarkupLanguage.Parser;
+using SongSuggestNS;
+using SmartSongSuggest.Configuration;
+using BeatSaberPlaylistsLib;
 
 namespace SmartSongSuggest.UI
 {
     class LevelDetailViewController : INotifyPropertyChanged
     {
         internal static readonly LevelDetailViewController persController = new LevelDetailViewController();
-        internal static bool HasAttached;
         internal StandardLevelDetailViewController sldv;
 
         [UIParams]
@@ -51,8 +53,8 @@ namespace SmartSongSuggest.UI
         private string _banHover;
         private string _likeHover;
 
-        private string _banColor;
-        private string _likeColor;
+        private string _banColor = "white";
+        private string _likeColor = "white";
 
         private int _banDays;
 
@@ -154,18 +156,16 @@ namespace SmartSongSuggest.UI
             if (t == null)
                 return;
 
-            BSMLParser.instance.Parse(Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "SmartSongSuggest.UI.Views.LevelDetailSuggestButtonsView.bsml"), t.gameObject, persController);
+            BSMLParser.instance.Parse(BeatSaberMarkupLanguage.Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "SmartSongSuggest.UI.Views.LevelDetailSuggestButtonsView.bsml"), t.gameObject, persController);
             persController.rootTransform.localScale *= 0.7f;
             persController.sldv = GameObject.FindObjectOfType<StandardLevelDetailViewController>();
             persController.sldv.didChangeContentEvent += persController.didChangeContent;
             persController.sldv.didChangeDifficultyBeatmapEvent += persController.didChangeDifficulty;
 
             persController.CheckButtons();
-
-            HasAttached = true;
         }
 
-        private void didChangeDifficulty(StandardLevelDetailViewController arg1, IDifficultyBeatmap arg2)
+        private void didChangeDifficulty(StandardLevelDetailViewController arg1)
         {
             CheckButtons();
         }
@@ -191,28 +191,42 @@ namespace SmartSongSuggest.UI
 
                 _rankPlate = "";
 
-               
 
-                if (sldv.beatmapLevel != null && sldv.beatmapLevel is CustomBeatmapLevel)
+                SongSuggestManager.toolBox.log?.WriteLine("Checking For Custom Map");
+                if (sldv.beatmapLevel != null && !sldv.beatmapLevel.hasPrecalculatedData)
                 {
-                    levelHash = Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel);
-
-                    if (Plugin.songDetails.songs.FindByHash(levelHash, out Song x))
+                    levelHash = Hashing.GetCustomLevelHash(sldv.beatmapLevel);
+                    SongSuggestManager.toolBox.log?.WriteLine("Getting Hash");
+                    if (Plugin.songDetails.songs.FindByHash(levelHash, out Song song))
                     {
+                        SongSuggestManager.toolBox.log?.WriteLine("Getting Difficulty");
                         SongDifficulty difficulty;
-                        if (x.GetDifficulty(out difficulty, (MapDifficulty)sldv.selectedDifficultyBeatmap.difficulty))
+                        if (song.GetDifficulty(out difficulty, (MapDifficulty)sldv.beatmapKey.difficulty))
                         {
-                            _mapRanked = difficulty.ranked;
+                            SongSuggestManager.toolBox.log?.WriteLine("Getting difc name");
+                            string diffLabel = sldv.beatmapKey.difficulty.SerializedName();
 
-                            string diffLabel = sldv.selectedDifficultyBeatmap.difficulty.SerializedName();
+                            SongSuggestManager.toolBox.log?.WriteLine("Checking if map is Ranked");
+                            _mapRanked = SongSuggestManager.toolBox.songLibrary.HasAnySongCategory(levelHash, diffLabel);//difficulty.ranked;
 
-                            //Forgot to check if map was ranked before checking ban... oops
-                            if (difficulty.ranked)
+                            if (_mapRanked)//difficulty.ranked)
                             {
-                                string songrank = SongSuggestManager.toolBox.GetSongRanking(levelHash, diffLabel);
+                                SongSuggestManager.toolBox.log?.WriteLine("Getting Songrank");
+                                string songRank = $"{SongSuggestManager.toolBox.GetSongRanking(levelHash, diffLabel)}";
+                                string maxRank = $"{SongSuggestManager.toolBox.GetSongRankingCount()}";
+                                string AP = $"{SongSuggestManager.toolBox.GetAPString(levelHash, diffLabel)}";
 
-                                if (songrank != "" && SettingsController.cfgInstance.showRankPlate)
-                                    _rankPlate = songrank + "/" + SongSuggestManager.toolBox.GetSongRankingCount();
+                                string rankPlateString = "";
+                                if (songRank != "") rankPlateString = $"{rankPlateString} {songRank}/{maxRank}";
+                                if (AP != "") rankPlateString = $"{rankPlateString} {AP}";
+                                rankPlateString = rankPlateString.Trim();
+
+                                SongSuggestManager.toolBox.log?.WriteLine("Checking if RankPlate is active, and song got a Ranking");
+                                if (rankPlateString != "" && SettingsController.cfgInstance.ShowRankPlate)
+                                {
+                                    SongSuggestManager.toolBox.log?.WriteLine("Setting Rank Plate Text");
+                                    _rankPlate = rankPlateString;//songrank + "/" + SongSuggestManager.toolBox.GetSongRankingCount();
+                                }
 
                                 if (SongSuggestManager.toolBox.songBanning.IsBanned(levelHash, diffLabel))
                                 {
@@ -225,7 +239,6 @@ namespace SmartSongSuggest.UI
                                     BanColor = "white";
 
                                 }
-
 
                                 if (SongSuggestManager.toolBox.songLiking.IsLiked(levelHash, diffLabel))
                                 {
@@ -256,16 +269,17 @@ namespace SmartSongSuggest.UI
         IEnumerator SetActiveLate()
         {
             yield return new WaitForEndOfFrame();
-            addToIgnoredBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.showBanButton);
-            addToLikedBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.showLikeButton);
+            addToIgnoredBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.ShowBanButton);
+            addToLikedBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.ShowLikeButton && SettingsController.cfgInstance.UseLikedSongs);
         }
 
         void CheckBanState()
         {
-            if (SongSuggestManager.toolBox.songBanning.IsBanned(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name()))
+            if (SongSuggestManager.toolBox.songBanning.IsBanned(levelHash, sldv.beatmapKey.difficulty.Name()))
             {
-                SongSuggestManager.toolBox.songBanning.LiftBan(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name());
-            } else
+                SongSuggestManager.toolBox.songBanning.LiftBan(levelHash, sldv.beatmapKey.difficulty.Name());
+            } 
+            else
             {
                 parserParams.EmitEvent("open-modal");
             }
@@ -277,10 +291,11 @@ namespace SmartSongSuggest.UI
         {
             if (days == -1)
             {
-                SongSuggestManager.toolBox.songBanning.SetPermaBan(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name());
-            } else
+                SongSuggestManager.toolBox.songBanning.SetPermaBan(levelHash, sldv.beatmapKey.difficulty.Name());
+            } 
+            else
             {
-                SongSuggestManager.toolBox.songBanning.SetBan(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name(), days);
+                SongSuggestManager.toolBox.songBanning.SetBan(levelHash, sldv.beatmapKey.difficulty.Name(), days);
             }
 
             CheckButtons();
@@ -288,17 +303,22 @@ namespace SmartSongSuggest.UI
 
         void AddDifficultyBeatmapToLiked()
         {
-            if (SongSuggestManager.toolBox.songLiking.IsLiked(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name()))
+            if (SongSuggestManager.toolBox.songLiking.IsLiked(levelHash, sldv.beatmapKey.difficulty.Name()))
             {
-                SongSuggestManager.toolBox.songLiking.RemoveLike(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name());
-            } else
+                SongSuggestManager.toolBox.songLiking.RemoveLike(levelHash, sldv.beatmapKey.difficulty.Name());
+            } 
+            else
             {
-
-                SongSuggestManager.toolBox.songLiking.SetLike(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name());
+                SongSuggestManager.toolBox.songLiking.SetLike(levelHash, sldv.beatmapKey.difficulty.Name());
             }
 
             CheckButtons();
 
+        }
+
+        public virtual void RankPlateChanged()
+        {
+            CheckButtons();
         }
     }
 }
