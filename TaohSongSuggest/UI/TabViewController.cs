@@ -55,7 +55,7 @@ namespace SmartSongSuggest.UI
                             return;
 
                         var lfnc = GameObject.FindObjectOfType<LevelFilteringNavigationController>();
-                        lfnc.SelectAnnotatedBeatmapLevelCollection(pl);
+                        lfnc.SelectAnnotatedBeatmapLevelCollection(pl.PlaylistLevelPack);
                     });
                 }
                 catch (Exception e)
@@ -91,7 +91,7 @@ namespace SmartSongSuggest.UI
                             return;
 
                         var lfnc = GameObject.FindObjectOfType<LevelFilteringNavigationController>();
-                        lfnc.SelectAnnotatedBeatmapLevelCollection(pl);
+                        lfnc.SelectAnnotatedBeatmapLevelCollection(pl.PlaylistLevelPack);
                     });
                 }
                 catch (Exception e)

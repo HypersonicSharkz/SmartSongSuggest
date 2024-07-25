@@ -53,8 +53,8 @@ namespace SmartSongSuggest.UI
         private string _banHover;
         private string _likeHover;
 
-        private string _banColor;
-        private string _likeColor;
+        private string _banColor = "white";
+        private string _likeColor = "white";
 
         private int _banDays;
 
@@ -165,7 +165,7 @@ namespace SmartSongSuggest.UI
             persController.CheckButtons();
         }
 
-        private void didChangeDifficulty(StandardLevelDetailViewController arg1, IDifficultyBeatmap arg2)
+        private void didChangeDifficulty(StandardLevelDetailViewController arg1)
         {
             CheckButtons();
         }
@@ -193,18 +193,18 @@ namespace SmartSongSuggest.UI
 
 
                 SongSuggestManager.toolBox.log?.WriteLine("Checking For Custom Map");
-                if (sldv.beatmapLevel != null && sldv.beatmapLevel is CustomBeatmapLevel)
+                if (sldv.beatmapLevel != null && !sldv.beatmapLevel.hasPrecalculatedData)
                 {
-                    levelHash = Hashing.GetCustomLevelHash(sldv.beatmapLevel as CustomBeatmapLevel);
+                    levelHash = Hashing.GetCustomLevelHash(sldv.beatmapLevel);
                     SongSuggestManager.toolBox.log?.WriteLine("Getting Hash");
                     if (Plugin.songDetails.songs.FindByHash(levelHash, out Song song))
                     {
                         SongSuggestManager.toolBox.log?.WriteLine("Getting Difficulty");
                         SongDifficulty difficulty;
-                        if (song.GetDifficulty(out difficulty, (MapDifficulty)sldv.selectedDifficultyBeatmap.difficulty))
+                        if (song.GetDifficulty(out difficulty, (MapDifficulty)sldv.beatmapKey.difficulty))
                         {
                             SongSuggestManager.toolBox.log?.WriteLine("Getting difc name");
-                            string diffLabel = sldv.selectedDifficultyBeatmap.difficulty.SerializedName();
+                            string diffLabel = sldv.beatmapKey.difficulty.SerializedName();
 
                             SongSuggestManager.toolBox.log?.WriteLine("Checking if map is Ranked");
                             _mapRanked = SongSuggestManager.toolBox.songLibrary.HasAnySongCategory(levelHash, diffLabel);//difficulty.ranked;
@@ -275,9 +275,9 @@ namespace SmartSongSuggest.UI
 
         void CheckBanState()
         {
-            if (SongSuggestManager.toolBox.songBanning.IsBanned(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name()))
+            if (SongSuggestManager.toolBox.songBanning.IsBanned(levelHash, sldv.beatmapKey.difficulty.Name()))
             {
-                SongSuggestManager.toolBox.songBanning.LiftBan(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name());
+                SongSuggestManager.toolBox.songBanning.LiftBan(levelHash, sldv.beatmapKey.difficulty.Name());
             } 
             else
             {
@@ -291,11 +291,11 @@ namespace SmartSongSuggest.UI
         {
             if (days == -1)
             {
-                SongSuggestManager.toolBox.songBanning.SetPermaBan(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name());
+                SongSuggestManager.toolBox.songBanning.SetPermaBan(levelHash, sldv.beatmapKey.difficulty.Name());
             } 
             else
             {
-                SongSuggestManager.toolBox.songBanning.SetBan(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name(), days);
+                SongSuggestManager.toolBox.songBanning.SetBan(levelHash, sldv.beatmapKey.difficulty.Name(), days);
             }
 
             CheckButtons();
@@ -303,13 +303,13 @@ namespace SmartSongSuggest.UI
 
         void AddDifficultyBeatmapToLiked()
         {
-            if (SongSuggestManager.toolBox.songLiking.IsLiked(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name()))
+            if (SongSuggestManager.toolBox.songLiking.IsLiked(levelHash, sldv.beatmapKey.difficulty.Name()))
             {
-                SongSuggestManager.toolBox.songLiking.RemoveLike(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name());
+                SongSuggestManager.toolBox.songLiking.RemoveLike(levelHash, sldv.beatmapKey.difficulty.Name());
             } 
             else
             {
-                SongSuggestManager.toolBox.songLiking.SetLike(levelHash, sldv.selectedDifficultyBeatmap.difficulty.Name());
+                SongSuggestManager.toolBox.songLiking.SetLike(levelHash, sldv.beatmapKey.difficulty.Name());
             }
 
             CheckButtons();

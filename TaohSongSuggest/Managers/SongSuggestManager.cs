@@ -279,8 +279,8 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
                 scoreSaberID = ui.CachedPlayerID,
 
                 //Check if slider is active, and selection is not outer values.
-                ignoreAccuracyEqualAbove = ui.UseAcc && ui.AccUserSelectionMax <= ui.AccSliderMax ? ui.AccUserSelectionMax : float.MaxValue,
-                ignoreAccuracyEqualBelow = ui.UseAcc && ui.AccUserSelectionMin >= ui.AccSliderMin ? ui.AccUserSelectionMin : float.MinValue,
+                ignoreAccuracyEqualAbove = ui.UseAcc && ui.AccUserSelectionMax <= ui.AccSliderMax ? ui.AccUserSelectionMax/100 : float.MaxValue,
+                ignoreAccuracyEqualBelow = ui.UseAcc && ui.AccUserSelectionMin >= ui.AccSliderMin ? ui.AccUserSelectionMin/100 : float.MinValue,
                 ignorePlayedDaysAbove = ui.UseAge && ui.AgeUserSelectionMax <= ui.AgeSliderMax ? ui.AgeUserSelectionMax : int.MaxValue,
                 ignorePlayedDaysBelow = ui.UseAge && ui.AgeUserSelectionMin >= ui.AgeSliderMin ? ui.AgeUserSelectionMin : 0,
                 ignoreBeatSaberStarAbove = ui.UseStars && ui.StarUserSelectionMax <= ui.StarSliderMax ? ui.StarUserSelectionMax : float.MaxValue,
@@ -367,7 +367,7 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
         {
             if (GameObject.FindObjectOfType<MainFlowCoordinator>().YoungestChildFlowCoordinatorOrSelf() is LevelSelectionFlowCoordinator)
             {
-                GameObject.FindObjectOfType<LevelFilteringNavigationController>().SelectAnnotatedBeatmapLevelCollection(playlist);
+                GameObject.FindObjectOfType<LevelFilteringNavigationController>().SelectAnnotatedBeatmapLevelCollection(playlist.PlaylistLevelPack);
                 return;
             }
             GameObject.FindObjectOfType<SoloFreePlayFlowCoordinator>().Setup(GetStateForPlaylist(playlist));
@@ -383,7 +383,7 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
 
         public static LevelSelectionFlowCoordinator.State GetStateForPlaylist(IPlaylist beatmapLevelPack)
         {
-            var state = new LevelSelectionFlowCoordinator.State(SelectLevelCategoryViewController.LevelCategory.CustomSongs, beatmapLevelPack, new EmptyDifficultyBeatmap());
+            var state = new LevelSelectionFlowCoordinator.State(SelectLevelCategoryViewController.LevelCategory.CustomSongs, beatmapLevelPack.PlaylistLevelPack, default, null);
             return state;
         }
 

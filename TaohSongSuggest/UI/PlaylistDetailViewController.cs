@@ -71,7 +71,7 @@ namespace SmartSongSuggest.UI
                 persController.lpdvc = pack;
                 persController.lpdvc.didActivateEvent += Lpdvc_didActivateEvent;
                 annotatedBeatmapLevelCollectionsViewController.didSelectAnnotatedBeatmapLevelCollectionEvent += collectionSelected;
-                collectionSelected(annotatedBeatmapLevelCollectionsViewController.selectedAnnotatedBeatmapLevelCollection);
+                collectionSelected(annotatedBeatmapLevelCollectionsViewController.selectedAnnotatedBeatmapLevelPack);
                 return true;
             }
             catch (Exception ex)
@@ -80,7 +80,7 @@ namespace SmartSongSuggest.UI
             }
         }
 
-        private static void collectionSelected(IAnnotatedBeatmapLevelCollection obj)
+        private static void collectionSelected(BeatmapLevelPack obj)
         {
             if (obj is IPlaylist pl)
             {

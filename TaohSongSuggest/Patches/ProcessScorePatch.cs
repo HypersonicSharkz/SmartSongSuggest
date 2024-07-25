@@ -6,7 +6,7 @@ namespace SmartSongSuggest.Patches
     [HarmonyPatch(typeof(LevelCompletionResultsHelper), nameof(LevelCompletionResultsHelper.ProcessScore))]
     static class ProcessScorePatch
     {
-        static void Postfix(PlayerData playerData, PlayerLevelStatsData playerLevelStats, LevelCompletionResults levelCompletionResults, IReadonlyBeatmapData transformedBeatmapData, IDifficultyBeatmap difficultyBeatmap, PlatformLeaderboardsModel platformLeaderboardsModel)
+        static void Postfix(in BeatmapKey beatmapKey, PlayerData playerData, PlayerLevelStatsData playerLevelStats, LevelCompletionResults levelCompletionResults, IReadonlyBeatmapData transformedBeatmapData, PlatformLeaderboardsModel platformLeaderboardsModel)
         {
             if (!SettingsController.cfgInstance.RecordLocalScores) return;
             if (BS_Utils.Gameplay.ScoreSubmission.Disabled) return;
@@ -24,8 +24,8 @@ namespace SmartSongSuggest.Patches
             if (modifiedScore > multipliedScore) return;
 
             float acc = modifiedScore / maxScore;
-            string mapId = difficultyBeatmap.level.levelID.Substring(13).Split('_')[0];
-            string difficulty = difficultyBeatmap.difficulty.SerializedName();
+            string mapId = beatmapKey.levelId.Substring(13).Split('_')[0];
+            string difficulty = beatmapKey.difficulty.SerializedName();
 
             Managers.SongSuggestManager.toolBox.AddLocalScore(mapId, difficulty, acc);
             LevelDetailViewController.persController.RankPlateChanged();

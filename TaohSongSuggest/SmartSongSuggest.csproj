@@ -15,7 +15,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>portable</DebugType>
     <LocalRefsDir Condition="Exists('..\Refs')">..\Refs</LocalRefsDir>
-    <BeatSaberDir>C:\Users\David\BSManager\BSInstances\1.34.2</BeatSaberDir>
+    <BeatSaberDir>$(LocalRefsDir)</BeatSaberDir>
     <AppOutputBase>$(MSBuildProjectDirectory)\</AppOutputBase>
     <!--<PathMap>$(AppOutputBase)=X:\$(AssemblyName)\</PathMap>-->
     <ErrorReport>prompt</ErrorReport>
@@ -56,6 +56,11 @@
     <Reference Include="BS_Utils, Version=1.11.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BeatSaberDir)\Plugins\BS_Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="DataModels, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\DataModels.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="GameplayCore, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -161,7 +166,7 @@
     </None>
     <None Include="Directory.Build.props" Condition="Exists('Directory.Build.props')" />
     <None Include="Directory.Build.targets" Condition="Exists('Directory.Build.targets')" />
-    <None Include="TaohSongSuggest.csproj.user" Condition="Exists('TaohSongSuggest.csproj.user')" />
+    <None Include="SmartSongSuggest.csproj.user" Condition="Exists('SmartSongSuggest.csproj.user')" />
     <EmbeddedResource Include="UI\Views\LevelDetailSuggestButtonsView.bsml" />
     <EmbeddedResource Include="UI\Views\SongSuggestMain.bsml" />
     <EmbeddedResource Include="UI\Views\SongSuggestLeft.bsml" />
