@@ -28711,33 +28711,6 @@
     "starTechBeatLeader": 3.222254753112793
   },
   {
-    "name": "FLUFFY FLASH",
-    "scoreSaberID": "378367",
-    "hash": "D4567C5E32D8EB66DBCCB169D5E2A267D340385A",
-    "difficulty": "9",
-    "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 8.6499996185302734
-  },
-  {
-    "name": "FLUFFY FLASH",
-    "scoreSaberID": "378369",
-    "hash": "D4567C5E32D8EB66DBCCB169D5E2A267D340385A",
-    "difficulty": "7",
-    "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 7.53000020980835
-  },
-  {
-    "name": "FLUFFY FLASH",
-    "scoreSaberID": "378371",
-    "hash": "D4567C5E32D8EB66DBCCB169D5E2A267D340385A",
-    "difficulty": "5",
-    "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 5.25
-  },
-  {
     "name": "Big Daddy",
     "scoreSaberID": "378373",
     "beatLeaderID": "194b471",
@@ -28750,24 +28723,6 @@
     "starAccBeatLeader": 8.29714584350586,
     "starPassBeatLeader": 6.2337064743041992,
     "starTechBeatLeader": 3.5339317321777344
-  },
-  {
-    "name": "FLUFFY FLASH",
-    "scoreSaberID": "378374",
-    "hash": "D4567C5E32D8EB66DBCCB169D5E2A267D340385A",
-    "difficulty": "3",
-    "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.1500000953674316
-  },
-  {
-    "name": "FLUFFY FLASH",
-    "scoreSaberID": "378376",
-    "hash": "D4567C5E32D8EB66DBCCB169D5E2A267D340385A",
-    "difficulty": "1",
-    "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 3.5699999332427979
   },
   {
     "name": "Big Daddy",
@@ -36438,42 +36393,6 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 7.320000171661377
-  },
-  {
-    "name": "QZKago Requiem",
-    "scoreSaberID": "420790",
-    "hash": "131348E6191925CBBF72158F16506F1444A007C5",
-    "difficulty": "9",
-    "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 8.9899997711181641
-  },
-  {
-    "name": "QZKago Requiem",
-    "scoreSaberID": "420792",
-    "hash": "131348E6191925CBBF72158F16506F1444A007C5",
-    "difficulty": "7",
-    "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 9.3199996948242188
-  },
-  {
-    "name": "QZKago Requiem",
-    "scoreSaberID": "420793",
-    "hash": "131348E6191925CBBF72158F16506F1444A007C5",
-    "difficulty": "5",
-    "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 7.3899998664855957
-  },
-  {
-    "name": "QZKago Requiem",
-    "scoreSaberID": "420813",
-    "hash": "131348E6191925CBBF72158F16506F1444A007C5",
-    "difficulty": "3",
-    "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 3.75
   },
   {
     "name": "Killing Rhythm",
@@ -51219,54 +51138,6 @@
     "starScoreSaber": 4.4200000762939453
   },
   {
-    "name": "Invisible Frenzy",
-    "scoreSaberID": "347274",
-    "hash": "9A8581460386E3D3CCA3BA62EE4BD621C131980C",
-    "difficulty": "9",
-    "characteristic": "Standard",
-    "songCategory": 1
-  },
-  {
-    "name": "Eviternity",
-    "scoreSaberID": "537326",
-    "hash": "2BAD9A0EA20D908FD9190723F0B62B881CFA3C9D",
-    "difficulty": "3",
-    "characteristic": "Standard",
-    "songCategory": 1
-  },
-  {
-    "name": "Eviternity",
-    "scoreSaberID": "537325",
-    "hash": "2BAD9A0EA20D908FD9190723F0B62B881CFA3C9D",
-    "difficulty": "5",
-    "characteristic": "Standard",
-    "songCategory": 1
-  },
-  {
-    "name": "Eviternity",
-    "scoreSaberID": "537324",
-    "hash": "2BAD9A0EA20D908FD9190723F0B62B881CFA3C9D",
-    "difficulty": "7",
-    "characteristic": "Standard",
-    "songCategory": 1
-  },
-  {
-    "name": "Eviternity",
-    "scoreSaberID": "537323",
-    "hash": "2BAD9A0EA20D908FD9190723F0B62B881CFA3C9D",
-    "difficulty": "9",
-    "characteristic": "Standard",
-    "songCategory": 1
-  },
-  {
-    "name": "Looking for Edge of Ground",
-    "scoreSaberID": "482056",
-    "hash": "05BF7E8A04779969CF79C8534183765614DBB692",
-    "difficulty": "9",
-    "characteristic": "Standard",
-    "songCategory": 1
-  },
-  {
     "name": "666",
     "scoreSaberID": "583270",
     "beatLeaderID": "2ee3bxxxxxx91",
@@ -54840,20 +54711,30 @@
   {
     "name": "Embracing intelligences",
     "scoreSaberID": "614860",
+    "beatLeaderID": "2f9b2xxxx91",
     "hash": "F4D4CCB86A7460CC04223F348A470C86AC10970B",
     "difficulty": "9",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 7.929999828338623
+    "songCategory": 17,
+    "starScoreSaber": 7.929999828338623,
+    "starBeatLeader": 8.1774358749389648,
+    "starAccBeatLeader": 9.0239572525024414,
+    "starPassBeatLeader": 7.1496477127075195,
+    "starTechBeatLeader": 5.507080078125
   },
   {
     "name": "Embracing intelligences",
     "scoreSaberID": "614890",
+    "beatLeaderID": "2f9b2xxxx71",
     "hash": "F4D4CCB86A7460CC04223F348A470C86AC10970B",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 5.6599998474121094
+    "songCategory": 17,
+    "starScoreSaber": 5.6599998474121094,
+    "starBeatLeader": 5.0565228462219238,
+    "starAccBeatLeader": 6.7281427383422852,
+    "starPassBeatLeader": 3.8442752361297607,
+    "starTechBeatLeader": 3.4148149490356445
   },
   {
     "name": "Looking for Edge of Ground",
