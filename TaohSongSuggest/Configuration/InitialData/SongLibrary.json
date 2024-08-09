@@ -6585,6 +6585,7 @@
   {
     "name": "Level of Concern",
     "scoreSaberID": "253841",
+    "beatSaverID": "aa73",
     "hash": "1B9278797FA6D85D0201D1A261101F8CB9AC7DDE",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -9664,6 +9665,7 @@
   {
     "name": "Shiawase No Monosashi",
     "scoreSaberID": "286337",
+    "beatSaverID": "d4a5",
     "hash": "D7CB32F23041DEC272DE3DA0AC141DD8F91478CA",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -23792,6 +23794,7 @@
   {
     "name": "Yoru wa Honoka",
     "scoreSaberID": "354008",
+    "beatSaverID": "17971",
     "hash": "1CC0CCB40969D5BDF1631930CB3119F4F89C3722",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -45532,6 +45535,7 @@
   {
     "name": "Pump it (Velvet Remix)",
     "scoreSaberID": "556408",
+    "beatSaverID": "314d5",
     "hash": "E131D90A4ACF4ACB54FD289BCB4D67ACA3BC141D",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -46704,6 +46708,7 @@
   {
     "name": "Variant Cross",
     "scoreSaberID": "562417",
+    "beatSaverID": "28281",
     "hash": "0A47291E4097024274BF601599CDBDABBB84EC20",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -48470,6 +48475,7 @@
   {
     "name": "Ievan Polkka - Nightcore",
     "scoreSaberID": "69331",
+    "beatSaverID": "13fe",
     "hash": "6089D255B56DEA46C030AEB3A66BE8AA48029E7D",
     "difficulty": "9",
     "characteristic": "Standard",
