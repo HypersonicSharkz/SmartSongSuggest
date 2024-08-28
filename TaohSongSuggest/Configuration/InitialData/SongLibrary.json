@@ -23614,6 +23614,7 @@
   {
     "name": "The Vampire",
     "scoreSaberID": "350950",
+    "beatSaverID": "171ff",
     "hash": "5B394FA294CF61796DC4AD412168D904198B39C2",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -31927,6 +31928,7 @@
   {
     "name": "Kolnidur",
     "scoreSaberID": "400418",
+    "beatSaverID": "1e840",
     "hash": "8E03ADD800CC186CE819B739FB775F972597B5DA",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -49723,6 +49725,7 @@
     "name": "I can't stop",
     "scoreSaberID": "87255",
     "beatLeaderID": "1ff031",
+    "beatSaverID": "1ff0",
     "hash": "8D9DF176C94ECF5C7725457525B6F959F5EF9296",
     "difficulty": "3",
     "characteristic": "Standard",
