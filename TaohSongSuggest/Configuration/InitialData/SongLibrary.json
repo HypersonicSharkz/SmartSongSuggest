@@ -55227,92 +55227,142 @@
   {
     "name": "PISSCORD",
     "scoreSaberID": "624568",
+    "beatLeaderID": "3a111xxxxxxxxxxxxxxxxx91",
     "hash": "91758A101730A2333850A9F007B0ED1DC2069DE9",
     "difficulty": "9",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 10.9399995803833
+    "songCategory": 17,
+    "starScoreSaber": 10.9399995803833,
+    "starBeatLeader": 11.634496688842773,
+    "starAccBeatLeader": 12.122126579284668,
+    "starPassBeatLeader": 6.2361435890197754,
+    "starTechBeatLeader": 12.051047325134277
   },
   {
     "name": "PISSCORD",
     "scoreSaberID": "624567",
+    "beatLeaderID": "3a111xxxxxxxxxxxxxxxxx71",
     "hash": "91758A101730A2333850A9F007B0ED1DC2069DE9",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 9.1000003814697266
+    "songCategory": 17,
+    "starScoreSaber": 9.1000003814697266,
+    "starBeatLeader": 9.8724451065063477,
+    "starAccBeatLeader": 10.783962249755859,
+    "starPassBeatLeader": 5.7497086524963379,
+    "starTechBeatLeader": 9.5912008285522461
   },
   {
     "name": "Retroscope",
     "scoreSaberID": "610342",
+    "beatLeaderID": "3d2c591",
     "hash": "75A0E9F214BA9A7C2156D6E29920F112B6423CD0",
     "difficulty": "9",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 9.630000114440918
+    "songCategory": 17,
+    "starScoreSaber": 9.630000114440918,
+    "starBeatLeader": 9.6812314987182617,
+    "starAccBeatLeader": 10.172019004821777,
+    "starPassBeatLeader": 9.8640842437744141,
+    "starTechBeatLeader": 2.8139872550964355
   },
   {
     "name": "Retroscope",
     "scoreSaberID": "610344",
+    "beatLeaderID": "3d2c571",
     "hash": "75A0E9F214BA9A7C2156D6E29920F112B6423CD0",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 7.929999828338623
+    "songCategory": 17,
+    "starScoreSaber": 7.929999828338623,
+    "starBeatLeader": 7.8365316390991211,
+    "starAccBeatLeader": 8.4413652420043945,
+    "starPassBeatLeader": 8.9245595932006836,
+    "starTechBeatLeader": 2.5984401702880859
   },
   {
     "name": "PISSCORD",
     "scoreSaberID": "624565",
+    "beatLeaderID": "3a111xxxxxxxxxxxxxxxxx51",
     "hash": "91758A101730A2333850A9F007B0ED1DC2069DE9",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 7.8299999237060547
+    "songCategory": 17,
+    "starScoreSaber": 7.8299999237060547,
+    "starBeatLeader": 6.7532567977905273,
+    "starAccBeatLeader": 8.7393636703491211,
+    "starPassBeatLeader": 3.5732076168060303,
+    "starTechBeatLeader": 4.8494701385498047
   },
   {
     "name": "Retroscope",
     "scoreSaberID": "610345",
+    "beatLeaderID": "3d2c551",
     "hash": "75A0E9F214BA9A7C2156D6E29920F112B6423CD0",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 6.380000114440918
+    "songCategory": 17,
+    "starScoreSaber": 6.380000114440918,
+    "starBeatLeader": 6.1207904815673828,
+    "starAccBeatLeader": 7.4917182922363281,
+    "starPassBeatLeader": 6.0109820365905762,
+    "starTechBeatLeader": 2.4237492084503174
   },
   {
     "name": "PISSCORD",
     "scoreSaberID": "624564",
+    "beatLeaderID": "3a111xxxxxxxxxxxxxxxxx31",
     "hash": "91758A101730A2333850A9F007B0ED1DC2069DE9",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 6.0799999237060547
+    "songCategory": 17,
+    "starScoreSaber": 6.0799999237060547,
+    "starBeatLeader": 5.4622149467468262,
+    "starAccBeatLeader": 7.4333372116088867,
+    "starPassBeatLeader": 3.34389591217041,
+    "starTechBeatLeader": 3.4600505828857422
   },
   {
     "name": "Retroscope",
     "scoreSaberID": "610341",
+    "beatLeaderID": "3d2c531",
     "hash": "75A0E9F214BA9A7C2156D6E29920F112B6423CD0",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 5.059999942779541
+    "songCategory": 17,
+    "starScoreSaber": 5.059999942779541,
+    "starBeatLeader": 4.7172703742980957,
+    "starAccBeatLeader": 6.516819953918457,
+    "starPassBeatLeader": 4.0157852172851562,
+    "starTechBeatLeader": 1.7264384031295776
   },
   {
     "name": "PISSCORD",
     "scoreSaberID": "624562",
+    "beatLeaderID": "3a111xxxxxxxxxxxxxxxxx11",
     "hash": "91758A101730A2333850A9F007B0ED1DC2069DE9",
     "difficulty": "1",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.6700000762939453
+    "songCategory": 17,
+    "starScoreSaber": 4.6700000762939453,
+    "starBeatLeader": 3.3627760410308838,
+    "starAccBeatLeader": 5.5186986923217773,
+    "starPassBeatLeader": 1.6573837995529175,
+    "starTechBeatLeader": 1.5488828420639038
   },
   {
     "name": "Retroscope",
     "scoreSaberID": "610340",
+    "beatLeaderID": "3d2c511",
     "hash": "75A0E9F214BA9A7C2156D6E29920F112B6423CD0",
     "difficulty": "1",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.5199999809265137
+    "songCategory": 17,
+    "starScoreSaber": 4.5199999809265137,
+    "starBeatLeader": 2.7713398933410645,
+    "starAccBeatLeader": 4.5418963432312012,
+    "starPassBeatLeader": 2.159660816192627,
+    "starTechBeatLeader": 1.0360623598098755
   },
   {
     "name": "<<wr/d.:maker>>",
