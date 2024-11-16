@@ -10,6 +10,7 @@ using SmartSongSuggest.UI;
 using IPALogger = IPA.Logging.Logger;
 using UnityEngine;
 using System.Collections;
+using BeatSaberMarkupLanguage.Util;
 
 namespace SmartSongSuggest
 {
@@ -32,6 +33,15 @@ namespace SmartSongSuggest
             Log = logger;
             Log.Info("SmartSongSuggest initialized.");
             SettingsController.cfgInstance = conf.Generated<PluginConfig>();
+
+            MainMenuAwaiter.MainMenuInitializing += MainMenuAwaiter_MainMenuInitializing;
+        }
+
+        private void MainMenuAwaiter_MainMenuInitializing()
+        {
+            UIManager.Init();
+            SongSuggestManager.Init();
+            songDetails = SongDetails.Init().Result;
         }
 
         [OnStart]
@@ -39,10 +49,6 @@ namespace SmartSongSuggest
         {
             harmony = new Harmony("HypersonicSharkz.BeatSaber.SmartSongSuggest");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
-
-            UIManager.Init();
-            SongSuggestManager.Init();
-            songDetails = SongDetails.Init().Result;
         }
 
         [OnExit]

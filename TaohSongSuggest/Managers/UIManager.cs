@@ -3,6 +3,8 @@ using HMUI;
 using BeatSaberMarkupLanguage;
 using SmartSongSuggest.UI;
 using BeatSaberMarkupLanguage.GameplaySetup;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace SmartSongSuggest.Managers
 {
