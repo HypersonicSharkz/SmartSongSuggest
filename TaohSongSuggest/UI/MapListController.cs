@@ -4,7 +4,7 @@ using System;
 
 namespace SmartSongSuggest.UI
 {
-    class MapListController : BSMLAutomaticViewController, TableView.IDataSource
+    class MapListController : BSMLAutomaticViewController
     {
         public TableCell CellForIdx(TableView tableView, int idx)
         {

@@ -13,9 +13,9 @@ namespace SmartSongSuggest.Managers
         public static void Init()
         {
             SmartSongSuggestButton = new MenuButton("Smart Song Suggest", "Smart ranked song suggestions", ShowFlow, true);
-            MenuButtons.instance.RegisterButton(SmartSongSuggestButton);
+            MenuButtons.Instance.RegisterButton(SmartSongSuggestButton);
             SmartSongSuggestButton.Interactable = false;
-            GameplaySetup.instance.AddTab("Smart Song Suggest", "SmartSongSuggest.UI.Views.SongSuggestTab.bsml", TabViewController.instance);
+            GameplaySetup.Instance.AddTab("Smart Song Suggest", "SmartSongSuggest.UI.Views.SongSuggestTab.bsml", TabViewController.instance);
         }
 
         internal static FlowCoordinator _parentFlow { get; private set; }
