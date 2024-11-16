@@ -79,7 +79,6 @@ namespace SmartSongSuggest.Managers
                     }
                     readyForAssignment = true;
 
-
                     //Prepare Active Settings files for Suggest, and ensure a valid option is set active
                     //(mostly relevant on first load, but also if the current active Leaderboard has been set inactive, as well as
                     //ensure there is a default value set if all are set inactive). There should be a settingfile for each leaderboard regardless.
@@ -161,14 +160,7 @@ namespace SmartSongSuggest.Managers
                 {
                     Plugin.Log.Error(e);
                 }
-            }).ContinueWith(t =>
-            {
-                //Everything loaded. Reenable access to Smart Song Suggest
-                MenuButtons.Instance.UnregisterButton(UIManager.SmartSongSuggestButton);
-                UIManager.SmartSongSuggestButton.Interactable = true;
-                MenuButtons.Instance.RegisterButton(UIManager.SmartSongSuggestButton);
-
-            }, TaskScheduler.FromCurrentSynchronizationContext());
+            });
         }
 
         public static void SuggestSongs()
@@ -179,13 +171,13 @@ namespace SmartSongSuggest.Managers
                 {
                     await IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew( () => TSSFlowCoordinator.Instance.ToggleBackButton(false));
 
+                    SongSuggestManager.toolBox.status = "Starting Search";
+
+                    IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() => UpdateProgessNew());
+
                     PluginConfig cfg = SettingsController.cfgInstance;
 
                     SongSuggestSettings linkedSettings = GetSongSuggestSettingsOld(cfg);
-
-                    toolBox.status = "Starting Search";
-
-                    IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() => UpdateProgessNew());
 
                     toolBox.GenerateSongSuggestions(linkedSettings);
 
@@ -320,13 +312,14 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
                 {
                     IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() => TSSFlowCoordinator.Instance.ToggleBackButton(false));
 
+                    IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() => UpdateProgessNew());
+
+                    while (SongSuggestManager.toolBox == null)
+                        Thread.Sleep(500);
+
                     var ui = SettingsController.cfgInstance;
 
                     OldAndNewSettings settings = GetOldAndNewSettings(ui);
-
-                    toolBox.status = "Starting Search";
-
-                    IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() => UpdateProgessNew());
 
                     toolBox.GenerateOldestSongs(settings);
 

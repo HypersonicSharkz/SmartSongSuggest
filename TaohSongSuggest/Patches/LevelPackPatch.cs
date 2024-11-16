@@ -18,20 +18,45 @@ namespace SmartSongSuggest.Patches
             //Informs the SongSuggestManager a new assignment is needed.
             if (firstActivation)
             {
-                SharedCoroutineStarter.instance.StartCoroutine(InitDelayed(__instance.transform, __instance));
+                Helper.levelPackDetailViewController = __instance;
+                Helper.TryAttach();
             }
         }
+    }
 
-        static IEnumerator InitDelayed(Transform t, LevelPackDetailViewController l)
+    [HarmonyPatch(typeof(AnnotatedBeatmapLevelCollectionsViewController), "DidActivate")]
+    static class AnnotatedLevelPackPatch
+    {
+        static void Prefix(AnnotatedBeatmapLevelCollectionsViewController __instance, bool firstActivation)
+        {
+            //Informs the SongSuggestManager a new assignment is needed.
+            if (firstActivation)
+            {
+                Helper.annotatedBeatmapLevelCollections = __instance;
+                Helper.TryAttach();
+            }
+        }
+    }
+
+
+    static class Helper
+    {
+        public static AnnotatedBeatmapLevelCollectionsViewController annotatedBeatmapLevelCollections;
+        public static LevelPackDetailViewController levelPackDetailViewController;
+
+        public static void TryAttach()
+        {
+            if (!annotatedBeatmapLevelCollections || !levelPackDetailViewController)
+                return;
+
+            SharedCoroutineStarter.instance.StartCoroutine(InitDelayed());
+        }
+
+        static IEnumerator InitDelayed()
         {
             yield return new WaitForEndOfFrame();
-            int attempts = 0;
-            while (!PlaylistDetailViewController.AttachTo(t.Find("Detail"), l) && attempts < 5)
-            {
-                yield return new WaitForSeconds(1);
-                attempts++;
-            }
-            Plugin.Log.Error("Could not attach to LevelPackDetailViewController");
+
+            PlaylistDetailViewController.AttachTo(levelPackDetailViewController.transform.Find("Detail"), levelPackDetailViewController, annotatedBeatmapLevelCollections);
         }
     }
 }

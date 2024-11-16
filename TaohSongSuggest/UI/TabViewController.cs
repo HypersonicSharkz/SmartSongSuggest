@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
@@ -25,6 +26,25 @@ namespace SmartSongSuggest.UI
         [UIComponent("statusText")]
         public TextMeshProUGUI statusComponent;
 
+        [UIValue("loaded")]
+        public bool loaded
+        {
+            get => SongSuggestManager.toolBox != null;
+        }
+
+        public async void Initialize()
+        {
+            while (SongSuggestManager.toolBox == null)
+            {
+                RefreshProgressBar(0);
+                await Task.Delay(200);
+            }
+
+            RefreshProgressBar(0);
+
+            NotifyPropertyChanged(nameof(loaded));
+        }
+
         [UIAction("RegenSuggest")]
         public void RegenSuggest()
         {
@@ -33,14 +53,16 @@ namespace SmartSongSuggest.UI
                 try
                 {
                     //await IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() => TSSFlowCoordinator.Instance.ToggleBackButton(false));
-
-                    PluginConfig cfg = SettingsController.cfgInstance;
-
-                    SongSuggestSettings linkedSettings = SongSuggestManager.GetSongSuggestSettingsOld(cfg);
+                    while (SongSuggestManager.toolBox == null)
+                        Thread.Sleep(500);
 
                     SongSuggestManager.toolBox.status = "Starting Search";
 
                     IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() => UpdateProgessNew());
+
+                    PluginConfig cfg = SettingsController.cfgInstance;
+
+                    SongSuggestSettings linkedSettings = SongSuggestManager.GetSongSuggestSettingsOld(cfg);
 
                     SongSuggestManager.toolBox.GenerateSongSuggestions(linkedSettings);
 
@@ -72,13 +94,16 @@ namespace SmartSongSuggest.UI
             {
                 try
                 {
-                    var ui = SettingsController.cfgInstance;
-
-                    OldAndNewSettings settings = SongSuggestManager.GetOldAndNewSettings(ui);
+                    while (SongSuggestManager.toolBox == null)
+                        Thread.Sleep(500);
 
                     SongSuggestManager.toolBox.status = "Starting Search";
 
                     IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() => UpdateProgessNew());
+
+                    var ui = SettingsController.cfgInstance;
+
+                    OldAndNewSettings settings = SongSuggestManager.GetOldAndNewSettings(ui);
 
                     SongSuggestManager.toolBox.GenerateOldestSongs(settings);
 
@@ -119,11 +144,13 @@ namespace SmartSongSuggest.UI
             RefreshProgressBar(0);
         }
 
+        int dots = 0;
         public void RefreshProgressBar(float prog)
         {
             try
             {
-                statusComponent.text = SongSuggestManager.toolBox.status;
+                dots = (dots % 3) + 1;
+                statusComponent.text = SongSuggestManager.toolBox != null ? SongSuggestManager.toolBox.status : "Loading" + new string('.', dots);
 
                 bgProgress.color = Color.green;
 

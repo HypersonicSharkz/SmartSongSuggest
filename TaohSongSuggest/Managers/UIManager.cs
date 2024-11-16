@@ -10,14 +10,10 @@ namespace SmartSongSuggest.Managers
 {
     static class UIManager
     {
-        internal static MenuButton SmartSongSuggestButton;
-
         public static void Init()
         {
-            SmartSongSuggestButton = new MenuButton("Smart Song Suggest", "Smart ranked song suggestions", ShowFlow, true);
-            MenuButtons.Instance.RegisterButton(SmartSongSuggestButton);
-            SmartSongSuggestButton.Interactable = false;
             GameplaySetup.Instance.AddTab("Smart Song Suggest", "SmartSongSuggest.UI.Views.SongSuggestTab.bsml", TabViewController.instance);
+            TabViewController.instance.Initialize();
         }
 
         internal static FlowCoordinator _parentFlow { get; private set; }

@@ -109,11 +109,13 @@ namespace SmartSongSuggest.UI
             oldestBTN.interactable = enable;
         }
 
+        int dots = 0;
         public void RefreshProgressBar(float prog)
         {
             try
             {
-                statusComponent.text = SongSuggestManager.toolBox.status;
+                dots = (dots % 3) + 1;
+                statusComponent.text = SongSuggestManager.toolBox != null ? SongSuggestManager.toolBox.status : "Loading" + new string('.', dots);
 
                 bgProgress.color = Color.green;
 
@@ -124,7 +126,8 @@ namespace SmartSongSuggest.UI
                 x.anchorMax = new Vector2(prog, 1);
 
                 x.ForceUpdateRectTransforms();
-            } catch
+            }
+            catch
             {
 
             }

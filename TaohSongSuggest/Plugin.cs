@@ -11,6 +11,8 @@ using IPALogger = IPA.Logging.Logger;
 using UnityEngine;
 using System.Collections;
 using BeatSaberMarkupLanguage.Util;
+using BeatSaberMarkupLanguage.MenuButtons;
+using System;
 
 namespace SmartSongSuggest
 {
