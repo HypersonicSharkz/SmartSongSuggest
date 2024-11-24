@@ -55899,20 +55899,30 @@
   {
     "name": "Forbidden Noise",
     "scoreSaberID": "630072",
+    "beatLeaderID": "3b35bxxxxxx71",
     "hash": "616856E99747291758BC02E624AAFD9222173FA8",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 6.1100001335144043
+    "songCategory": 17,
+    "starScoreSaber": 6.1100001335144043,
+    "starBeatLeader": 8.4806423187255859,
+    "starAccBeatLeader": 10.541300773620606,
+    "starPassBeatLeader": 3.3950037956237793,
+    "starTechBeatLeader": 6.7735838890075684
   },
   {
     "name": "Forbidden Noise",
     "scoreSaberID": "630070",
+    "beatLeaderID": "3b35bxxxxxx91",
     "hash": "616856E99747291758BC02E624AAFD9222173FA8",
     "difficulty": "9",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 7.7600002288818359
+    "songCategory": 17,
+    "starScoreSaber": 7.7600002288818359,
+    "starBeatLeader": 9.2362337112426758,
+    "starAccBeatLeader": 10.675312995910645,
+    "starPassBeatLeader": 5.0062026977539062,
+    "starTechBeatLeader": 7.672727108001709
   },
   {
     "name": "Motorspeed 300 km/h",
