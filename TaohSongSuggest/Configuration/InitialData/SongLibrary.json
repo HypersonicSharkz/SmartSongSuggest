@@ -57081,29 +57081,44 @@
   {
     "name": "ENDYMION",
     "scoreSaberID": "631585",
+    "beatLeaderID": "3c0bexxxxx91",
     "hash": "983BD21E9714AF726259A6B046FD01B864CA6AB0",
     "difficulty": "9",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 12.390000343322754
+    "songCategory": 17,
+    "starScoreSaber": 12.390000343322754,
+    "starBeatLeader": 12.852407455444336,
+    "starAccBeatLeader": 13.060199737548828,
+    "starPassBeatLeader": 8.69035816192627,
+    "starTechBeatLeader": 8.8588037490844727
   },
   {
     "name": "ENDYMION",
     "scoreSaberID": "631580",
+    "beatLeaderID": "3c0bexxxxx31",
     "hash": "983BD21E9714AF726259A6B046FD01B864CA6AB0",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 7.4899997711181641
+    "songCategory": 17,
+    "starScoreSaber": 7.4899997711181641,
+    "starBeatLeader": 8.2385616302490234,
+    "starAccBeatLeader": 9.4138994216918945,
+    "starPassBeatLeader": 6.5668778419494629,
+    "starTechBeatLeader": 4.9785051345825195
   },
   {
     "name": "ENDYMION",
     "scoreSaberID": "631579",
+    "beatLeaderID": "3c0bexxxxx11",
     "hash": "983BD21E9714AF726259A6B046FD01B864CA6AB0",
     "difficulty": "1",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 5.630000114440918
+    "songCategory": 17,
+    "starScoreSaber": 5.630000114440918,
+    "starBeatLeader": 4.6681370735168457,
+    "starAccBeatLeader": 6.6547698974609375,
+    "starPassBeatLeader": 2.8839583396911621,
+    "starTechBeatLeader": 2.8634705543518066
   },
   {
     "name": "Senseless Massacre",
