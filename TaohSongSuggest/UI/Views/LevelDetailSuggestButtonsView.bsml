@@ -14,9 +14,9 @@
       <string-setting id='dayBanCustom' value='ban-length' bind-value='true' apply-on-change='true' text='Days' pref-width='50' size-delta-y='1'/>
     </vertical>
 
-    <button text='1' pref-width='10' anchor-pos-x ='8' anchor-pos-y='-10' click-event='close-modal' size-delta-x='10' on-click='one-day-ban'/>
-    <button text='7' pref-width='10' anchor-pos-x ='18' anchor-pos-y='-10' click-event='close-modal' size-delta-x='10' on-click='one-week-ban'/>
-    <button text='30' pref-width='10' anchor-pos-x ='28' anchor-pos-y='-10' click-event='close-modal' size-delta-x='10' on-click='one-month-ban'/>
+    <button text='~ban-short' pref-width='10' anchor-pos-x ='8' anchor-pos-y='-10' click-event='close-modal' size-delta-x='10' on-click='one-day-ban'/>
+    <button text='~ban-medium' pref-width='10' anchor-pos-x ='18' anchor-pos-y='-10' click-event='close-modal' size-delta-x='10' on-click='one-week-ban'/>
+    <button text='~ban-long' pref-width='10' anchor-pos-x ='28' anchor-pos-y='-10' click-event='close-modal' size-delta-x='10' on-click='one-month-ban'/>
     <button text='Perma' pref-width='10' anchor-pos-x ='38' anchor-pos-y='-10' click-event='close-modal' size-delta-x='10' on-click='perm-ban'/>
 
     <button text='Ban' face-color='red' pref-width='10' anchor-pos-x ='8' anchor-pos-y='-25' click-event='close-modal' size-delta-x='10' on-click='custom-day-ban'/>

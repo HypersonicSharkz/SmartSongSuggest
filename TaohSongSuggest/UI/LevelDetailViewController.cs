@@ -104,16 +104,25 @@ namespace SmartSongSuggest.UI
             }
         }
 
+        [UIValue("ban-short")]
+        private int BanShort => SettingsController.cfgInstance.BanShort; 
+
+        [UIValue("ban-medium")]
+        private int BanMedium => SettingsController.cfgInstance.BanMedium;
+        [UIValue("ban-long")]
+        private int BanLong => SettingsController.cfgInstance.BanLong;
+
         [UIValue("ban-length")]
-        private string BanDays
+        private string BanCustom
         {
-            get => _banDays.ToString();
+            get => SettingsController.cfgInstance.BanCustom.ToString();
             set
             {
-                if (!int.TryParse(value, out _banDays))
-                    _banDays = 30;
-
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(BanDays)));
+                if (int.TryParse(value, out _banDays))
+                {
+                    SettingsController.cfgInstance.BanCustom = _banDays;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(BanCustom)));
+                }
             }
         }
 
@@ -131,13 +140,13 @@ namespace SmartSongSuggest.UI
 
 
         [UIAction("one-day-ban")]
-        private void odb() => AddDifficultyBeatmapToIgnored(1);
+        private void odb() => AddDifficultyBeatmapToIgnored(SettingsController.cfgInstance.BanShort);
 
         [UIAction("one-week-ban")]
-        private void owb() => AddDifficultyBeatmapToIgnored(7);
+        private void owb() => AddDifficultyBeatmapToIgnored(SettingsController.cfgInstance.BanMedium);
 
         [UIAction("one-month-ban")]
-        private void omb() => AddDifficultyBeatmapToIgnored(30);
+        private void omb() => AddDifficultyBeatmapToIgnored(SettingsController.cfgInstance.BanLong);
 
         [UIAction("perm-ban")]
         private void pb() => AddDifficultyBeatmapToIgnored(-1);
@@ -146,7 +155,7 @@ namespace SmartSongSuggest.UI
         [UIAction("custom-day-ban")]
         private void CustomDayBan()
         {
-            AddDifficultyBeatmapToIgnored(_banDays);
+            AddDifficultyBeatmapToIgnored(SettingsController.cfgInstance.BanCustom);
         }
 
         LevelDetailViewController() { }
@@ -182,8 +191,6 @@ namespace SmartSongSuggest.UI
         {
             try
             {
-                BanDays = "60";
-
                 _mapRanked = false;
 
                 addToIgnoredBTN.gameObject.SetActive(false);

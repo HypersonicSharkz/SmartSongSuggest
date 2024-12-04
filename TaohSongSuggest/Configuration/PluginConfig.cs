@@ -21,6 +21,17 @@ namespace SmartSongSuggest.Configuration
 {
     internal class PluginConfig : INotifyPropertyChanged
     {
+        public virtual string __comment_Config_Options__ { get; set; } = "Log/Ban Days";
+        public virtual bool LogEnabled { get; set; } = false;
+
+        public virtual int BanShort { get; set; } = 1;
+
+        public virtual int BanMedium { get; set; } = 7;
+
+        public virtual int BanLong { get; set; } = 30;
+
+        public virtual int BanCustom { get; set; } = 60;
+
         public virtual string __comment_Suggest__ { get; set; } = "Configureable Values for the Suggestions Tab starts here";
         [NonNullable]
         [UseConverter(typeof(ListConverter<string>))]
@@ -85,11 +96,7 @@ namespace SmartSongSuggest.Configuration
         public virtual float ComplexitySliderIncrement { get; set; } = 0.1f;
         public virtual int ComplexitySliderDecimals { get; set; } = 1;
 
-        public virtual string __comment_Config_Options__ { get; set; } = "Logging Enabled";
-        public virtual bool LogEnabled { get; set; } = false;
-
         public virtual string __comment_Variables__ { get; set; } = "Remaining Values are in game selectable Values";
-
         //Stores if defaults been updated.
         public virtual bool HasResetDefaultValuesTo2_0 { get; set; } = false;
         //Cached player ID between sessions

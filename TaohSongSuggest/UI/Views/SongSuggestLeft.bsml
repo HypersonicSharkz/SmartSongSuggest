@@ -39,11 +39,11 @@
 
   <horizontal>
     
-    <horizontal horizontal-fit="PreferredSize" spacing="2" preferred-height="10" child-control-height='true'>
+    <!--<horizontal horizontal-fit="PreferredSize" spacing="2" preferred-height="10" child-control-height='true'>
       <clickable-image src="SmartSongSuggest.UI.Images.kofilogo.png" preferred-width="10" preserve-aspect="true" on-click='open-kofi'/>
       <clickable-text text="Buy me a coffee" align='Center' on-click='open-kofi'/>
       
-    </horizontal>
+    </horizontal>-->
 
     <horizontal horizontal-fit="PreferredSize" spacing="2">    
       <label text="Mod Version:" face-color="magenta"/>
