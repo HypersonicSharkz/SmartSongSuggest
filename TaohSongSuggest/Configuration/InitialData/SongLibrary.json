@@ -45201,6 +45201,7 @@
   {
     "name": "Eye Candy",
     "scoreSaberID": "551712",
+    "beatSaverID": "2ff04",
     "hash": "965916D9CF59F262ACB4BDD206369885E3E9B5C4",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -49832,6 +49833,7 @@
     "name": "OKAY",
     "scoreSaberID": "90470",
     "beatLeaderID": "212091",
+    "beatSaverID": "2120",
     "hash": "8BD769820F8D71EBC25964771DDC950B5EBD3AAB",
     "difficulty": "9",
     "characteristic": "Standard",
