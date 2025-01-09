@@ -213,7 +213,7 @@ namespace SmartSongSuggest.UI
                             SongSuggestManager.toolBox.log?.WriteLine("Getting difc name");
                             string diffLabel = sldv.beatmapKey.difficulty.SerializedName();
 
-                            SongSuggestManager.toolBox.log?.WriteLine("Checking if map is Ranked");
+                            SongSuggestManager.toolBox.log?.WriteLine($"Checking if map is Ranked: {levelHash} {diffLabel}");
                             _mapRanked = SongSuggestManager.toolBox.songLibrary.HasAnySongCategory(levelHash, diffLabel);//difficulty.ranked;
 
                             if (_mapRanked)//difficulty.ranked)
@@ -277,6 +277,7 @@ namespace SmartSongSuggest.UI
         {
             yield return new WaitForEndOfFrame();
             addToIgnoredBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.ShowBanButton);
+            //addToIgnoredBTN.gameObject.SetActive(SettingsController.cfgInstance.ShowBanButton);
             addToLikedBTN.gameObject.SetActive(_mapRanked && SettingsController.cfgInstance.ShowLikeButton && SettingsController.cfgInstance.UseLikedSongs);
         }
 

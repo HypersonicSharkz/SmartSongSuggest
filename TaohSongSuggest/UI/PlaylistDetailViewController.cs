@@ -41,18 +41,29 @@ namespace SmartSongSuggest.UI
         {
             Task.Run(() =>
             {
+                //Save link to updated playlist in case user selects another during update. (under async thread)
+                var pl = selectedPlaylist;
+
                 if (selectedPlaylist == null)
                     return;
 
                 string path = PlaylistManager.DefaultManager.GetManagerForPlaylist(selectedPlaylist).PlaylistPath;
                 path = path.Replace(PlaylistManager.DefaultManager.PlaylistPath, "");
 
-                PlaylistPath playlistPath = new PlaylistPath() { FileExtension = selectedPlaylist.SuggestedExtension, FileName = selectedPlaylist.Filename, Subfolders = path };
+                string fileName = selectedPlaylist.Filename;
+                string extension = selectedPlaylist.SuggestedExtension;
+                SongSuggestManager.toolBox.log?.WriteLine($"Variables: {path}  {fileName} {extension}");
+
+                //PlaylistPath playlistPath = new PlaylistPath() { FileExtension = selectedPlaylist.SuggestedExtension, FileName = selectedPlaylist.Filename, Subfolders = path };
+                PlaylistPath playlistPath = new PlaylistPath() { FileExtension = extension, FileName = fileName, Subfolders = path };
+
                 SongSuggest.MainInstance.FilterSyncURL(playlistPath, playlistPath);
 
+                //**BUG** Playlist not updated
                 IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
                 {
-                    SongSuggestManager.UpdatePlaylists(selectedPlaylist.Filename);
+                    SongSuggestManager.toolBox.log?.WriteLine("Requesting Update of Playlist after updating Sync File");
+                    SongSuggestManager.UpdatePlaylists(pl);
                 });
             });
         }

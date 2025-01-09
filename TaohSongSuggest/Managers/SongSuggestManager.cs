@@ -362,14 +362,15 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
 
         internal static IPlaylist UpdatePlaylists(IPlaylist playlist)
         {
+            SongSuggestManager.toolBox.log?.WriteLine("Update Playlist before Null Check");
             PlaylistManager playlistManager = PlaylistManager.DefaultManager.GetManagerForPlaylist(playlist);
             if (playlistManager == null)
                 return null;
-
+            SongSuggestManager.toolBox.log?.WriteLine("Update Playlist after Null Check");
             playlistManager.MarkPlaylistChanged(playlist);
             playlistManager.RefreshPlaylists(true);
             playlistManager.RequestRefresh("SmartSongSuggest (Plugin)");
-
+            SongSuggestManager.toolBox.log?.WriteLine("Update Playlist after Refresh");
             lastPlaylist = playlist;
             return playlist;
         }

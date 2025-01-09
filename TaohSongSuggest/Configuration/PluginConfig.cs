@@ -15,6 +15,7 @@ using System.ComponentModel;
 using IPA.Config.Data;
 using Settings;
 using SmartSongSuggest.Managers;
+using SongLibraryNS;
 
 [assembly: InternalsVisibleTo(GeneratedStore.AssemblyVisibilityTarget)]
 namespace SmartSongSuggest.Configuration
@@ -59,7 +60,7 @@ namespace SmartSongSuggest.Configuration
             } 
         }
         [UIValue("suggest-playlist-min-count")] 
-        public virtual int SuggestPlaylistMinCount { get; set; } = 10;
+        public virtual int SuggestPlaylistMinCount { get; set; } = 6;
         [UIValue("suggest-playlist-max-count")]
         public virtual int SuggestPlaylistMaxCount { get; set; } = 100;
         public virtual int SuggestIgnorePlayedDaysMaxCount { get; set; } = 100;
@@ -73,7 +74,7 @@ namespace SmartSongSuggest.Configuration
         public virtual bool LoadBeatLeaderLeaderboard { get; set; } = true;
         public virtual string __comment_OldnNew__ { get; set; } = "Configureable Values for the Old & New Tab starts here";
         [UIValue("oldnnew-playlist-min-count")] 
-        public virtual int OldnNewPlaylistMinCount { get; set; } = 10;
+        public virtual int OldnNewPlaylistMinCount { get; set; } = 6;
         [UIValue("oldnnew-playlist-max-count")] 
         public virtual int OldnNewPlaylistMaxCount { get; set; } = 100;
         [UIValue("acc-slider-min")]
@@ -213,7 +214,7 @@ namespace SmartSongSuggest.Configuration
         [UIValue("show-ban-button")]
         public virtual bool ShowBanButton { get; set; } = true;
         [UIValue("show-sync-url")]
-        public virtual bool ShowSyncURL { get; set; } = true;
+        public virtual bool ShowSyncURL { get; set; } = false;
         [UIValue("oldnnew-playlist-count")]
         public virtual int OldnNewPlaylistCount { get; set; } = 25;
         [UIValue("random-weight")]
@@ -403,7 +404,7 @@ namespace SmartSongSuggest.Configuration
         {
             get
             {
-                double star = SmartSongSuggest.Managers.SongSuggestManager.toolBox.songLibrary.songs.OrderByDescending(c => c.Value.starScoreSaber).First().Value.starScoreSaber;
+                double star = SongLibrary.GetMaxRating(Actions.LeaderboardType.ScoreSaber);
                 star = Math.Ceiling(star / StarSliderIncrement) * StarSliderIncrement - StarSliderIncrement;
                 return (float)star;
             }
@@ -426,7 +427,7 @@ namespace SmartSongSuggest.Configuration
         {
             get
             {
-                double star = SmartSongSuggest.Managers.SongSuggestManager.toolBox.songLibrary.songs.OrderByDescending(c => c.Value.complexityAccSaber).First().Value.complexityAccSaber;
+                double star = SongLibrary.GetMaxRating(Actions.LeaderboardType.AccSaber);
                 star = Math.Ceiling(star / ComplexitySliderIncrement) * ComplexitySliderIncrement - ComplexitySliderIncrement;
                 return (float)star;
             }
