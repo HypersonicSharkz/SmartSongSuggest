@@ -12,16 +12,26 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using IPA.Config.Data;
 using Newtonsoft.Json;
-using ScoreSabersJson;
 using Actions;
 using UnityEngine;
 using BeatSaberPlaylistsLib.Types;
 using System.Reflection;
 using System.Threading;
 using BeatSaberMarkupLanguage.MenuButtons;
+using System.Text;
 
 namespace SmartSongSuggest.Managers
 {
+    public class SongSuggestLogTextWriter : TextWriter
+    {
+        public override Encoding Encoding => Encoding.UTF8;
+
+        public override void Write(string value)
+        {
+            Plugin.Log.Info(value);
+        }
+    }
+
     static class SongSuggestManager
     {
         internal static SongSuggest toolBox;
@@ -67,10 +77,12 @@ namespace SmartSongSuggest.Managers
 
                     if (SettingsController.cfgInstance.LogEnabled)
                     {
-                        Console.WriteLine("Logging Enabled. Direct Console Write");
-                        coreSettings.Log = Console.Out;
+                        Plugin.Log.Info("Logging Enabled. Direct Log Write");
+
+                        coreSettings.Log = new SongSuggestLogTextWriter();
                         toolBox = new SongSuggest(coreSettings);
-                        Console.WriteLine("Logging Enabled. Direct Console Write After Toolbox Create");
+
+                        Plugin.Log.Info("Logging Enabled. Direct Log Write After Toolbox Create");
                         toolBox.log?.WriteLine("Logging Enabled. Write Via ToolBox");
                     }
                     else
@@ -188,19 +200,20 @@ namespace SmartSongSuggest.Managers
                     await IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
                     {
 
-                        if (toolBox.lowQualitySuggestions)
-                        {
-                            if (cfg.UseLikedSongs)
-                            {
-                                TSSFlowCoordinator.settingsView.ShowError("Not enough liked songs", @"You do currently not have enough liked songs for the program to find personalized maps, this will result in a less optimal playlist.");
-                            }
-                            else
-                            {
-                                TSSFlowCoordinator.settingsView.ShowError("A low amount of links was found when generating your suggestions.", @"Due to this the suggestions may be more random and less personalized.
-This warning will disappear on song generation when you complete more suggested songs at a high enough accuracy. A simple way to greatly improve accuracy is ensuring you full swing as much as possible.
-If this warning persists your Cached data may be broken, try using the 'CLEAR CACHE'.");
-                            }
-                        }
+                     //Low Link check is no longer needed, commenting out for now.     
+//                        if (toolBox.lowQualitySuggestions)
+//                        {
+//                            if (cfg.UseLikedSongs)
+//                            {
+//                                TSSFlowCoordinator.settingsView.ShowError("Not enough liked songs", @"You do currently not have enough liked songs for the program to find personalized maps, this will result in a less optimal playlist.");
+//                            }
+//                            else
+//                            {
+//                                TSSFlowCoordinator.settingsView.ShowError("A low amount of links was found when generating your suggestions.", @"Due to this the suggestions may be more random and less personalized.
+//This warning will disappear on song generation when you complete more suggested songs at a high enough accuracy. A simple way to greatly improve accuracy is ensuring you full swing as much as possible.
+//If this warning persists your Cached data may be broken, try using the 'CLEAR CACHE'.");
+//                            }
+//                        }
 
                         UpdatePlaylists("Song Suggest");
                         TSSFlowCoordinator.Instance.ToggleBackButton(true);
@@ -239,8 +252,8 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
                 PlaylistLength = cfg.SuggestPlaylistCount,
                 IgnorePlayedAll = cfg.IgnorePlayedDays == cfg.SuggestIgnorePlayedDaysAllCount,
                 IgnorePlayedDays = cfg.IgnorePlayedDays,
-                UseLikedSongs = cfg.UseLikedSongs,
-                FillLikedSongs = cfg.FillLikedSongs && cfg.UseLikedSongs,
+                UseLikedSongs = cfg.UseSeedSongs,
+                FillLikedSongs = !cfg.UseOnlySeedSongs && cfg.UseSeedSongs,
                 IgnoreNonImproveable = cfg.RemoveOptimizedScores,
                 PlaylistSettings = playListSettings,
                 FilterSettings = filterSettings,
@@ -362,15 +375,15 @@ If this warning persists your Cached data may be broken, try using the 'CLEAR CA
 
         internal static IPlaylist UpdatePlaylists(IPlaylist playlist)
         {
-            SongSuggestManager.toolBox.log?.WriteLine("Update Playlist before Null Check");
             PlaylistManager playlistManager = PlaylistManager.DefaultManager.GetManagerForPlaylist(playlist);
             if (playlistManager == null)
                 return null;
-            SongSuggestManager.toolBox.log?.WriteLine("Update Playlist after Null Check");
+
             playlistManager.MarkPlaylistChanged(playlist);
-            playlistManager.RefreshPlaylists(true);
-            playlistManager.RequestRefresh("SmartSongSuggest (Plugin)");
-            SongSuggestManager.toolBox.log?.WriteLine("Update Playlist after Refresh");
+            
+            //refresh Main Playlist Manager instead of any that might on the playlist marked for update (sub folders).
+            PlaylistManager.DefaultManager.RefreshPlaylists(true);
+            PlaylistManager.DefaultManager.RequestRefresh("SmartSongSuggest (Plugin)");
             lastPlaylist = playlist;
             return playlist;
         }

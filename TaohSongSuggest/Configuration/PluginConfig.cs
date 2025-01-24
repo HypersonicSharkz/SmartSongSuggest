@@ -34,6 +34,7 @@ namespace SmartSongSuggest.Configuration
         public virtual int BanCustom { get; set; } = 60;
 
         public virtual string __comment_Suggest__ { get; set; } = "Configureable Values for the Suggestions Tab starts here";
+        [Ignore]
         [NonNullable]
         [UseConverter(typeof(ListConverter<string>))]
         public virtual List<string> DefaultLeaderboardNames { get; set; }
@@ -154,13 +155,14 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        [UIValue("fill-liked-songs")][Ignore]
-        public virtual bool FillLikedSongs
+        //Original Liked Songs, and what Song Suggest knows these as. Functionality of button was inverted in the UI.
+        [UIValue("use-only-seed-songs")][Ignore]
+        public virtual bool UseOnlySeedSongs
         {
-            get => ActiveLeaderboard.FillLikedSongs;
+            get => !ActiveLeaderboard.FillLikedSongs;
             set
             {
-                ActiveLeaderboard.FillLikedSongs = value;
+                ActiveLeaderboard.FillLikedSongs = !value;
                 SaveSuggestSettings();
             }
         }
@@ -209,8 +211,8 @@ namespace SmartSongSuggest.Configuration
         }
         [UIValue("show-rank-plate")]
         public virtual bool ShowRankPlate { get; set; } = true;
-        [UIValue("show-like-button")]
-        public virtual bool ShowLikeButton { get; set; } = false;
+        [UIValue("show-seed-button")]
+        public virtual bool ShowSeedButton { get; set; } = false;
         [UIValue("show-ban-button")]
         public virtual bool ShowBanButton { get; set; } = true;
         [UIValue("show-sync-url")]
@@ -462,16 +464,16 @@ namespace SmartSongSuggest.Configuration
             }
         }
 
-        private bool _useLikedSongs { get; set; } = false;
+        private bool _useSeedSongs { get; set; } = false;
 
-        [UIValue("use-liked-songs")]
-        public virtual bool UseLikedSongs
+        [UIValue("use-seed-songs")]
+        public virtual bool UseSeedSongs
         {
-            get => _useLikedSongs;
+            get => _useSeedSongs;
             set
             {
-                _useLikedSongs = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(UseLikedSongs)));
+                _useSeedSongs = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(UseSeedSongs)));
             }
         }
 
@@ -689,7 +691,7 @@ namespace SmartSongSuggest.Configuration
             CopyFrom(new PluginConfig()
             {
                 ShowRankPlate = ShowRankPlate,
-                ShowLikeButton = ShowLikeButton,
+                ShowSeedButton = ShowSeedButton,
                 ShowBanButton = ShowBanButton
             });
 
@@ -740,7 +742,7 @@ namespace SmartSongSuggest.Configuration
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(RemoveOptimizedScores)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ModifierOverweight)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ModifierStyle)));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(FillLikedSongs)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(UseOnlySeedSongs)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IgnorePlayedDays)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SuggestPlaylistCount)));
         }

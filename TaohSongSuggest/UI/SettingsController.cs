@@ -131,7 +131,6 @@ namespace SmartSongSuggest.UI
             {
 
             }
-
         }
 
         public void ShowError(string header, string description)

@@ -21,7 +21,7 @@ namespace SmartSongSuggest.Patches
             }
 
             //Only activate once on a new reload, and only after SongSuggestCore is done loading
-            if (SongSuggestManager.needsAssignment && SongSuggestManager.readyForAssignment)
+            if (SongSuggestManager.needsAssignment)// && SongSuggestManager.readyForAssignment)
             {
                 SongSuggestManager.needsAssignment = false;
                 SharedCoroutineStarter.instance.StartCoroutine(InitDelayed(__instance.transform));
@@ -29,10 +29,24 @@ namespace SmartSongSuggest.Patches
             }
         }
 
+        //static IEnumerator InitDelayed(Transform t)
+        //{
+        //    yield return new WaitForEndOfFrame();
+        //    LevelDetailViewController.AttachTo(t.Find("LevelDetail"));
+        //}
         static IEnumerator InitDelayed(Transform t)
         {
-            yield return new WaitForEndOfFrame();
-            LevelDetailViewController.AttachTo(t.Find("LevelDetail"));
+            while (!SongSuggestManager.readyForAssignment)
+                yield return new WaitForEndOfFrame();
+
+            try
+            {
+                LevelDetailViewController.AttachTo(t.Find("LevelDetail"));
+            }
+            catch (Exception e)
+            {
+                SongSuggestManager.needsAssignment = true;
+            }
         }
     }
 }

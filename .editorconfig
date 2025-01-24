@@ -1,4 +1,13 @@
 ﻿[*.cs]
 
 # CS0649: Field 'LevelDetailViewController.parserParams' is never assigned to, and will always have its default value null
-dotnet_diagnostic.CS0649.severity = warning
+dotnet_diagnostic.CS0649.severity = suggestion
+
+# CS0169: The field 'PlaylistDetailViewController.parserParams' is never used
+dotnet_diagnostic.CS0169.severity = suggestion
+
+# CS0067: The event 'PlaylistDetailViewController.PropertyChanged' is never used
+dotnet_diagnostic.CS0067.severity = suggestion
+
+# CS0414: The field 'PluginConfig._activeLeaderboard' is assigned but its value is never used
+dotnet_diagnostic.CS0414.severity = suggestion
