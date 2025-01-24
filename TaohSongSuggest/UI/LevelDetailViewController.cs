@@ -191,7 +191,7 @@ namespace SmartSongSuggest.UI
         string levelCharacteristic => sldv?.beatmapKey.beatmapCharacteristic?.serializedName;
 
         //Something changed so lets update display components to fit for next rendering.
-        void CheckButtons()
+        internal void CheckButtons()
         {
             try
             {
@@ -258,7 +258,7 @@ namespace SmartSongSuggest.UI
         {
             //Only show for ranked maps, others cannot be displayed
             if (!mapRanked) return;
-            showSeedButton = SettingsController.cfgInstance.ShowSeedButton;
+            showSeedButton = SettingsController.cfgInstance.ShowSeedButton && SettingsController.cfgInstance.UseSeedSongs;
 
             if (SongSuggestManager.toolBox.songLiking.IsLiked(levelHash, levelDifficulty))
             {

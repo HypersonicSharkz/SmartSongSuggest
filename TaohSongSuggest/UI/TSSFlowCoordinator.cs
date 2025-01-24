@@ -45,6 +45,7 @@ namespace SmartSongSuggest.UI
                 {
                     SongSuggestManager.GoToPlaylist(SongSuggestManager.lastPlaylist);
                 }
+                LevelDetailViewController.persController.CheckButtons();
             }, ViewController.AnimationDirection.Horizontal, true);
         }
     }

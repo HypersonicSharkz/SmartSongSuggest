@@ -107,8 +107,6 @@ namespace SmartSongSuggest.UI
 
                     SongSuggestManager.toolBox.GenerateOldestSongs(settings);
 
-                    //Task.Delay(200);
-
                     IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() =>
                     {
                         IPlaylist pl = SongSuggestManager.UpdatePlaylists("Old and New");
