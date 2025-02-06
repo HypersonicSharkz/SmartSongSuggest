@@ -136,6 +136,8 @@ namespace SmartSongSuggest.Managers
                                     break;
                                 case "Beat Leader":
                                     activeSetting.Leaderboard = LeaderboardType.BeatLeader;
+                                    activeSetting.ExtraSongs = 35;
+                                    activeSetting.FilterSettings.modifierOverweight = 90;
                                     break;
                                 default:
                                     break;
