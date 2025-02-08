@@ -52,7 +52,6 @@ namespace SmartSongSuggest.UI
             {
                 try
                 {
-                    //await IPA.Utilities.Async.UnityMainThreadTaskScheduler.Factory.StartNew(() => TSSFlowCoordinator.Instance.ToggleBackButton(false));
                     while (SongSuggestManager.toolBox == null)
                         Thread.Sleep(500);
 
@@ -151,6 +150,20 @@ namespace SmartSongSuggest.UI
                 statusComponent.text = SongSuggestManager.toolBox != null ? SongSuggestManager.toolBox.status : "Loading" + new string('.', dots);
 
                 bgProgress.color = Color.green;
+
+                //Core was not placed in libs, lets inform user of this
+                if (!SongSuggestManager.coreDetected)
+                {
+                    statusComponent.text = "No Core Found, make sure SongSuggestCore.dll is placed in the Libs folder";
+                    bgProgress.color = Color.red;
+                }
+
+                //Core and UI version do not match
+                if (!SongSuggestManager.coreVersionValidated)
+                {
+                    statusComponent.text = "SongSuggestCore.dll is of an unsupported version";
+                    bgProgress.color = Color.red;
+                }
 
                 var x = (bgProgress.gameObject.transform as RectTransform);
                 if (x == null)

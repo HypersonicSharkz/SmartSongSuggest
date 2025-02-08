@@ -34,6 +34,8 @@ namespace SmartSongSuggest.Managers
 
     static class SongSuggestManager
     {
+        internal static bool coreDetected = false;
+        internal static bool coreVersionValidated = false;
         internal static SongSuggest toolBox;
         public static bool needsAssignment = false;
         public static bool readyForAssignment = false;
@@ -54,6 +56,38 @@ namespace SmartSongSuggest.Managers
 
         public static void Init()
         {
+            //Detect if a Core is Present
+            Type songSuggestType = Type.GetType("SongSuggestNS.SongSuggest, SongSuggestCore");
+            if (songSuggestType != null)
+            {
+                if (SettingsController.cfgInstance.LogEnabled) Plugin.Log.Info("Song Suggest Core Detected");
+                coreDetected = true;
+            }
+            else
+            {
+                Plugin.Log.Error("No Song Suggest Core Detected");
+                return;
+            }
+
+            //Detect if version is new enough to have the GetCoreVersion() call
+            var method = songSuggestType.GetMethod("GetCoreVersion");
+            if (method != null)
+            {
+                Version reqCoreVersion = new Version(2, 0, 3);
+                coreVersionValidated = true;
+                if (SettingsController.cfgInstance.LogEnabled) Plugin.Log.Info($"Core Version: {SongSuggest.GetCoreVersion()}  Required: {reqCoreVersion}  Valid?: {SongSuggest.GetCoreVersion() >= reqCoreVersion}");
+                if (SongSuggest.GetCoreVersion() < reqCoreVersion) coreVersionValidated = false;
+                var UIVersion = Assembly.GetExecutingAssembly().GetName().Version;
+                if (SettingsController.cfgInstance.LogEnabled) Plugin.Log.Info($"UI Version: {UIVersion}  Required: {SongSuggest.MinimumUIVersion()}  Valid?: {UIVersion >= SongSuggest.MinimumUIVersion()}");
+                if (UIVersion < SongSuggest.MinimumUIVersion()) coreVersionValidated = false;
+            }
+            else
+            {
+                Plugin.Log.Error("No Core Version Detected");
+                return;
+            }
+
+
             Task.Run(() =>
             {
                 try

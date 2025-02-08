@@ -5,7 +5,7 @@
       <vertical child-control-height='true' child-control-width='true' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-width='90' spacing='0'>
         <horizontal spacing='5' child-control-height='false'>
           <button text='Clear Bans' font-size='5' italics='false' on-click='ClearBans' face-color='Red'/>
-          <button text='Clear Likes' font-size='5' italics='false' on-click='ClearLikes' face-color='Red'/>
+          <button text='Clear Seeds' font-size='5' italics='false' on-click='ClearSeeds' face-color='Red'/>
           <button text='Clear Cache' font-size='5' italics='false' on-click='ClearCache' face-color='Red'/>
         </horizontal>
       </vertical>

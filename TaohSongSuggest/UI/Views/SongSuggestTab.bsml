@@ -1,7 +1,7 @@
 ﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
   <settings-container child-control-width='true' child-expand-width='true' size-delta-y='-15'>
-			<button id='RegenSuggest' text='Regen Song Suggest' align='Center' interactable='~loaded' italics='true' on-click='RegenSuggest'/>
-			<button id='RegenOldNew' text='Regen Old &amp; New' align='Center' interactable='~loaded' italics='true' on-click='RegenOldest'/>
+			<button id='RegenSuggest' text='Update Song Suggest' align='Center' interactable='~loaded' italics='true' on-click='RegenSuggest'/>
+			<button id='RegenOldNew' text='Update Old &amp; New' align='Center' interactable='~loaded' italics='true' on-click='RegenOldest'/>
       <button id='Settings' text='Settings' align='Center' italics='true' interactable='~loaded' on-click='Settings'/>
 	</settings-container>
   

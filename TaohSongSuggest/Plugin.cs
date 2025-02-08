@@ -33,9 +33,9 @@ namespace SmartSongSuggest
         public void Init(IPALogger logger, Config conf)
         {
             Log = logger;
-            Log.Info("SmartSongSuggest initialized.");
-            SettingsController.cfgInstance = conf.Generated<PluginConfig>();
 
+            SettingsController.cfgInstance = conf.Generated<PluginConfig>();
+            if (SettingsController.cfgInstance.LogEnabled) Log.Info("SmartSongSuggest initialized.");
             MainMenuAwaiter.MainMenuInitializing += MainMenuAwaiter_MainMenuInitializing;
         }
 

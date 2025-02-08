@@ -14,8 +14,11 @@ namespace SmartSongSuggest.UI
         public static PluginConfig cfgInstance = SettingsController.cfgInstance;
 
 
+        
+        string uiVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        string coreVersion = $"{SongSuggestNS.SongSuggest.GetCoreVersion()}";
         [UIValue("mod-version")]
-        public string modVersion => Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        public string modVersion => $"UI: {uiVersion}\nCore: {coreVersion}";
 
         [UIAction("open-kofi")]
         public void OpenKoFi()
@@ -33,7 +36,7 @@ namespace SmartSongSuggest.UI
             SongSuggestManager.toolBox.ClearBan();
         }
 
-        public void ClearLikes()
+        public void ClearSeeds()
         {
             SongSuggestManager.toolBox.ClearLiked();
         }

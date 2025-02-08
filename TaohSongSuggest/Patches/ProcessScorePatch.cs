@@ -26,10 +26,8 @@ namespace SmartSongSuggest.Patches
             if (modifiedScore == 0 || maxScore == 0) return;
 
             //Played hit 0 energy and failed during gameplay. This is leaderboard specific handling, for Song Suggest locals we only use songs that was completed without triggering NoFail.
-            Managers.SongSuggestManager.toolBox.log?.WriteLine($"**Tmp** Energy: {levelCompletionResults.energy}");
             if (levelCompletionResults.energy == 0) return;
-            Managers.SongSuggestManager.toolBox.log?.WriteLine($"**Tmp** Passed No Energy Check");
-
+            
             //??Is this a check for speed FS/SF, or level failed with NoFail turned on??            
             //if (modifiedScore > multipliedScore) return;
 
