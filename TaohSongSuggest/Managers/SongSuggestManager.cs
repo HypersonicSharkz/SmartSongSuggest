@@ -73,7 +73,7 @@ namespace SmartSongSuggest.Managers
             var method = songSuggestType.GetMethod("GetCoreVersion");
             if (method != null)
             {
-                Version reqCoreVersion = new Version(2, 0, 3);
+                Version reqCoreVersion = new Version(2, 1, 0);
                 coreVersionValidated = true;
                 if (SettingsController.cfgInstance.LogEnabled) Plugin.Log.Info($"Core Version: {SongSuggest.GetCoreVersion()}  Required: {reqCoreVersion}  Valid?: {SongSuggest.GetCoreVersion() >= reqCoreVersion}");
                 if (SongSuggest.GetCoreVersion() < reqCoreVersion) coreVersionValidated = false;
