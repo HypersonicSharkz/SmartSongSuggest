@@ -1,6 +1,6 @@
 ﻿using BeatSaberMarkupLanguage.Attributes;
 using BeatSaberMarkupLanguage.Components;
-using BeatSaberMarkupLanguage.Util;
+//using BeatSaberMarkupLanguage.Util;
 using BeatSaberMarkupLanguage.ViewControllers;
 using BeatSaberPlaylistsLib.Types;
 using HMUI;
@@ -76,7 +76,7 @@ namespace SmartSongSuggest.UI
                             return;
 
                         var lfnc = GameObject.FindObjectOfType<LevelFilteringNavigationController>();
-                        lfnc.SelectAnnotatedBeatmapLevelCollection(pl.PlaylistLevelPack);
+                    lfnc.SelectAnnotatedBeatmapLevelCollection(pl);// .PlaylistLevelPack);
                     });
                 }
                 catch (Exception e)
@@ -113,7 +113,7 @@ namespace SmartSongSuggest.UI
                             return;
 
                         var lfnc = GameObject.FindObjectOfType<LevelFilteringNavigationController>();
-                        lfnc.SelectAnnotatedBeatmapLevelCollection(pl.PlaylistLevelPack);
+                    lfnc.SelectAnnotatedBeatmapLevelCollection(pl);//.PlaylistLevelPack);
                     });
                 }
                 catch (Exception e)

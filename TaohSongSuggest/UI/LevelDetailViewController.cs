@@ -151,7 +151,7 @@ namespace SmartSongSuggest.UI
             if (t == null)
                 return;
 
-            BSMLParser.Instance.Parse(BeatSaberMarkupLanguage.Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "SmartSongSuggest.UI.Views.LevelDetailSuggestButtonsView.bsml"), t.gameObject, persController);
+            BSMLParser.instance.Parse(BeatSaberMarkupLanguage.Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "SmartSongSuggest.UI.Views.LevelDetailSuggestButtonsView.bsml"), t.gameObject, persController);
             persController.rootTransform.localScale *= 0.7f;
             persController.sldv = GameObject.FindObjectOfType<StandardLevelDetailViewController>();
             persController.sldv.didChangeContentEvent += persController.didChangeContent;
@@ -160,7 +160,7 @@ namespace SmartSongSuggest.UI
             persController.CheckButtons();
         }
 
-        private void didChangeDifficulty(StandardLevelDetailViewController arg1)
+        private void didChangeDifficulty(StandardLevelDetailViewController arg1,IDifficultyBeatmap arg2)
         {
             CheckButtons();
         }
@@ -173,9 +173,9 @@ namespace SmartSongSuggest.UI
             } 
         }
 
-        string levelHash => sldv != null ? Hashing.GetCustomLevelHash(sldv.beatmapLevel) : null;
-        string levelDifficulty => sldv?.beatmapKey.difficulty.SerializedName();
-        string levelCharacteristic => sldv?.beatmapKey.beatmapCharacteristic?.serializedName;
+        string levelHash => sldv != null ? Hashing.GetCustomLevelHash(sldv.beatmapLevel is CustomBeatmapLevel custom? custom : null) : null;
+        string levelDifficulty => sldv?.selectedDifficultyBeatmap.difficulty.SerializedName();
+        string levelCharacteristic => sldv?.selectedDifficultyBeatmap.parentDifficultyBeatmapSet.beatmapCharacteristic?.serializedName;
         SongID songID => SongSuggestManager.toolBox.songLibrary.GetID(levelCharacteristic, levelDifficulty, levelHash);
 
 
@@ -197,7 +197,8 @@ namespace SmartSongSuggest.UI
                 //Check if we are ready to update (general checks)
                 //Check song is selected
                 if (sldv == null) return;
-                if (sldv.beatmapLevel.hasPrecalculatedData) return;
+                if (!(sldv.beatmapLevel is CustomBeatmapLevel)) return;
+                //if (sldv.beatmapLevel.hasPrecalculatedData) return;
 
                 //Check SongSuggest has finished loading
                 if (SongSuggestManager.toolBox == null) return;

@@ -430,7 +430,7 @@ namespace SmartSongSuggest.Managers
             
             if (GameObject.FindObjectOfType<MainFlowCoordinator>().YoungestChildFlowCoordinatorOrSelf() is LevelSelectionFlowCoordinator)
             {
-                GameObject.FindObjectOfType<LevelFilteringNavigationController>().SelectAnnotatedBeatmapLevelCollection(playlist.PlaylistLevelPack);
+                GameObject.FindObjectOfType<LevelFilteringNavigationController>().SelectAnnotatedBeatmapLevelCollection(playlist);
                 return;
             }
 
@@ -445,7 +445,7 @@ namespace SmartSongSuggest.Managers
 
         public static LevelSelectionFlowCoordinator.State GetStateForPlaylist(IPlaylist beatmapLevelPack)
         {
-            var state = new LevelSelectionFlowCoordinator.State(SelectLevelCategoryViewController.LevelCategory.CustomSongs, beatmapLevelPack.PlaylistLevelPack, default, null);
+            var state = new LevelSelectionFlowCoordinator.State(SelectLevelCategoryViewController.LevelCategory.CustomSongs, beatmapLevelPack, new EmptyDifficultyBeatmap());
             return state;
         }
 

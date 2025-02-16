@@ -7,7 +7,8 @@ namespace SmartSongSuggest.Patches
     [HarmonyPatch(typeof(LevelCompletionResultsHelper), nameof(LevelCompletionResultsHelper.ProcessScore))]
     static class ProcessScorePatch
     {
-        static void Postfix(in BeatmapKey beatmapKey, PlayerData playerData, PlayerLevelStatsData playerLevelStats, LevelCompletionResults levelCompletionResults, IReadonlyBeatmapData transformedBeatmapData, PlatformLeaderboardsModel platformLeaderboardsModel)
+        //ProcessScore(PlayerData playerData, PlayerLevelStatsData playerLevelStats, LevelCompletionResults levelCompletionResults, IReadonlyBeatmapData transformedBeatmapData, IDifficultyBeatmap difficultyBeatmap, PlatformLeaderboardsModel platformLeaderboardsModel)
+        static void Postfix(PlayerData playerData, PlayerLevelStatsData playerLevelStats, LevelCompletionResults levelCompletionResults, IReadonlyBeatmapData transformedBeatmapData, IDifficultyBeatmap difficultyBeatmap,PlatformLeaderboardsModel platformLeaderboardsModel)
         {
             Managers.SongSuggestManager.toolBox.log?.WriteLine($"Processing Result Screen");
             //if (!SettingsController.cfgInstance.RecordLocalScores) return;
@@ -35,8 +36,8 @@ namespace SmartSongSuggest.Patches
             float acc = multipliedScore / maxScore;
 
             string mapType = playerLevelStats.beatmapCharacteristic.serializedName;
-            string mapId = beatmapKey.levelId.Substring(13).Split('_')[0];
-            string difficulty = beatmapKey.difficulty.SerializedName();
+            string mapId = difficultyBeatmap.level.levelID.Substring(13).Split('_')[0];
+            string difficulty = difficultyBeatmap.difficulty.SerializedName();
             var songID = SongLibrary.GetID(mapType, difficulty, mapId);
 
             //Mod can only calculate with Normal speed for now.

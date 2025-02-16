@@ -75,13 +75,13 @@ namespace SmartSongSuggest.UI
             {
                 annotatedBeatmapLevelCollectionsViewController = collectionsViewController;
 
-                BSMLParser.Instance.Parse(BeatSaberMarkupLanguage.Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "SmartSongSuggest.UI.Views.PlaylistDetailView.bsml"), t.gameObject, persController);
+                BSMLParser.instance.Parse(BeatSaberMarkupLanguage.Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "SmartSongSuggest.UI.Views.PlaylistDetailView.bsml"), t.gameObject, persController);
                 persController.rootTransform.localScale *= 0.6f;
                 persController.lpdvc = pack;
                 persController.lpdvc.didActivateEvent += Lpdvc_didActivateEvent;
 
                 annotatedBeatmapLevelCollectionsViewController.didSelectAnnotatedBeatmapLevelCollectionEvent += collectionSelected;
-                collectionSelected(annotatedBeatmapLevelCollectionsViewController.selectedAnnotatedBeatmapLevelPack);
+                collectionSelected(PlaylistDetailViewController.annotatedBeatmapLevelCollectionsViewController.selectedAnnotatedBeatmapLevelCollection);
                 return true;
             }
             catch (Exception ex)
@@ -91,11 +91,11 @@ namespace SmartSongSuggest.UI
             }
         }
 
-        private static void collectionSelected(BeatmapLevelPack obj)
+        private static void collectionSelected(IAnnotatedBeatmapLevelCollection obj)
         {
-            if (obj is PlaylistLevelPack pl)
+            if (obj is IPlaylist pl)
             {
-                selectedPlaylist = pl.playlist;
+                selectedPlaylist = pl;
             } 
             else
             {

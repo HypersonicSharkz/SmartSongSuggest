@@ -12,7 +12,7 @@ namespace SmartSongSuggest.Managers
     {
         public static void Init()
         {
-            GameplaySetup.Instance.AddTab("Smart Song Suggest", "SmartSongSuggest.UI.Views.SongSuggestTab.bsml", TabViewController.instance);
+            GameplaySetup.instance.AddTab("Smart Song Suggest", "SmartSongSuggest.UI.Views.SongSuggestTab.bsml", TabViewController.instance);
             TabViewController.instance.Initialize();
         }
 

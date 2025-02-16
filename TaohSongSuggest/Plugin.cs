@@ -10,7 +10,7 @@ using SmartSongSuggest.UI;
 using IPALogger = IPA.Logging.Logger;
 using UnityEngine;
 using System.Collections;
-using BeatSaberMarkupLanguage.Util;
+//using BeatSaberMarkupLanguage.Util;
 using BeatSaberMarkupLanguage.MenuButtons;
 using System;
 
@@ -36,15 +36,17 @@ namespace SmartSongSuggest
 
             SettingsController.cfgInstance = conf.Generated<PluginConfig>();
             if (SettingsController.cfgInstance.LogEnabled) Log.Info("SmartSongSuggest initialized.");
-            MainMenuAwaiter.MainMenuInitializing += MainMenuAwaiter_MainMenuInitializing;
-        }
-
-        private void MainMenuAwaiter_MainMenuInitializing()
-        {
             UIManager.Init();
             SongSuggestManager.Init();
             songDetails = SongDetails.Init().Result;
         }
+
+        //private void MainMenuAwaiter_MainMenuInitializing()
+        //{
+        //    UIManager.Init();
+        //    SongSuggestManager.Init();
+        //    songDetails = SongDetails.Init().Result;
+        //}
 
         [OnStart]
         public void OnApplicationStart()
