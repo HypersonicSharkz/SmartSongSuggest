@@ -5,15 +5,11 @@ using UnityEngine;
 using System.ComponentModel;
 using System;
 using HMUI;
-using SongDetailsCache.Structs;
 using SongCore.Utilities;
 using SmartSongSuggest.Managers;
 using TMPro;
 using System.Collections;
 using BeatSaberMarkupLanguage.Parser;
-using SongSuggestNS;
-using SmartSongSuggest.Configuration;
-using BeatSaberPlaylistsLib;
 using SongLibraryNS;
 
 namespace SmartSongSuggest.UI

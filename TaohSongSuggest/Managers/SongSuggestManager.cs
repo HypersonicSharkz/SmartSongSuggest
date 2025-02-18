@@ -106,8 +106,19 @@ namespace SmartSongSuggest.Managers
                         playlistPath = Path.Combine(UnityGame.InstallPath, "Playlists"),
                     };
 
-                    CoreSettings coreSettings = new CoreSettings() { FilePathSettings = fps };
-                    coreSettings.UserID = SettingsController.cfgInstance.CachedPlayerID;
+                    var cfg = SettingsController.cfgInstance;
+
+                    CoreSettings coreSettings = new CoreSettings()
+                    {
+                        FilePathSettings = fps,
+                        UserID = cfg.CachedPlayerID,
+                        UseScoreSaberLeaderboard =      cfg.LoadScoreSaberLeaderboard,
+                        UpdateScoreSaberLeaderboard =   cfg.UpdateScoreSaberLeaderboard,
+                        UseAccSaberLeaderboard =        cfg.LoadAccSaberLeaderboard,
+                        UpdateAccSaberLeaderboard =     cfg.UpdateAccSaberLeaderboard,
+                        UseBeatLeaderLeaderboard =      cfg.LoadBeatLeaderLeaderboard,
+                        UpdateBeatLeaderLeaderboard =   cfg.UpdateBeatLeaderLeaderboard,
+                    };
 
                     if (SettingsController.cfgInstance.LogEnabled)
                     {
@@ -137,7 +148,6 @@ namespace SmartSongSuggest.Managers
                     //var leaderboardOptions = SettingsController.cfgInstance.LeaderboardsOptions;
                     //List<string> defaultSettings = SettingsController.cfgInstance.DefaultLeaderboards;
                     toolBox.log?.WriteLine("LeaderBoard Creation Start");
-                    var cfg = SettingsController.cfgInstance;
 
                     cfg.DefaultLeaderboardNames = new List<string> { "Score Saber", "Acc Saber", "Beat Leader" };
                     cfg.SuggestSettings = JsonConvert.DeserializeObject<List<SongSuggestSettings>>(cfg.SuggestSettingsString);
