@@ -2644,6 +2644,7 @@
   {
     "name": "Haruka Kanata",
     "scoreSaberID": "187050",
+    "beatSaverID": "712e",
     "hash": "E4920174BBEF9E571750F10E99133811D74ABF72",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -31019,6 +31020,7 @@
   {
     "name": "Metal Bat",
     "scoreSaberID": "392310",
+    "beatSaverID": "1b148",
     "hash": "169D407A1B6C02F8FC4EC56EB4CC5B152D658457",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -35488,6 +35490,7 @@
   {
     "name": "Liberation",
     "scoreSaberID": "41571",
+    "beatSaverID": "8c1",
     "hash": "E95E6B02DA5D37AF7864637DCA17E1B0D40DBBDB",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -38184,6 +38187,7 @@
   {
     "name": "Swiggity",
     "scoreSaberID": "46809",
+    "beatSaverID": "94c",
     "hash": "3B6FA2F63B901F2407C676443B0A8896213ED387",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -39806,6 +39810,7 @@
   {
     "name": "Way Back",
     "scoreSaberID": "4974",
+    "beatSaverID": "2fe",
     "hash": "D5AF11F4C5CAED00D68CD030FE9E269B0D12EFF0",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -41705,6 +41710,7 @@
   {
     "name": "SUPER;JAPAN",
     "scoreSaberID": "532698",
+    "beatSaverID": "20848",
     "hash": "C825450FEADA2737909B414D4E6F4B199C6CFE9A",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -42052,6 +42058,7 @@
   {
     "name": "Guruguru Mero Melody",
     "scoreSaberID": "535252",
+    "beatSaverID": "28348",
     "hash": "D6B72B128630B6CA00630835FC7721EB96D41A5F",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -47951,6 +47958,7 @@
   {
     "name": "Always",
     "scoreSaberID": "58412",
+    "beatSaverID": "116b",
     "hash": "022C187AE58A1897BBC309B4F6B62ECB4ADC5760",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -57732,6 +57740,7 @@
   {
     "name": "Last Resort",
     "scoreSaberID": "630643",
+    "beatSaverID": "3dce2",
     "hash": "980B27527143A47A6A4A0B0446D13979508100A3",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -59209,38 +59218,58 @@
   {
     "name": "Medicine",
     "scoreSaberID": "641208",
+    "beatLeaderID": "40e10xxxxxxx11",
     "hash": "BEF8EE876B981A3D87201495EBEF5D98B44068EA",
     "difficulty": "1",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 7.1500000953674316
+    "songCategory": 17,
+    "starScoreSaber": 7.1500000953674316,
+    "starBeatLeader": 6.0010299682617188,
+    "starAccBeatLeader": 8.1797475814819336,
+    "starPassBeatLeader": 2.5357115268707275,
+    "starTechBeatLeader": 4.7954874038696289
   },
   {
     "name": "Medicine",
     "scoreSaberID": "641207",
+    "beatLeaderID": "40e10xxxxxxx31",
     "hash": "BEF8EE876B981A3D87201495EBEF5D98B44068EA",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 7.4800000190734863
+    "songCategory": 17,
+    "starScoreSaber": 7.4800000190734863,
+    "starBeatLeader": 8.42422866821289,
+    "starAccBeatLeader": 10.195429801940918,
+    "starPassBeatLeader": 3.8971710205078125,
+    "starTechBeatLeader": 7.3197793960571289
   },
   {
     "name": "Medicine",
     "scoreSaberID": "641206",
+    "beatLeaderID": "40e10xxxxxxx51",
     "hash": "BEF8EE876B981A3D87201495EBEF5D98B44068EA",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 10.460000038146973
+    "songCategory": 17,
+    "starScoreSaber": 10.460000038146973,
+    "starBeatLeader": 11.116703033447266,
+    "starAccBeatLeader": 12.209859848022461,
+    "starPassBeatLeader": 5.4586181640625,
+    "starTechBeatLeader": 10.009805679321289
   },
   {
     "name": "Medicine",
     "scoreSaberID": "641205",
+    "beatLeaderID": "40e10xxxxxxx71",
     "hash": "BEF8EE876B981A3D87201495EBEF5D98B44068EA",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 10.5600004196167
+    "songCategory": 17,
+    "starScoreSaber": 10.5600004196167,
+    "starBeatLeader": 11.612594604492188,
+    "starAccBeatLeader": 11.493866920471191,
+    "starPassBeatLeader": 7.9528689384460449,
+    "starTechBeatLeader": 11.744565963745117
   },
   {
     "name": "Medicine",
