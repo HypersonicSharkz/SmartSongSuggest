@@ -2704,6 +2704,7 @@
   {
     "name": "Small Shock",
     "scoreSaberID": "187959",
+    "beatSaverID": "722f",
     "hash": "6D24C4477B498830E78E2F9B4DBD9AB97642B3E7",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -3498,6 +3499,7 @@
   {
     "name": "Brain Specialist",
     "scoreSaberID": "195470",
+    "beatSaverID": "7c2c",
     "hash": "6188B01AB9C804653CF9537E7CDC54C5149A8795",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -30349,6 +30351,7 @@
   {
     "name": "Home Haruka no Undoukai",
     "scoreSaberID": "386668",
+    "beatSaverID": "1aa94",
     "hash": "C0BF806E39E3AE5C025C620BE664B7A3C81B4B78",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -36686,6 +36689,7 @@
   {
     "name": "Sanctuary",
     "scoreSaberID": "422633",
+    "beatSaverID": "20a96",
     "hash": "9302BD51CD2118C5392BDB93A1E8E00534F73488",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -36987,6 +36991,7 @@
   {
     "name": "Lavender",
     "scoreSaberID": "426148",
+    "beatSaverID": "1f31b",
     "hash": "6F316D488C43288F3079407829C1028A5E998EBC",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -55842,6 +55847,7 @@
   {
     "name": "Papasito",
     "scoreSaberID": "623752",
+    "beatSaverID": "39543",
     "hash": "A837C28DA5B7794048F491D801FF3CFB2E18D750",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -57650,6 +57656,7 @@
   {
     "name": "Sense",
     "scoreSaberID": "631701",
+    "beatSaverID": "3e732",
     "hash": "2A5233C65ED6AEF7A861D0A6E4175F54E2A9BECE",
     "difficulty": "3",
     "characteristic": "Standard",
