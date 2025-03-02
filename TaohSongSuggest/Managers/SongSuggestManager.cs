@@ -106,8 +106,21 @@ namespace SmartSongSuggest.Managers
                         playlistPath = Path.Combine(UnityGame.InstallPath, "Playlists"),
                     };
 
-                    CoreSettings coreSettings = new CoreSettings() { FilePathSettings = fps };
-                    coreSettings.UserID = SettingsController.cfgInstance.CachedPlayerID;
+                    var cfg = SettingsController.cfgInstance;
+
+                    CoreSettings coreSettings = new CoreSettings()
+                    {
+                        FilePathSettings = fps,
+                        UserID = cfg.CachedPlayerID,
+                        UseScoreSaberLeaderboard = cfg.LoadScoreSaberLeaderboard,
+                        UpdateScoreSaberLeaderboard = cfg.UpdateScoreSaberLeaderboard,
+                        UseAccSaberLeaderboard = cfg.LoadAccSaberLeaderboard,
+                        UpdateAccSaberLeaderboard = cfg.UpdateAccSaberLeaderboard,
+                        UseBeatLeaderLeaderboard = cfg.LoadBeatLeaderLeaderboard,
+                        UpdateBeatLeaderLeaderboard = cfg.UpdateBeatLeaderLeaderboard,
+                    };
+
+                    coreSettings.UserID = cfg.CachedPlayerID;
 
                     if (SettingsController.cfgInstance.LogEnabled)
                     {
@@ -129,15 +142,7 @@ namespace SmartSongSuggest.Managers
                     //(mostly relevant on first load, but also if the current active Leaderboard has been set inactive, as well as
                     //ensure there is a default value set if all are set inactive). There should be a settingfile for each leaderboard regardless.
 
-                    //var suggestSettings = SettingsController.cfgInstance.suggestSettings;
-                    //bool scoreSaberActive = SettingsController.cfgInstance.LoadScoreSaberLeaderboard;
-                    //bool accSaberActive = SettingsController.cfgInstance.LoadAccSaberLeaderboard;
-                    //bool beatLeaderActive = SettingsController.cfgInstance.LoadBeatLeaderLeaderboard;
-                    //var activeLeaderboardName = SettingsController.cfgInstance.LeaderboardsSelection;
-                    //var leaderboardOptions = SettingsController.cfgInstance.LeaderboardsOptions;
-                    //List<string> defaultSettings = SettingsController.cfgInstance.DefaultLeaderboards;
                     toolBox.log?.WriteLine("LeaderBoard Creation Start");
-                    var cfg = SettingsController.cfgInstance;
 
                     cfg.DefaultLeaderboardNames = new List<string> { "Score Saber", "Acc Saber", "Beat Leader" };
                     cfg.SuggestSettings = JsonConvert.DeserializeObject<List<SongSuggestSettings>>(cfg.SuggestSettingsString);
