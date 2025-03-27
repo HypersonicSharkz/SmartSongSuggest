@@ -14028,6 +14028,7 @@
     "name": "OniiChan High Tech",
     "scoreSaberID": "304145",
     "beatLeaderID": "108c651",
+    "beatSaverID": "108c6",
     "hash": "1EBB6C788C2C6C5B55F0D7C62092575DC3C4946F",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -37156,6 +37157,7 @@
   {
     "name": "Big Sky (Agnelli & Nelson Remix)",
     "scoreSaberID": "42994",
+    "beatSaverID": "8e9",
     "hash": "8FB6C0898680ECDC9D5CEBB7B823D7341D850C0A",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -56222,6 +56224,7 @@
   {
     "name": "Cranky Clown",
     "scoreSaberID": "629380",
+    "beatSaverID": "3c778",
     "hash": "60A83AA6FF994D786363CDA4A6FDD3278506E34A",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -56673,6 +56676,7 @@
   {
     "name": "DANCE REACTOR",
     "scoreSaberID": "610821",
+    "beatSaverID": "3d4ae",
     "hash": "99090E807E2B08DAEF919915445864908FB681D5",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -59420,6 +59424,7 @@
   {
     "name": "Memory of Dismantled Reality",
     "scoreSaberID": "640124",
+    "beatSaverID": "41cc2",
     "hash": "9DB7E355C59871C3974FFF1C1D59212D69C21E76",
     "difficulty": "9",
     "characteristic": "Standard",
