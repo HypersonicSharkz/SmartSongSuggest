@@ -1112,7 +1112,7 @@
     "starScoreSaber": 6.4800000190734863
   },
   {
-    "name": "Freedom Dive Music Box",
+    "name": "FREEDOM DiVE",
     "scoreSaberID": "133669",
     "beatLeaderID": "467a71",
     "hash": "A4DB5E8CFB99B835DA0429B5586B15217C3335D7",
@@ -11819,7 +11819,7 @@
     "starTechBeatLeader": 4.6413278579711914
   },
   {
-    "name": "1Summer",
+    "name": "EC1-Summer",
     "scoreSaberID": "29395",
     "beatLeaderID": "74651",
     "hash": "7E9057B04FE1206194ABDA12C6039BEE46A86736",
@@ -11833,7 +11833,7 @@
     "starTechBeatLeader": 3.2113828659057617
   },
   {
-    "name": "[EC1]Everything Goes",
+    "name": "EC1-Everything Goes",
     "scoreSaberID": "29426",
     "beatLeaderID": "74371",
     "hash": "8E6FD170583FD5C0FBE86C1C811F2400D7C3D8F9",
@@ -11847,7 +11847,7 @@
     "starTechBeatLeader": 5.9419798851013184
   },
   {
-    "name": "[EC1]Haunted",
+    "name": "EC1-Haunted",
     "scoreSaberID": "29428",
     "beatLeaderID": "74471",
     "hash": "D56898547D40BAFDF348492376F68C084674F118",
@@ -17782,7 +17782,7 @@
     "starTechBeatLeader": 4.4586963653564453
   },
   {
-    "name": "Extra Credit on the Chromosome Test! VICTORY ROYALE?!?!?!",
+    "name": "Extra Credit on the Chromosome Test! VICTORY ROYALE​!​!​!",
     "scoreSaberID": "323852",
     "beatLeaderID": "12fae31",
     "hash": "BC1EC36D7A78658C0870FB9529F848C034A3D43E",
@@ -19439,7 +19439,7 @@
     "starTechBeatLeader": 4.9037394523620605
   },
   {
-    "name": "1Gas Mask",
+    "name": "Gas Mask",
     "scoreSaberID": "33025",
     "beatLeaderID": "7a671",
     "hash": "8B53010B2F6656C5BE03C110724703763CC3CB03",
@@ -36627,8 +36627,9 @@
     "hash": "BA3EDDD4447985AAC531491C53D7E0F76FFF8603",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.6700000762939453
+    "songCategory": 5,
+    "starScoreSaber": 4.6700000762939453,
+    "complexityAccSaber": 7.74
   },
   {
     "name": "Multicolored",
@@ -37350,7 +37351,7 @@
     "starTechBeatLeader": 1.3884787559509277
   },
   {
-    "name": "Happy Synthesizer ",
+    "name": "Happy Synthesizer",
     "scoreSaberID": "4359",
     "beatLeaderID": "2b451",
     "hash": "6CBE4F85271656591CF5402C3BAB3364BF8B98AA",
@@ -37364,7 +37365,7 @@
     "starTechBeatLeader": 4.8874177932739258
   },
   {
-    "name": "Happy Synthesizer ",
+    "name": "Happy Synthesizer",
     "scoreSaberID": "4369",
     "beatLeaderID": "2b411",
     "hash": "6CBE4F85271656591CF5402C3BAB3364BF8B98AA",
@@ -37582,7 +37583,7 @@
     "starScoreSaber": 5.7300000190734863
   },
   {
-    "name": "Happy Synthesizer ",
+    "name": "Happy Synthesizer",
     "scoreSaberID": "4383",
     "beatLeaderID": "2b431",
     "hash": "6CBE4F85271656591CF5402C3BAB3364BF8B98AA",
@@ -38571,8 +38572,9 @@
     "hash": "80559A7A4AC0F62F27DAF1C59DF67F305250ADFF",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.309999942779541
+    "songCategory": 9,
+    "starScoreSaber": 4.309999942779541,
+    "complexityAccSaber": 10.05285659
   },
   {
     "name": "Phony",
@@ -40956,8 +40958,9 @@
     "hash": "CBDC3B21CD2CA1D1CFAFA6E7615A298D34D5D589",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.309999942779541
+    "songCategory": 5,
+    "starScoreSaber": 4.309999942779541,
+    "complexityAccSaber": 7.280097442
   },
   {
     "name": "Late Night Talking",
@@ -41329,8 +41332,9 @@
     "hash": "9EDB7FA076EC5493DF4EAC4B1C134A4F3C4C3EBF",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.5399999618530273
+    "songCategory": 9,
+    "starScoreSaber": 4.5399999618530273,
+    "complexityAccSaber": 9.072578823
   },
   {
     "name": "TELL U",
@@ -41561,8 +41565,9 @@
     "hash": "18F3BBB66FAC56584EC9CC266E605EFE5CAEA398",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.6599998474121094
+    "songCategory": 9,
+    "starScoreSaber": 4.6599998474121094,
+    "complexityAccSaber": 9.27
   },
   {
     "name": "One More",
@@ -41805,8 +41810,9 @@
     "hash": "113EA9A78EC563FC134CA21C46584D0616A45326",
     "difficulty": "1",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.0199999809265137
+    "songCategory": 5,
+    "starScoreSaber": 4.0199999809265137,
+    "complexityAccSaber": 6.7
   },
   {
     "name": "SEITEN NO TERIYAKI NO DENSETSU",
@@ -42556,8 +42562,9 @@
     "hash": "727FAD7B449265E42CF49292E3FCE06629388633",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.059999942779541
+    "songCategory": 5,
+    "starScoreSaber": 4.059999942779541,
+    "complexityAccSaber": 6.925054065
   },
   {
     "name": "Everything Everything",
@@ -43285,8 +43292,9 @@
     "hash": "53D63590F2D3E6148B1DB14D5C63ACDC411149E4",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.3899998664855957
+    "songCategory": 9,
+    "starScoreSaber": 4.3899998664855957,
+    "complexityAccSaber": 9.05
   },
   {
     "name": "Nerdy",
@@ -43534,8 +43542,9 @@
     "hash": "465F13F0472EA9ACD1B34E75C4D3DA76556AD5D1",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.2600002288818359
+    "songCategory": 9,
+    "starScoreSaber": 4.2600002288818359,
+    "complexityAccSaber": 8.29
   },
   {
     "name": "KICK BACK",
@@ -45014,8 +45023,9 @@
     "hash": "034D7EEF90EE01F9AE78AC9CB3E78DFD34FD5D94",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.6700000762939453
+    "songCategory": 9,
+    "starScoreSaber": 4.6700000762939453,
+    "complexityAccSaber": 9.9
   },
   {
     "name": "22",
@@ -45213,8 +45223,9 @@
     "hash": "97DF03B26D2384A6E6EC8409534A4A0E369E6DBA",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.2399997711181641
+    "songCategory": 5,
+    "starScoreSaber": 4.2399997711181641,
+    "complexityAccSaber": 8.4
   },
   {
     "name": "Chicago",
@@ -45231,8 +45242,9 @@
     "hash": "97DF03B26D2384A6E6EC8409534A4A0E369E6DBA",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 3.7000000476837158
+    "songCategory": 5,
+    "starScoreSaber": 3.7000000476837158,
+    "complexityAccSaber": 5.6
   },
   {
     "name": "Beasts Marching to Victory",
@@ -46890,8 +46902,9 @@
     "hash": "E892864E9B4D708F0797C6F51B002F402A440DDE",
     "difficulty": "1",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.1599998474121094
+    "songCategory": 5,
+    "starScoreSaber": 4.1599998474121094,
+    "complexityAccSaber": 6.62
   },
   {
     "name": "The 89's Momentum",
@@ -47712,8 +47725,9 @@
     "hash": "0D8C1DCC0FC3D98EFCDF3C52DF968369F9AD6534",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.2300000190734863
+    "songCategory": 5,
+    "starScoreSaber": 4.2300000190734863,
+    "complexityAccSaber": 8.2
   },
   {
     "name": "Last Man In The World",
@@ -48350,7 +48364,7 @@
     "starScoreSaber": 9.6899995803833
   },
   {
-    "name": "iLLness LiLin ",
+    "name": "iLLness LiLin",
     "scoreSaberID": "66939",
     "beatLeaderID": "126c31",
     "hash": "0BFAB2B62C6D7EA1C3587C48EFD1A0EEC365D983",
@@ -48364,7 +48378,7 @@
     "starTechBeatLeader": 1.6962927579879761
   },
   {
-    "name": "iLLness LiLin ",
+    "name": "iLLness LiLin",
     "scoreSaberID": "66944",
     "beatLeaderID": "126c51",
     "hash": "0BFAB2B62C6D7EA1C3587C48EFD1A0EEC365D983",
@@ -48414,7 +48428,7 @@
     "starScoreSaber": 6.3899998664855957
   },
   {
-    "name": "Greenlights Serenade ",
+    "name": "Greenlights Serenade",
     "scoreSaberID": "68737",
     "beatLeaderID": "13a091",
     "hash": "B3F11301E4AC555184E7EF4344242049FEA41345",
@@ -48428,7 +48442,7 @@
     "starTechBeatLeader": 7.4349889755249023
   },
   {
-    "name": "Greenlights Serenade ",
+    "name": "Greenlights Serenade",
     "scoreSaberID": "68758",
     "beatLeaderID": "13a071",
     "hash": "B3F11301E4AC555184E7EF4344242049FEA41345",
@@ -49648,7 +49662,7 @@
     "starTechBeatLeader": 8.14565372467041
   },
   {
-    "name": "The Merchant Guild",
+    "name": "The Merchant Guild - 100k Contest",
     "scoreSaberID": "87214",
     "beatLeaderID": "1fec11",
     "hash": "05ADE6C52249659190140EBD4540786EF7752E06",
@@ -49662,7 +49676,7 @@
     "starTechBeatLeader": 0.49148717522621155
   },
   {
-    "name": "The Merchant Guild",
+    "name": "The Merchant Guild - 100k Contest",
     "scoreSaberID": "87227",
     "beatLeaderID": "1fec31",
     "hash": "05ADE6C52249659190140EBD4540786EF7752E06",
@@ -49676,7 +49690,7 @@
     "starTechBeatLeader": 1.0496528148651123
   },
   {
-    "name": "The Merchant Guild",
+    "name": "The Merchant Guild - 100k Contest",
     "scoreSaberID": "87228",
     "beatLeaderID": "1fec51",
     "hash": "05ADE6C52249659190140EBD4540786EF7752E06",
@@ -49955,7 +49969,7 @@
     "starTechBeatLeader": 8.8171701431274414
   },
   {
-    "name": "Snakey Chantey ",
+    "name": "Snakey Chantey",
     "scoreSaberID": "94918",
     "beatLeaderID": "243e91",
     "hash": "1CCA456BF71339F4A9B0E7BEE5EF9E6A016D20CC",
@@ -49997,7 +50011,7 @@
     "starTechBeatLeader": 8.0204076766967773
   },
   {
-    "name": "Crocodile Cacophony ",
+    "name": "Crocodile Cacophony",
     "scoreSaberID": "94923",
     "beatLeaderID": "244171",
     "hash": "B54881C288E83036EC8A67E774926CE334798F4E",
@@ -50011,7 +50025,7 @@
     "starTechBeatLeader": 7.8021039962768555
   },
   {
-    "name": "Snakey Chantey ",
+    "name": "Snakey Chantey",
     "scoreSaberID": "94935",
     "beatLeaderID": "243e71",
     "hash": "1CCA456BF71339F4A9B0E7BEE5EF9E6A016D20CC",
@@ -50053,7 +50067,7 @@
     "starTechBeatLeader": 3.1068627834320068
   },
   {
-    "name": "Crocodile Cacophony ",
+    "name": "Crocodile Cacophony",
     "scoreSaberID": "94955",
     "beatLeaderID": "244151",
     "hash": "B54881C288E83036EC8A67E774926CE334798F4E",
@@ -50109,7 +50123,7 @@
     "starTechBeatLeader": 8.7757186889648438
   },
   {
-    "name": "Snakey Chantey ",
+    "name": "Snakey Chantey",
     "scoreSaberID": "94988",
     "beatLeaderID": "243e51",
     "hash": "1CCA456BF71339F4A9B0E7BEE5EF9E6A016D20CC",
@@ -51805,8 +51819,9 @@
     "hash": "A8C0871563948792D8D3D8E6BEC6D33BA0F0D75E",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.03000020980835
+    "songCategory": 5,
+    "starScoreSaber": 4.03000020980835,
+    "complexityAccSaber": 6.71
   },
   {
     "name": "Don't You Dare",
@@ -52712,8 +52727,9 @@
     "hash": "70A44A4C8FE20BC239FE772207560DAC8F8B2F84",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.4600000381469727
+    "songCategory": 5,
+    "starScoreSaber": 4.4600000381469727,
+    "complexityAccSaber": 8.0
   },
   {
     "name": "Anti Safety Zone",
@@ -52901,8 +52917,9 @@
     "hash": "178E68A392835D6EF8762692AB059BC17433AC54",
     "difficulty": "1",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 3.4700000286102295
+    "songCategory": 5,
+    "starScoreSaber": 3.4700000286102295,
+    "complexityAccSaber": 4.04
   },
   {
     "name": "REKKA RESONANCE",
@@ -52910,8 +52927,9 @@
     "hash": "178E68A392835D6EF8762692AB059BC17433AC54",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.2300000190734863
+    "songCategory": 5,
+    "starScoreSaber": 4.2300000190734863,
+    "complexityAccSaber": 6.9
   },
   {
     "name": "REKKA RESONANCE",
@@ -54913,8 +54931,9 @@
     "hash": "2C132782B74DE3FFFF7B16FFC1C1EF5CB25E0842",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.28000020980835
+    "songCategory": 5,
+    "starScoreSaber": 4.28000020980835,
+    "complexityAccSaber": 7.17
   },
   {
     "name": "Twisted Drop Party",
@@ -55783,8 +55802,9 @@
     "hash": "C024C98AB67DF99D74B49587259EA03E9A02C26A",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.1500000953674316
+    "songCategory": 5,
+    "starScoreSaber": 4.1500000953674316,
+    "complexityAccSaber": 6.51
   },
   {
     "name": "Something Comforting",
@@ -55819,8 +55839,9 @@
     "hash": "0573981EC268EF2D254D38BBD3C1B9126F33A227",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.940000057220459
+    "songCategory": 5,
+    "starScoreSaber": 4.940000057220459,
+    "complexityAccSaber": 9.21
   },
   {
     "name": "Everything You Have Done",
@@ -56155,8 +56176,9 @@
     "hash": "48464C8EAB7624752B51E9782D0BE4F3D5650C06",
     "difficulty": "5",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.6399998664855957
+    "songCategory": 5,
+    "starScoreSaber": 4.6399998664855957,
+    "complexityAccSaber": 7.65
   },
   {
     "name": "Feel Alive",
@@ -56164,8 +56186,9 @@
     "hash": "48464C8EAB7624752B51E9782D0BE4F3D5650C06",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.7600002288818359
+    "songCategory": 9,
+    "starScoreSaber": 4.7600002288818359,
+    "complexityAccSaber": 12.06
   },
   {
     "name": "Feel Alive",
@@ -56264,8 +56287,9 @@
     "hash": "3CD6D979D3F491A78D021BE91F26AE0F3C05C410",
     "difficulty": "3",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.8600001335144043
+    "songCategory": 5,
+    "starScoreSaber": 4.8600001335144043,
+    "complexityAccSaber": 7.87
   },
   {
     "name": "Kalis Mind",
@@ -57442,8 +57466,9 @@
     "hash": "2A12F6930C4ECEF3CD4A5A3B7749853A6D234284",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.630000114440918
+    "songCategory": 5,
+    "starScoreSaber": 4.630000114440918,
+    "complexityAccSaber": 8.69
   },
   {
     "name": "Amsterdam",
