@@ -42850,6 +42850,7 @@
   {
     "name": "Meowter Space",
     "scoreSaberID": "537130",
+    "beatSaverID": "28b2d",
     "hash": "81344BD2079A4A6BEFC9DB6C189E838EF8611438",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -57575,6 +57576,7 @@
   {
     "name": "Rinne",
     "scoreSaberID": "630588",
+    "beatSaverID": "24cbd",
     "hash": "792A6EE8FBB3932749F6B0DEA22002877B64FAEC",
     "difficulty": "9",
     "characteristic": "Standard",
