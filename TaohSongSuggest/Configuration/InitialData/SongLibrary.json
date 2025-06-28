@@ -5130,6 +5130,7 @@
   {
     "name": "VECTLEGGENDARIA",
     "scoreSaberID": "219508",
+    "beatSaverID": "995e",
     "hash": "1C09E823E2B9720E573EA46C53C62EDAAAD51665",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -25007,6 +25008,7 @@
     "name": "Heart of Witch",
     "scoreSaberID": "360550",
     "beatLeaderID": "18d3e91",
+    "beatSaverID": "18d3e",
     "hash": "403FE120B764A47A4A129F45A27541F4B00DCE90",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -25984,6 +25986,7 @@
   {
     "name": "Paranoia",
     "scoreSaberID": "364446",
+    "beatSaverID": "1988c",
     "hash": "4C9BE2EE9CABB12A7D0E9D2DC68CE9D5C2A6DAFB",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -49602,6 +49605,7 @@
     "name": "Hammer o Denpa Song ni Shitemita",
     "scoreSaberID": "86820",
     "beatLeaderID": "1f3b91",
+    "beatSaverID": "1f3b",
     "hash": "5C6C1D7CFDA4C91920CE0510FE4B43D6CA918AFF",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -62935,5 +62939,32 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 5.679999828338623
+  },
+  {
+    "name": "Sakura, Reincarnation",
+    "scoreSaberID": "653022",
+    "hash": "BDA532F37904235898E34311B7A60A8CE4DD82BF",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.5199999809265137
+  },
+  {
+    "name": "Urami no Waltz",
+    "scoreSaberID": "655771",
+    "hash": "8B4D7B8C92D76569F3EB20250061302AA365EC91",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 5.8400001525878906
+  },
+  {
+    "name": "Ultrasonic Anthem",
+    "scoreSaberID": "655080",
+    "hash": "4992D3708F25612289227AA27A7543E76DD79D1E",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 5.4200000762939453
   }
 ]
