@@ -5702,6 +5702,7 @@
     "name": "Nirvana",
     "scoreSaberID": "224126",
     "beatLeaderID": "9deb91",
+    "beatSaverID": "9deb",
     "hash": "A30D0B147D4839F8DAD52A08CA608F43A14F06E4",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -7667,6 +7668,7 @@
     "name": "Red Dress",
     "scoreSaberID": "275985",
     "beatLeaderID": "b87591",
+    "beatSaverID": "b875",
     "hash": "37AA9A561BBF58651503B3C8A59DE294EA2F380E",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -8951,6 +8953,7 @@
   {
     "name": "Voices",
     "scoreSaberID": "283068",
+    "beatSaverID": "caba",
     "hash": "862D6DA8D494FA5D4A40788330D76F52DDC58F4D",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -10708,6 +10711,7 @@
     "name": "The Fox's Wedding",
     "scoreSaberID": "289354",
     "beatLeaderID": "de7c91",
+    "beatSaverID": "de7c",
     "hash": "7D12A13A03B615D7E4895DD4177C4A4A1F84F1F5",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -17152,6 +17156,7 @@
   {
     "name": "In my room",
     "scoreSaberID": "322217",
+    "beatSaverID": "12ca8",
     "hash": "649B22C635D6E19434FD03D362AB68B2AF5BCC94",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -22932,6 +22937,7 @@
     "name": "Envy Baby",
     "scoreSaberID": "348299",
     "beatLeaderID": "16ac191",
+    "beatSaverID": "16ac1",
     "hash": "4529498DAB9D920C1E7A3BA46507B677655B3AD7",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -29993,6 +29999,7 @@
   {
     "name": "21st Century Humor But It's A Rave Song",
     "scoreSaberID": "383038",
+    "beatSaverID": "1c3e1",
     "hash": "5C6D84C52B7B1B387CA62D9217E99D9303D2E716",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -35309,6 +35316,7 @@
   {
     "name": "Donkey Donk",
     "scoreSaberID": "414594",
+    "beatSaverID": "1bf53",
     "hash": "B855DC68594177B950A6922ADF48E8A7D4F39946",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -39355,6 +39363,7 @@
     "name": "Aien-Jihen",
     "scoreSaberID": "488986",
     "beatLeaderID": "2777cx91",
+    "beatSaverID": "2777c",
     "hash": "D06BD638A1BBDBB907E4FE5FFA0F5E027E524C37",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -41640,6 +41649,7 @@
   {
     "name": "Rebuff",
     "scoreSaberID": "532166",
+    "beatSaverID": "265dd",
     "hash": "45E261FE93ABFDC263B3670E84AC39451725881F",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -45707,6 +45717,7 @@
   {
     "name": "Crazy Shuffle",
     "scoreSaberID": "559752",
+    "beatSaverID": "1e3fc",
     "hash": "A4F82E6969F89AA75A5C943C67DDB3C8C7D4769B",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -54171,6 +54182,7 @@
   {
     "name": "RATATA",
     "scoreSaberID": "607476",
+    "beatSaverID": "3a7a2",
     "hash": "8E4B7917C01E5987A5B3FF13FAA3CA8F27D21D34",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -55825,6 +55837,7 @@
   {
     "name": "Everything You Have Done",
     "scoreSaberID": "623496",
+    "beatSaverID": "3aaeb",
     "hash": "0573981EC268EF2D254D38BBD3C1B9126F33A227",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -56556,6 +56569,7 @@
   {
     "name": "Kaiba",
     "scoreSaberID": "629429",
+    "beatSaverID": "37412",
     "hash": "FA0E01A9024CD7F740DF3CBC894009A2A47E4729",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -57015,6 +57029,7 @@
   {
     "name": "It Gets Better",
     "scoreSaberID": "627533",
+    "beatSaverID": "3c7fb",
     "hash": "F517955DE422CE948F2FBE298EFEDC3618B5B213",
     "difficulty": "9",
     "characteristic": "Standard",
