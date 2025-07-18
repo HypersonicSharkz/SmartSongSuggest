@@ -14160,6 +14160,7 @@
     "name": "Liquid Answers",
     "scoreSaberID": "304261",
     "beatLeaderID": "1090871",
+    "beatSaverID": "10908",
     "hash": "062180FA016CF9FD1FA320C3D8FF03B413628C44",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -26453,6 +26454,7 @@
   {
     "name": "Oyasumi",
     "scoreSaberID": "368040",
+    "beatSaverID": "1a32a",
     "hash": "8B7FC7B898AECE2967690846DA7889048C0880FF",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -35628,6 +35630,7 @@
   {
     "name": "HELLOHELL",
     "scoreSaberID": "416538",
+    "beatSaverID": "21380",
     "hash": "7B593A99940898B637846A875C5B8405A9D63722",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -62571,6 +62574,7 @@
   {
     "name": "RakiRaki Rebuilders!!!",
     "scoreSaberID": "656789",
+    "beatSaverID": "45b1e",
     "hash": "0ABFFF555D72F441F05B83A2B821559565522129",
     "difficulty": "3",
     "characteristic": "Standard",
