@@ -15064,6 +15064,7 @@
     "name": "Phantom's Wonderland",
     "scoreSaberID": "313727",
     "beatLeaderID": "11bde71",
+    "beatSaverID": "11bde",
     "hash": "F51107032366A868319CEB77CA4F56E1D1DB94BD",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -22524,6 +22525,7 @@
   {
     "name": "Der Wald",
     "scoreSaberID": "347782",
+    "beatSaverID": "1696d",
     "hash": "D0236D2C8D43BDE7AF15060A7EB052494FECAFC4",
     "difficulty": "5",
     "characteristic": "Standard",
