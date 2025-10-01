@@ -39987,6 +39987,7 @@
     "name": "Ajuga",
     "scoreSaberID": "501242",
     "beatLeaderID": "243e5xx71",
+    "beatSaverID": "243e5",
     "hash": "5FC930DD535F282D1C8A0ABD1D1407B10A5ABF5C",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -79611,12 +79612,39 @@
     "starTechBeatLeader": 0.0028672704938799143
   },
   {
-    "name": "Perhaps some things are best left forgotten, for now.",
-    "scoreSaberID": "639997",
-    "hash": "BAFAE7C443D7F2A35AFA2787605E1633921516DE",
+    "name": "Ascension to Heaven",
+    "beatLeaderID": "447b5xxxxx91",
+    "hash": "C4E19E72DF7DB23A0A91C286E3264E9021799D00",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 13.361689567565918,
+    "starAccBeatLeader": 12.604897499084473,
+    "starPassBeatLeader": 9.2443828582763672,
+    "starTechBeatLeader": 13.153820037841797
+  },
+  {
+    "name": "Ascension to Heaven",
+    "beatLeaderID": "447b5xxxxx71",
+    "hash": "C4E19E72DF7DB23A0A91C286E3264E9021799D00",
     "difficulty": "7",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 9.3900003433227539
+    "songCategory": 16,
+    "starBeatLeader": 10.504301071166992,
+    "starAccBeatLeader": 11.47221565246582,
+    "starPassBeatLeader": 7.5747289657592773,
+    "starTechBeatLeader": 5.871699333190918
+  },
+  {
+    "name": "Ascension to Heaven",
+    "beatLeaderID": "447b5xxxxx51",
+    "hash": "C4E19E72DF7DB23A0A91C286E3264E9021799D00",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 5.9605875015258789,
+    "starAccBeatLeader": 7.9772233963012695,
+    "starPassBeatLeader": 3.7729861736297607,
+    "starTechBeatLeader": 3.1459336280822754
   }
 ]
