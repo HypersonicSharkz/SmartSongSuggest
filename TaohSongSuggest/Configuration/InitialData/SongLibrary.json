@@ -18587,6 +18587,7 @@
   {
     "name": "Face Down",
     "scoreSaberID": "326488",
+    "beatSaverID": "135ae",
     "hash": "8FD628B4F4A04B66BEF3CCE9BF7BA4F8A30984FC",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -31042,6 +31043,7 @@
   {
     "name": "Metal Bat",
     "scoreSaberID": "392310",
+    "beatSaverID": "1b148",
     "hash": "169D407A1B6C02F8FC4EC56EB4CC5B152D658457",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -44495,6 +44497,7 @@
   {
     "name": "Ghost House",
     "scoreSaberID": "549020",
+    "beatSaverID": "2acf0",
     "hash": "A34973C39C5A610B49EE98C1C89BDBDDBD696767",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -52761,6 +52764,7 @@
   {
     "name": "Anti Safety Zone",
     "scoreSaberID": "597344",
+    "beatSaverID": "3568f",
     "hash": "70A44A4C8FE20BC239FE772207560DAC8F8B2F84",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -54521,6 +54525,7 @@
   {
     "name": "Ljusa Stjärnan",
     "scoreSaberID": "610640",
+    "beatSaverID": "356b1",
     "hash": "9988E50D064E05424813E98597E878C161F5D311",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -57468,6 +57473,7 @@
   {
     "name": "Amsterdam",
     "scoreSaberID": "632831",
+    "beatSaverID": "3ead7",
     "hash": "2A12F6930C4ECEF3CD4A5A3B7749853A6D234284",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -59850,6 +59856,7 @@
   {
     "name": "BBoom BBoom",
     "scoreSaberID": "641217",
+    "beatSaverID": "3da0f",
     "hash": "8F3C7653312E2358F02E3BC6B132C2B052C335F4",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -60021,6 +60028,7 @@
   {
     "name": "Collapsing Rift",
     "scoreSaberID": "639789",
+    "beatSaverID": "41691",
     "hash": "37459E37A2EC78956C798B6CEEBFC5A235DC4B06",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -60741,6 +60749,7 @@
   {
     "name": "The Days",
     "scoreSaberID": "642854",
+    "beatSaverID": "41aab",
     "hash": "421A657B4B6E4EC6AA3AA36C5AA3DB5570188C57",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -63924,7 +63933,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 13.760000228881836
+    "starScoreSaber": 13.909999847412109
   },
   {
     "name": "Our Goodbye",
@@ -64050,7 +64059,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.119999885559082
+    "starScoreSaber": 11.920000076293945
   },
   {
     "name": "Mesmerizer",
@@ -64105,7 +64114,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 17,
-    "starScoreSaber": 7.0999999046325684,
+    "starScoreSaber": 6.8899998664855957,
     "starBeatLeader": 7.6176304817199707,
     "starAccBeatLeader": 9.395172119140625,
     "starPassBeatLeader": 3.8894567489624023,
@@ -64133,7 +64142,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 17,
-    "starScoreSaber": 5.0100002288818359,
+    "starScoreSaber": 5.4099998474121094,
     "starBeatLeader": 3.7556543350219727,
     "starAccBeatLeader": 5.8990211486816406,
     "starPassBeatLeader": 1.8458610773086548,
@@ -64147,7 +64156,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 17,
-    "starScoreSaber": 4.3499999046325684,
+    "starScoreSaber": 4.9000000953674316,
     "starBeatLeader": 2.7384655475616455,
     "starAccBeatLeader": 4.8910865783691406,
     "starPassBeatLeader": 1.1501133441925049,
@@ -64161,7 +64170,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 17,
-    "starScoreSaber": 3.7400000095367432,
+    "starScoreSaber": 4.6399998664855957,
     "starBeatLeader": 2.2268481254577637,
     "starAccBeatLeader": 4.4446167945861816,
     "starPassBeatLeader": 0.562763512134552,
@@ -64174,7 +64183,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.619999885559082
+    "starScoreSaber": 10.550000190734863
   },
   {
     "name": "my love life needs a lobotomy",
@@ -64183,7 +64192,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 3.5099999904632568
+    "starScoreSaber": 4.059999942779541
   },
   {
     "name": "my love life needs a lobotomy",
@@ -64192,7 +64201,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.1599998474121094
+    "starScoreSaber": 5.1700000762939453
   },
   {
     "name": "my love life needs a lobotomy",
@@ -64201,7 +64210,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.6000003814697266
+    "starScoreSaber": 7.8299999237060547
   },
   {
     "name": "my love life needs a lobotomy",
@@ -64210,7 +64219,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.3600001335144043
+    "starScoreSaber": 6.25
   },
   {
     "name": "Rafflesia",
@@ -64219,7 +64228,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.0900001525878906
+    "starScoreSaber": 6.619999885559082
   },
   {
     "name": "Rafflesia",
@@ -64228,7 +64237,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.869999885559082
+    "starScoreSaber": 9.5799999237060547
   },
   {
     "name": "Rafflesia",
@@ -64237,7 +64246,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.9399995803833
+    "starScoreSaber": 13.399999618530273
   },
   {
     "name": "Nin Mint",
@@ -64255,7 +64264,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 11.659999847412109
+    "starScoreSaber": 11.909999847412109
   },
   {
     "name": "BAD X END",
@@ -64264,7 +64273,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 3.6400001049041748
+    "starScoreSaber": 3.9900000095367432
   },
   {
     "name": "BAD X END",
@@ -64273,7 +64282,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 3.9900000095367432
+    "starScoreSaber": 5.3499999046325684
   },
   {
     "name": "Roars of V.E.N.G.E.A.N.C.E",
@@ -64282,7 +64291,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 11.789999961853027
+    "starScoreSaber": 12.789999961853027
   },
   {
     "name": "Day N Night",
@@ -64291,7 +64300,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.4499998092651367
+    "starScoreSaber": 6.4899997711181641
   },
   {
     "name": "Day N Night",
@@ -64300,7 +64309,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.5600004196167
+    "starScoreSaber": 8.5100002288818359
   },
   {
     "name": "Day N Night",
@@ -64309,7 +64318,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 11.069999694824219
+    "starScoreSaber": 9.9799995422363281
   },
   {
     "name": "Day N Night",
@@ -64323,11 +64332,12 @@
   {
     "name": "Back 2 Back",
     "scoreSaberID": "668565",
+    "beatSaverID": "46b75",
     "hash": "035F1036B2F56E65771FCCAFAE571EC7E39B6224",
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 5,
-    "starScoreSaber": 4.4600000381469727,
+    "starScoreSaber": 4.4099998474121094,
     "complexityAccSaber": 5.5
   },
   {
@@ -64346,7 +64356,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.5500001907348633
+    "starScoreSaber": 6.3499999046325684
   },
   {
     "name": "Back 2 Back",
@@ -64355,7 +64365,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 11.159999847412109
+    "starScoreSaber": 10.1899995803833
   },
   {
     "name": "laced up",
@@ -64364,7 +64374,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.1499996185302734
+    "starScoreSaber": 9.4399995803833
   },
   {
     "name": "Man's First Inhibition",
@@ -64373,7 +64383,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.0799999237060547
+    "starScoreSaber": 5.380000114440918
   },
   {
     "name": "Man's First Inhibition",
@@ -64382,7 +64392,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.5500001907348633
+    "starScoreSaber": 6.8000001907348633
   },
   {
     "name": "Man's First Inhibition",
@@ -64391,7 +64401,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.2300000190734863
+    "starScoreSaber": 7.179999828338623
   },
   {
     "name": "Man's First Inhibition",
@@ -64400,7 +64410,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.2600002288818359
+    "starScoreSaber": 9.4600000381469727
   },
   {
     "name": "Man's First Inhibition",
@@ -64409,7 +64419,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.260000228881836
+    "starScoreSaber": 12.720000267028809
   },
   {
     "name": "Seraph's Trial",
@@ -64418,7 +64428,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.380000114440918
+    "starScoreSaber": 5.5799999237060547
   },
   {
     "name": "Seraph's Trial",
@@ -64427,7 +64437,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.119999885559082
+    "starScoreSaber": 7.880000114440918
   },
   {
     "name": "Seraph's Trial",
@@ -64436,7 +64446,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.380000114440918
+    "starScoreSaber": 10.029999732971191
   },
   {
     "name": "Seraph's Trial",
@@ -64454,7 +64464,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.8499999046325684
+    "starScoreSaber": 5.0199999809265137
   },
   {
     "name": "Ego Rock",
@@ -64463,7 +64473,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.21999979019165
+    "starScoreSaber": 6.4000000953674316
   },
   {
     "name": "Ego Rock",
@@ -64472,7 +64482,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.179999828338623
+    "starScoreSaber": 7.0500001907348633
   },
   {
     "name": "Ego Rock",
@@ -64481,7 +64491,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.119999885559082
+    "starScoreSaber": 9.0
   },
   {
     "name": "Ego Rock",
@@ -64490,7 +64500,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 11.159999847412109
+    "starScoreSaber": 11.279999732971191
   },
   {
     "name": "SUPERNOVA",
@@ -64499,7 +64509,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.9899997711181641
+    "starScoreSaber": 6.2899999618530273
   },
   {
     "name": "SUPERNOVA",
@@ -64508,7 +64518,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.309999942779541
+    "starScoreSaber": 6.6100001335144043
   },
   {
     "name": "SUPERNOVA",
@@ -64517,7 +64527,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.2600002288818359
+    "starScoreSaber": 7.7600002288818359
   },
   {
     "name": "SUPERNOVA",
@@ -64526,7 +64536,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.90999984741211
+    "starScoreSaber": 8.8500003814697266
   },
   {
     "name": "Antila Floriography",
@@ -64535,7 +64545,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 3.4800000190734863
+    "starScoreSaber": 4.309999942779541
   },
   {
     "name": "POWER OF COURAGE",
@@ -64544,7 +64554,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.559999942779541
+    "starScoreSaber": 7.53000020980835
   },
   {
     "name": "POWER OF COURAGE",
@@ -64553,7 +64563,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.6899995803833
+    "starScoreSaber": 8.2899999618530273
   },
   {
     "name": "POWER OF COURAGE",
@@ -64562,7 +64572,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 11.0
+    "starScoreSaber": 10.390000343322754
   },
   {
     "name": "equivalence",
@@ -64571,7 +64581,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.190000057220459
+    "starScoreSaber": 6.0900001525878906
   },
   {
     "name": "equivalence",
@@ -64580,7 +64590,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.020000457763672
+    "starScoreSaber": 9.7899999618530273
   },
   {
     "name": "Crimson hood",
@@ -64589,7 +64599,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.28000020980835
+    "starScoreSaber": 6.5100002288818359
   },
   {
     "name": "Crimson hood",
@@ -64598,7 +64608,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.25
+    "starScoreSaber": 7.5199999809265137
   },
   {
     "name": "Crimson hood",
@@ -64607,7 +64617,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.1700000762939453
+    "starScoreSaber": 9.9600000381469727
   },
   {
     "name": "Crimson hood",
@@ -64616,7 +64626,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.420000076293945
+    "starScoreSaber": 12.710000038146973
   },
   {
     "name": "Cyber Dawn",
@@ -64625,7 +64635,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.3600001335144043
+    "starScoreSaber": 5.059999942779541
   },
   {
     "name": "Cyber Dawn",
@@ -64652,7 +64662,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.079999923706055
+    "starScoreSaber": 12.0600004196167
   },
   {
     "name": "ETA",
@@ -64661,7 +64671,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 3.9800000190734863
+    "starScoreSaber": 5.130000114440918
   },
   {
     "name": "ETA",
@@ -64679,7 +64689,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.7300000190734863
+    "starScoreSaber": 7.0999999046325684
   },
   {
     "name": "ETA",
@@ -64706,7 +64716,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.0
+    "starScoreSaber": 6.4200000762939453
   },
   {
     "name": "Dounika nachaisou!",
@@ -64715,7 +64725,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.440000057220459
+    "starScoreSaber": 7.5199999809265137
   },
   {
     "name": "Dounika nachaisou!",
@@ -64733,7 +64743,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 3.7100000381469727
+    "starScoreSaber": 4.440000057220459
   },
   {
     "name": "Enigma",
@@ -64742,7 +64752,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.0
+    "starScoreSaber": 5.1999998092651367
   },
   {
     "name": "Enigma",
@@ -64751,7 +64761,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.320000171661377
+    "starScoreSaber": 5.869999885559082
   },
   {
     "name": "Enigma",
@@ -64760,7 +64770,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.03000020980835
+    "starScoreSaber": 7.0500001907348633
   },
   {
     "name": "Enigma",
@@ -64769,7 +64779,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.3599996566772461
+    "starScoreSaber": 9.5100002288818359
   },
   {
     "name": "ecstacy",
@@ -64778,7 +64788,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 3.7200000286102295
+    "starScoreSaber": 4.0199999809265137
   },
   {
     "name": "ecstacy",
@@ -64787,7 +64797,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.2699999809265137
+    "starScoreSaber": 5.190000057220459
   },
   {
     "name": "Leave It To Fate",
@@ -64796,7 +64806,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.2100000381469727
+    "starScoreSaber": 6.179999828338623
   },
   {
     "name": "Leave It To Fate",
@@ -64814,7 +64824,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.75
+    "starScoreSaber": 9.6400003433227539
   },
   {
     "name": "Operation: Zenithfall",
@@ -64823,7 +64833,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.7899999618530273
+    "starScoreSaber": 7.809999942779541
   },
   {
     "name": "Operation: Zenithfall",
@@ -64832,7 +64842,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.119999885559082
+    "starScoreSaber": 12.4399995803833
   },
   {
     "name": "Operation: Zenithfall",
@@ -64841,7 +64851,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 13.609999656677246
+    "starScoreSaber": 14.069999694824219
   },
   {
     "name": "Pistoleta",
@@ -64850,7 +64860,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.1599998474121094
+    "starScoreSaber": 4.679999828338623
   },
   {
     "name": "Pistoleta",
@@ -64859,7 +64869,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.2600002288818359
+    "starScoreSaber": 6.2100000381469727
   },
   {
     "name": "BAD X END",
@@ -64868,7 +64878,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.119999885559082
+    "starScoreSaber": 7.21999979019165
   },
   {
     "name": "BAD X END",
@@ -64877,7 +64887,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.0
+    "starScoreSaber": 11.850000381469727
   },
   {
     "name": "BAD X END",
@@ -64895,7 +64905,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.2699999809265137
+    "starScoreSaber": 5.71999979019165
   },
   {
     "name": "Dalai Lama",
@@ -64904,7 +64914,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.1100001335144043
+    "starScoreSaber": 6.559999942779541
   },
   {
     "name": "Dalai Lama",
@@ -64913,7 +64923,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.0399999618530273
+    "starScoreSaber": 7.809999942779541
   },
   {
     "name": "Bossfight Afterparty",
@@ -64922,7 +64932,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.8000001907348633
+    "starScoreSaber": 6.25
   },
   {
     "name": "Bossfight Afterparty",
@@ -64931,7 +64941,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.03000020980835
+    "starScoreSaber": 6.5199999809265137
   },
   {
     "name": "Bossfight Afterparty",
@@ -64940,7 +64950,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.5
+    "starScoreSaber": 8.7700004577636719
   },
   {
     "name": "Bossfight Afterparty",
@@ -64949,7 +64959,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 11.460000038146973
+    "starScoreSaber": 10.569999694824219
   },
   {
     "name": "Marigold",
@@ -64967,7 +64977,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.0
+    "starScoreSaber": 8.4300003051757812
   },
   {
     "name": "We Could Get More Machinegun Psystyle!",
@@ -64994,7 +65004,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 13.029999732971191
+    "starScoreSaber": 13.340000152587891
   },
   {
     "name": "Designant.",
@@ -65003,7 +65013,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.0799999237060547
+    "starScoreSaber": 6.130000114440918
   },
   {
     "name": "Designant.",
@@ -65012,7 +65022,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.5600004196167
+    "starScoreSaber": 8.630000114440918
   },
   {
     "name": "Designant.",
@@ -65021,7 +65031,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 11.539999961853027
+    "starScoreSaber": 11.699999809265137
   },
   {
     "name": "ULTRA SYNERGY MATRIX",
@@ -65030,7 +65040,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.619999885559082
+    "starScoreSaber": 9.6700000762939453
   },
   {
     "name": "ULTRA SYNERGY MATRIX",
@@ -65039,7 +65049,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 11.279999732971191
+    "starScoreSaber": 11.6899995803833
   },
   {
     "name": "ULTRA SYNERGY MATRIX",
@@ -69397,6 +69407,7 @@
   {
     "name": "So Sorry",
     "beatLeaderID": "3864bxxxxxxxxxxxxx91",
+    "beatSaverID": "3864b",
     "hash": "F0CF5A938C1897E57DC0CE6BBD5CEB3CCB0DED94",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -79657,6 +79668,7 @@
   {
     "name": "Favorite Part",
     "scoreSaberID": "616551",
+    "beatSaverID": "3debc",
     "hash": "9860FC19DC3A57D31B275182E51F66D51D4E9752",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -79738,6 +79750,7 @@
   {
     "name": "Illegal",
     "scoreSaberID": "663004",
+    "beatSaverID": "4886f",
     "hash": "4B12AC940C9F90B03A6899FD315139A4C26EB051",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -79884,5 +79897,298 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 9.3900003433227539
+  },
+  {
+    "name": "Vortex",
+    "scoreSaberID": "674314",
+    "beatLeaderID": "42fd0xxxxxx91",
+    "hash": "AB058265A53E5BB7DEA3D921A826AF2A9A926B2D",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 17,
+    "starScoreSaber": 11.640000343322754,
+    "starBeatLeader": 12.206130027770996,
+    "starAccBeatLeader": 12.582408905029297,
+    "starPassBeatLeader": 7.412076473236084,
+    "starTechBeatLeader": 10.454706192016602
+  },
+  {
+    "name": "Vortex",
+    "scoreSaberID": "674316",
+    "beatLeaderID": "42fd0xxxxxx71",
+    "hash": "AB058265A53E5BB7DEA3D921A826AF2A9A926B2D",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 17,
+    "starScoreSaber": 9.1899995803833,
+    "starBeatLeader": 10.124649047851563,
+    "starAccBeatLeader": 11.150796890258789,
+    "starPassBeatLeader": 7.0223226547241211,
+    "starTechBeatLeader": 6.4714527130126953
+  },
+  {
+    "name": "APT.",
+    "beatLeaderID": "43d05xxx91",
+    "hash": "149DB1F8649E8AE04862CF9002B47C2FFD139C35",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 9.2595252990722656,
+    "starAccBeatLeader": 11.315759658813477,
+    "starPassBeatLeader": 3.4133048057556152,
+    "starTechBeatLeader": 7.4718117713928223
+  },
+  {
+    "name": "Vortex",
+    "scoreSaberID": "674317",
+    "beatLeaderID": "42fd0xxxxxx51",
+    "hash": "AB058265A53E5BB7DEA3D921A826AF2A9A926B2D",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 17,
+    "starScoreSaber": 6.8600001335144043,
+    "starBeatLeader": 6.7515659332275391,
+    "starAccBeatLeader": 8.5789117813110352,
+    "starPassBeatLeader": 4.2563004493713379,
+    "starTechBeatLeader": 4.35798454284668
+  },
+  {
+    "name": "APT.",
+    "beatLeaderID": "43d05xxx51",
+    "hash": "149DB1F8649E8AE04862CF9002B47C2FFD139C35",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 6.7436771392822266,
+    "starAccBeatLeader": 9.0521459579467773,
+    "starPassBeatLeader": 2.9406707286834717,
+    "starTechBeatLeader": 4.3147597312927246
+  },
+  {
+    "name": "APT.",
+    "beatLeaderID": "43d05xxx71",
+    "hash": "149DB1F8649E8AE04862CF9002B47C2FFD139C35",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 6.6732935905456543,
+    "starAccBeatLeader": 9.1721439361572266,
+    "starPassBeatLeader": 2.3945825099945068,
+    "starTechBeatLeader": 4.267601490020752
+  },
+  {
+    "name": "APT.",
+    "beatLeaderID": "43d05xxx31",
+    "hash": "149DB1F8649E8AE04862CF9002B47C2FFD139C35",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 4.7762889862060547,
+    "starAccBeatLeader": 7.3121066093444824,
+    "starPassBeatLeader": 1.6146973371505737,
+    "starTechBeatLeader": 2.6340470314025879
+  },
+  {
+    "name": "Vortex",
+    "scoreSaberID": "674318",
+    "beatLeaderID": "42fd0xxxxxx31",
+    "hash": "AB058265A53E5BB7DEA3D921A826AF2A9A926B2D",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 17,
+    "starScoreSaber": 5.3899998664855957,
+    "starBeatLeader": 4.2707819938659668,
+    "starAccBeatLeader": 6.46211051940918,
+    "starPassBeatLeader": 2.4351577758789062,
+    "starTechBeatLeader": 1.8313530683517456
+  },
+  {
+    "name": "APT.",
+    "beatLeaderID": "43d05xxx11",
+    "hash": "149DB1F8649E8AE04862CF9002B47C2FFD139C35",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 3.1152200698852539,
+    "starAccBeatLeader": 5.3658623695373535,
+    "starPassBeatLeader": 1.2590080499649048,
+    "starTechBeatLeader": 1.246517539024353
+  },
+  {
+    "name": "Yearn to Bloom - Aeldra's Theme",
+    "scoreSaberID": "674385",
+    "beatLeaderID": "4561cxxxxxx51",
+    "hash": "2090C2B0A765E4AB63767F66E3B2F19953A23D14",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 17,
+    "starScoreSaber": 4.0399999618530273,
+    "starBeatLeader": 2.7590587139129639,
+    "starAccBeatLeader": 4.9284539222717285,
+    "starPassBeatLeader": 1.0420366525650024,
+    "starTechBeatLeader": 1.1991603374481201
+  },
+  {
+    "name": "Yearn to Bloom - Aeldra's Theme",
+    "scoreSaberID": "674387",
+    "beatLeaderID": "4561cxxxxxx31",
+    "hash": "2090C2B0A765E4AB63767F66E3B2F19953A23D14",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 17,
+    "starScoreSaber": 3.6099998950958252,
+    "starBeatLeader": 1.82093346118927,
+    "starAccBeatLeader": 3.910280704498291,
+    "starPassBeatLeader": 0.31480681896209717,
+    "starTechBeatLeader": 0.3357817530632019
+  },
+  {
+    "name": "Yearn to Bloom - Aeldra's Theme",
+    "scoreSaberID": "674388",
+    "beatLeaderID": "4561cxxxxxx11",
+    "hash": "2090C2B0A765E4AB63767F66E3B2F19953A23D14",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 17,
+    "starScoreSaber": 3.0799999237060547,
+    "starBeatLeader": 1.3688685894012451,
+    "starAccBeatLeader": 3.1628818511962891,
+    "starPassBeatLeader": 0.13430538773536682,
+    "starTechBeatLeader": 0.1402430534362793
+  },
+  {
+    "name": "It All Starts Right Now",
+    "scoreSaberID": "674511",
+    "hash": "402833D56BCA3248C4A3F408C47C62A461747FCD",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 7.5900001525878906
+  },
+  {
+    "name": "ThE gUaRdIaN",
+    "scoreSaberID": "670485",
+    "hash": "5EB0C39B7DEAE975633ACD2EF5822F14860753F6",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 7.559999942779541
+  },
+  {
+    "name": "ThE gUaRdIaN",
+    "scoreSaberID": "670515",
+    "hash": "5EB0C39B7DEAE975633ACD2EF5822F14860753F6",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.010000228881836
+  },
+  {
+    "name": "ThE gUaRdIaN",
+    "scoreSaberID": "670655",
+    "hash": "5EB0C39B7DEAE975633ACD2EF5822F14860753F6",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.720000267028809
+  },
+  {
+    "name": "ThE gUaRdIaN",
+    "scoreSaberID": "670513",
+    "hash": "5EB0C39B7DEAE975633ACD2EF5822F14860753F6",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 12.279999732971191
+  },
+  {
+    "name": "Galaxy Crush",
+    "scoreSaberID": "668157",
+    "hash": "18780D574B44ABACB82D8DC13FBD7489FCC08176",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 9.25
+  },
+  {
+    "name": "Galaxy Crush",
+    "scoreSaberID": "669694",
+    "hash": "18780D574B44ABACB82D8DC13FBD7489FCC08176",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 11.210000038146973
+  },
+  {
+    "name": "Galaxy Crush",
+    "scoreSaberID": "669693",
+    "hash": "18780D574B44ABACB82D8DC13FBD7489FCC08176",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 11.239999771118164
+  },
+  {
+    "name": "Big Town Banky Blaine's Rockabilly BBQ",
+    "scoreSaberID": "674743",
+    "hash": "28373B6E7E2CF96ED35FD4DC7F7ED9B39DEB9431",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.8499999046325684
+  },
+  {
+    "name": "Big Town Banky Blaine's Rockabilly BBQ",
+    "scoreSaberID": "674764",
+    "hash": "28373B6E7E2CF96ED35FD4DC7F7ED9B39DEB9431",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 8.9600000381469727
+  },
+  {
+    "name": "Big Town Banky Blaine's Rockabilly BBQ",
+    "scoreSaberID": "674775",
+    "hash": "28373B6E7E2CF96ED35FD4DC7F7ED9B39DEB9431",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 11.880000114440918
+  },
+  {
+    "name": "Big Town Banky Blaine's Rockabilly BBQ",
+    "scoreSaberID": "674748",
+    "hash": "28373B6E7E2CF96ED35FD4DC7F7ED9B39DEB9431",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 12.729999542236328
+  },
+  {
+    "name": "YOU GAS ME UP",
+    "scoreSaberID": "673329",
+    "hash": "85D5F847933B4277C36C5F67D08DE76F7F4EECE6",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 12.529999732971191
+  },
+  {
+    "name": "pink diamond",
+    "scoreSaberID": "670939",
+    "hash": "366B8AAA9DBF012472525E44ACD1B475FCEFFAEB",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 7.3899998664855957
+  },
+  {
+    "name": "pink diamond",
+    "scoreSaberID": "670938",
+    "hash": "366B8AAA9DBF012472525E44ACD1B475FCEFFAEB",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.210000038146973
   }
 ]
