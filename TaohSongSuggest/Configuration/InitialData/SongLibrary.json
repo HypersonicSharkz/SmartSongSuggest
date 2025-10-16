@@ -62466,6 +62466,7 @@
   {
     "name": "Ambivalence",
     "scoreSaberID": "656807",
+    "beatSaverID": "40f58",
     "hash": "72E473DE7786D476BF6B3CEDF4E4964296C3AE1C",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -64269,6 +64270,7 @@
   {
     "name": "BAD X END",
     "scoreSaberID": "670110",
+    "beatSaverID": "40dd1",
     "hash": "29D05694A3703ACC95E0B3C338CC9659B7FEA046",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -64739,6 +64741,7 @@
   {
     "name": "Enigma",
     "scoreSaberID": "666132",
+    "beatSaverID": "479d7",
     "hash": "885454BFDFB8C4496C59DD04431C6BA558F24EFC",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -64928,6 +64931,7 @@
   {
     "name": "Bossfight Afterparty",
     "scoreSaberID": "669508",
+    "beatSaverID": "46b4c",
     "hash": "60BD21D7C266679161E4BE11479D1EF00CF3047F",
     "difficulty": "3",
     "characteristic": "Standard",
