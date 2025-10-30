@@ -36963,6 +36963,7 @@
     "name": "Brain Power",
     "scoreSaberID": "425632",
     "beatLeaderID": "1af2fx71",
+    "beatSaverID": "1af2f",
     "hash": "79D9DACEC0607F45E868A3F49B0795B3341EFFB2",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -56596,6 +56597,7 @@
   {
     "name": "Kaiba",
     "scoreSaberID": "629267",
+    "beatSaverID": "37412",
     "hash": "FA0E01A9024CD7F740DF3CBC894009A2A47E4729",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -63692,6 +63694,7 @@
   {
     "name": "COFFEE RUN",
     "scoreSaberID": "661184",
+    "beatSaverID": "422d9",
     "hash": "78513DB84926DA1ED1818E97D19DD5AD32050EC7",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -64701,6 +64704,7 @@
   {
     "name": "ETA",
     "scoreSaberID": "666839",
+    "beatSaverID": "4178f",
     "hash": "F14AB57BAFC284D500ED15C7ED6D1A1AA45531F9",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -80247,5 +80251,77 @@
     "starAccBeatLeader": 5.4645109176635742,
     "starPassBeatLeader": 1.1000908613204956,
     "starTechBeatLeader": 1.0467501878738403
+  },
+  {
+    "name": "Konpeito Extremists",
+    "beatLeaderID": "44b4dxxxxxxxxxxx91",
+    "hash": "450B2F57EBEBB0893D3FD0A3B4B2DB5221D0C102",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 12.088817596435547,
+    "starAccBeatLeader": 11.813844680786133,
+    "starPassBeatLeader": 7.9401330947875977,
+    "starTechBeatLeader": 12.875648498535156
+  },
+  {
+    "name": "Data Loss",
+    "beatLeaderID": "362c5xx91",
+    "hash": "77CA28BD44F04D2F2DB618FAA995BCD29ED4B480",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 10.735152244567871,
+    "starAccBeatLeader": 11.297386169433594,
+    "starPassBeatLeader": 6.8370833396911621,
+    "starTechBeatLeader": 9.8551626205444336
+  },
+  {
+    "name": "Konpeito Extremists",
+    "beatLeaderID": "44b4dxxxxxxxxxxx71",
+    "hash": "450B2F57EBEBB0893D3FD0A3B4B2DB5221D0C102",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 9.7254066467285156,
+    "starAccBeatLeader": 10.772374153137207,
+    "starPassBeatLeader": 5.2544779777526855,
+    "starTechBeatLeader": 9.7434139251708984
+  },
+  {
+    "name": "Konpeito Extremists",
+    "beatLeaderID": "44b4dxxxxxxxxxxx51",
+    "hash": "450B2F57EBEBB0893D3FD0A3B4B2DB5221D0C102",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 8.4123754501342773,
+    "starAccBeatLeader": 9.82125473022461,
+    "starPassBeatLeader": 4.0953068733215332,
+    "starTechBeatLeader": 8.9238672256469727
+  },
+  {
+    "name": "Konpeito Extremists",
+    "beatLeaderID": "44b4dxxxxxxxxxxx31",
+    "hash": "450B2F57EBEBB0893D3FD0A3B4B2DB5221D0C102",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 6.1721372604370117,
+    "starAccBeatLeader": 8.6306476593017578,
+    "starPassBeatLeader": 2.0554499626159668,
+    "starTechBeatLeader": 4.4807085990905762
+  },
+  {
+    "name": "Konpeito Extremists",
+    "beatLeaderID": "44b4dxxxxxxxxxxx11",
+    "hash": "450B2F57EBEBB0893D3FD0A3B4B2DB5221D0C102",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 5.582883358001709,
+    "starAccBeatLeader": 8.611393928527832,
+    "starPassBeatLeader": 1.1981291770935059,
+    "starTechBeatLeader": 2.2370638847351074
   }
 ]
