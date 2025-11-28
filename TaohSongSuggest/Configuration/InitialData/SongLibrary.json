@@ -61255,6 +61255,7 @@
   {
     "name": "Ai o Chikaishi Hime Kazari",
     "scoreSaberID": "648827",
+    "beatSaverID": "3f870",
     "hash": "0ECE9EC659645D8E12E635CADA6047C97D233684",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -63016,6 +63017,7 @@
   {
     "name": "Urami no Waltz",
     "scoreSaberID": "655771",
+    "beatSaverID": "40bad",
     "hash": "8B4D7B8C92D76569F3EB20250061302AA365EC91",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -64050,6 +64052,7 @@
   {
     "name": "Confessions of a Rotten Girl",
     "scoreSaberID": "665182",
+    "beatSaverID": "444ea",
     "hash": "FB71A8FB054F11300C2F56C95CDFC3CCFD14A2AA",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -64936,6 +64939,7 @@
   {
     "name": "Dalai Lama",
     "scoreSaberID": "668761",
+    "beatSaverID": "4703e",
     "hash": "DD7EE866DE15EC0F7795F95AFCD0927D3A4D769B",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -69906,6 +69910,7 @@
   {
     "name": "Christmas Eve/Sarajevo 12/24",
     "beatLeaderID": "2d91591",
+    "beatSaverID": "2d915",
     "hash": "C5E6D1C5DCB77B9492D7ECA0808FC6261CFEB0AC",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -81703,6 +81708,7 @@
   {
     "name": "1nput This 2 Y0ur Spine",
     "scoreSaberID": "675058",
+    "beatSaverID": "472e3",
     "hash": "3F0D9251DB8D9B38114A161D7B4015EB7BDE633C",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -82032,5 +82038,65 @@
     "starAccBeatLeader": 5.3284082412719727,
     "starPassBeatLeader": 1.1325069665908814,
     "starTechBeatLeader": 1.0815184116363525
+  },
+  {
+    "name": "Duallel Spirit",
+    "beatLeaderID": "3ba66xxxxxxxxxxxxxxxx91",
+    "hash": "8C74531454B076D9BBA8898D36A64D33FC5F55AD",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 10.86171817779541,
+    "starAccBeatLeader": 11.456480026245117,
+    "starPassBeatLeader": 6.5528841018676758,
+    "starTechBeatLeader": 10.353659629821777
+  },
+  {
+    "name": "Kusari Unparallel",
+    "beatLeaderID": "41e55xxxx91",
+    "hash": "EB4575CB78C7E49F2DD8E5BB70E63DE08FEAFCFF",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 6.8451595306396484,
+    "starAccBeatLeader": 8.8228750228881836,
+    "starPassBeatLeader": 3.93686842918396,
+    "starTechBeatLeader": 4.2880034446716309
+  },
+  {
+    "name": "Duallel Spirit",
+    "beatLeaderID": "3ba66xxxxxxxxxxxxxxxx71",
+    "hash": "8C74531454B076D9BBA8898D36A64D33FC5F55AD",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 6.0774688720703125,
+    "starAccBeatLeader": 8.4156570434570312,
+    "starPassBeatLeader": 2.4080009460449219,
+    "starTechBeatLeader": 4.28449821472168
+  },
+  {
+    "name": "Astrum",
+    "beatLeaderID": "48445x71",
+    "hash": "FE9BF6533A8CFE9E7E480E04BBF9E3FBCE25254C",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 5.124260425567627,
+    "starAccBeatLeader": 7.400177001953125,
+    "starPassBeatLeader": 2.2109944820404053,
+    "starTechBeatLeader": 3.4724223613739014
+  },
+  {
+    "name": "Kusari Unparallel",
+    "beatLeaderID": "41e55xxxx71",
+    "hash": "EB4575CB78C7E49F2DD8E5BB70E63DE08FEAFCFF",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 4.3614721298217773,
+    "starAccBeatLeader": 6.4510087966918945,
+    "starPassBeatLeader": 2.5911710262298584,
+    "starTechBeatLeader": 2.2688872814178467
   }
 ]
