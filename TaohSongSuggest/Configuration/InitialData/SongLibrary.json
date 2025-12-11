@@ -82218,5 +82218,101 @@
     "starAccBeatLeader": 7.0471982955932617,
     "starPassBeatLeader": 1.9492850303649902,
     "starTechBeatLeader": 2.7144978046417236
+  },
+  {
+    "name": "Godspeed",
+    "beatLeaderID": "4c5e3xx91",
+    "hash": "AA3D71EEBDE6AF6BBF30EA50CE3EE4A72CA6B2BC",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 14.363601684570313,
+    "starAccBeatLeader": 11.674602508544922,
+    "starPassBeatLeader": 16.962324142456055,
+    "starTechBeatLeader": 4.4473395347595215
+  },
+  {
+    "name": "G4M3-0V3R",
+    "beatLeaderID": "4936axxxxxxxxxxx91",
+    "hash": "EF80DA526A3AE58B00D592BD2290221CA77A57DB",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 13.889466285705566,
+    "starAccBeatLeader": 13.575385093688965,
+    "starPassBeatLeader": 9.0652389526367188,
+    "starTechBeatLeader": 11.257542610168457
+  },
+  {
+    "name": "Godspeed",
+    "beatLeaderID": "4c5e3xx71",
+    "hash": "AA3D71EEBDE6AF6BBF30EA50CE3EE4A72CA6B2BC",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 13.775480270385742,
+    "starAccBeatLeader": 11.031725883483887,
+    "starPassBeatLeader": 17.451631546020508,
+    "starTechBeatLeader": 3.1871457099914551
+  },
+  {
+    "name": "G4M3-0V3R",
+    "beatLeaderID": "4936axxxxxxxxxxx71",
+    "hash": "EF80DA526A3AE58B00D592BD2290221CA77A57DB",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 12.112518310546875,
+    "starAccBeatLeader": 12.463671684265137,
+    "starPassBeatLeader": 8.0419645309448242,
+    "starTechBeatLeader": 9.1838836669921875
+  },
+  {
+    "name": "G4M3-0V3R",
+    "beatLeaderID": "4936axxxxxxxxxxx51",
+    "hash": "EF80DA526A3AE58B00D592BD2290221CA77A57DB",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 11.449498176574707,
+    "starAccBeatLeader": 11.975108146667481,
+    "starPassBeatLeader": 7.34220552444458,
+    "starTechBeatLeader": 9.3996753692626953
+  },
+  {
+    "name": "Godspeed",
+    "beatLeaderID": "4c5e3xx51",
+    "hash": "AA3D71EEBDE6AF6BBF30EA50CE3EE4A72CA6B2BC",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 9.18058967590332,
+    "starAccBeatLeader": 10.080891609191895,
+    "starPassBeatLeader": 8.7364940643310547,
+    "starTechBeatLeader": 2.689091682434082
+  },
+  {
+    "name": "G4M3-0V3R",
+    "beatLeaderID": "4936axxxxxxxxxxx31",
+    "hash": "EF80DA526A3AE58B00D592BD2290221CA77A57DB",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 8.0529289245605469,
+    "starAccBeatLeader": 10.109417915344238,
+    "starPassBeatLeader": 3.5352637767791748,
+    "starTechBeatLeader": 6.0802726745605469
+  },
+  {
+    "name": "G4M3-0V3R",
+    "beatLeaderID": "4936axxxxxxxxxxx11",
+    "hash": "EF80DA526A3AE58B00D592BD2290221CA77A57DB",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 6.3395514488220215,
+    "starAccBeatLeader": 8.5385723114013672,
+    "starPassBeatLeader": 2.7907040119171143,
+    "starTechBeatLeader": 4.6665339469909668
   }
 ]
