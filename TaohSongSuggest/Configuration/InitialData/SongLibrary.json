@@ -62667,6 +62667,7 @@
   {
     "name": "Tic! Tac! Toe!",
     "scoreSaberID": "656415",
+    "beatSaverID": "4523d",
     "hash": "9C458B4E35211B571E2ADA94ABCBCBC43AFE9B69",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -63009,6 +63010,7 @@
   {
     "name": "Sakura, Reincarnation",
     "scoreSaberID": "653022",
+    "beatSaverID": "19eaf",
     "hash": "BDA532F37904235898E34311B7A60A8CE4DD82BF",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -63288,6 +63290,7 @@
   {
     "name": "Higashi",
     "scoreSaberID": "660141",
+    "beatSaverID": "3ebe1",
     "hash": "84F08EB456C727894EAD08731AF0FB1F6443752F",
     "difficulty": "5",
     "characteristic": "Standard",
