@@ -52833,6 +52833,7 @@
   {
     "name": "Fracture Ray",
     "scoreSaberID": "598617",
+    "beatSaverID": "3721a",
     "hash": "E3FFB12E116E6DB81D964E198657ED23BD9A642C",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -58639,6 +58640,7 @@
   {
     "name": "Mrs. Hollywood",
     "scoreSaberID": "606364",
+    "beatSaverID": "3c5d2",
     "hash": "965C6E50A30AD8109779C9ACAB663A55FD21FC80",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -61134,6 +61136,7 @@
   {
     "name": "ETERNAL ASCENT",
     "scoreSaberID": "646014",
+    "beatSaverID": "3ca03",
     "hash": "2D2A6498FC8B20C8149B30754B146B0887CE8FB5",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -61929,6 +61932,7 @@
   {
     "name": "Packet Hero",
     "scoreSaberID": "653041",
+    "beatSaverID": "3b7fa",
     "hash": "60291F966F7BC087AF87AD5A804B73E4EA1F0B2D",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -62518,6 +62522,7 @@
   {
     "name": "Full Throttle",
     "scoreSaberID": "655597",
+    "beatSaverID": "45ab8",
     "hash": "F210E6E476EA6E6170A23F2F0E036B98C4E2D931",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -63079,6 +63084,7 @@
   {
     "name": "MOLLY",
     "scoreSaberID": "661520",
+    "beatSaverID": "4689c",
     "hash": "F19FAFB619BCFE0201A94877CC3FEAF45E99182E",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -81648,6 +81654,7 @@
   {
     "name": "Apo:llioth",
     "scoreSaberID": "676199",
+    "beatSaverID": "47aa7",
     "hash": "DAACAFFCE9595C373EE4FBC35FA61E86D4F41890",
     "difficulty": "3",
     "characteristic": "Standard",
