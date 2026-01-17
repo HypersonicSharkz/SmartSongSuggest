@@ -58631,6 +58631,7 @@
   {
     "name": "Into You",
     "scoreSaberID": "605948",
+    "beatSaverID": "3c43d",
     "hash": "CECDD84ABA329B6147034ABAEE077C349657ABD6",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -81153,7 +81154,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 13.159999847412109
+    "starScoreSaber": 12.739999771118164
   },
   {
     "name": "OH SHIT!",
@@ -81280,7 +81281,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.4399995803833
+    "starScoreSaber": 12.430000305175781
   },
   {
     "name": "Sincerely, Maya",
@@ -81415,7 +81416,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.119999885559082
+    "starScoreSaber": 12.239999771118164
   },
   {
     "name": "Halcyon",
@@ -81537,6 +81538,7 @@
   {
     "name": "DEUX EX MĀXHINĀ",
     "scoreSaberID": "678408",
+    "beatSaverID": "47a4b",
     "hash": "0CA4B9F85C55BF7FF429D243E036ACA6FC5AFBF3",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -81741,7 +81743,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 13.300000190734863
+    "starScoreSaber": 13.319999694824219
   },
   {
     "name": "WUWAHAHAHA",
@@ -82258,7 +82260,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 17,
-    "starScoreSaber": 13.409999847412109,
+    "starScoreSaber": 14.0,
     "starBeatLeader": 13.889466285705566,
     "starAccBeatLeader": 13.575385093688965,
     "starPassBeatLeader": 9.0652389526367188,
@@ -82284,7 +82286,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 17,
-    "starScoreSaber": 12.270000457763672,
+    "starScoreSaber": 12.119999885559082,
     "starBeatLeader": 12.112518310546875,
     "starAccBeatLeader": 12.463671684265137,
     "starPassBeatLeader": 8.0419645309448242,
@@ -82324,7 +82326,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 17,
-    "starScoreSaber": 6.8000001907348633,
+    "starScoreSaber": 6.869999885559082,
     "starBeatLeader": 8.0529289245605469,
     "starAccBeatLeader": 10.109417915344238,
     "starPassBeatLeader": 3.5352637767791748,
@@ -82338,7 +82340,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 17,
-    "starScoreSaber": 5.929999828338623,
+    "starScoreSaber": 5.8600001335144043,
     "starBeatLeader": 6.3395514488220215,
     "starAccBeatLeader": 8.5385723114013672,
     "starPassBeatLeader": 2.7907040119171143,
@@ -82423,7 +82425,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 5,
-    "starScoreSaber": 3.6099998950958252,
+    "starScoreSaber": 3.809999942779541,
     "complexityAccSaber": 5.3
   },
   {
@@ -82550,7 +82552,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.4899997711181641
+    "starScoreSaber": 6.820000171661377
   },
   {
     "name": "JETLAGG!",
@@ -82568,7 +82570,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.8199996948242188
+    "starScoreSaber": 9.869999885559082
   },
   {
     "name": "JETLAGG!",
@@ -82586,7 +82588,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.670000076293945
+    "starScoreSaber": 12.710000038146973
   },
   {
     "name": "Echoes of Memoria",
@@ -82595,7 +82597,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.800000190734863
+    "starScoreSaber": 11.0
   },
   {
     "name": "Echoes of Memoria",
@@ -82604,7 +82606,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.529999732971191
+    "starScoreSaber": 13.109999656677246
   },
   {
     "name": "Rock It",
@@ -82613,7 +82615,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.6100001335144043
+    "starScoreSaber": 6.6100001335144043
   },
   {
     "name": "Rock It",
@@ -82622,7 +82624,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.7300000190734863
+    "starScoreSaber": 7.820000171661377
   },
   {
     "name": "Rock It",
@@ -82631,7 +82633,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.0799999237060547
+    "starScoreSaber": 10.329999923706055
   },
   {
     "name": "Rock It",
@@ -82649,7 +82651,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.1899995803833
+    "starScoreSaber": 12.239999771118164
   },
   {
     "name": "Sharks",
@@ -82667,7 +82669,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.070000171661377
+    "starScoreSaber": 5.820000171661377
   },
   {
     "name": "EmbryO",
@@ -82676,7 +82678,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.809999942779541
+    "starScoreSaber": 6.3600001335144043
   },
   {
     "name": "EmbryO",
@@ -82685,7 +82687,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.8600001335144043
+    "starScoreSaber": 7.6599998474121094
   },
   {
     "name": "EmbryO",
@@ -82712,7 +82714,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.680000305175781
+    "starScoreSaber": 10.779999732971191
   },
   {
     "name": "Bad Apple!!",
@@ -82721,7 +82723,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.430000305175781
+    "starScoreSaber": 12.529999732971191
   },
   {
     "name": "Hard Times",
@@ -82730,7 +82732,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 3.2799999713897705
+    "starScoreSaber": 3.8199999332427979
   },
   {
     "name": "Hard Times",
@@ -82739,7 +82741,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 3.9700000286102295
+    "starScoreSaber": 4.570000171661377
   },
   {
     "name": "Hard Times",
@@ -82748,7 +82750,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.6999998092651367
+    "starScoreSaber": 5.75
   },
   {
     "name": "Hard Times",
@@ -82757,7 +82759,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.5999999046325684
+    "starScoreSaber": 9.0299997329711914
   },
   {
     "name": "Tornado",
@@ -82766,7 +82768,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.1899995803833
+    "starScoreSaber": 9.2700004577636719
   },
   {
     "name": "Tornado",
@@ -82775,7 +82777,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.859999656677246
+    "starScoreSaber": 12.989999771118164
   },
   {
     "name": "SOUND ARCHITECT",
@@ -82793,7 +82795,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.590000152587891
+    "starScoreSaber": 12.859999656677246
   },
   {
     "name": "Bring Our Ignition Back",
@@ -82811,7 +82813,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.989999771118164
+    "starScoreSaber": 11.359999656677246
   },
   {
     "name": "Computer Cornflakes",
@@ -82820,7 +82822,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 3.9600000381469727
+    "starScoreSaber": 4.3600001335144043
   },
   {
     "name": "Computer Cornflakes",
@@ -82829,7 +82831,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.0799999237060547
+    "starScoreSaber": 5.429999828338623
   },
   {
     "name": "Computer Cornflakes",
@@ -82838,7 +82840,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.4799995422363281
+    "starScoreSaber": 8.5100002288818359
   },
   {
     "name": "Computer Cornflakes",
@@ -82847,7 +82849,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.4399995803833
+    "starScoreSaber": 10.590000152587891
   },
   {
     "name": "Computer Cornflakes",
@@ -82856,7 +82858,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.199999809265137
+    "starScoreSaber": 10.260000228881836
   },
   {
     "name": "places to be",
@@ -82865,7 +82867,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.869999885559082
+    "starScoreSaber": 6.4200000762939453
   },
   {
     "name": "places to be",
@@ -82874,7 +82876,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.4200000762939453
+    "starScoreSaber": 8.1400003433227539
   },
   {
     "name": "BAD MAD GIRL",
@@ -82883,7 +82885,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.570000171661377
+    "starScoreSaber": 5.3600001335144043
   },
   {
     "name": "BAD MAD GIRL",
@@ -82892,7 +82894,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.570000171661377
+    "starScoreSaber": 7.21999979019165
   },
   {
     "name": "BAD MAD GIRL",
@@ -82901,7 +82903,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.8199996948242188
+    "starScoreSaber": 9.369999885559082
   },
   {
     "name": "Enjoy This Time",
@@ -82910,7 +82912,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.429999828338623
+    "starScoreSaber": 6.679999828338623
   },
   {
     "name": "Enjoy This Time",
@@ -82919,7 +82921,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.630000114440918
+    "starScoreSaber": 8.1999998092651367
   },
   {
     "name": "Mizuki UP!",
@@ -82928,7 +82930,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.5199999809265137
+    "starScoreSaber": 6.1500000953674316
   },
   {
     "name": "Mizuki UP!",
@@ -82937,7 +82939,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.1700000762939453
+    "starScoreSaber": 8.4499998092651367
   },
   {
     "name": "Revolution",
@@ -82946,7 +82948,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.559999942779541
+    "starScoreSaber": 6.059999942779541
   },
   {
     "name": "Revolution",
@@ -82955,7 +82957,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.4000000953674316
+    "starScoreSaber": 7.2100000381469727
   },
   {
     "name": "Revolution",
@@ -82964,7 +82966,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.5200004577636719
+    "starScoreSaber": 9.3900003433227539
   },
   {
     "name": "Party People",
@@ -82982,7 +82984,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.029999732971191
+    "starScoreSaber": 9.2899999618530273
   },
   {
     "name": "Party People",
@@ -82991,7 +82993,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.170000076293945
+    "starScoreSaber": 12.300000190734863
   },
   {
     "name": "OPEN YOUR 3RD EYE",
@@ -83000,7 +83002,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.5399999618530273
+    "starScoreSaber": 7.5900001525878906
   },
   {
     "name": "OPEN YOUR 3RD EYE",
@@ -83009,7 +83011,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 9.8299999237060547
+    "starScoreSaber": 10.6899995803833
   },
   {
     "name": "OPEN YOUR 3RD EYE",
@@ -83018,7 +83020,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 12.600000381469727
+    "starScoreSaber": 12.520000457763672
   },
   {
     "name": "B.B.K.K.B.K.K.",
@@ -83027,7 +83029,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.0900001525878906
+    "starScoreSaber": 5.059999942779541
   },
   {
     "name": "B.B.K.K.B.K.K.",
@@ -83036,7 +83038,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 5.2399997711181641
+    "starScoreSaber": 6.3899998664855957
   },
   {
     "name": "B.B.K.K.B.K.K.",
@@ -83045,7 +83047,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.1000003814697266
+    "starScoreSaber": 7.9600000381469727
   },
   {
     "name": "B.B.K.K.B.K.K.",
@@ -83054,7 +83056,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.159999847412109
+    "starScoreSaber": 9.7399997711181641
   },
   {
     "name": "HIBANA",
@@ -83063,7 +83065,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 7.059999942779541
+    "starScoreSaber": 8.5100002288818359
   },
   {
     "name": "HIBANA",
@@ -83072,7 +83074,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 11.199999809265137
+    "starScoreSaber": 10.420000076293945
   },
   {
     "name": "eat",
@@ -83081,7 +83083,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.9800000190734863
+    "starScoreSaber": 7.7300000190734863
   },
   {
     "name": "eat",
@@ -83090,7 +83092,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 10.079999923706055
+    "starScoreSaber": 9.5399999618530273
   },
   {
     "name": "visions",
@@ -83099,7 +83101,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 4.429999828338623
+    "starScoreSaber": 5.929999828338623
   },
   {
     "name": "visions",
@@ -83108,7 +83110,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 6.3400001525878906
+    "starScoreSaber": 7.3400001525878906
   },
   {
     "name": "visions",
@@ -83117,7 +83119,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 1,
-    "starScoreSaber": 8.0399999618530273
+    "starScoreSaber": 8.09000015258789
   },
   {
     "name": "visions",
@@ -83127,5 +83129,428 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 9.6899995803833
+  },
+  {
+    "name": "Just Your Doll",
+    "scoreSaberID": "680965",
+    "hash": "58E6885C6B00441276B5B68614B1F0FE7ACDFFB6",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.619999885559082
+  },
+  {
+    "name": "Just Your Doll",
+    "scoreSaberID": "680968",
+    "hash": "58E6885C6B00441276B5B68614B1F0FE7ACDFFB6",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 5.7300000190734863
+  },
+  {
+    "name": "Just Your Doll",
+    "scoreSaberID": "680967",
+    "hash": "58E6885C6B00441276B5B68614B1F0FE7ACDFFB6",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 7.630000114440918
+  },
+  {
+    "name": "Just Your Doll",
+    "scoreSaberID": "680966",
+    "hash": "58E6885C6B00441276B5B68614B1F0FE7ACDFFB6",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 9.369999885559082
+  },
+  {
+    "name": "Crack",
+    "scoreSaberID": "681534",
+    "hash": "2689FE2ECFE95F7236348C685AEBE70E88F8BFAC",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 5.5100002288818359
+  },
+  {
+    "name": "Crack",
+    "scoreSaberID": "681470",
+    "hash": "2689FE2ECFE95F7236348C685AEBE70E88F8BFAC",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 7.4899997711181641
+  },
+  {
+    "name": "Crack",
+    "scoreSaberID": "681480",
+    "hash": "2689FE2ECFE95F7236348C685AEBE70E88F8BFAC",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.5
+  },
+  {
+    "name": "Crack",
+    "scoreSaberID": "681453",
+    "hash": "2689FE2ECFE95F7236348C685AEBE70E88F8BFAC",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 12.640000343322754
+  },
+  {
+    "name": "Good In Bed",
+    "scoreSaberID": "686483",
+    "hash": "4DC79F44BEE406E7953FBAF1DD1F911BB9722CB1",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.9300000667572021
+  },
+  {
+    "name": "Good In Bed",
+    "scoreSaberID": "686511",
+    "hash": "4DC79F44BEE406E7953FBAF1DD1F911BB9722CB1",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 5.309999942779541
+  },
+  {
+    "name": "Good In Bed",
+    "scoreSaberID": "686522",
+    "hash": "4DC79F44BEE406E7953FBAF1DD1F911BB9722CB1",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.320000171661377
+  },
+  {
+    "name": "Good In Bed",
+    "scoreSaberID": "686477",
+    "hash": "4DC79F44BEE406E7953FBAF1DD1F911BB9722CB1",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.239999771118164
+  },
+  {
+    "name": "Good In Bed",
+    "scoreSaberID": "686615",
+    "hash": "4DC79F44BEE406E7953FBAF1DD1F911BB9722CB1",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.649999618530273
+  },
+  {
+    "name": "Break Over",
+    "scoreSaberID": "685922",
+    "hash": "0A8E630031B9301ED964CE3A742BE27732122265",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.7200000286102295
+  },
+  {
+    "name": "gold",
+    "scoreSaberID": "686058",
+    "hash": "1EA1ECD355470B23D5C3C74D576E3F43C0907C47",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 8.5
+  },
+  {
+    "name": "///Under Construxion///",
+    "scoreSaberID": "684808",
+    "hash": "BE1249A0B8E17210821CAB89CFF802B954E396AC",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 11.880000114440918
+  },
+  {
+    "name": "Hercules",
+    "scoreSaberID": "686698",
+    "hash": "11477F33C443B90E9DD979E0F5C56169E7675BA1",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 11.369999885559082
+  },
+  {
+    "name": "///Under Construxion///",
+    "scoreSaberID": "684706",
+    "hash": "BE1249A0B8E17210821CAB89CFF802B954E396AC",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.890000343322754
+  },
+  {
+    "name": "gold",
+    "scoreSaberID": "686059",
+    "hash": "1EA1ECD355470B23D5C3C74D576E3F43C0907C47",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 11.090000152587891
+  },
+  {
+    "name": "Kyouran Hey Kids!!",
+    "scoreSaberID": "679100",
+    "hash": "718A37AD36DC0AE6B7AB831C6906CDB64B3FDFD2",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.320000171661377
+  },
+  {
+    "name": "Acid Burst",
+    "scoreSaberID": "686773",
+    "hash": "7E3548D116A7E65A5D00E6762386EEA30A25CF10",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.979999542236328
+  },
+  {
+    "name": "HOW",
+    "scoreSaberID": "686590",
+    "hash": "3CE509589CEB6F689E64F9502163C80BD86AFCC7",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.170000076293945
+  },
+  {
+    "name": "Anomaly",
+    "scoreSaberID": "686692",
+    "hash": "87495EC87D6F4F62EE6538BEA75EF059ED27D85B",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 8.6499996185302734
+  },
+  {
+    "name": "Lilly",
+    "scoreSaberID": "685874",
+    "hash": "0BE221BD2A2E9482D59C5D386CF6BF6A3AB47255",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 9.9200000762939453
+  },
+  {
+    "name": "The King's Return",
+    "scoreSaberID": "687269",
+    "hash": "1CB476A75A9CC314239CC5FD5ACF5E6386E9B924",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.699999809265137
+  },
+  {
+    "name": "Lilly",
+    "scoreSaberID": "685871",
+    "hash": "0BE221BD2A2E9482D59C5D386CF6BF6A3AB47255",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 11.739999771118164
+  },
+  {
+    "name": "Break Over",
+    "scoreSaberID": "685895",
+    "hash": "0A8E630031B9301ED964CE3A742BE27732122265",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 11.359999656677246
+  },
+  {
+    "name": "You Spin Me Round (Like a Record)",
+    "scoreSaberID": "685952",
+    "hash": "4D75CD0DAF0334489B348435BF7B7DDE5DE96FFB",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 9.0500001907348633
+  },
+  {
+    "name": "MEMORY SURGE",
+    "scoreSaberID": "686869",
+    "hash": "18B64628F89556AA6C6D2DC98A71B977E5C339E1",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 11.239999771118164
+  },
+  {
+    "name": "Air Raid 2010",
+    "scoreSaberID": "685519",
+    "hash": "53707816116FE7934C9A48F980DF72E242DDCB4E",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 11.359999656677246
+  },
+  {
+    "name": "MEMORY SURGE",
+    "scoreSaberID": "686868",
+    "hash": "18B64628F89556AA6C6D2DC98A71B977E5C339E1",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 12.25
+  },
+  {
+    "name": "Hercules",
+    "scoreSaberID": "686032",
+    "hash": "11477F33C443B90E9DD979E0F5C56169E7675BA1",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 11.829999923706055
+  },
+  {
+    "name": "Arche",
+    "scoreSaberID": "686292",
+    "hash": "F787167990446CBC734B88025A405B15A59AE5FD",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 11.789999961853027
+  },
+  {
+    "name": "Break Over",
+    "scoreSaberID": "685945",
+    "hash": "0A8E630031B9301ED964CE3A742BE27732122265",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 7.2899999618530273
+  },
+  {
+    "name": "Kyouran Hey Kids!!",
+    "scoreSaberID": "679082",
+    "hash": "718A37AD36DC0AE6B7AB831C6906CDB64B3FDFD2",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.670000076293945
+  },
+  {
+    "name": "Anomaly",
+    "scoreSaberID": "686634",
+    "hash": "87495EC87D6F4F62EE6538BEA75EF059ED27D85B",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 9.7700004577636719
+  },
+  {
+    "name": "MEMORY SURGE",
+    "scoreSaberID": "686870",
+    "hash": "18B64628F89556AA6C6D2DC98A71B977E5C339E1",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 8.869999885559082
+  },
+  {
+    "name": "The King's Return",
+    "scoreSaberID": "687276",
+    "hash": "1CB476A75A9CC314239CC5FD5ACF5E6386E9B924",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 7.6599998474121094
+  },
+  {
+    "name": "HOW",
+    "scoreSaberID": "686586",
+    "hash": "3CE509589CEB6F689E64F9502163C80BD86AFCC7",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.1100001335144043
+  },
+  {
+    "name": "Kyouran Hey Kids!!",
+    "scoreSaberID": "679097",
+    "hash": "718A37AD36DC0AE6B7AB831C6906CDB64B3FDFD2",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.1599998474121094
+  },
+  {
+    "name": "Acid Burst",
+    "scoreSaberID": "686772",
+    "hash": "7E3548D116A7E65A5D00E6762386EEA30A25CF10",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.0500001907348633
+  },
+  {
+    "name": "Arche",
+    "scoreSaberID": "686306",
+    "hash": "F787167990446CBC734B88025A405B15A59AE5FD",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 8.4499998092651367
+  },
+  {
+    "name": "Lilly",
+    "scoreSaberID": "685873",
+    "hash": "0BE221BD2A2E9482D59C5D386CF6BF6A3AB47255",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.5500001907348633
+  },
+  {
+    "name": "Kyouran Hey Kids!!",
+    "scoreSaberID": "679090",
+    "hash": "718A37AD36DC0AE6B7AB831C6906CDB64B3FDFD2",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 5.0500001907348633
+  },
+  {
+    "name": "Acid Burst",
+    "scoreSaberID": "686771",
+    "hash": "7E3548D116A7E65A5D00E6762386EEA30A25CF10",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.1999998092651367
+  },
+  {
+    "name": "Anomaly",
+    "scoreSaberID": "686690",
+    "hash": "87495EC87D6F4F62EE6538BEA75EF059ED27D85B",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.679999828338623
+  },
+  {
+    "name": "MEMORY SURGE",
+    "scoreSaberID": "686872",
+    "hash": "18B64628F89556AA6C6D2DC98A71B977E5C339E1",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.8299999237060547
   }
 ]
