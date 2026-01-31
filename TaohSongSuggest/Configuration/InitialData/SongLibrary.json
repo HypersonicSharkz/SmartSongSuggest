@@ -62976,6 +62976,7 @@
   {
     "name": "N0TH1NG",
     "scoreSaberID": "655428",
+    "beatSaverID": "43f5f",
     "hash": "C6BFF37B56FA8FA047FF3AA8481C90F8D960A03F",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -83353,6 +83354,7 @@
   {
     "name": "The King's Return",
     "scoreSaberID": "687269",
+    "beatSaverID": "366ec",
     "hash": "1CB476A75A9CC314239CC5FD5ACF5E6386E9B924",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -83871,5 +83873,14 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 4.2399997711181641
+  },
+  {
+    "name": "HOW",
+    "scoreSaberID": "686588",
+    "hash": "3CE509589CEB6F689E64F9502163C80BD86AFCC7",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 7.130000114440918
   }
 ]
