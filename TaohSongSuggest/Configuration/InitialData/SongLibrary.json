@@ -60747,6 +60747,7 @@
   {
     "name": "Classical Dragon",
     "scoreSaberID": "644719",
+    "beatSaverID": "40368",
     "hash": "680E7A7DD33B6A238A80B183B20E9E91008E70EA",
     "difficulty": "9",
     "characteristic": "Standard",
