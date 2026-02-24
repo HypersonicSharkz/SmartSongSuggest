@@ -89772,5 +89772,113 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 6.070000171661377
+  },
+  {
+    "name": "Slash Inferno",
+    "beatLeaderID": "49cacxxx91",
+    "hash": "CDFD021AD5B147767B9D86BFCA645EE9468C1737",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 12.811763763427734,
+    "starAccBeatLeader": 12.187774658203125,
+    "starPassBeatLeader": 9.8649816513061523,
+    "starTechBeatLeader": 10.799115180969238
+  },
+  {
+    "name": "Huh",
+    "beatLeaderID": "48acexx91",
+    "hash": "BD2875D162A11E6AF7056286EDE8849BC258DE17",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 9.0306310653686523,
+    "starAccBeatLeader": 10.529925346374512,
+    "starPassBeatLeader": 4.721733570098877,
+    "starTechBeatLeader": 7.73711633682251
+  },
+  {
+    "name": "Protect Me",
+    "beatLeaderID": "47a42xxxx91",
+    "hash": "0771D4052670794B7555FB75B05134FC81F12540",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 8.8729057312011719,
+    "starAccBeatLeader": 9.3815908432006836,
+    "starPassBeatLeader": 9.8645715713500977,
+    "starTechBeatLeader": 2.0300841331481934
+  },
+  {
+    "name": "Slash Inferno",
+    "beatLeaderID": "49cacxxx71",
+    "hash": "CDFD021AD5B147767B9D86BFCA645EE9468C1737",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 8.8427038192749023,
+    "starAccBeatLeader": 10.584506988525391,
+    "starPassBeatLeader": 4.8818902969360352,
+    "starTechBeatLeader": 5.8952569961547852
+  },
+  {
+    "name": "Slash Inferno",
+    "beatLeaderID": "49cacxxx51",
+    "hash": "CDFD021AD5B147767B9D86BFCA645EE9468C1737",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 5.6533451080322266,
+    "starAccBeatLeader": 7.400662899017334,
+    "starPassBeatLeader": 4.1210794448852539,
+    "starTechBeatLeader": 3.4596309661865234
+  },
+  {
+    "name": "Protect Me",
+    "beatLeaderID": "47a42xxxx71",
+    "hash": "0771D4052670794B7555FB75B05134FC81F12540",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 5.6319012641906738,
+    "starAccBeatLeader": 7.4583072662353516,
+    "starPassBeatLeader": 4.715247631072998,
+    "starTechBeatLeader": 1.7866339683532715
+  },
+  {
+    "name": "Slash Inferno",
+    "beatLeaderID": "49cacxxx31",
+    "hash": "CDFD021AD5B147767B9D86BFCA645EE9468C1737",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 3.2304229736328125,
+    "starAccBeatLeader": 5.4964494705200195,
+    "starPassBeatLeader": 1.3555655479431152,
+    "starTechBeatLeader": 1.250840425491333
+  },
+  {
+    "name": "Slash Inferno",
+    "beatLeaderID": "49cacxxx11",
+    "hash": "CDFD021AD5B147767B9D86BFCA645EE9468C1737",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 2.7078962326049805,
+    "starAccBeatLeader": 4.8839263916015625,
+    "starPassBeatLeader": 0.99215829372406006,
+    "starTechBeatLeader": 1.1294176578521729
+  },
+  {
+    "name": "Protect Me",
+    "beatLeaderID": "47a42xxxx51",
+    "hash": "0771D4052670794B7555FB75B05134FC81F12540",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 2.4352211952209473,
+    "starAccBeatLeader": 4.2716851234436035,
+    "starPassBeatLeader": 1.5844042301177979,
+    "starTechBeatLeader": 0.85896646976470947
   }
 ]
