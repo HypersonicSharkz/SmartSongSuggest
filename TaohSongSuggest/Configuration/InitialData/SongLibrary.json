@@ -45967,6 +45967,7 @@
   {
     "name": "RTX 20000",
     "scoreSaberID": "536294",
+    "beatSaverID": "2b94e",
     "hash": "F648234741613199B7F8EF0DFAD85C69D4174557",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -68539,6 +68540,7 @@
   {
     "name": "can we change the subject",
     "scoreSaberID": "657094",
+    "beatSaverID": "45a21",
     "hash": "3900D5A6226321B41AF1EC181B486CB40FDBC3D1",
     "difficulty": "3",
     "characteristic": "Standard",
