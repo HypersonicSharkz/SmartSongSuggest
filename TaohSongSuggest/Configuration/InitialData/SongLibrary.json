@@ -39901,6 +39901,7 @@
   {
     "name": "Vocaloids are Lame",
     "scoreSaberID": "426811",
+    "beatSaverID": "1c4f6",
     "hash": "7F6E3587A0130F5C4E817B41867A7FD4B1C4F4F3",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -46383,6 +46384,7 @@
   {
     "name": "Nyahaha ^~",
     "scoreSaberID": "537441",
+    "beatSaverID": "244a3",
     "hash": "E0161F0C8FF8A8921BD8E0BFF6B220FB0C82F488",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -65183,6 +65185,7 @@
   {
     "name": "The Sailor Song",
     "scoreSaberID": "639924",
+    "beatSaverID": "3cffe",
     "hash": "3BAD801FA151476EBB6752BC977E6218B52B4737",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -69986,6 +69989,7 @@
   {
     "name": "Ego Rock",
     "scoreSaberID": "661866",
+    "beatSaverID": "48315",
     "hash": "6EC3338EC7C4DCDF9C02C4580120C2B32EB431C2",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -92883,5 +92887,89 @@
     "starAccBeatLeader": 5.4876117706298828,
     "starPassBeatLeader": 2.0580532550811768,
     "starTechBeatLeader": 1.6550172567367554
+  },
+  {
+    "name": "SLIDE THE BPM (UP TO) 420!!",
+    "beatLeaderID": "47c48xxxx91",
+    "hash": "8B9B8D524EEF7D7B1F7F8943D937D8746FADA268",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 14.035629272460938,
+    "starAccBeatLeader": 12.165421485900879,
+    "starPassBeatLeader": 15.029133796691895,
+    "starTechBeatLeader": 5.1989288330078125
+  },
+  {
+    "name": "MOSHI",
+    "beatLeaderID": "4c05fxx91",
+    "hash": "1579FB221B2F286A5E3DA2B85D9629B3E30AEC33",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 11.564787864685059,
+    "starAccBeatLeader": 11.643305778503418,
+    "starPassBeatLeader": 7.78848934173584,
+    "starTechBeatLeader": 10.981535911560059
+  },
+  {
+    "name": "MOSHI",
+    "beatLeaderID": "4c05fxx71",
+    "hash": "1579FB221B2F286A5E3DA2B85D9629B3E30AEC33",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 9.3601713180542,
+    "starAccBeatLeader": 10.197546005249023,
+    "starPassBeatLeader": 7.1119890213012695,
+    "starTechBeatLeader": 6.738253116607666
+  },
+  {
+    "name": "MOSHI",
+    "beatLeaderID": "4c05fxx51",
+    "hash": "1579FB221B2F286A5E3DA2B85D9629B3E30AEC33",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 6.207089900970459,
+    "starAccBeatLeader": 8.0769481658935547,
+    "starPassBeatLeader": 4.0957345962524414,
+    "starTechBeatLeader": 3.6833846569061279
+  },
+  {
+    "name": "it's a seal!",
+    "beatLeaderID": "4d8eax91",
+    "hash": "6F33249B17710972BF5DDD742C3FA66CE4637BC2",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 5.4212446212768555,
+    "starAccBeatLeader": 7.7651224136352539,
+    "starPassBeatLeader": 2.5815596580505371,
+    "starTechBeatLeader": 2.8544673919677734
+  },
+  {
+    "name": "MOSHI",
+    "beatLeaderID": "4c05fxx31",
+    "hash": "1579FB221B2F286A5E3DA2B85D9629B3E30AEC33",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 4.0952253341674805,
+    "starAccBeatLeader": 6.164576530456543,
+    "starPassBeatLeader": 2.3758101463317871,
+    "starTechBeatLeader": 2.2551541328430176
+  },
+  {
+    "name": "MOSHI",
+    "beatLeaderID": "4c05fxx11",
+    "hash": "1579FB221B2F286A5E3DA2B85D9629B3E30AEC33",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 2.0960593223571777,
+    "starAccBeatLeader": 4.1121182441711426,
+    "starPassBeatLeader": 0.73569011688232422,
+    "starTechBeatLeader": 0.69175666570663452
   }
 ]
