@@ -41211,6 +41211,7 @@
   {
     "name": "All Eyes On Me",
     "scoreSaberID": "471676",
+    "beatSaverID": "269b2",
     "hash": "B7F9116377C0ADDEAD9AAC285C3BAD63E8E303CE",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -93352,5 +93353,14 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 11.180000305175781
+  },
+  {
+    "name": "Necrophagiatoast",
+    "scoreSaberID": "693050",
+    "hash": "1827B823A00DFA0DD41FF5EB32F09C43DA525441",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 10.770000457763672
   }
 ]
