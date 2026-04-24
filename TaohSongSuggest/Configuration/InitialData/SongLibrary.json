@@ -76550,6 +76550,7 @@
   {
     "name": "Curious",
     "beatLeaderID": "3f72dxxxx91",
+    "beatSaverID": "3f72d",
     "hash": "D8AD12DA2ED00D9EF39A4C1028967C74B6902F3C",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -86960,6 +86961,7 @@
   {
     "name": "Big Town Banky Blaine's Rockabilly BBQ",
     "scoreSaberID": "674743",
+    "beatSaverID": "3f08d",
     "hash": "28373B6E7E2CF96ED35FD4DC7F7ED9B39DEB9431",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -87275,6 +87277,7 @@
   {
     "name": "Oxycodone",
     "beatLeaderID": "456d0xxxx91",
+    "beatSaverID": "456d0",
     "hash": "5B57BEAF60790D0E4CA0421F01F2123919CAA995",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -91884,6 +91887,7 @@
   {
     "name": "Swoon.exe",
     "scoreSaberID": "684208",
+    "beatSaverID": "4760b",
     "hash": "3056E248B2F42C96BD67BFCB3DA291EC1E48C156",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -92976,6 +92980,7 @@
   {
     "name": "toxic till the end",
     "beatLeaderID": "455eexxxxxx91",
+    "beatSaverID": "455ee",
     "hash": "26BF3C369025DC0E899D89C4391170EE2A10A6D1",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -93362,5 +93367,41 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 10.770000457763672
+  },
+  {
+    "name": "Yggdrasil",
+    "beatLeaderID": "4b51fxxx91",
+    "hash": "6F05A9B96661DD873EA407730F59A25F6B5CEF67",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 12.341609954833984,
+    "starAccBeatLeader": 11.252213478088379,
+    "starPassBeatLeader": 12.80668830871582,
+    "starTechBeatLeader": 6.0830807685852051
+  },
+  {
+    "name": "FINAL_ROAD_MEGAMIX",
+    "beatLeaderID": "46472xxxxx91",
+    "hash": "18E8007AD0F75C1FD1C11D675211C924E634990E",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 11.012224197387695,
+    "starAccBeatLeader": 11.322622299194336,
+    "starPassBeatLeader": 9.3269882202148438,
+    "starTechBeatLeader": 5.9617137908935547
+  },
+  {
+    "name": "Yggdrasil",
+    "beatLeaderID": "4b51fxxx71",
+    "hash": "6F05A9B96661DD873EA407730F59A25F6B5CEF67",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 8.6217403411865234,
+    "starAccBeatLeader": 9.8478832244873047,
+    "starPassBeatLeader": 6.839907169342041,
+    "starTechBeatLeader": 4.4978742599487305
   }
 ]
