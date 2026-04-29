@@ -93575,5 +93575,14 @@
     "characteristic": "Standard",
     "songCategory": 4,
     "complexityAccSaber": 8.4
+  },
+  {
+    "name": "We're On Fire",
+    "scoreSaberID": "698399",
+    "hash": "827DC48347DA1B56705E717FE627C722CAC36885",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 8,
+    "complexityAccSaber": 12.4
   }
 ]
