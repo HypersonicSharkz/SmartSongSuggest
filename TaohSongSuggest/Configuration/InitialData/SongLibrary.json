@@ -29656,6 +29656,7 @@
   {
     "name": "Astrogazer - D.J Totto",
     "scoreSaberID": "3719",
+    "beatSaverID": "22a",
     "hash": "7F123B09A16FF0BDCE6B0B9182CD89C46B936A5F",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -93414,15 +93415,6 @@
     "complexityAccSaber": 9.8
   },
   {
-    "name": "We're On Fire",
-    "scoreSaberID": "689154",
-    "hash": "AF4F62C7A9AE8E49B682B51FA17DE6AA2AB176B7",
-    "difficulty": "3",
-    "characteristic": "Standard",
-    "songCategory": 8,
-    "complexityAccSaber": 12.4
-  },
-  {
     "name": "can't slow down",
     "scoreSaberID": "697099",
     "hash": "FBE947C75643B446B5F41FFC3FF6E78912D9F107",
@@ -93484,15 +93476,6 @@
     "characteristic": "Standard",
     "songCategory": 4,
     "complexityAccSaber": 6.8
-  },
-  {
-    "name": "We're On Fire",
-    "scoreSaberID": "689146",
-    "hash": "AF4F62C7A9AE8E49B682B51FA17DE6AA2AB176B7",
-    "difficulty": "1",
-    "characteristic": "Standard",
-    "songCategory": 4,
-    "complexityAccSaber": 8.4
   },
   {
     "name": "Rift",
@@ -93583,5 +93566,14 @@
     "characteristic": "Standard",
     "songCategory": 2,
     "complexityAccSaber": 3.3
+  },
+  {
+    "name": "We're On Fire",
+    "scoreSaberID": "698396",
+    "hash": "827DC48347DA1B56705E717FE627C722CAC36885",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 4,
+    "complexityAccSaber": 8.4
   }
 ]
