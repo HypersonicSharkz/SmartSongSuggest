@@ -21595,6 +21595,7 @@
   {
     "name": "BTH 4 - SELFIE",
     "scoreSaberID": "33352",
+    "beatSaverID": "7cd",
     "hash": "B9C0F43ADEF34726CFAF86AEFF9196FB66786760",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -92200,6 +92201,7 @@
   {
     "name": "Empusa: Queen of the Damned",
     "scoreSaberID": "687783",
+    "beatSaverID": "4bfe2",
     "hash": "78DD9FC4D439B9E831C2E21FD28D6AD0B49D6E0B",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -94798,6 +94800,7 @@
   {
     "name": "Paradission",
     "scoreSaberID": "700254",
+    "beatSaverID": "4d6a1",
     "hash": "233DC096241A6978834E1CB46D35C4DDBA00FD6D",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -95298,5 +95301,77 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 4.53000020980835
+  },
+  {
+    "name": "Venomous Firefly",
+    "scoreSaberID": "813428",
+    "hash": "6CDCA4D32D9CDAA7B1573D2373225D335A78FCCE",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 8.6099996566772461
+  },
+  {
+    "name": "Adios",
+    "scoreSaberID": "704080",
+    "hash": "18849729CB23E2C8C8E7FE4EAA07CB58F240AD3B",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.429999828338623
+  },
+  {
+    "name": "Blackmagik Blazing",
+    "scoreSaberID": "837423",
+    "hash": "4996F93149DC3909E6565862C0E523098F83C8F8",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.5500001907348633
+  },
+  {
+    "name": "Bangin' Burst",
+    "scoreSaberID": "703965",
+    "hash": "C3C22AC8FDBBB32B32AB273875D395116E51B02B",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.53000020980835
+  },
+  {
+    "name": "Utakata",
+    "scoreSaberID": "704067",
+    "hash": "FE348C36940CD3505D061EABD458AA2D7499351A",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 5.2399997711181641
+  },
+  {
+    "name": "Utakata",
+    "scoreSaberID": "704071",
+    "hash": "FE348C36940CD3505D061EABD458AA2D7499351A",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.9300000667572021
+  },
+  {
+    "name": "COSMIC LOOPER",
+    "scoreSaberID": "700216",
+    "hash": "67DC6AF3242A7C2A806AEFA1FF3F0CCC3BAFCBE8",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.179999828338623
+  },
+  {
+    "name": "Sweets Holic",
+    "scoreSaberID": "704413",
+    "hash": "C4BEC199B8F84B8C38F379ACD71E59F9D1180698",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.309999942779541
   }
 ]
