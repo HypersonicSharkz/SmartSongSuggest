@@ -9408,6 +9408,7 @@
   {
     "name": "Cotton Eyed Joe",
     "scoreSaberID": "28213",
+    "beatSaverID": "728",
     "hash": "CE42EA216F58F72DBAF0F18E99C8B1E636E8C126",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -48474,6 +48475,7 @@
   {
     "name": "Hyadain no Joujou Yuujou",
     "scoreSaberID": "549607",
+    "beatSaverID": "25b0b",
     "hash": "8C9346022BBF5D123D6DCB8B76635A68F06DE185",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -55360,6 +55362,7 @@
   {
     "name": "FLYING OUT TO THE SKY",
     "scoreSaberID": "578134",
+    "beatSaverID": "2e2d9",
     "hash": "5BEFE6F8CD5456FFF8DEBCF19410FC7B6027202F",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -94945,6 +94948,7 @@
   {
     "name": "glitter ✩‧₊˚",
     "scoreSaberID": "698212",
+    "beatSaverID": "4f682",
     "hash": "032E768319365F65250CC99E37E2CED4EB024356",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -95373,5 +95377,41 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 4.309999942779541
+  },
+  {
+    "name": "Checkmate",
+    "scoreSaberID": "756144",
+    "hash": "45F3CF5A78D70B559E82B4D67069E55F9263F377",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.0100002288818359
+  },
+  {
+    "name": "Adios",
+    "scoreSaberID": "704078",
+    "hash": "18849729CB23E2C8C8E7FE4EAA07CB58F240AD3B",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.1400001049041748
+  },
+  {
+    "name": "Antidote",
+    "scoreSaberID": "701590",
+    "hash": "007605B50065EC15F67C9ACCBAF323D77F552FC8",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.809999942779541
+  },
+  {
+    "name": "Gee",
+    "scoreSaberID": "841158",
+    "hash": "BF6650ECD26F885FC78EFE56FD29468796BC0B35",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.0499999523162842
   }
 ]
