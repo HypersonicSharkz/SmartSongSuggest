@@ -20559,6 +20559,7 @@
     "name": "Hellcat",
     "scoreSaberID": "327947",
     "beatLeaderID": "138da71",
+    "beatSaverID": "138da",
     "hash": "BDF85D5D575A992139EFF968A8348B3E6F03EEFE",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -60569,6 +60570,7 @@
   {
     "name": "Mi Mi Mi",
     "scoreSaberID": "622533",
+    "beatSaverID": "37177",
     "hash": "6E42E450F6298AB51EB8C31E2CA947DF3693D91B",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -61094,11 +61096,13 @@
   {
     "name": "Feel Alive",
     "scoreSaberID": "629612",
+    "beatLeaderID": "36410xxx11",
     "hash": "48464C8EAB7624752B51E9782D0BE4F3D5650C06",
     "difficulty": "1",
     "characteristic": "Standard",
-    "songCategory": 33,
+    "songCategory": 35,
     "starScoreSaber": 3.4000000953674316,
+    "complexityAccSaber": 4.0,
     "complexityAutoBalancer": 4.2
   },
   {
@@ -64538,6 +64542,7 @@
   {
     "name": "Caramelldansen",
     "scoreSaberID": "640660",
+    "beatSaverID": "42820",
     "hash": "9DD8B12460F0A9331ED81A6616C17AD54DAC144E",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -67022,6 +67027,7 @@
   {
     "name": "Heartbeatz",
     "scoreSaberID": "648543",
+    "beatSaverID": "40a79",
     "hash": "2B58F463497C1FCBD5EA7320D7C8AB8D3E109B00",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -70453,6 +70459,7 @@
   {
     "name": "equivalence",
     "scoreSaberID": "669514",
+    "beatSaverID": "46095",
     "hash": "7FB514BD4A003DE48D4F3A12AF9DC3D87AEBBEE2",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -88760,6 +88767,7 @@
   {
     "name": "Joanne",
     "scoreSaberID": "678136",
+    "beatSaverID": "481da",
     "hash": "BA9BA3A9D49D2D4B96C9F8EBD317C428B6EC9F91",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -90702,6 +90710,7 @@
   {
     "name": "Kyouran Hey Kids!!",
     "scoreSaberID": "679100",
+    "beatSaverID": "4bc37",
     "hash": "718A37AD36DC0AE6B7AB831C6906CDB64B3FDFD2",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -91009,6 +91018,7 @@
   {
     "name": "You Spin Me Round (Like a Record)",
     "scoreSaberID": "685953",
+    "beatSaverID": "4bf14",
     "hash": "4D75CD0DAF0334489B348435BF7B7DDE5DE96FFB",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -91018,6 +91028,7 @@
   {
     "name": "Air Raid 2010",
     "scoreSaberID": "685524",
+    "beatSaverID": "49062",
     "hash": "53707816116FE7934C9A48F980DF72E242DDCB4E",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -91979,6 +91990,7 @@
   {
     "name": "Necrophagiatoast",
     "scoreSaberID": "693048",
+    "beatSaverID": "4d79f",
     "hash": "1827B823A00DFA0DD41FF5EB32F09C43DA525441",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -92286,6 +92298,7 @@
   {
     "name": "Swoon.exe",
     "scoreSaberID": "684223",
+    "beatSaverID": "4760b",
     "hash": "3056E248B2F42C96BD67BFCB3DA291EC1E48C156",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -92620,6 +92633,7 @@
   {
     "name": "Offset",
     "scoreSaberID": "692689",
+    "beatSaverID": "48544",
     "hash": "BDAC197F36E40641CA5341C22BA44331C3209BC8",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -92855,6 +92869,7 @@
   {
     "name": "Sneaky Little Thief",
     "scoreSaberID": "692729",
+    "beatSaverID": "47ed9",
     "hash": "38552A5BE19E2E1EB5C9C0BB580A8FE8127F51E0",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -93000,6 +93015,7 @@
   {
     "name": "DADDY",
     "scoreSaberID": "691378",
+    "beatSaverID": "49854",
     "hash": "674F0E2764B0433121371BC222021BB4EB014E3A",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -93677,11 +93693,13 @@
   {
     "name": "Polka Dot Dobbins",
     "scoreSaberID": "697491",
+    "beatLeaderID": "4d44dxx11",
     "hash": "5E1D4230B22566F81FD0DECEBFDD1F4801CA0966",
     "difficulty": "1",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 4.5100002288818359
+    "songCategory": 5,
+    "starScoreSaber": 4.5100002288818359,
+    "complexityAccSaber": 6.2
   },
   {
     "name": "Polka Dot Dobbins",
@@ -94176,6 +94194,7 @@
   {
     "name": "MOVE YOUR BODY",
     "scoreSaberID": "697182",
+    "beatSaverID": "4a25e",
     "hash": "7407A0E7367B1E10C1A458969CC5D646EA67FC47",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -94230,6 +94249,7 @@
   {
     "name": "Dragostea Din Tei",
     "scoreSaberID": "698248",
+    "beatSaverID": "4dfc3",
     "hash": "1FD7016930AC67BABE3DDDCED50E120FD2ABFC17",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -95390,11 +95410,13 @@
   {
     "name": "Adios",
     "scoreSaberID": "704078",
+    "beatLeaderID": "4d048xxx11",
     "hash": "18849729CB23E2C8C8E7FE4EAA07CB58F240AD3B",
     "difficulty": "1",
     "characteristic": "Standard",
-    "songCategory": 1,
-    "starScoreSaber": 3.1400001049041748
+    "songCategory": 5,
+    "starScoreSaber": 3.1400001049041748,
+    "complexityAccSaber": 5.5
   },
   {
     "name": "Antidote",
@@ -95413,5 +95435,255 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 3.0499999523162842
+  },
+  {
+    "name": "Distortion",
+    "beatLeaderID": "4bf13xxxxxx91",
+    "hash": "F3A6E9A2ADE6C5D17B175DB9769DEC6F4FC2683C",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 11.632988929748535,
+    "starAccBeatLeader": 11.07565975189209,
+    "starPassBeatLeader": 11.890494346618652,
+    "starTechBeatLeader": 5.0707364082336426
+  },
+  {
+    "name": "Wavetapper",
+    "beatLeaderID": "4bbe5xx91",
+    "hash": "279E2C6185FB0BDAC8EEF8C349120A9F982DE218",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 10.543364524841309,
+    "starAccBeatLeader": 11.103565216064453,
+    "starPassBeatLeader": 7.369600772857666,
+    "starTechBeatLeader": 8.605860710144043
+  },
+  {
+    "name": "D/N/A",
+    "beatLeaderID": "4e6afxxx91",
+    "hash": "B3C4219489531A980608ED48364BC8A6A9523705",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 10.206405639648438,
+    "starAccBeatLeader": 11.358125686645508,
+    "starPassBeatLeader": 5.0991430282592773,
+    "starTechBeatLeader": 9.8341922760009766
+  },
+  {
+    "name": "Distortion",
+    "beatLeaderID": "4bf13xxxxxx71",
+    "hash": "F3A6E9A2ADE6C5D17B175DB9769DEC6F4FC2683C",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 10.050206184387207,
+    "starAccBeatLeader": 9.4472379684448242,
+    "starPassBeatLeader": 12.057557106018066,
+    "starTechBeatLeader": 3.9312965869903564
+  },
+  {
+    "name": "D/N/A",
+    "beatLeaderID": "4e6afxxx71",
+    "hash": "B3C4219489531A980608ED48364BC8A6A9523705",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 7.1241278648376465,
+    "starAccBeatLeader": 8.6712942123413086,
+    "starPassBeatLeader": 4.997718334197998,
+    "starTechBeatLeader": 4.8955373764038086
+  },
+  {
+    "name": "Wavetapper",
+    "beatLeaderID": "4bbe5xx71",
+    "hash": "279E2C6185FB0BDAC8EEF8C349120A9F982DE218",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 7.0785923004150391,
+    "starAccBeatLeader": 8.7180261611938477,
+    "starPassBeatLeader": 4.5461258888244629,
+    "starTechBeatLeader": 5.2411561012268066
+  },
+  {
+    "name": "Ginger Lemonade",
+    "scoreSaberID": "698494",
+    "beatLeaderID": "5001731",
+    "hash": "09F2FDA53C3B5B818EB10CAB41D1C172267310D9",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 8,
+    "complexityAccSaber": 7.4
+  },
+  {
+    "name": "10 Percent Jazz",
+    "scoreSaberID": "688091",
+    "beatLeaderID": "4dcf851",
+    "hash": "15D864922F7D2B817EAAAB9456963CD5E224FEF9",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 4,
+    "complexityAccSaber": 5.9
+  },
+  {
+    "name": "Masterpiece",
+    "scoreSaberID": "917759",
+    "beatLeaderID": "51f1471",
+    "hash": "1D29B771F971E874EC20668485A8D961C4AB137B",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 8,
+    "complexityAccSaber": 10.2
+  },
+  {
+    "name": "Lumiose City",
+    "scoreSaberID": "691990",
+    "beatLeaderID": "4eaec31",
+    "hash": "6476355AF2051FA62D33E9E1319B07A3691E5A81",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 4,
+    "complexityAccSaber": 4.0
+  },
+  {
+    "name": "Cicada",
+    "scoreSaberID": "695775",
+    "beatLeaderID": "4f5be51",
+    "hash": "6A9561916FD8FAC06682EA9D8EA7C79850D0E59C",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 8,
+    "complexityAccSaber": 9.2
+  },
+  {
+    "name": "Cicada",
+    "scoreSaberID": "695773",
+    "beatLeaderID": "4f5be31",
+    "hash": "6A9561916FD8FAC06682EA9D8EA7C79850D0E59C",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 8,
+    "complexityAccSaber": 7.2
+  },
+  {
+    "name": "Midnight Sun",
+    "scoreSaberID": "697934",
+    "beatLeaderID": "4fdd271",
+    "hash": "785D542323A10A5AB48FE55AA18770B740B73D90",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 4,
+    "complexityAccSaber": 6.1
+  },
+  {
+    "name": "Midnight Sun",
+    "scoreSaberID": "697933",
+    "beatLeaderID": "4fdd291",
+    "hash": "785D542323A10A5AB48FE55AA18770B740B73D90",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 8,
+    "complexityAccSaber": 9.6
+  },
+  {
+    "name": "Midnight Sun",
+    "scoreSaberID": "697957",
+    "beatLeaderID": "4fdd251",
+    "hash": "785D542323A10A5AB48FE55AA18770B740B73D90",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 2,
+    "complexityAccSaber": 3.5
+  },
+  {
+    "name": "Beaches",
+    "scoreSaberID": "903482",
+    "beatLeaderID": "51eb3x31",
+    "hash": "9C6B7CC080521F76BB63DADC986DE28F5A63CB51",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 4,
+    "complexityAccSaber": 6.4
+  },
+  {
+    "name": "Kiss the Sky",
+    "scoreSaberID": "1067446",
+    "beatLeaderID": "51596x11",
+    "hash": "B7D9D652C3A1C4FE37BE506379B958B0056565EA",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 2,
+    "complexityAccSaber": 3.2
+  },
+  {
+    "name": "Kiss the Sky",
+    "scoreSaberID": "1067448",
+    "beatLeaderID": "51596x51",
+    "hash": "B7D9D652C3A1C4FE37BE506379B958B0056565EA",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 8,
+    "complexityAccSaber": 11.5
+  },
+  {
+    "name": "Kiss the Sky",
+    "scoreSaberID": "1067447",
+    "beatLeaderID": "51596x31",
+    "hash": "B7D9D652C3A1C4FE37BE506379B958B0056565EA",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 4,
+    "complexityAccSaber": 6.7
+  },
+  {
+    "name": "My Life Would Suck Without You",
+    "scoreSaberID": "703837",
+    "beatLeaderID": "5168611",
+    "hash": "B8BE5275EE1B9AE3B5D87D29102A326AC06298AC",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 2,
+    "complexityAccSaber": 6.7
+  },
+  {
+    "name": "My Life Would Suck Without You",
+    "scoreSaberID": "703875",
+    "beatLeaderID": "5168651",
+    "hash": "B8BE5275EE1B9AE3B5D87D29102A326AC06298AC",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 4,
+    "complexityAccSaber": 9.6
+  },
+  {
+    "name": "Green Light",
+    "scoreSaberID": "701347",
+    "beatLeaderID": "50bb571",
+    "hash": "FC0CF8643D8CC3716443BD0E4A0711674E5F25A9",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 8,
+    "complexityAccSaber": 10.5
+  },
+  {
+    "name": "COSMIC LOOPER",
+    "scoreSaberID": "700215",
+    "hash": "67DC6AF3242A7C2A806AEFA1FF3F0CCC3BAFCBE8",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.0399999618530273
+  },
+  {
+    "name": "Adios",
+    "scoreSaberID": "704060",
+    "hash": "18849729CB23E2C8C8E7FE4EAA07CB58F240AD3B",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.5100002288818359
   }
 ]
