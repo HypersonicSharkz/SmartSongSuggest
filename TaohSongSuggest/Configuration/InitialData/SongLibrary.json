@@ -60370,6 +60370,7 @@
   {
     "name": "CRUSH",
     "scoreSaberID": "626129",
+    "beatSaverID": "3d075",
     "hash": "7ABEF97002B3B8DAA2231A3D7ED4ACCFD67295EE",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -60796,6 +60797,7 @@
   {
     "name": "Papasito",
     "scoreSaberID": "623750",
+    "beatSaverID": "39543",
     "hash": "A837C28DA5B7794048F491D801FF3CFB2E18D750",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -62267,6 +62269,7 @@
   {
     "name": "DAICON V",
     "scoreSaberID": "631772",
+    "beatSaverID": "3f114",
     "hash": "DDA13B4DC6BC34F777D38032061BC78A7A63414E",
     "difficulty": "7",
     "characteristic": "Standard",
@@ -94315,6 +94318,7 @@
   {
     "name": "She Looked Like Me!",
     "scoreSaberID": "694914",
+    "beatSaverID": "4e12c",
     "hash": "0F2913B8201C980891863C39F1E821D828F9BAFA",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -95385,6 +95389,7 @@
   {
     "name": "COSMIC LOOPER",
     "scoreSaberID": "700216",
+    "beatSaverID": "4ac0e",
     "hash": "67DC6AF3242A7C2A806AEFA1FF3F0CCC3BAFCBE8",
     "difficulty": "5",
     "characteristic": "Standard",
@@ -95933,5 +95938,86 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 4.2699999809265137
+  },
+  {
+    "name": "Poffertje Bloedworst",
+    "scoreSaberID": "1209147",
+    "hash": "C1476E69EED6AF9AAA406B5A746E0E3510B56A31",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.3400001525878906
+  },
+  {
+    "name": "LIMIT BURST",
+    "scoreSaberID": "869911",
+    "hash": "75952FA3F477E4B0FED946B33E3856B66FE3E451",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.5100002288818359
+  },
+  {
+    "name": "Gram's Solo Serene Requiem, \"The Abyss\"",
+    "scoreSaberID": "875267",
+    "hash": "851C97E056B0F1557AC6CAF0F244F4432341F818",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.5900001525878906
+  },
+  {
+    "name": "Cyaegha",
+    "scoreSaberID": "888772",
+    "hash": "3D31005D1DBDD056564EB831C664B1EC9AF51AB2",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 8.6499996185302734
+  },
+  {
+    "name": "Cyaegha",
+    "scoreSaberID": "888770",
+    "hash": "3D31005D1DBDD056564EB831C664B1EC9AF51AB2",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.96999979019165
+  },
+  {
+    "name": "Cyaegha",
+    "scoreSaberID": "888771",
+    "hash": "3D31005D1DBDD056564EB831C664B1EC9AF51AB2",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.46999979019165
+  },
+  {
+    "name": "LIMIT BURST",
+    "scoreSaberID": "869910",
+    "hash": "75952FA3F477E4B0FED946B33E3856B66FE3E451",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.6500000953674316
+  },
+  {
+    "name": "Gram's Solo Serene Requiem, \"The Abyss\"",
+    "scoreSaberID": "875268",
+    "hash": "851C97E056B0F1557AC6CAF0F244F4432341F818",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.7600002288818359
+  },
+  {
+    "name": "Miku",
+    "scoreSaberID": "855160",
+    "hash": "9A3B2ADA05E83C4232E6BF13C2564516702BC2CF",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.7200000286102295
   }
 ]
