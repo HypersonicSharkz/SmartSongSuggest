@@ -96019,5 +96019,41 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 3.7200000286102295
+  },
+  {
+    "name": "Calamitous Demise",
+    "beatLeaderID": "46f03xx91",
+    "hash": "00EF562C32FA111FA901F6769E7737F0A5C49386",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 14.070054054260254,
+    "starAccBeatLeader": 11.826927185058594,
+    "starPassBeatLeader": 16.180631637573242,
+    "starTechBeatLeader": 4.1119155883789062
+  },
+  {
+    "name": "Calamitous Demise",
+    "beatLeaderID": "46f03xx71",
+    "hash": "00EF562C32FA111FA901F6769E7737F0A5C49386",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 12.148123741149902,
+    "starAccBeatLeader": 10.636588096618652,
+    "starPassBeatLeader": 14.913018226623535,
+    "starTechBeatLeader": 2.84505558013916
+  },
+  {
+    "name": "Calamitous Demise",
+    "beatLeaderID": "46f03xx51",
+    "hash": "00EF562C32FA111FA901F6769E7737F0A5C49386",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 8.9231681823730469,
+    "starAccBeatLeader": 10.302952766418457,
+    "starPassBeatLeader": 7.2044596672058105,
+    "starTechBeatLeader": 3.1471054553985596
   }
 ]
