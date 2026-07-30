@@ -69529,6 +69529,7 @@
   {
     "name": "Boingo",
     "scoreSaberID": "662706",
+    "beatSaverID": "43258",
     "hash": "F02B86EB836EE16C0A2F6095BF596404572D2843",
     "difficulty": "1",
     "characteristic": "Standard",
@@ -90228,6 +90229,7 @@
   {
     "name": "Computer Cornflakes",
     "scoreSaberID": "681602",
+    "beatSaverID": "48673",
     "hash": "6DFEDFD47B009208F3468D9D8B06B4000FC26252",
     "difficulty": "1",
     "characteristic": "Standard",
