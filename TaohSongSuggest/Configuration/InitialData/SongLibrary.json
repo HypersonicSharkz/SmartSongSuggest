@@ -96692,5 +96692,68 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 4.4200000762939453
+  },
+  {
+    "name": "Family Guy Main Title",
+    "scoreSaberID": "1389932",
+    "hash": "96B6B31311A7FA0164E58CC1AA46F6BAFBA90D5D",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.7799999713897705
+  },
+  {
+    "name": "Arcahv",
+    "scoreSaberID": "2014595",
+    "hash": "A40A59B7AE95F8D2326BEBF83621A618EB72D328",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 5.3600001335144043
+  },
+  {
+    "name": "Bubblegum Bitch",
+    "scoreSaberID": "1985637",
+    "hash": "80A4FA6B8782A69F6B684058FBBA94BEACDB220F",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.7100000381469727
+  },
+  {
+    "name": "bad times",
+    "scoreSaberID": "718047",
+    "hash": "E95650D085C8B1202E2B6EFD27FF342AA14845F5",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.7699999809265137
+  },
+  {
+    "name": "Nietige Wortel",
+    "scoreSaberID": "702215",
+    "hash": "E22248DC694C78158C97A8F784B2CDCA8A793D1A",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.0399999618530273
+  },
+  {
+    "name": "Ne Night & All Night",
+    "scoreSaberID": "1246962",
+    "hash": "01599EE9352045085ABE4FDAEE5E0851F709DA14",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.9000000953674316
+  },
+  {
+    "name": "Cold As Ice",
+    "scoreSaberID": "702970",
+    "hash": "92C031BD7EF2BA2D560BE22860F386F6AD5F789E",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.559999942779541
   }
 ]
