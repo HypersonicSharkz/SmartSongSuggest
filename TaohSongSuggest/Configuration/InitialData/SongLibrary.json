@@ -94969,6 +94969,7 @@
   {
     "name": "glitter ✩‧₊˚",
     "scoreSaberID": "698149",
+    "beatSaverID": "4f682",
     "hash": "032E768319365F65250CC99E37E2CED4EB024356",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -95132,6 +95133,7 @@
   {
     "name": "Hero",
     "scoreSaberID": "703053",
+    "beatSaverID": "4cb75",
     "hash": "10B0DBDF98F7EABD805817B51263517D1CC2848F",
     "difficulty": "9",
     "characteristic": "Standard",
@@ -95321,6 +95323,7 @@
   {
     "name": "Gee",
     "scoreSaberID": "841159",
+    "beatSaverID": "4da4b",
     "hash": "BF6650ECD26F885FC78EFE56FD29468796BC0B35",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -95937,6 +95940,7 @@
   {
     "name": "Poffertje Bloedworst",
     "scoreSaberID": "1209148",
+    "beatSaverID": "4bfa8",
     "hash": "C1476E69EED6AF9AAA406B5A746E0E3510B56A31",
     "difficulty": "3",
     "characteristic": "Standard",
@@ -96755,5 +96759,59 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 3.559999942779541
+  },
+  {
+    "name": "Classical VIP",
+    "beatLeaderID": "4c356xxxx91",
+    "hash": "70C128E70D8E42ED53CD2546028516A0BAE1CA2D",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 12.120235443115234,
+    "starAccBeatLeader": 12.488929748535156,
+    "starPassBeatLeader": 6.2279295921325684,
+    "starTechBeatLeader": 12.967240333557129
+  },
+  {
+    "name": "Classical VIP",
+    "beatLeaderID": "4c356xxxx51",
+    "hash": "70C128E70D8E42ED53CD2546028516A0BAE1CA2D",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 7.6270303726196289,
+    "starAccBeatLeader": 9.3501977920532227,
+    "starPassBeatLeader": 3.7668895721435547,
+    "starTechBeatLeader": 7.0005435943603516
+  },
+  {
+    "name": "Do No Harm",
+    "beatLeaderID": "4d6bdxxx71",
+    "hash": "29DAC83A7EF560223E29EC730CBE4099488AB081",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 4.0324621200561523,
+    "starAccBeatLeader": 6.2159991264343262,
+    "starPassBeatLeader": 1.5770127773284912,
+    "starTechBeatLeader": 3.1492965221405029
+  },
+  {
+    "name": "Nietige Wortel",
+    "scoreSaberID": "702206",
+    "hash": "E22248DC694C78158C97A8F784B2CDCA8A793D1A",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.9000000953674316
+  },
+  {
+    "name": "Bubblegum Bitch",
+    "scoreSaberID": "1985638",
+    "hash": "80A4FA6B8782A69F6B684058FBBA94BEACDB220F",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 3.869999885559082
   }
 ]
