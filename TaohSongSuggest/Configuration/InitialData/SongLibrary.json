@@ -96846,5 +96846,65 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 4.9800000190734863
+  },
+  {
+    "name": "MIREN",
+    "beatLeaderID": "4cb5cxxx91",
+    "hash": "05A1E0CF2D1EE6971116D2EC5184B68D3DC1BA3F",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 12.954483032226563,
+    "starAccBeatLeader": 12.399272918701172,
+    "starPassBeatLeader": 8.750213623046875,
+    "starTechBeatLeader": 13.004184722900391
+  },
+  {
+    "name": "MIREN",
+    "beatLeaderID": "4cb5cxxx71",
+    "hash": "05A1E0CF2D1EE6971116D2EC5184B68D3DC1BA3F",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 9.5665721893310547,
+    "starAccBeatLeader": 10.474966049194336,
+    "starPassBeatLeader": 5.7480607032775879,
+    "starTechBeatLeader": 9.3745050430297852
+  },
+  {
+    "name": "MIREN",
+    "beatLeaderID": "4cb5cxxx51",
+    "hash": "05A1E0CF2D1EE6971116D2EC5184B68D3DC1BA3F",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 5.2829394340515137,
+    "starAccBeatLeader": 7.0169706344604492,
+    "starPassBeatLeader": 3.319504976272583,
+    "starTechBeatLeader": 4.52105712890625
+  },
+  {
+    "name": "MIREN",
+    "beatLeaderID": "4cb5cxxx31",
+    "hash": "05A1E0CF2D1EE6971116D2EC5184B68D3DC1BA3F",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 2.6486024856567383,
+    "starAccBeatLeader": 4.6678276062011719,
+    "starPassBeatLeader": 1.1242778301239014,
+    "starTechBeatLeader": 1.5174448490142822
+  },
+  {
+    "name": "MIREN",
+    "beatLeaderID": "4cb5cxxx11",
+    "hash": "05A1E0CF2D1EE6971116D2EC5184B68D3DC1BA3F",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 1.6688359975814819,
+    "starAccBeatLeader": 3.5298378467559814,
+    "starPassBeatLeader": 0.50931531190872192,
+    "starTechBeatLeader": 0.58091366291046143
   }
 ]
