@@ -1407,7 +1407,7 @@
     "starAccBeatLeader": 3.9313411712646484,
     "starPassBeatLeader": 0.79819375276565552,
     "starTechBeatLeader": 1.0654125213623047,
-    "complexityAccSaber": 2.4,
+    "complexityAccSaber": 3.0,
     "complexityAutoBalancer": 3.58
   },
   {
@@ -4188,7 +4188,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.0
+    "complexityAccSaber": 11.0
   },
   {
     "name": "Who's Got Your Love",
@@ -6932,7 +6932,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.7
+    "complexityAccSaber": 7.2
   },
   {
     "name": "Icarus",
@@ -7163,7 +7163,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.9
+    "complexityAccSaber": 4.3
   },
   {
     "name": "Lone Digger",
@@ -7283,7 +7283,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.0
+    "complexityAccSaber": 8.3
   },
   {
     "name": "Temple Of Sound",
@@ -7399,7 +7399,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.1
+    "complexityAccSaber": 4.3
   },
   {
     "name": "Click Bait",
@@ -7814,7 +7814,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.7
+    "complexityAccSaber": 3.6
   },
   {
     "name": "176 - ikazuchi",
@@ -9236,7 +9236,7 @@
     "starAccBeatLeader": 5.0037970542907715,
     "starPassBeatLeader": 1.3798189163208008,
     "starTechBeatLeader": 1.4838756322860718,
-    "complexityAccSaber": 7.0,
+    "complexityAccSaber": 6.9,
     "complexityAutoBalancer": 4.83
   },
   {
@@ -10495,7 +10495,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.6
+    "complexityAccSaber": 10.4
   },
   {
     "name": "SUPER RISER!",
@@ -10505,7 +10505,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.4
+    "complexityAccSaber": 4.2
   },
   {
     "name": "You Are Mine",
@@ -10600,7 +10600,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.9
+    "complexityAccSaber": 4.7
   },
   {
     "name": "Keep It Up",
@@ -10725,7 +10725,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.7
+    "complexityAccSaber": 7.1
   },
   {
     "name": "PRAGMATISM",
@@ -10950,7 +10950,7 @@
     "starAccBeatLeader": 6.5891780853271484,
     "starPassBeatLeader": 2.9965105056762695,
     "starTechBeatLeader": 2.8119373321533203,
-    "complexityAccSaber": 8.5,
+    "complexityAccSaber": 11.2,
     "complexityAutoBalancer": 5.11
   },
   {
@@ -10981,7 +10981,7 @@
     "starAccBeatLeader": 4.9125218391418457,
     "starPassBeatLeader": 1.3572834730148315,
     "starTechBeatLeader": 1.5512188673019409,
-    "complexityAccSaber": 6.7,
+    "complexityAccSaber": 8.1,
     "complexityAutoBalancer": 4.9
   },
   {
@@ -11660,7 +11660,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.9
+    "complexityAccSaber": 4.5
   },
   {
     "name": "Revenge",
@@ -12921,7 +12921,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.3
+    "complexityAccSaber": 2.2
   },
   {
     "name": "Dharma",
@@ -12931,7 +12931,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.9
+    "complexityAccSaber": 4.6
   },
   {
     "name": "GHOST",
@@ -13202,7 +13202,7 @@
     "starAccBeatLeader": 5.0494270324707031,
     "starPassBeatLeader": 1.3720182180404663,
     "starTechBeatLeader": 1.2117230892181397,
-    "complexityAccSaber": 6.7,
+    "complexityAccSaber": 7.3,
     "complexityAutoBalancer": 4.75
   },
   {
@@ -13478,7 +13478,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.9
+    "complexityAccSaber": 4.7
   },
   {
     "name": "Battle Sirens",
@@ -13693,7 +13693,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 1.9
+    "complexityAccSaber": 2.4
   },
   {
     "name": "Who's Laughing Now",
@@ -14274,7 +14274,7 @@
     "starAccBeatLeader": 6.1637144088745117,
     "starPassBeatLeader": 1.7434500455856323,
     "starTechBeatLeader": 2.8999783992767334,
-    "complexityAccSaber": 8.8,
+    "complexityAccSaber": 9.5,
     "complexityAutoBalancer": 5.01
   },
   {
@@ -14821,7 +14821,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.0
+    "complexityAccSaber": 12.1
   },
   {
     "name": "ENERGY SYNERGY MATRIX",
@@ -15939,7 +15939,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.8
+    "complexityAccSaber": 4.5
   },
   {
     "name": "Pandora",
@@ -16049,7 +16049,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.1
+    "complexityAccSaber": 8.7
   },
   {
     "name": "THE LAUNCH OF THE MEGANTO METEOR",
@@ -16357,7 +16357,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 5.5
+    "complexityAccSaber": 5.4
   },
   {
     "name": "Vettem a Piacon",
@@ -16872,7 +16872,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.1
+    "complexityAccSaber": 10.0
   },
   {
     "name": "Goodbye",
@@ -16987,7 +16987,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.6
+    "complexityAccSaber": 7.2
   },
   {
     "name": "Bergentruckung",
@@ -17337,7 +17337,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.0
+    "complexityAccSaber": 4.5
   },
   {
     "name": "XTREME",
@@ -17742,7 +17742,7 @@
     "starAccBeatLeader": 6.4236865043640137,
     "starPassBeatLeader": 1.6320923566818237,
     "starTechBeatLeader": 2.3249208927154541,
-    "complexityAccSaber": 8.7,
+    "complexityAccSaber": 9.7,
     "complexityAutoBalancer": 5.06
   },
   {
@@ -18193,7 +18193,7 @@
     "starAccBeatLeader": 5.9444284439086914,
     "starPassBeatLeader": 2.4059133529663086,
     "starTechBeatLeader": 2.3357551097869873,
-    "complexityAccSaber": 9.3,
+    "complexityAccSaber": 9.2,
     "complexityAutoBalancer": 5.09
   },
   {
@@ -20101,7 +20101,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.5
+    "complexityAccSaber": 9.6
   },
   {
     "name": "I CAN'T STOP ME",
@@ -20552,7 +20552,7 @@
     "starAccBeatLeader": 6.1401848793029785,
     "starPassBeatLeader": 2.4925022125244141,
     "starTechBeatLeader": 2.4013960361480713,
-    "complexityAccSaber": 8.2,
+    "complexityAccSaber": 10.3,
     "complexityAutoBalancer": 5.11
   },
   {
@@ -20680,7 +20680,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.6
+    "complexityAccSaber": 9.8
   },
   {
     "name": "Extra Credit on the Chromosome Test! VICTORY ROYALE!!!",
@@ -20915,7 +20915,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.9
+    "complexityAccSaber": 5.4
   },
   {
     "name": "Ultimate Ascension",
@@ -21045,7 +21045,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.5
+    "complexityAccSaber": 11.5
   },
   {
     "name": "1Gas Mask",
@@ -21235,7 +21235,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.6
+    "complexityAccSaber": 9.4
   },
   {
     "name": "Final Boss",
@@ -21432,7 +21432,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1073741832,
-    "complexityAccSaber": 8.5
+    "complexityAccSaber": 10.8
   },
   {
     "name": "Kingslayer",
@@ -22314,7 +22314,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.3
+    "complexityAccSaber": 9.6
   },
   {
     "name": "Feelin Sky",
@@ -22424,7 +22424,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.5
+    "complexityAccSaber": 11.5
   },
   {
     "name": "Goodbye",
@@ -22590,7 +22590,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.5
+    "complexityAccSaber": 10.1
   },
   {
     "name": "I'LL SHOW YOU",
@@ -22800,7 +22800,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.2
+    "complexityAccSaber": 12.3
   },
   {
     "name": "REANIMATE",
@@ -23265,7 +23265,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.5
+    "complexityAccSaber": 5.2
   },
   {
     "name": "That's What I Like",
@@ -23275,7 +23275,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.9
+    "complexityAccSaber": 8.7
   },
   {
     "name": "24K Magic",
@@ -23285,7 +23285,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.0
+    "complexityAccSaber": 5.0
   },
   {
     "name": "Peanut Butter Jelly",
@@ -23296,7 +23296,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.2
+    "complexityAccSaber": 8.5
   },
   {
     "name": "Bang!",
@@ -23456,7 +23456,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 9.0
+    "complexityAccSaber": 9.1
   },
   {
     "name": "Autonomy",
@@ -23466,7 +23466,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.8
+    "complexityAccSaber": 11.0
   },
   {
     "name": "Heroes",
@@ -23476,7 +23476,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.0
+    "complexityAccSaber": 7.8
   },
   {
     "name": "Memento Mori",
@@ -23541,7 +23541,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.1
+    "complexityAccSaber": 4.7
   },
   {
     "name": "iNSaNiTY",
@@ -23832,7 +23832,7 @@
     "starAccBeatLeader": 5.5260324478149414,
     "starPassBeatLeader": 1.5997368097305298,
     "starTechBeatLeader": 1.7128292322158814,
-    "complexityAccSaber": 7.4,
+    "complexityAccSaber": 8.7,
     "complexityAutoBalancer": 5.01
   },
   {
@@ -24764,7 +24764,7 @@
     "starAccBeatLeader": 5.7305874824523926,
     "starPassBeatLeader": 1.9652916193008423,
     "starTechBeatLeader": 2.2335050106048584,
-    "complexityAccSaber": 8.5,
+    "complexityAccSaber": 9.5,
     "complexityAutoBalancer": 5.03
   },
   {
@@ -25486,7 +25486,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.5
+    "complexityAccSaber": 11.3
   },
   {
     "name": "KING",
@@ -25496,7 +25496,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.9
+    "complexityAccSaber": 5.1
   },
   {
     "name": "The Vampire",
@@ -25656,7 +25656,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.1
+    "complexityAccSaber": 8.8
   },
   {
     "name": "Feast Ov Goreglutton",
@@ -25742,7 +25742,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.9
+    "complexityAccSaber": 3.8
   },
   {
     "name": "QZKago Requiem",
@@ -25852,7 +25852,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.1
+    "complexityAccSaber": 10.0
   },
   {
     "name": "NOVAGROUND",
@@ -26107,7 +26107,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.6
+    "complexityAccSaber": 8.6
   },
   {
     "name": "Endless Adventure",
@@ -26283,7 +26283,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.3
+    "complexityAccSaber": 10.2
   },
   {
     "name": "Trombone",
@@ -26293,7 +26293,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.3
+    "complexityAccSaber": 10.6
   },
   {
     "name": "FLASHBACK",
@@ -26373,7 +26373,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.5
+    "complexityAccSaber": 10.9
   },
   {
     "name": "Heartbreak",
@@ -26383,7 +26383,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.5
+    "complexityAccSaber": 9.5
   },
   {
     "name": "Bailandorape",
@@ -27119,7 +27119,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.3
+    "complexityAccSaber": 11.7
   },
   {
     "name": "changes",
@@ -27634,7 +27634,7 @@
     "starAccBeatLeader": 5.9165134429931641,
     "starPassBeatLeader": 2.0822968482971191,
     "starTechBeatLeader": 1.6052675247192383,
-    "complexityAccSaber": 8.6,
+    "complexityAccSaber": 9.3,
     "complexityAutoBalancer": 4.99
   },
   {
@@ -27650,7 +27650,7 @@
     "starAccBeatLeader": 5.3761711120605469,
     "starPassBeatLeader": 2.0750999450683594,
     "starTechBeatLeader": 1.7358732223510742,
-    "complexityAccSaber": 8.1,
+    "complexityAccSaber": 9.0,
     "complexityAutoBalancer": 5.0
   },
   {
@@ -27796,7 +27796,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.9
+    "complexityAccSaber": 4.7
   },
   {
     "name": "Matasaburo",
@@ -27806,7 +27806,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.5
+    "complexityAccSaber": 10.5
   },
   {
     "name": "Get Get Down",
@@ -27966,7 +27966,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.3
+    "complexityAccSaber": 3.9
   },
   {
     "name": "astrid",
@@ -27996,7 +27996,7 @@
     "starAccBeatLeader": 6.1640372276306152,
     "starPassBeatLeader": 2.0283608436584473,
     "starTechBeatLeader": 1.6486815214157105,
-    "complexityAccSaber": 9.0,
+    "complexityAccSaber": 10.1,
     "complexityAutoBalancer": 5.06
   },
   {
@@ -28037,7 +28037,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.3
+    "complexityAccSaber": 7.2
   },
   {
     "name": "Paranoia",
@@ -28057,7 +28057,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.9
+    "complexityAccSaber": 4.3
   },
   {
     "name": "Paranoia",
@@ -28107,7 +28107,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.4
+    "complexityAccSaber": 4.5
   },
   {
     "name": "Felis",
@@ -28162,7 +28162,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.7
+    "complexityAccSaber": 11.9
   },
   {
     "name": "Felis",
@@ -28187,7 +28187,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.2
+    "complexityAccSaber": 8.5
   },
   {
     "name": "Felis",
@@ -28347,7 +28347,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.2
+    "complexityAccSaber": 11.5
   },
   {
     "name": "Bad",
@@ -28357,7 +28357,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.0
+    "complexityAccSaber": 10.2
   },
   {
     "name": "Cut Your Teeth",
@@ -28377,7 +28377,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.3
+    "complexityAccSaber": 3.7
   },
   {
     "name": "Farewell",
@@ -28768,7 +28768,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.7
+    "complexityAccSaber": 7.4
   },
   {
     "name": "simulation",
@@ -28794,7 +28794,7 @@
     "starAccBeatLeader": 6.4323616027832031,
     "starPassBeatLeader": 2.6296737194061279,
     "starTechBeatLeader": 2.0855684280395508,
-    "complexityAccSaber": 9.0,
+    "complexityAccSaber": 10.7,
     "complexityAutoBalancer": 5.11
   },
   {
@@ -29005,7 +29005,7 @@
     "starAccBeatLeader": 6.2032504081726074,
     "starPassBeatLeader": 2.3047966957092285,
     "starTechBeatLeader": 1.7333165407180786,
-    "complexityAccSaber": 9.6,
+    "complexityAccSaber": 9.9,
     "complexityAutoBalancer": 5.09
   },
   {
@@ -29228,7 +29228,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.9
+    "complexityAccSaber": 4.1
   },
   {
     "name": "Kodokushi",
@@ -29528,7 +29528,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.3
+    "complexityAccSaber": 11.3
   },
   {
     "name": "EYE",
@@ -29538,7 +29538,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 7.9
+    "complexityAccSaber": 9.1
   },
   {
     "name": "Carmina",
@@ -29563,7 +29563,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.9
+    "complexityAccSaber": 4.6
   },
   {
     "name": "Fly Again [NCS Release]",
@@ -29573,7 +29573,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.1
+    "complexityAccSaber": 8.9
   },
   {
     "name": "Venomous Firefly",
@@ -29673,7 +29673,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.9
+    "complexityAccSaber": 4.4
   },
   {
     "name": "EYE",
@@ -29683,7 +29683,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 5.2
+    "complexityAccSaber": 5.3
   },
   {
     "name": "Megalovania",
@@ -29764,7 +29764,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.5
+    "complexityAccSaber": 12.8
   },
   {
     "name": "Additional Memory",
@@ -29856,7 +29856,7 @@
     "starAccBeatLeader": 6.4639015197753906,
     "starPassBeatLeader": 2.1527547836303711,
     "starTechBeatLeader": 1.7459396123886108,
-    "complexityAccSaber": 9.0,
+    "complexityAccSaber": 10.3,
     "complexityAutoBalancer": 5.06
   },
   {
@@ -30519,7 +30519,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.7
+    "complexityAccSaber": 2.9
   },
   {
     "name": "Scare Me",
@@ -30609,7 +30609,7 @@
     "starAccBeatLeader": 6.440241813659668,
     "starPassBeatLeader": 2.8118488788604736,
     "starTechBeatLeader": 2.1191897392272949,
-    "complexityAccSaber": 9.5,
+    "complexityAccSaber": 11.1,
     "complexityAutoBalancer": 5.02
   },
   {
@@ -30635,7 +30635,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.6
+    "complexityAccSaber": 8.9
   },
   {
     "name": "You'll Be Gone",
@@ -30721,7 +30721,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.4
+    "complexityAccSaber": 4.8
   },
   {
     "name": "Goodbye Declaration",
@@ -30731,7 +30731,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.9
+    "complexityAccSaber": 5.4
   },
   {
     "name": "Crisis",
@@ -30892,7 +30892,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 7.2
+    "complexityAccSaber": 8.4
   },
   {
     "name": "Toilet",
@@ -31068,7 +31068,7 @@
     "starAccBeatLeader": 5.0414338111877441,
     "starPassBeatLeader": 1.7231597900390625,
     "starTechBeatLeader": 1.1349376440048218,
-    "complexityAccSaber": 6.7,
+    "complexityAccSaber": 7.4,
     "complexityAutoBalancer": 4.92
   },
   {
@@ -31305,7 +31305,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.4
+    "complexityAccSaber": 4.6
   },
   {
     "name": "what was the last thing u said",
@@ -31420,7 +31420,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.0
+    "complexityAccSaber": 7.8
   },
   {
     "name": "Digital World",
@@ -31465,7 +31465,7 @@
     "starAccBeatLeader": 6.2415261268615723,
     "starPassBeatLeader": 1.8362433910369873,
     "starTechBeatLeader": 1.9352203607559204,
-    "complexityAccSaber": 9.4,
+    "complexityAccSaber": 10.9,
     "complexityAutoBalancer": 5.03
   },
   {
@@ -31751,7 +31751,7 @@
     "starAccBeatLeader": 6.1979374885559082,
     "starPassBeatLeader": 2.3526415824890137,
     "starTechBeatLeader": 2.4600362777709961,
-    "complexityAccSaber": 10.4,
+    "complexityAccSaber": 10.5,
     "complexityAutoBalancer": 5.14
   },
   {
@@ -31992,7 +31992,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.2
+    "complexityAccSaber": 5.8
   },
   {
     "name": "poison",
@@ -32002,7 +32002,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.7
+    "complexityAccSaber": 11.7
   },
   {
     "name": "Our Generation",
@@ -32242,7 +32242,7 @@
     "starAccBeatLeader": 5.656914234161377,
     "starPassBeatLeader": 2.96537184715271,
     "starTechBeatLeader": 1.9434041976928711,
-    "complexityAccSaber": 8.0,
+    "complexityAccSaber": 8.5,
     "complexityAutoBalancer": 5.03
   },
   {
@@ -32678,7 +32678,7 @@
     "starAccBeatLeader": 6.2971587181091309,
     "starPassBeatLeader": 2.3383734226226807,
     "starTechBeatLeader": 2.2511944770812988,
-    "complexityAccSaber": 9.8,
+    "complexityAccSaber": 10.6,
     "complexityAutoBalancer": 5.4
   },
   {
@@ -33009,7 +33009,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.7
+    "complexityAccSaber": 11.0
   },
   {
     "name": "Tenohira De Odoru",
@@ -33431,7 +33431,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.2
+    "complexityAccSaber": 10.1
   },
   {
     "name": "Metal Bat",
@@ -33592,7 +33592,7 @@
     "starAccBeatLeader": 4.8329610824584961,
     "starPassBeatLeader": 0.909048855304718,
     "starTechBeatLeader": 0.82343190908432007,
-    "complexityAccSaber": 5.95,
+    "complexityAccSaber": 6.7,
     "complexityAutoBalancer": 4.55
   },
   {
@@ -33898,7 +33898,7 @@
     "starAccBeatLeader": 6.9659466743469238,
     "starPassBeatLeader": 2.7887628078460693,
     "starTechBeatLeader": 3.2760384082794189,
-    "complexityAccSaber": 11.1,
+    "complexityAccSaber": 11.9,
     "complexityAutoBalancer": 5.1
   },
   {
@@ -34074,7 +34074,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.86
+    "complexityAccSaber": 10.8
   },
   {
     "name": "Empty Bed",
@@ -34119,7 +34119,7 @@
     "starAccBeatLeader": 6.192690372467041,
     "starPassBeatLeader": 2.351783275604248,
     "starTechBeatLeader": 3.1121962070465088,
-    "complexityAccSaber": 10.3,
+    "complexityAccSaber": 10.8,
     "complexityAutoBalancer": 5.13
   },
   {
@@ -34180,7 +34180,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.2
+    "complexityAccSaber": 8.4
   },
   {
     "name": "Step!",
@@ -34506,7 +34506,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 1.7
+    "complexityAccSaber": 2.8
   },
   {
     "name": "werewolf howls.",
@@ -34581,7 +34581,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.1
+    "complexityAccSaber": 9.0
   },
   {
     "name": "Funk Assembly",
@@ -35508,7 +35508,7 @@
     "starAccBeatLeader": 4.093925952911377,
     "starPassBeatLeader": 0.34480565786361694,
     "starTechBeatLeader": 0.46038523316383362,
-    "complexityAccSaber": 4.9,
+    "complexityAccSaber": 5.0,
     "complexityAutoBalancer": 4.04
   },
   {
@@ -35539,7 +35539,7 @@
     "starAccBeatLeader": 5.5184354782104492,
     "starPassBeatLeader": 1.8204618692398071,
     "starTechBeatLeader": 2.2132003307342529,
-    "complexityAccSaber": 9.1,
+    "complexityAccSaber": 9.7,
     "complexityAutoBalancer": 5.0
   },
   {
@@ -35736,7 +35736,7 @@
     "starAccBeatLeader": 5.4138355255126953,
     "starPassBeatLeader": 2.3163454532623291,
     "starTechBeatLeader": 1.5573804378509522,
-    "complexityAccSaber": 7.950443393,
+    "complexityAccSaber": 8.6,
     "complexityAutoBalancer": 5.08
   },
   {
@@ -36002,7 +36002,7 @@
     "starAccBeatLeader": 5.7313957214355469,
     "starPassBeatLeader": 2.0472066402435303,
     "starTechBeatLeader": 2.6063416004180908,
-    "complexityAccSaber": 9.0,
+    "complexityAccSaber": 10.2,
     "complexityAutoBalancer": 5.09
   },
   {
@@ -36204,7 +36204,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.7
+    "complexityAccSaber": 12.1
   },
   {
     "name": "Meikaruza",
@@ -37240,7 +37240,7 @@
     "starAccBeatLeader": 6.4781808853149414,
     "starPassBeatLeader": 2.2151410579681396,
     "starTechBeatLeader": 2.2269740104675293,
-    "complexityAccSaber": 8.3,
+    "complexityAccSaber": 10.3,
     "complexityAutoBalancer": 5.03
   },
   {
@@ -37516,7 +37516,7 @@
     "starAccBeatLeader": 5.9426288604736328,
     "starPassBeatLeader": 1.606237530708313,
     "starTechBeatLeader": 1.5431691408157349,
-    "complexityAccSaber": 9.0,
+    "complexityAccSaber": 9.3,
     "complexityAutoBalancer": 5.05
   },
   {
@@ -37717,7 +37717,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.0
+    "complexityAccSaber": 12.0
   },
   {
     "name": "We Move Together as One",
@@ -38442,7 +38442,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 9.6
+    "complexityAccSaber": 10.0
   },
   {
     "name": "HELLOHELL",
@@ -38492,7 +38492,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.8
+    "complexityAccSaber": 4.2
   },
   {
     "name": "Nothing for Free",
@@ -38502,7 +38502,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.5
+    "complexityAccSaber": 4.1
   },
   {
     "name": "Clip it Bro",
@@ -38512,7 +38512,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.6
+    "complexityAccSaber": 11.0
   },
   {
     "name": "My War",
@@ -38938,7 +38938,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1073741826,
-    "complexityAccSaber": 4.3
+    "complexityAccSaber": 4.7
   },
   {
     "name": "The Blood Moon Strikes Again (tsukimishi-hen)",
@@ -39318,7 +39318,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.9
+    "complexityAccSaber": 10.1
   },
   {
     "name": "Database",
@@ -39328,7 +39328,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.3
+    "complexityAccSaber": 10.2
   },
   {
     "name": "Dans la mer de son",
@@ -39584,7 +39584,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.6700000762939453,
-    "complexityAccSaber": 7.74,
+    "complexityAccSaber": 8.7,
     "complexityAutoBalancer": 5.05
   },
   {
@@ -40742,7 +40742,7 @@
     "starAccBeatLeader": 6.18630838394165,
     "starPassBeatLeader": 1.6872496604919434,
     "starTechBeatLeader": 2.2413942813873291,
-    "complexityAccSaber": 9.9,
+    "complexityAccSaber": 10.2,
     "complexityAutoBalancer": 5.21
   },
   {
@@ -40928,7 +40928,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.950575227
+    "complexityAccSaber": 8.3
   },
   {
     "name": "Enhancer (Lights in the air)",
@@ -41057,7 +41057,7 @@
     "starAccBeatLeader": 6.3035979270935059,
     "starPassBeatLeader": 2.0783913135528564,
     "starTechBeatLeader": 2.3691234588623047,
-    "complexityAccSaber": 9.90659478,
+    "complexityAccSaber": 10.6,
     "complexityAutoBalancer": 5.34
   },
   {
@@ -41068,7 +41068,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 7.9
+    "complexityAccSaber": 8.3
   },
   {
     "name": "Tell Me You Know",
@@ -41078,7 +41078,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 1073741828,
-    "complexityAccSaber": 5.72
+    "complexityAccSaber": 6.6
   },
   {
     "name": "Parasite",
@@ -41325,7 +41325,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.7632478
+    "complexityAccSaber": 12.5
   },
   {
     "name": "Awe",
@@ -41560,7 +41560,7 @@
     "starAccBeatLeader": 6.1748719215393066,
     "starPassBeatLeader": 2.4080066680908203,
     "starTechBeatLeader": 1.823086142539978,
-    "complexityAccSaber": 9.4,
+    "complexityAccSaber": 10.1,
     "complexityAutoBalancer": 5.06
   },
   {
@@ -41621,7 +41621,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.93
+    "complexityAccSaber": 12.5
   },
   {
     "name": "Blow Me Away",
@@ -41645,7 +41645,7 @@
     "starAccBeatLeader": 7.1994194984436035,
     "starPassBeatLeader": 2.5053977966308594,
     "starTechBeatLeader": 2.3790915012359619,
-    "complexityAccSaber": 11.3,
+    "complexityAccSaber": 11.9,
     "complexityAutoBalancer": 5.83
   },
   {
@@ -41708,7 +41708,7 @@
     "characteristic": "Standard",
     "songCategory": 41,
     "starScoreSaber": 4.309999942779541,
-    "complexityAccSaber": 10.05285659,
+    "complexityAccSaber": 10.6,
     "complexityAutoBalancer": 5.08
   },
   {
@@ -42319,7 +42319,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.79
+    "complexityAccSaber": 7.9
   },
   {
     "name": "Another Xronixle",
@@ -43115,7 +43115,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.79
+    "complexityAccSaber": 11.3
   },
   {
     "name": "Ludicrous Speed",
@@ -43171,7 +43171,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.23
+    "complexityAccSaber": 7.5
   },
   {
     "name": "Energy Drink",
@@ -43200,7 +43200,7 @@
     "starAccBeatLeader": 3.5706446170806885,
     "starPassBeatLeader": 0.14390046894550324,
     "starTechBeatLeader": 0.12302696704864502,
-    "complexityAccSaber": 4.052561944,
+    "complexityAccSaber": 4.1,
     "complexityAutoBalancer": 3.89
   },
   {
@@ -43311,7 +43311,7 @@
     "starAccBeatLeader": 3.9836108684539795,
     "starPassBeatLeader": 0.97715860605239868,
     "starTechBeatLeader": 0.77484977245330811,
-    "complexityAccSaber": 5.079383605,
+    "complexityAccSaber": 5.3,
     "complexityAutoBalancer": 4.3
   },
   {
@@ -43326,7 +43326,7 @@
     "starAccBeatLeader": 3.7721614837646484,
     "starPassBeatLeader": 0.23913387954235077,
     "starTechBeatLeader": 0.40293401479721069,
-    "complexityAccSaber": 2.0,
+    "complexityAccSaber": 1.9,
     "complexityAutoBalancer": 3.68
   },
   {
@@ -43623,7 +43623,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.84
+    "complexityAccSaber": 9.1
   },
   {
     "name": "Iro o Ushinatta Machi",
@@ -43838,7 +43838,7 @@
     "starAccBeatLeader": 4.9827766418457031,
     "starPassBeatLeader": 2.0453271865844727,
     "starTechBeatLeader": 1.5410178899765015,
-    "complexityAccSaber": 7.229777021,
+    "complexityAccSaber": 7.8,
     "complexityAutoBalancer": 5.01
   },
   {
@@ -44019,7 +44019,7 @@
     "starAccBeatLeader": 5.2932939529418945,
     "starPassBeatLeader": 2.4396557807922363,
     "starTechBeatLeader": 1.7824891805648804,
-    "complexityAccSaber": 7.799053821,
+    "complexityAccSaber": 8.2,
     "complexityAutoBalancer": 5.14
   },
   {
@@ -44095,7 +44095,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.14
+    "complexityAccSaber": 3.6
   },
   {
     "name": "Monster",
@@ -44105,7 +44105,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.34
+    "complexityAccSaber": 8.9
   },
   {
     "name": "Downfall",
@@ -44205,7 +44205,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.10219122
+    "complexityAccSaber": 5.9
   },
   {
     "name": "MIRROR",
@@ -44311,7 +44311,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.309999942779541,
-    "complexityAccSaber": 7.280097442,
+    "complexityAccSaber": 8.0,
     "complexityAutoBalancer": 4.9
   },
   {
@@ -44547,7 +44547,7 @@
     "starAccBeatLeader": 4.8032488822937012,
     "starPassBeatLeader": 1.5006468296051025,
     "starTechBeatLeader": 1.3066403865814209,
-    "complexityAccSaber": 7.28,
+    "complexityAccSaber": 7.7,
     "complexityAutoBalancer": 4.84
   },
   {
@@ -44724,7 +44724,7 @@
     "characteristic": "Standard",
     "songCategory": 41,
     "starScoreSaber": 4.5399999618530273,
-    "complexityAccSaber": 9.072578823,
+    "complexityAccSaber": 9.8,
     "complexityAutoBalancer": 5.05
   },
   {
@@ -44755,7 +44755,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.4
+    "complexityAccSaber": 10.5
   },
   {
     "name": "No Time To Explain",
@@ -44835,7 +44835,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.88
+    "complexityAccSaber": 10.5
   },
   {
     "name": "Decoy",
@@ -44950,7 +44950,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.814177026
+    "complexityAccSaber": 9.2
   },
   {
     "name": "One More",
@@ -44981,7 +44981,7 @@
     "characteristic": "Standard",
     "songCategory": 41,
     "starScoreSaber": 4.6599998474121094,
-    "complexityAccSaber": 9.27,
+    "complexityAccSaber": 10.2,
     "complexityAutoBalancer": 5.16
   },
   {
@@ -45082,7 +45082,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.48
+    "complexityAccSaber": 5.7
   },
   {
     "name": "Mental Chainsaw",
@@ -45254,7 +45254,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.0199999809265137,
-    "complexityAccSaber": 6.7,
+    "complexityAccSaber": 7.2,
     "complexityAutoBalancer": 4.66
   },
   {
@@ -45285,7 +45285,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.4
+    "complexityAccSaber": 8.0
   },
   {
     "name": "Scuffed Up Age",
@@ -45325,7 +45325,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.05
+    "complexityAccSaber": 8.7
   },
   {
     "name": "Rip It Off (Now) Rip It Off",
@@ -45360,7 +45360,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 1.148463164
+    "complexityAccSaber": 1.0
   },
   {
     "name": "200cc",
@@ -45435,7 +45435,7 @@
     "starAccBeatLeader": 4.3095383644104,
     "starPassBeatLeader": 1.4354351758956909,
     "starTechBeatLeader": 1.1736730337142944,
-    "complexityAccSaber": 5.78,
+    "complexityAccSaber": 6.1,
     "complexityAutoBalancer": 4.56
   },
   {
@@ -45446,7 +45446,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.273608138
+    "complexityAccSaber": 4.2
   },
   {
     "name": "mr. sunshine",
@@ -45456,7 +45456,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.7
+    "complexityAccSaber": 10.2
   },
   {
     "name": "RTX 20000",
@@ -46077,7 +46077,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.059999942779541,
-    "complexityAccSaber": 6.925054065,
+    "complexityAccSaber": 7.7,
     "complexityAutoBalancer": 4.91
   },
   {
@@ -46088,7 +46088,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 0.65
+    "complexityAccSaber": 0.4
   },
   {
     "name": "Gourmet Race",
@@ -46098,7 +46098,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 0.3
+    "complexityAccSaber": 0.1
   },
   {
     "name": "RTX 20000",
@@ -46535,7 +46535,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.1
+    "complexityAccSaber": 8.6
   },
   {
     "name": "Forget the Real World",
@@ -46545,7 +46545,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.49
+    "complexityAccSaber": 8.4
   },
   {
     "name": "Nyahaha ^~",
@@ -46585,7 +46585,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 12.51
+    "complexityAccSaber": 11.5
   },
   {
     "name": "When I use it",
@@ -46886,7 +46886,7 @@
     "characteristic": "Standard",
     "songCategory": 41,
     "starScoreSaber": 4.3899998664855957,
-    "complexityAccSaber": 9.05,
+    "complexityAccSaber": 10.0,
     "complexityAutoBalancer": 5.07
   },
   {
@@ -47017,7 +47017,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.86
+    "complexityAccSaber": 12.0
   },
   {
     "name": "Brooklyn",
@@ -47027,7 +47027,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.93
+    "complexityAccSaber": 7.3
   },
   {
     "name": "Aegleseeker",
@@ -47163,7 +47163,7 @@
     "characteristic": "Standard",
     "songCategory": 41,
     "starScoreSaber": 4.2600002288818359,
-    "complexityAccSaber": 8.29,
+    "complexityAccSaber": 9.3,
     "complexityAutoBalancer": 5.03
   },
   {
@@ -47184,7 +47184,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.96
+    "complexityAccSaber": 7.4
   },
   {
     "name": "All We Know",
@@ -47194,7 +47194,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.92
+    "complexityAccSaber": 9.5
   },
   {
     "name": "My R",
@@ -47204,7 +47204,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.4
+    "complexityAccSaber": 12.1
   },
   {
     "name": "Everything Black",
@@ -47314,7 +47314,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 1073741828,
-    "complexityAccSaber": 5.54
+    "complexityAccSaber": 6.0
   },
   {
     "name": "FINAL BLENDERMAN APPEARED.",
@@ -47344,7 +47344,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.2
+    "complexityAccSaber": 6.3
   },
   {
     "name": "blind",
@@ -47354,7 +47354,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.8
+    "complexityAccSaber": 3.9
   },
   {
     "name": "Levels",
@@ -47364,7 +47364,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.7
+    "complexityAccSaber": 7.2
   },
   {
     "name": "Voices From Heaven",
@@ -47579,7 +47579,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.92
+    "complexityAccSaber": 8.2
   },
   {
     "name": "Bass Weapon: LAZERFLAME",
@@ -47679,7 +47679,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.67
+    "complexityAccSaber": 8.4
   },
   {
     "name": "Hyper Bass",
@@ -48406,7 +48406,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.8
+    "complexityAccSaber": 8.3
   },
   {
     "name": "Qrestfall",
@@ -48737,7 +48737,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.05
+    "complexityAccSaber": 7.5
   },
   {
     "name": "VANDALIZED AI",
@@ -48798,7 +48798,7 @@
     "characteristic": "Standard",
     "songCategory": 41,
     "starScoreSaber": 4.6700000762939453,
-    "complexityAccSaber": 9.9,
+    "complexityAccSaber": 10.5,
     "complexityAutoBalancer": 5.08
   },
   {
@@ -48949,7 +48949,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.44
+    "complexityAccSaber": 7.9
   },
   {
     "name": "Spacetime distortion",
@@ -48979,7 +48979,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.17
+    "complexityAccSaber": 11.1
   },
   {
     "name": "Eye Candy",
@@ -48990,7 +48990,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.22
+    "complexityAccSaber": 8.9
   },
   {
     "name": "Hourglass",
@@ -49000,7 +49000,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.14
+    "complexityAccSaber": 8.5
   },
   {
     "name": "Hourglass",
@@ -49010,7 +49010,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.88
+    "complexityAccSaber": 3.2
   },
   {
     "name": "Chicago",
@@ -49043,7 +49043,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 3.7000000476837158,
-    "complexityAccSaber": 5.6,
+    "complexityAccSaber": 5.7,
     "complexityAutoBalancer": 4.37
   },
   {
@@ -49064,7 +49064,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.25
+    "complexityAccSaber": 3.3
   },
   {
     "name": "FU In My Head",
@@ -49074,7 +49074,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.66
+    "complexityAccSaber": 7.4
   },
   {
     "name": "Welcome to the Internet",
@@ -49105,7 +49105,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.11
+    "complexityAccSaber": 10.8
   },
   {
     "name": "Bad Dream",
@@ -49115,7 +49115,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.5
+    "complexityAccSaber": 3.8
   },
   {
     "name": "Coffee Black",
@@ -49295,7 +49295,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.8
+    "complexityAccSaber": 3.0
   },
   {
     "name": "Onslaught",
@@ -49406,7 +49406,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.63
+    "complexityAccSaber": 7.2
   },
   {
     "name": "You're Somebody Else",
@@ -49416,7 +49416,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.59
+    "complexityAccSaber": 3.1
   },
   {
     "name": "Madeleine",
@@ -49426,7 +49426,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.0
+    "complexityAccSaber": 2.3
   },
   {
     "name": "Fractured Angel",
@@ -49466,7 +49466,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.78
+    "complexityAccSaber": 9.0
   },
   {
     "name": "Minimum",
@@ -49476,7 +49476,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.14
+    "complexityAccSaber": 3.2
   },
   {
     "name": "The Darkside",
@@ -49486,7 +49486,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.01
+    "complexityAccSaber": 3.5
   },
   {
     "name": "Poison Apple",
@@ -49556,7 +49556,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.07
+    "complexityAccSaber": 8.3
   },
   {
     "name": "Crazy Shuffle",
@@ -49757,7 +49757,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.26
+    "complexityAccSaber": 7.8
   },
   {
     "name": "Mentai Cosmic",
@@ -49897,7 +49897,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.84
+    "complexityAccSaber": 9.0
   },
   {
     "name": "A prompted error (that may or may not have cracked the quantum mechanism)",
@@ -50881,7 +50881,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.1599998474121094,
-    "complexityAccSaber": 6.62,
+    "complexityAccSaber": 7.1,
     "complexityAutoBalancer": 4.86
   },
   {
@@ -51132,7 +51132,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.96
+    "complexityAccSaber": 6.4
   },
   {
     "name": "Sweater Weather",
@@ -51207,7 +51207,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.74
+    "complexityAccSaber": 7.3
   },
   {
     "name": "1:15",
@@ -51268,7 +51268,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.87
+    "complexityAccSaber": 10.2
   },
   {
     "name": "Kobayashi Maru",
@@ -51278,7 +51278,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.98
+    "complexityAccSaber": 7.7
   },
   {
     "name": "Magic Man",
@@ -51288,7 +51288,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.24
+    "complexityAccSaber": 11.2
   },
   {
     "name": "The Longest Wave",
@@ -51298,7 +51298,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.4
+    "complexityAccSaber": 3.1
   },
   {
     "name": "Yoakeno Uta",
@@ -51420,7 +51420,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 12.11
+    "complexityAccSaber": 11.6
   },
   {
     "name": "the way things go",
@@ -51430,7 +51430,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.31
+    "complexityAccSaber": 6.7
   },
   {
     "name": "The Shower Scene",
@@ -51440,7 +51440,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.21
+    "complexityAccSaber": 7.6
   },
   {
     "name": "My God",
@@ -51450,7 +51450,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.96
+    "complexityAccSaber": 3.8
   },
   {
     "name": "Dum Dum",
@@ -51460,7 +51460,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.9
+    "complexityAccSaber": 9.2
   },
   {
     "name": "What You Know",
@@ -51470,7 +51470,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1073741826,
-    "complexityAccSaber": 4.35
+    "complexityAccSaber": 3.7
   },
   {
     "name": "Idol",
@@ -51480,7 +51480,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.29
+    "complexityAccSaber": 9.4
   },
   {
     "name": "Cupid",
@@ -51490,7 +51490,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 1073741826,
-    "complexityAccSaber": 1.0
+    "complexityAccSaber": 0.9
   },
   {
     "name": "Keep On Dancing",
@@ -51500,7 +51500,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.7
+    "complexityAccSaber": 3.9
   },
   {
     "name": "Luminency",
@@ -51585,7 +51585,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.1
+    "complexityAccSaber": 2.3
   },
   {
     "name": "Moskau",
@@ -51796,7 +51796,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.2300000190734863,
-    "complexityAccSaber": 8.2,
+    "complexityAccSaber": 8.3,
     "complexityAutoBalancer": 5.01
   },
   {
@@ -51847,7 +51847,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.31
+    "complexityAccSaber": 10.2
   },
   {
     "name": "EC2 - Still Waiting",
@@ -51872,7 +51872,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 1.6
+    "complexityAccSaber": 1.2
   },
   {
     "name": "What You Know",
@@ -51883,7 +51883,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.42
+    "complexityAccSaber": 8.6
   },
   {
     "name": "NULCTRL",
@@ -52044,7 +52044,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.47
+    "complexityAccSaber": 9.8
   },
   {
     "name": "Whenever, Wherever",
@@ -52054,7 +52054,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.59
+    "complexityAccSaber": 12.0
   },
   {
     "name": "G.O.M.D",
@@ -56283,7 +56283,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.03000020980835,
-    "complexityAccSaber": 6.71,
+    "complexityAccSaber": 7.6,
     "complexityAutoBalancer": 4.89
   },
   {
@@ -56384,7 +56384,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.37
+    "complexityAccSaber": 2.1
   },
   {
     "name": "Waste My Time",
@@ -56394,7 +56394,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.92
+    "complexityAccSaber": 9.8
   },
   {
     "name": "Back To You",
@@ -56404,7 +56404,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.84
+    "complexityAccSaber": 9.2
   },
   {
     "name": "Fool for you",
@@ -56414,7 +56414,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.27
+    "complexityAccSaber": 4.1
   },
   {
     "name": "Lied To",
@@ -56424,7 +56424,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.52
+    "complexityAccSaber": 8.3
   },
   {
     "name": "Lo-Fi Children",
@@ -56434,7 +56434,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.29
+    "complexityAccSaber": 10.5
   },
   {
     "name": "Lo-Fi Children",
@@ -56444,7 +56444,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.9
+    "complexityAccSaber": 5.1
   },
   {
     "name": "Black Hole",
@@ -56454,7 +56454,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.55
+    "complexityAccSaber": 8.1
   },
   {
     "name": "Hold Me While You Wait",
@@ -56464,7 +56464,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.87
+    "complexityAccSaber": 4.2
   },
   {
     "name": "El Dorado",
@@ -56474,7 +56474,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.0
+    "complexityAccSaber": 5.1
   },
   {
     "name": "Black Tortoise",
@@ -56484,7 +56484,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.52
+    "complexityAccSaber": 10.2
   },
   {
     "name": "Landslide",
@@ -56494,7 +56494,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.46
+    "complexityAccSaber": 3.7
   },
   {
     "name": "Catch Me",
@@ -56504,7 +56504,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.88
+    "complexityAccSaber": 7.2
   },
   {
     "name": "Bitter Taste",
@@ -56514,7 +56514,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.98
+    "complexityAccSaber": 9.3
   },
   {
     "name": "Don't Play Games",
@@ -56524,7 +56524,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.21
+    "complexityAccSaber": 8.9
   },
   {
     "name": "Something Good Can Work",
@@ -56534,7 +56534,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.82
+    "complexityAccSaber": 3.1
   },
   {
     "name": "ES",
@@ -56544,7 +56544,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.65
+    "complexityAccSaber": 8.0
   },
   {
     "name": "Hot Mess",
@@ -56554,7 +56554,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.31
+    "complexityAccSaber": 7.2
   },
   {
     "name": "Osmosis",
@@ -56564,7 +56564,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.12
+    "complexityAccSaber": 7.6
   },
   {
     "name": "Gold",
@@ -56574,7 +56574,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.47
+    "complexityAccSaber": 8.9
   },
   {
     "name": "I'm So Good At Being Alone",
@@ -56584,7 +56584,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.72
+    "complexityAccSaber": 6.8
   },
   {
     "name": "I'm So Good At Being Alone",
@@ -56594,7 +56594,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.51
+    "complexityAccSaber": 11.5
   },
   {
     "name": "cough drops",
@@ -56604,7 +56604,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.46
+    "complexityAccSaber": 6.7
   },
   {
     "name": "All Falls Down",
@@ -56614,7 +56614,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.33
+    "complexityAccSaber": 5.8
   },
   {
     "name": "Pointless",
@@ -56624,7 +56624,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.3
+    "complexityAccSaber": 3.4
   },
   {
     "name": "Lucky Luke",
@@ -56634,7 +56634,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.47
+    "complexityAccSaber": 10.1
   },
   {
     "name": "Caffeine",
@@ -56644,7 +56644,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.41
+    "complexityAccSaber": 7.7
   },
   {
     "name": "ANALYS",
@@ -56654,7 +56654,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.07
+    "complexityAccSaber": 9.2
   },
   {
     "name": "Elevate",
@@ -56664,7 +56664,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.19
+    "complexityAccSaber": 6.1
   },
   {
     "name": "Stranger",
@@ -56674,7 +56674,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.8
+    "complexityAccSaber": 12.2
   },
   {
     "name": "Caroline",
@@ -56684,7 +56684,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.8
+    "complexityAccSaber": 11.6
   },
   {
     "name": "Hello My Old Heart",
@@ -56694,7 +56694,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.39
+    "complexityAccSaber": 3.4
   },
   {
     "name": "Nobody Knows",
@@ -56704,7 +56704,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.5
+    "complexityAccSaber": 8.6
   },
   {
     "name": "Smoking Gun",
@@ -56714,7 +56714,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.5
+    "complexityAccSaber": 11.4
   },
   {
     "name": "ΩΩPARTS",
@@ -57291,7 +57291,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.4600000381469727,
-    "complexityAccSaber": 8.0,
+    "complexityAccSaber": 8.6,
     "complexityAutoBalancer": 5.07
   },
   {
@@ -57505,7 +57505,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 3.4700000286102295,
-    "complexityAccSaber": 4.04,
+    "complexityAccSaber": 4.3,
     "complexityAutoBalancer": 4.24
   },
   {
@@ -57517,7 +57517,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.2300000190734863,
-    "complexityAccSaber": 6.9,
+    "complexityAccSaber": 7.1,
     "complexityAutoBalancer": 4.85
   },
   {
@@ -57918,7 +57918,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.11
+    "complexityAccSaber": 7.5
   },
   {
     "name": "the perfect pair",
@@ -57928,7 +57928,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.03
+    "complexityAccSaber": 6.5
   },
   {
     "name": "Favorite Liar",
@@ -57938,7 +57938,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.33
+    "complexityAccSaber": 9.5
   },
   {
     "name": "Slingshot",
@@ -57948,7 +57948,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.58
+    "complexityAccSaber": 5.5
   },
   {
     "name": "I'm So Good At Being Alone",
@@ -57958,7 +57958,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 12.2
+    "complexityAccSaber": 11.8
   },
   {
     "name": "From The Start",
@@ -57968,7 +57968,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.07
+    "complexityAccSaber": 8.3
   },
   {
     "name": "From The Start",
@@ -57978,7 +57978,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.1
+    "complexityAccSaber": 2.8
   },
   {
     "name": "Only Human",
@@ -57988,7 +57988,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.74
+    "complexityAccSaber": 9.3
   },
   {
     "name": "Libre",
@@ -57998,7 +57998,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.7
+    "complexityAccSaber": 7.9
   },
   {
     "name": "Ik Wil Dansen",
@@ -58008,7 +58008,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.6
+    "complexityAccSaber": 6.3
   },
   {
     "name": "Womanizer",
@@ -58018,7 +58018,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.59
+    "complexityAccSaber": 3.3
   },
   {
     "name": "She Wants Me (To Be Loved) ",
@@ -58028,7 +58028,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 9.05
+    "complexityAccSaber": 9.3
   },
   {
     "name": "In the Lobby",
@@ -58038,7 +58038,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 12.05
+    "complexityAccSaber": 11.9
   },
   {
     "name": "girl in blue",
@@ -58048,7 +58048,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.83
+    "complexityAccSaber": 8.7
   },
   {
     "name": "avalanche",
@@ -58058,7 +58058,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.6
+    "complexityAccSaber": 4.4
   },
   {
     "name": "avalanche",
@@ -58069,7 +58069,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.62
+    "complexityAccSaber": 11.3
   },
   {
     "name": "It Is What It is",
@@ -58079,7 +58079,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.58
+    "complexityAccSaber": 3.1
   },
   {
     "name": "It Is What It is",
@@ -58089,7 +58089,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.85
+    "complexityAccSaber": 9.1
   },
   {
     "name": "DOPING LIFE",
@@ -58610,7 +58610,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.0
+    "complexityAccSaber": 2.4
   },
   {
     "name": "Lovers to strangers",
@@ -58620,7 +58620,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.24
+    "complexityAccSaber": 3.3
   },
   {
     "name": "My heart i surrender",
@@ -58630,7 +58630,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.92
+    "complexityAccSaber": 8.6
   },
   {
     "name": "Pretty Carolina",
@@ -58640,7 +58640,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.17
+    "complexityAccSaber": 8.6
   },
   {
     "name": "Libre",
@@ -58660,7 +58660,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.44
+    "complexityAccSaber": 7.7
   },
   {
     "name": "sundays",
@@ -58670,7 +58670,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.71
+    "complexityAccSaber": 8.3
   },
   {
     "name": "I'm A Human",
@@ -58680,7 +58680,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.74
+    "complexityAccSaber": 9.4
   },
   {
     "name": "The Negative",
@@ -58690,7 +58690,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.75
+    "complexityAccSaber": 7.2
   },
   {
     "name": "Break",
@@ -58700,7 +58700,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.58
+    "complexityAccSaber": 9.0
   },
   {
     "name": "avalanche",
@@ -58710,7 +58710,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.36
+    "complexityAccSaber": 9.5
   },
   {
     "name": "Lovers to strangers",
@@ -58720,7 +58720,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.99
+    "complexityAccSaber": 9.7
   },
   {
     "name": "Cheerleader",
@@ -58730,7 +58730,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.87
+    "complexityAccSaber": 8.8
   },
   {
     "name": "Too Much",
@@ -58740,7 +58740,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.7
+    "complexityAccSaber": 9.9
   },
   {
     "name": "Friendly Gigant Fire",
@@ -59743,7 +59743,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.28000020980835,
-    "complexityAccSaber": 7.17,
+    "complexityAccSaber": 7.4,
     "complexityAutoBalancer": 4.84
   },
   {
@@ -60204,7 +60204,7 @@
     "starAccBeatLeader": 4.6902194023132324,
     "starPassBeatLeader": 2.4022889137268066,
     "starTechBeatLeader": 1.4680770635604858,
-    "complexityAccSaber": 6.95,
+    "complexityAccSaber": 7.2,
     "complexityAutoBalancer": 4.74
   },
   {
@@ -60710,7 +60710,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.1500000953674316,
-    "complexityAccSaber": 6.51,
+    "complexityAccSaber": 7.2,
     "complexityAutoBalancer": 4.65
   },
   {
@@ -60752,7 +60752,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.940000057220459,
-    "complexityAccSaber": 9.21,
+    "complexityAccSaber": 9.7,
     "complexityAutoBalancer": 5.25
   },
   {
@@ -61106,7 +61106,7 @@
     "characteristic": "Standard",
     "songCategory": 35,
     "starScoreSaber": 3.4000000953674316,
-    "complexityAccSaber": 4.0,
+    "complexityAccSaber": 4.1,
     "complexityAutoBalancer": 4.2
   },
   {
@@ -61128,7 +61128,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.6399998664855957,
-    "complexityAccSaber": 7.65,
+    "complexityAccSaber": 7.6,
     "complexityAutoBalancer": 4.89
   },
   {
@@ -61140,7 +61140,7 @@
     "characteristic": "Standard",
     "songCategory": 41,
     "starScoreSaber": 4.7600002288818359,
-    "complexityAccSaber": 12.06,
+    "complexityAccSaber": 12.0,
     "complexityAutoBalancer": 5.68
   },
   {
@@ -61252,7 +61252,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.8600001335144043,
-    "complexityAccSaber": 7.87,
+    "complexityAccSaber": 8.2,
     "complexityAutoBalancer": 4.99
   },
   {
@@ -61605,7 +61605,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.619999885559082,
-    "complexityAccSaber": 7.7,
+    "complexityAccSaber": 8.1,
     "complexityAutoBalancer": 4.95
   },
   {
@@ -62568,7 +62568,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.630000114440918,
-    "complexityAccSaber": 8.69,
+    "complexityAccSaber": 8.5,
     "complexityAutoBalancer": 5.21
   },
   {
@@ -63030,7 +63030,7 @@
     "characteristic": "Standard",
     "songCategory": 35,
     "starScoreSaber": 3.6500000953674316,
-    "complexityAccSaber": 4.1,
+    "complexityAccSaber": 3.0,
     "complexityAutoBalancer": 4.06
   },
   {
@@ -63052,7 +63052,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.5500001907348633,
-    "complexityAccSaber": 6.2,
+    "complexityAccSaber": 5.7,
     "complexityAutoBalancer": 4.46
   },
   {
@@ -63713,7 +63713,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.4
+    "complexityAccSaber": 3.2
   },
   {
     "name": "Figure You Out",
@@ -63723,7 +63723,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.4
+    "complexityAccSaber": 3.0
   },
   {
     "name": "Simple Life",
@@ -63733,7 +63733,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.72
+    "complexityAccSaber": 3.2
   },
   {
     "name": "Synchronize",
@@ -63743,7 +63743,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.34
+    "complexityAccSaber": 3.4
   },
   {
     "name": "Changes",
@@ -63763,7 +63763,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 1.6
+    "complexityAccSaber": 0.9
   },
   {
     "name": "Yours",
@@ -63773,7 +63773,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.4
+    "complexityAccSaber": 3.5
   },
   {
     "name": "Coffin",
@@ -63783,7 +63783,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.0
+    "complexityAccSaber": 2.5
   },
   {
     "name": "DeLorean",
@@ -63793,7 +63793,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.47
+    "complexityAccSaber": 2.3
   },
   {
     "name": "DeLorean",
@@ -63803,7 +63803,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.5
+    "complexityAccSaber": 3.4
   },
   {
     "name": "Perfect Night",
@@ -63813,7 +63813,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 1.76
+    "complexityAccSaber": 1.3
   },
   {
     "name": "Wish You Stayed",
@@ -63823,7 +63823,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.2
+    "complexityAccSaber": 2.6
   },
   {
     "name": "Into You",
@@ -63834,7 +63834,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.25
+    "complexityAccSaber": 6.4
   },
   {
     "name": "Mrs. Hollywood",
@@ -63845,7 +63845,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 9.02
+    "complexityAccSaber": 8.9
   },
   {
     "name": "Klunker",
@@ -63855,7 +63855,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.73
+    "complexityAccSaber": 9.2
   },
   {
     "name": "Figure You Out",
@@ -63865,7 +63865,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.26
+    "complexityAccSaber": 7.5
   },
   {
     "name": "Simple Life",
@@ -63875,7 +63875,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.68
+    "complexityAccSaber": 9.3
   },
   {
     "name": "Darling, The Planets",
@@ -63885,7 +63885,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.28
+    "complexityAccSaber": 8.8
   },
   {
     "name": "Brown Eyes",
@@ -63895,7 +63895,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.02
+    "complexityAccSaber": 7.4
   },
   {
     "name": "Lose Control",
@@ -63905,7 +63905,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.39
+    "complexityAccSaber": 8.1
   },
   {
     "name": "Ritalin",
@@ -63915,7 +63915,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.0
+    "complexityAccSaber": 8.3
   },
   {
     "name": "Second Rate Town",
@@ -63925,7 +63925,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.11
+    "complexityAccSaber": 7.5
   },
   {
     "name": "Second Rate Town",
@@ -63935,7 +63935,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.5
+    "complexityAccSaber": 5.2
   },
   {
     "name": "Queendom",
@@ -63945,7 +63945,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.73
+    "complexityAccSaber": 6.6
   },
   {
     "name": "Foolish Of Me",
@@ -63955,7 +63955,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.63
+    "complexityAccSaber": 7.7
   },
   {
     "name": "Memory Bank",
@@ -63965,7 +63965,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.01
+    "complexityAccSaber": 8.7
   },
   {
     "name": "Two of Many",
@@ -63976,7 +63976,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.72
+    "complexityAccSaber": 10.8
   },
   {
     "name": "Nobody",
@@ -63986,7 +63986,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.05
+    "complexityAccSaber": 10.4
   },
   {
     "name": "Simple Life",
@@ -63996,7 +63996,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.64
+    "complexityAccSaber": 11.2
   },
   {
     "name": "I See London I See France",
@@ -64007,7 +64007,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.88
+    "complexityAccSaber": 7.3
   },
   {
     "name": "Who am I",
@@ -64017,7 +64017,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.06
+    "complexityAccSaber": 8.6
   },
   {
     "name": "No More Bad Days",
@@ -64027,7 +64027,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.74
+    "complexityAccSaber": 8.1
   },
   {
     "name": "Sugardaddy",
@@ -64037,7 +64037,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.68
+    "complexityAccSaber": 7.9
   },
   {
     "name": "Sugardaddy",
@@ -64047,7 +64047,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.35
+    "complexityAccSaber": 5.6
   },
   {
     "name": "Brown Eyes",
@@ -64057,7 +64057,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.25
+    "complexityAccSaber": 5.2
   },
   {
     "name": "Synchronize",
@@ -64067,7 +64067,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.47
+    "complexityAccSaber": 6.3
   },
   {
     "name": "Won't Give Up",
@@ -64077,7 +64077,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.05
+    "complexityAccSaber": 10.2
   },
   {
     "name": "Hypnotized",
@@ -64087,7 +64087,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.86
+    "complexityAccSaber": 10.9
   },
   {
     "name": "Spectator",
@@ -64097,7 +64097,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.2
+    "complexityAccSaber": 9.8
   },
   {
     "name": "Vampire Disco",
@@ -64107,7 +64107,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.55
+    "complexityAccSaber": 9.1
   },
   {
     "name": "Halo",
@@ -64117,7 +64117,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.61
+    "complexityAccSaber": 9.1
   },
   {
     "name": "Feather",
@@ -64127,7 +64127,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.13
+    "complexityAccSaber": 9.5
   },
   {
     "name": "Home",
@@ -64147,7 +64147,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 9.01
+    "complexityAccSaber": 8.9
   },
   {
     "name": "Tear In My Heart",
@@ -64157,7 +64157,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.7
+    "complexityAccSaber": 7.9
   },
   {
     "name": "Yours",
@@ -64167,7 +64167,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.28
+    "complexityAccSaber": 7.3
   },
   {
     "name": "Hypnotized",
@@ -64177,7 +64177,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.26
+    "complexityAccSaber": 9.7
   },
   {
     "name": "We Don't Wanna Talk",
@@ -64187,7 +64187,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.7
+    "complexityAccSaber": 11.8
   },
   {
     "name": "Berenstein",
@@ -64197,7 +64197,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.34
+    "complexityAccSaber": 9.3
   },
   {
     "name": "chihiro",
@@ -64207,7 +64207,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.91
+    "complexityAccSaber": 10.9
   },
   {
     "name": "HONEY",
@@ -64217,7 +64217,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.13
+    "complexityAccSaber": 9.9
   },
   {
     "name": "Synchronize",
@@ -64227,7 +64227,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.78
+    "complexityAccSaber": 11.3
   },
   {
     "name": "Liar Liar",
@@ -64237,7 +64237,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.59
+    "complexityAccSaber": 10.6
   },
   {
     "name": "i like the way you kiss me",
@@ -64247,7 +64247,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.9
+    "complexityAccSaber": 10.1
   },
   {
     "name": "Cave Me In",
@@ -64257,7 +64257,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.36
+    "complexityAccSaber": 11.2
   },
   {
     "name": "i remember",
@@ -64267,7 +64267,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.82
+    "complexityAccSaber": 9.7
   },
   {
     "name": "Ephemera",
@@ -65398,7 +65398,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.179999828338623,
-    "complexityAccSaber": 5.6,
+    "complexityAccSaber": 6.0,
     "complexityAutoBalancer": 4.49
   },
   {
@@ -65410,7 +65410,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.8400001525878906,
-    "complexityAccSaber": 8.7,
+    "complexityAccSaber": 8.2,
     "complexityAutoBalancer": 5.19
   },
   {
@@ -67729,7 +67729,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 5.0100002288818359,
-    "complexityAccSaber": 7.8,
+    "complexityAccSaber": 7.7,
     "complexityAutoBalancer": 4.89
   },
   {
@@ -68203,7 +68203,7 @@
     "characteristic": "Standard",
     "songCategory": 41,
     "starScoreSaber": 4.6100001335144043,
-    "complexityAccSaber": 7.0,
+    "complexityAccSaber": 7.2,
     "complexityAutoBalancer": 4.83
   },
   {
@@ -68316,7 +68316,7 @@
     "characteristic": "Standard",
     "songCategory": 41,
     "starScoreSaber": 5.7399997711181641,
-    "complexityAccSaber": 10.3,
+    "complexityAccSaber": 10.2,
     "complexityAutoBalancer": 5.45
   },
   {
@@ -68669,7 +68669,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.0799999237060547,
-    "complexityAccSaber": 5.4,
+    "complexityAccSaber": 5.7,
     "complexityAutoBalancer": 4.35
   },
   {
@@ -68864,7 +68864,7 @@
     "characteristic": "Standard",
     "songCategory": 41,
     "starScoreSaber": 5.619999885559082,
-    "complexityAccSaber": 10.8,
+    "complexityAccSaber": 10.7,
     "complexityAutoBalancer": 5.58
   },
   {
@@ -68901,7 +68901,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.0199999809265137,
-    "complexityAccSaber": 5.3,
+    "complexityAccSaber": 4.9,
     "complexityAutoBalancer": 4.11
   },
   {
@@ -68914,7 +68914,7 @@
     "characteristic": "Standard",
     "songCategory": 35,
     "starScoreSaber": 3.119999885559082,
-    "complexityAccSaber": 3.6,
+    "complexityAccSaber": 2.1,
     "complexityAutoBalancer": 3.81
   },
   {
@@ -69274,7 +69274,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.559999942779541,
-    "complexityAccSaber": 6.2,
+    "complexityAccSaber": 6.1,
     "complexityAutoBalancer": 4.56
   },
   {
@@ -69396,7 +69396,7 @@
     "characteristic": "Standard",
     "songCategory": 35,
     "starScoreSaber": 3.4200000762939453,
-    "complexityAccSaber": 3.9,
+    "complexityAccSaber": 3.2,
     "complexityAutoBalancer": 3.81
   },
   {
@@ -70198,7 +70198,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.4099998474121094,
-    "complexityAccSaber": 5.5,
+    "complexityAccSaber": 5.6,
     "complexityAutoBalancer": 4.27
   },
   {
@@ -70210,7 +70210,7 @@
     "characteristic": "Standard",
     "songCategory": 41,
     "starScoreSaber": 5.309999942779541,
-    "complexityAccSaber": 8.3,
+    "complexityAccSaber": 8.4,
     "complexityAutoBalancer": 5.09
   },
   {
@@ -83767,7 +83767,7 @@
     "starAccBeatLeader": 6.2090868949890137,
     "starPassBeatLeader": 1.806171178817749,
     "starTechBeatLeader": 2.8932514190673828,
-    "complexityAccSaber": 11.0,
+    "complexityAccSaber": 10.7,
     "complexityAutoBalancer": 5.69
   },
   {
@@ -86045,7 +86045,7 @@
     "starAccBeatLeader": 4.6199822425842285,
     "starPassBeatLeader": 1.6154916286468506,
     "starTechBeatLeader": 1.2365347146987915,
-    "complexityAccSaber": 6.6,
+    "complexityAccSaber": 7.0,
     "complexityAutoBalancer": 4.86
   },
   {
@@ -86850,7 +86850,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.9
+    "complexityAccSaber": 3.7
   },
   {
     "name": "Dancing Off My Sins",
@@ -86860,7 +86860,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.2
+    "complexityAccSaber": 3.1
   },
   {
     "name": "Body Language",
@@ -86870,7 +86870,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.4
+    "complexityAccSaber": 3.6
   },
   {
     "name": "i am not who i was",
@@ -86880,7 +86880,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.5
+    "complexityAccSaber": 2.9
   },
   {
     "name": "Busy woman",
@@ -86890,7 +86890,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.0
+    "complexityAccSaber": 1.6
   },
   {
     "name": "Like This",
@@ -86900,7 +86900,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.4
+    "complexityAccSaber": 7.6
   },
   {
     "name": "Busy woman",
@@ -86910,7 +86910,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.3
+    "complexityAccSaber": 5.8
   },
   {
     "name": "Manchild",
@@ -86920,7 +86920,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.4
+    "complexityAccSaber": 5.4
   },
   {
     "name": "Lush Life",
@@ -86930,7 +86930,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.3
+    "complexityAccSaber": 6.2
   },
   {
     "name": "Illegal",
@@ -86941,7 +86941,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.4
+    "complexityAccSaber": 7.7
   },
   {
     "name": "Perspective",
@@ -86961,7 +86961,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.8
+    "complexityAccSaber": 6.2
   },
   {
     "name": "lemons",
@@ -86971,7 +86971,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.9
+    "complexityAccSaber": 8.4
   },
   {
     "name": "Into You",
@@ -86981,7 +86981,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.2
+    "complexityAccSaber": 10.5
   },
   {
     "name": "gum!",
@@ -86991,7 +86991,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.0
+    "complexityAccSaber": 10.3
   },
   {
     "name": "Someone Else",
@@ -87001,7 +87001,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.4
+    "complexityAccSaber": 10.6
   },
   {
     "name": "Killshot",
@@ -87011,7 +87011,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.6
+    "complexityAccSaber": 9.3
   },
   {
     "name": "Hypnotize",
@@ -87021,7 +87021,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.5
+    "complexityAccSaber": 11.1
   },
   {
     "name": "Better Than You",
@@ -87031,7 +87031,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.8
+    "complexityAccSaber": 9.5
   },
   {
     "name": "No Plans",
@@ -87041,7 +87041,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.9
+    "complexityAccSaber": 9.1
   },
   {
     "name": "Lush Life",
@@ -87051,7 +87051,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 12.0
+    "complexityAccSaber": 11.8
   },
   {
     "name": "Body Language",
@@ -88469,7 +88469,7 @@
     "characteristic": "Standard",
     "songCategory": 37,
     "starScoreSaber": 4.690000057220459,
-    "complexityAccSaber": 6.9,
+    "complexityAccSaber": 7.0,
     "complexityAutoBalancer": 4.81
   },
   {
@@ -88481,7 +88481,7 @@
     "characteristic": "Standard",
     "songCategory": 41,
     "starScoreSaber": 5.03000020980835,
-    "complexityAccSaber": 9.1,
+    "complexityAccSaber": 9.0,
     "complexityAutoBalancer": 5.25
   },
   {
@@ -89187,7 +89187,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.5
+    "complexityAccSaber": 6.9
   },
   {
     "name": "Eat That Up, It’s Good for You",
@@ -89197,7 +89197,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.2
+    "complexityAccSaber": 7.0
   },
   {
     "name": "Someone Else",
@@ -89207,7 +89207,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.2
+    "complexityAccSaber": 6.1
   },
   {
     "name": "Talking to Heads",
@@ -89217,7 +89217,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 9.1
+    "complexityAccSaber": 9.0
   },
   {
     "name": "10 things i hate about you",
@@ -89227,7 +89227,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.3
+    "complexityAccSaber": 6.0
   },
   {
     "name": "Always, Everytime",
@@ -89237,7 +89237,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.8
+    "complexityAccSaber": 8.1
   },
   {
     "name": "i am not who i was",
@@ -89257,7 +89257,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.0
+    "complexityAccSaber": 7.8
   },
   {
     "name": "Free",
@@ -89267,7 +89267,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 9.5
+    "complexityAccSaber": 9.2
   },
   {
     "name": "Body Language",
@@ -89277,7 +89277,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.8
+    "complexityAccSaber": 10.3
   },
   {
     "name": "Join the Club",
@@ -89287,7 +89287,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.3
+    "complexityAccSaber": 10.1
   },
   {
     "name": "stuck",
@@ -89297,7 +89297,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 12.7
+    "complexityAccSaber": 12.2
   },
   {
     "name": "The Unknowing",
@@ -89307,7 +89307,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.0
+    "complexityAccSaber": 9.4
   },
   {
     "name": "stuck",
@@ -89317,7 +89317,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.9
+    "complexityAccSaber": 3.0
   },
   {
     "name": "Tough Luck",
@@ -89327,7 +89327,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 5.0
+    "complexityAccSaber": 3.8
   },
   {
     "name": "Lovefool",
@@ -89337,7 +89337,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.0
+    "complexityAccSaber": 3.1
   },
   {
     "name": "It's My Bad",
@@ -89347,7 +89347,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.0
+    "complexityAccSaber": 3.8
   },
   {
     "name": "NO NAME",
@@ -89783,7 +89783,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.6
+    "complexityAccSaber": 8.3
   },
   {
     "name": "In The Dark",
@@ -89803,7 +89803,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.8
+    "complexityAccSaber": 6.6
   },
   {
     "name": "Turné",
@@ -89813,7 +89813,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.1
+    "complexityAccSaber": 6.0
   },
   {
     "name": "Hard Times",
@@ -89824,7 +89824,7 @@
     "characteristic": "Standard",
     "songCategory": 5,
     "starScoreSaber": 3.809999942779541,
-    "complexityAccSaber": 5.3
+    "complexityAccSaber": 5.1
   },
   {
     "name": "Sentiment",
@@ -89834,7 +89834,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.8
+    "complexityAccSaber": 5.6
   },
   {
     "name": "Phoenix",
@@ -89844,7 +89844,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.5
+    "complexityAccSaber": 9.8
   },
   {
     "name": "only wanna dance",
@@ -89854,7 +89854,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.5
+    "complexityAccSaber": 9.1
   },
   {
     "name": "Busy Earnin",
@@ -89864,7 +89864,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.4
+    "complexityAccSaber": 9.9
   },
   {
     "name": "The Adults Are Talking",
@@ -89874,7 +89874,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.3
+    "complexityAccSaber": 10.2
   },
   {
     "name": "RUNAWAY",
@@ -89884,7 +89884,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.2
+    "complexityAccSaber": 9.7
   },
   {
     "name": "Cross The Street",
@@ -89894,7 +89894,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.3
+    "complexityAccSaber": 8.6
   },
   {
     "name": "favorite",
@@ -89904,7 +89904,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.8
+    "complexityAccSaber": 11.1
   },
   {
     "name": "Wall",
@@ -89914,7 +89914,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.8
+    "complexityAccSaber": 2.5
   },
   {
     "name": "Mr. Bubbles",
@@ -89924,7 +89924,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.3
+    "complexityAccSaber": 4.1
   },
   {
     "name": "Everytime We Touch",
@@ -89934,7 +89934,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.3
+    "complexityAccSaber": 2.8
   },
   {
     "name": "Sports car",
@@ -89944,7 +89944,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.0
+    "complexityAccSaber": 10.2
   },
   {
     "name": "Bury Me",
@@ -89954,7 +89954,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.7
+    "complexityAccSaber": 11.6
   },
   {
     "name": "JETLAGG!",
@@ -90073,7 +90073,7 @@
     "characteristic": "Standard",
     "songCategory": 5,
     "starScoreSaber": 5.1399998664855957,
-    "complexityAccSaber": 7.4
+    "complexityAccSaber": 7.5
   },
   {
     "name": "EmbryO",
@@ -91026,7 +91026,7 @@
     "characteristic": "Standard",
     "songCategory": 5,
     "starScoreSaber": 5.1500000953674316,
-    "complexityAccSaber": 8.0
+    "complexityAccSaber": 7.7
   },
   {
     "name": "You Spin Me Round (Like a Record)",
@@ -91083,7 +91083,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.0
+    "complexityAccSaber": 6.1
   },
   {
     "name": "Onbezonnen",
@@ -91103,7 +91103,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.7
+    "complexityAccSaber": 5.6
   },
   {
     "name": "hours",
@@ -91113,7 +91113,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.2
+    "complexityAccSaber": 6.6
   },
   {
     "name": "Electric Love",
@@ -91123,7 +91123,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.6
+    "complexityAccSaber": 8.2
   },
   {
     "name": "Ano band",
@@ -91133,7 +91133,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.5
+    "complexityAccSaber": 4.8
   },
   {
     "name": "Mr. Bubbles",
@@ -91143,7 +91143,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.5
+    "complexityAccSaber": 8.4
   },
   {
     "name": "New Type of Hero",
@@ -91153,7 +91153,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 12.2
+    "complexityAccSaber": 11.2
   },
   {
     "name": "Once a Day",
@@ -91163,7 +91163,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.5
+    "complexityAccSaber": 9.4
   },
   {
     "name": "Girls In Bikinis",
@@ -91173,7 +91173,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.9
+    "complexityAccSaber": 9.8
   },
   {
     "name": "hours",
@@ -91183,7 +91183,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.7
+    "complexityAccSaber": 11.1
   },
   {
     "name": "Muse",
@@ -91193,7 +91193,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.2
+    "complexityAccSaber": 8.3
   },
   {
     "name": "Horror Show",
@@ -91203,7 +91203,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.4
+    "complexityAccSaber": 10.5
   },
   {
     "name": "Runnin' Mouth",
@@ -91213,7 +91213,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.1
+    "complexityAccSaber": 10.0
   },
   {
     "name": "Liar Liar",
@@ -91223,7 +91223,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 6.2
+    "complexityAccSaber": 5.3
   },
   {
     "name": "r u ok?",
@@ -91233,7 +91233,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.4
+    "complexityAccSaber": 2.3
   },
   {
     "name": "Turné",
@@ -91243,7 +91243,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.9
+    "complexityAccSaber": 3.3
   },
   {
     "name": "Sanity Krush",
@@ -93142,7 +93142,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 4.5
+    "complexityAccSaber": 3.9
   },
   {
     "name": "Chromatically",
@@ -93152,7 +93152,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.1
+    "complexityAccSaber": 4.6
   },
   {
     "name": "99%",
@@ -93162,7 +93162,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.1
+    "complexityAccSaber": 6.2
   },
   {
     "name": "When You Know Someone",
@@ -93172,7 +93172,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.5
+    "complexityAccSaber": 7.2
   },
   {
     "name": "CASINO RAVE",
@@ -93182,7 +93182,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.0
+    "complexityAccSaber": 6.1
   },
   {
     "name": "Hush",
@@ -93202,7 +93202,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.3
+    "complexityAccSaber": 10.1
   },
   {
     "name": "HYPNOTIZE",
@@ -93212,7 +93212,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.4
+    "complexityAccSaber": 9.9
   },
   {
     "name": "Magic",
@@ -93232,7 +93232,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.3
+    "complexityAccSaber": 11.2
   },
   {
     "name": "Good Girl",
@@ -93242,7 +93242,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.5
+    "complexityAccSaber": 10.2
   },
   {
     "name": "Chromatically",
@@ -93252,7 +93252,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.3
+    "complexityAccSaber": 3.9
   },
   {
     "name": "Royals",
@@ -93262,7 +93262,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.6
+    "complexityAccSaber": 3.3
   },
   {
     "name": "Interdixion",
@@ -93456,7 +93456,7 @@
     "starAccBeatLeader": 4.1121182441711426,
     "starPassBeatLeader": 0.73569011688232422,
     "starTechBeatLeader": 0.69175666570663452,
-    "complexityAccSaber": 5.9
+    "complexityAccSaber": 6.7
   },
   {
     "name": "toxic till the end",
@@ -93714,7 +93714,7 @@
     "characteristic": "Standard",
     "songCategory": 5,
     "starScoreSaber": 4.5100002288818359,
-    "complexityAccSaber": 6.2
+    "complexityAccSaber": 6.0
   },
   {
     "name": "Polka Dot Dobbins",
@@ -93896,7 +93896,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.8
+    "complexityAccSaber": 9.9
   },
   {
     "name": "can't slow down",
@@ -93906,7 +93906,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.8
+    "complexityAccSaber": 8.9
   },
   {
     "name": "Underestimated Your High",
@@ -93916,7 +93916,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.9
+    "complexityAccSaber": 10.8
   },
   {
     "name": "My Girl",
@@ -93926,7 +93926,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.8
+    "complexityAccSaber": 9.7
   },
   {
     "name": "Capsize",
@@ -93936,7 +93936,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.3
+    "complexityAccSaber": 9.9
   },
   {
     "name": "Can't Keep A Beat",
@@ -93946,7 +93946,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.1
+    "complexityAccSaber": 9.8
   },
   {
     "name": "SUPERSCAR",
@@ -93966,7 +93966,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.8
+    "complexityAccSaber": 6.7
   },
   {
     "name": "Rift",
@@ -93976,7 +93976,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.7
+    "complexityAccSaber": 6.5
   },
   {
     "name": "Capsize",
@@ -93996,7 +93996,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.2
+    "complexityAccSaber": 5.1
   },
   {
     "name": "Rift",
@@ -94006,7 +94006,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.6
+    "complexityAccSaber": 6.0
   },
   {
     "name": "RUDE!",
@@ -94016,7 +94016,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.9
+    "complexityAccSaber": 7.1
   },
   {
     "name": "Magic",
@@ -94026,7 +94026,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.5
+    "complexityAccSaber": 6.9
   },
   {
     "name": "Seven (feat. Latto)",
@@ -94036,7 +94036,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.2
+    "complexityAccSaber": 3.9
   },
   {
     "name": "Capsize",
@@ -94046,7 +94046,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.5
+    "complexityAccSaber": 2.4
   },
   {
     "name": "Hush",
@@ -94056,7 +94056,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.4
+    "complexityAccSaber": 3.2
   },
   {
     "name": "HYPNOTIZE",
@@ -94066,7 +94066,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.3
+    "complexityAccSaber": 3.5
   },
   {
     "name": "We're On Fire",
@@ -94086,7 +94086,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 12.4
+    "complexityAccSaber": 12.1
   },
   {
     "name": "Hito Mania",
@@ -94634,7 +94634,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.1
+    "complexityAccSaber": 9.0
   },
   {
     "name": "Somewhere Only We Know",
@@ -94644,7 +94644,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.6
+    "complexityAccSaber": 6.4
   },
   {
     "name": "Cities",
@@ -94664,7 +94664,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.4
+    "complexityAccSaber": 10.5
   },
   {
     "name": "i won't run",
@@ -94674,7 +94674,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.7
+    "complexityAccSaber": 6.3
   },
   {
     "name": "It Is What It Is",
@@ -94694,7 +94694,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.9
+    "complexityAccSaber": 11.6
   },
   {
     "name": "Hide And Seek",
@@ -94704,7 +94704,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.3
+    "complexityAccSaber": 9.1
   },
   {
     "name": "Wall",
@@ -94714,7 +94714,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.4
+    "complexityAccSaber": 11.0
   },
   {
     "name": "Lumiose City",
@@ -94734,7 +94734,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.5
+    "complexityAccSaber": 3.0
   },
   {
     "name": "Drugs and Candy",
@@ -94744,7 +94744,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.2
+    "complexityAccSaber": 7.9
   },
   {
     "name": "Delulu",
@@ -94754,7 +94754,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.0
+    "complexityAccSaber": 3.9
   },
   {
     "name": "FANCY",
@@ -94764,7 +94764,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 1.4
+    "complexityAccSaber": 1.8
   },
   {
     "name": "Macaroni Moon",
@@ -94774,7 +94774,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.5
+    "complexityAccSaber": 10.1
   },
   {
     "name": "Downpour.vip",
@@ -94785,7 +94785,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 1.0
+    "complexityAccSaber": 1.4
   },
   {
     "name": "r u ok?",
@@ -94795,7 +94795,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.3
+    "complexityAccSaber": 10.4
   },
   {
     "name": "FOCUS",
@@ -94805,7 +94805,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.7
+    "complexityAccSaber": 7.2
   },
   {
     "name": "xo",
@@ -94825,7 +94825,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.3
+    "complexityAccSaber": 9.8
   },
   {
     "name": "Adios",
@@ -94836,7 +94836,7 @@
     "characteristic": "Standard",
     "songCategory": 5,
     "starScoreSaber": 4.190000057220459,
-    "complexityAccSaber": 5.5
+    "complexityAccSaber": 5.1
   },
   {
     "name": "Distortion",
@@ -94918,7 +94918,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 7.4
+    "complexityAccSaber": 7.2
   },
   {
     "name": "10 Percent Jazz",
@@ -94928,7 +94928,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.9
+    "complexityAccSaber": 6.4
   },
   {
     "name": "Masterpiece",
@@ -94938,7 +94938,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.2
+    "complexityAccSaber": 10.3
   },
   {
     "name": "Lumiose City",
@@ -94948,7 +94948,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 4.0
+    "complexityAccSaber": 3.9
   },
   {
     "name": "Cicada",
@@ -94978,7 +94978,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.1
+    "complexityAccSaber": 6.0
   },
   {
     "name": "Midnight Sun",
@@ -94988,7 +94988,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.6
+    "complexityAccSaber": 9.8
   },
   {
     "name": "Midnight Sun",
@@ -95008,7 +95008,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.4
+    "complexityAccSaber": 6.9
   },
   {
     "name": "Kiss the Sky",
@@ -95018,7 +95018,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.2
+    "complexityAccSaber": 2.9
   },
   {
     "name": "Kiss the Sky",
@@ -95028,7 +95028,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.5
+    "complexityAccSaber": 11.4
   },
   {
     "name": "Kiss the Sky",
@@ -95038,7 +95038,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.7
+    "complexityAccSaber": 6.8
   },
   {
     "name": "My Life Would Suck Without You",
@@ -95048,7 +95048,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 6.7
+    "complexityAccSaber": 6.2
   },
   {
     "name": "My Life Would Suck Without You",
@@ -95058,7 +95058,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 9.6
+    "complexityAccSaber": 9.7
   },
   {
     "name": "Green Light",
@@ -95068,7 +95068,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.5
+    "complexityAccSaber": 9.9
   },
   {
     "name": "I Can Fly In The Universe",
@@ -95172,7 +95172,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.6
+    "complexityAccSaber": 9.8
   },
   {
     "name": "Only For A Moment",
@@ -95182,7 +95182,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.9
+    "complexityAccSaber": 6.1
   },
   {
     "name": "enjoy the ride",
@@ -95192,7 +95192,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.0
+    "complexityAccSaber": 7.4
   },
   {
     "name": "enjoy the ride",
@@ -95202,7 +95202,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.7
+    "complexityAccSaber": 10.9
   },
   {
     "name": "enjoy the ride",
@@ -95212,7 +95212,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.8
+    "complexityAccSaber": 3.6
   },
   {
     "name": "fantasize",
@@ -95222,7 +95222,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 6.6
+    "complexityAccSaber": 6.9
   },
   {
     "name": "fantasize",
@@ -95232,7 +95232,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 4.2
+    "complexityAccSaber": 4.5
   },
   {
     "name": "100 ways",
@@ -95242,7 +95242,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 12.5
+    "complexityAccSaber": 12.0
   },
   {
     "name": "Hoshifuru Yoru to Ichirin no Hana",
@@ -95252,7 +95252,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.7
+    "complexityAccSaber": 5.4
   },
   {
     "name": "I'm talking to you!",
@@ -95262,7 +95262,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 4.5
+    "complexityAccSaber": 4.1
   },
   {
     "name": "Desdemona",
@@ -95282,7 +95282,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.2
+    "complexityAccSaber": 7.9
   },
   {
     "name": "Deep Down",
@@ -95293,7 +95293,7 @@
     "characteristic": "Standard",
     "songCategory": 5,
     "starScoreSaber": 5.46999979019165,
-    "complexityAccSaber": 8.6
+    "complexityAccSaber": 8.1
   },
   {
     "name": "FOCUS",
@@ -95313,7 +95313,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.5
+    "complexityAccSaber": 8.6
   },
   {
     "name": "Home",
@@ -95323,7 +95323,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.4
+    "complexityAccSaber": 7.6
   },
   {
     "name": "CR SPEEDRAVER",
@@ -95633,7 +95633,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.9
+    "complexityAccSaber": 3.2
   },
   {
     "name": "KIIRI",
@@ -95643,7 +95643,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 10.5
+    "complexityAccSaber": 10.6
   },
   {
     "name": "東京真中 - ドゥーマー feat. 重音テト",
@@ -95653,7 +95653,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.7
+    "complexityAccSaber": 7.8
   },
   {
     "name": "YES GODDD",
@@ -95663,7 +95663,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 11.4
+    "complexityAccSaber": 11.7
   },
   {
     "name": "Eurosummer",
@@ -95673,7 +95673,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.2
+    "complexityAccSaber": 7.7
   },
   {
     "name": "Eurosummer",
@@ -95693,7 +95693,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 3.0
+    "complexityAccSaber": 3.6
   },
   {
     "name": "Overworld Medley (Super Mario World)",
@@ -95703,7 +95703,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 4.3
+    "complexityAccSaber": 4.4
   },
   {
     "name": "Eureka",
@@ -95713,7 +95713,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.4
+    "complexityAccSaber": 9.6
   },
   {
     "name": "Tangerine Rays",
@@ -95723,7 +95723,7 @@
     "difficulty": "1",
     "characteristic": "Standard",
     "songCategory": 2,
-    "complexityAccSaber": 2.6
+    "complexityAccSaber": 3.0
   },
   {
     "name": "Red Bottoms",
@@ -95733,7 +95733,7 @@
     "difficulty": "9",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 8.8
+    "complexityAccSaber": 8.6
   },
   {
     "name": "r u ok?",
@@ -95743,7 +95743,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 5.6
+    "complexityAccSaber": 6.1
   },
   {
     "name": "Super Bell Hill",
@@ -95753,7 +95753,7 @@
     "difficulty": "3",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 4.9
+    "complexityAccSaber": 5.2
   },
   {
     "name": "Ghost Keeper",
@@ -95763,7 +95763,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 4,
-    "complexityAccSaber": 7.4
+    "complexityAccSaber": 7.7
   },
   {
     "name": "Three Steps Ahead",
@@ -95773,7 +95773,7 @@
     "difficulty": "5",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 8.5
+    "complexityAccSaber": 8.0
   },
   {
     "name": "no more regrets",
@@ -95783,7 +95783,7 @@
     "difficulty": "7",
     "characteristic": "Standard",
     "songCategory": 8,
-    "complexityAccSaber": 9.7
+    "complexityAccSaber": 9.8
   },
   {
     "name": "Itchy Scratchy",
@@ -96700,6 +96700,7 @@
   {
     "name": "Cyaegha",
     "scoreSaberID": "888771",
+    "beatSaverID": "4e35e",
     "hash": "3D31005D1DBDD056564EB831C664B1EC9AF51AB2",
     "difficulty": "5",
     "characteristic": "Standard",
