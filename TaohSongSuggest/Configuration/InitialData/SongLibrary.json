@@ -97471,5 +97471,101 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 10.649999618530273
+  },
+  {
+    "name": "Sound Chimera",
+    "beatLeaderID": "4cbd0xxxx91",
+    "hash": "E29203DE6C2970254B678CBCA33A5354BEE79106",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 13.97084903717041,
+    "starAccBeatLeader": 11.96321964263916,
+    "starPassBeatLeader": 14.562811851501465,
+    "starTechBeatLeader": 7.1977176666259766
+  },
+  {
+    "name": "ENÛMA∇ELIŠ",
+    "beatLeaderID": "44794xxx92",
+    "hash": "A201AADB8F2BF513FF4C8E4E41A0E20DC113ECB3",
+    "difficulty": "9",
+    "characteristic": "OneSaber",
+    "songCategory": 16,
+    "starBeatLeader": 12.088434219360352,
+    "starAccBeatLeader": 13.671128273010254,
+    "starPassBeatLeader": 4.5464920997619629,
+    "starTechBeatLeader": 9.6538019180297852
+  },
+  {
+    "name": "ENÛMA∇ELIŠ",
+    "beatLeaderID": "44794xxx91",
+    "hash": "A201AADB8F2BF513FF4C8E4E41A0E20DC113ECB3",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 11.919169425964356,
+    "starAccBeatLeader": 12.108664512634277,
+    "starPassBeatLeader": 9.0306329727172852,
+    "starTechBeatLeader": 7.7941274642944336
+  },
+  {
+    "name": "BIKE",
+    "beatLeaderID": "4e47axx91",
+    "hash": "1E342362345BBF5700D8841057A45926C9940BA2",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 9.91840648651123,
+    "starAccBeatLeader": 10.744972229003906,
+    "starPassBeatLeader": 6.170438289642334,
+    "starTechBeatLeader": 9.2248382568359375
+  },
+  {
+    "name": "ENÛMA∇ELIŠ",
+    "beatLeaderID": "44794xxx71",
+    "hash": "A201AADB8F2BF513FF4C8E4E41A0E20DC113ECB3",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 9.7512483596801758,
+    "starAccBeatLeader": 10.616774559020996,
+    "starPassBeatLeader": 8.0995664596557617,
+    "starTechBeatLeader": 4.757901668548584
+  },
+  {
+    "name": "ENÛMA∇ELIŠ",
+    "beatLeaderID": "44794xxx51",
+    "hash": "A201AADB8F2BF513FF4C8E4E41A0E20DC113ECB3",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 7.642819881439209,
+    "starAccBeatLeader": 8.83420181274414,
+    "starPassBeatLeader": 6.613060474395752,
+    "starTechBeatLeader": 4.14910888671875
+  },
+  {
+    "name": "ENÛMA∇ELIŠ",
+    "beatLeaderID": "44794xxx31",
+    "hash": "A201AADB8F2BF513FF4C8E4E41A0E20DC113ECB3",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 4.6027126312255859,
+    "starAccBeatLeader": 6.7003898620605469,
+    "starPassBeatLeader": 2.712733268737793,
+    "starTechBeatLeader": 2.4637715816497803
+  },
+  {
+    "name": "ENÛMA∇ELIŠ",
+    "beatLeaderID": "44794xxx11",
+    "hash": "A201AADB8F2BF513FF4C8E4E41A0E20DC113ECB3",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 3.0220577716827393,
+    "starAccBeatLeader": 5.1521930694580078,
+    "starPassBeatLeader": 1.4602633714675903,
+    "starTechBeatLeader": 1.2197792530059815
   }
 ]
