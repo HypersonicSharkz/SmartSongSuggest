@@ -97942,5 +97942,77 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 4.0500001907348633
+  },
+  {
+    "name": "Garakuta Doll Play",
+    "beatLeaderID": "4adb0xx91",
+    "hash": "5671A569183F5E4D37622FDCCEE9A2CF43C4AACC",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 12.473323822021484,
+    "starAccBeatLeader": 12.50936222076416,
+    "starPassBeatLeader": 8.6695890426635742,
+    "starTechBeatLeader": 9.7076530456542969
+  },
+  {
+    "name": "Proof",
+    "beatLeaderID": "44c1axxxx91",
+    "hash": "7AD1B697B972C1ADBA3A9268A81C93625E02144F",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 7.2464160919189453,
+    "starAccBeatLeader": 8.8969316482543945,
+    "starPassBeatLeader": 5.040346622467041,
+    "starTechBeatLeader": 4.3852148056030273
+  },
+  {
+    "name": "Proof",
+    "beatLeaderID": "44c1axxxx71",
+    "hash": "7AD1B697B972C1ADBA3A9268A81C93625E02144F",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 5.1624679565429688,
+    "starAccBeatLeader": 7.21351432800293,
+    "starPassBeatLeader": 3.0549979209899902,
+    "starTechBeatLeader": 3.0789988040924072
+  },
+  {
+    "name": "Lichen",
+    "beatLeaderID": "4d978x51",
+    "hash": "7BDEA1E9E79BC1E0D17CC882C295782DA3093F3C",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 1.9966906309127808,
+    "starAccBeatLeader": 4.24708366394043,
+    "starPassBeatLeader": 0.065472036600112915,
+    "starTechBeatLeader": 0.084820598363876343
+  },
+  {
+    "name": "Lichen",
+    "beatLeaderID": "4d978x31",
+    "hash": "7BDEA1E9E79BC1E0D17CC882C295782DA3093F3C",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 1.1725414991378784,
+    "starAccBeatLeader": 2.8207230567932129,
+    "starPassBeatLeader": 0.055417284369468689,
+    "starTechBeatLeader": 0.052625954151153564
+  },
+  {
+    "name": "Lichen",
+    "beatLeaderID": "4d978x11",
+    "hash": "7BDEA1E9E79BC1E0D17CC882C295782DA3093F3C",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 16,
+    "starBeatLeader": 0.7941480278968811,
+    "starAccBeatLeader": 2.0930883884429932,
+    "starPassBeatLeader": 0.026055911555886269,
+    "starTechBeatLeader": 0.022893782705068588
   }
 ]
