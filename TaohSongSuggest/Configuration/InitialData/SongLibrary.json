@@ -98468,5 +98468,95 @@
     "characteristic": "Standard",
     "songCategory": 1,
     "starScoreSaber": 6.4800000190734863
+  },
+  {
+    "name": "Kobayashi Maru (My Very Own)",
+    "scoreSaberID": "2258974",
+    "hash": "74FDAAD1A40D4EAEC0954F411F633DEF2ADBB555",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 9.0200004577636719
+  },
+  {
+    "name": "Down with your Love",
+    "scoreSaberID": "2254956",
+    "hash": "794F0D97B44A29704197E7BF528D13A04B0BE0CE",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 8.369999885559082
+  },
+  {
+    "name": "Brain Power",
+    "scoreSaberID": "2259004",
+    "hash": "C355C7FFAEDB4CDFF91C77CAEA07ABDCA2662FCD",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.7100000381469727
+  },
+  {
+    "name": "Brain Power",
+    "scoreSaberID": "2259005",
+    "hash": "C355C7FFAEDB4CDFF91C77CAEA07ABDCA2662FCD",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 6.630000114440918
+  },
+  {
+    "name": "Kobayashi Maru (My Very Own)",
+    "scoreSaberID": "2258972",
+    "hash": "74FDAAD1A40D4EAEC0954F411F633DEF2ADBB555",
+    "difficulty": "3",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.369999885559082
+  },
+  {
+    "name": "Mystic Light Quest",
+    "scoreSaberID": "2256826",
+    "hash": "4F6FA5AA325A61A434A74951264F45183E987CAE",
+    "difficulty": "5",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.03000020980835
+  },
+  {
+    "name": "Down with your Love",
+    "scoreSaberID": "2254953",
+    "hash": "794F0D97B44A29704197E7BF528D13A04B0BE0CE",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.21999979019165
+  },
+  {
+    "name": "Strongholds",
+    "scoreSaberID": "2254944",
+    "hash": "E2718D6F753DE582E19E10D55ECF3564923AD9C2",
+    "difficulty": "1",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 4.5900001525878906
+  },
+  {
+    "name": "Strongholds",
+    "scoreSaberID": "2254947",
+    "hash": "E2718D6F753DE582E19E10D55ECF3564923AD9C2",
+    "difficulty": "7",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 7.3499999046325684
+  },
+  {
+    "name": "Kobayashi Maru (My Very Own)",
+    "scoreSaberID": "2258975",
+    "hash": "74FDAAD1A40D4EAEC0954F411F633DEF2ADBB555",
+    "difficulty": "9",
+    "characteristic": "Standard",
+    "songCategory": 1,
+    "starScoreSaber": 8.4600000381469727
   }
 ]
